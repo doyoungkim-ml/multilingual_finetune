@@ -1,0 +1,49 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [4,5,6,7]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+Downloading builder script: 100%|██████████████████████████████████████████████████| 28.8k/28.8k [00:00<00:00, 1.02MB/s]
+Downloading metadata: 100%|█████████████████████████████████████████████████████████| 28.7k/28.7k [00:00<00:00, 973kB/s]
+###############################
+{'sentence1': 'Amrozi accused his brother , whom he called " the witness " , of deliberately distorting his evidence .', 'sentence2': 'Referring to him as only " the witness " , Amrozi accused his brother of deliberately distorting his evidence .', 'label': 1, 'idx': 0}
+###############################
+First elem of self.dataset is  {'sentence1': 'Amrozi accused his brother , whom he called " the witness " , of deliberately distorting his evidence .', 'sentence2': 'Referring to him as only " the witness " , Amrozi accused his brother of deliberately distorting his evidence .', 'label': 1, 'idx': 0}
+Length of dataset retrieving is.. 3668
+Downloading readme: 100%|██████████████████████████████████████████████████████████| 27.8k/27.8k [00:00<00:00, 1.01MB/s]
+WARNING:datasets.builder:Found cached dataset glue (/home/joel_jang/.cache/huggingface/datasets/glue/mrpc/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+100%|████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 578.58it/s]
+Epoch 0:   0%|                                                                                  | 0/917 [00:00<?, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+Epoch 0:   0%|                                                 | 1/917 [00:09<2:28:22,  9.72s/it, loss=7.32, v_num=b8fg]save
+
+
+
+
+
+Epoch 1:   3%|█▋                                                | 30/917 [00:18<08:53,  1.66it/s, loss=7.91, v_num=b8fg]save
+
+
+Epoch 2:   1%|▎                                                  | 5/917 [00:14<43:04,  2.83s/it, loss=7.75, v_num=b8fg]save
+
+Epoch 3:   0%|                                                 | 1/917 [00:14<3:40:43, 14.46s/it, loss=7.74, v_num=b8fg]save
+
+
+Epoch 4:   1%|▌                                                 | 10/917 [00:17<26:14,  1.74s/it, loss=7.64, v_num=b8fg]save
+Epoch 4:   1%|▌                                               | 10/917 [02:15<3:25:34, 13.60s/it, loss=7.64, v_num=b8fg]
+Time: 785.4824495315552

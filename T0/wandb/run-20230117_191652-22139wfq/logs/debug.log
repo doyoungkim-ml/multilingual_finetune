@@ -1,0 +1,28 @@
+2023-01-17 19:16:52,649 INFO    MainThread:38652 [wandb_setup.py:_flush():68] Configure stats pid to 38652
+2023-01-17 19:16:52,649 INFO    MainThread:38652 [wandb_setup.py:_flush():68] Loading settings from /home/joel_jang/.config/wandb/settings
+2023-01-17 19:16:52,649 INFO    MainThread:38652 [wandb_setup.py:_flush():68] Loading settings from /home/joel_jang/seungone/Flipped-Learning/T0/wandb/settings
+2023-01-17 19:16:52,649 INFO    MainThread:38652 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-01-17 19:16:52,649 INFO    MainThread:38652 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'T0/run.py', 'program': 'run.py'}
+2023-01-17 19:16:52,649 INFO    MainThread:38652 [wandb_init.py:_log_setup():476] Logging user logs to /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230117_191652-22139wfq/logs/debug.log
+2023-01-17 19:16:52,649 INFO    MainThread:38652 [wandb_init.py:_log_setup():477] Logging internal logs to /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230117_191652-22139wfq/logs/debug-internal.log
+2023-01-17 19:16:52,650 INFO    MainThread:38652 [wandb_init.py:init():516] calling init triggers
+2023-01-17 19:16:52,650 INFO    MainThread:38652 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2023-01-17 19:16:52,650 INFO    MainThread:38652 [wandb_init.py:init():569] starting backend
+2023-01-17 19:16:52,650 INFO    MainThread:38652 [wandb_init.py:init():573] setting up manager
+2023-01-17 19:16:52,653 INFO    MainThread:38652 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-01-17 19:16:52,655 INFO    MainThread:38652 [wandb_init.py:init():580] backend started and connected
+2023-01-17 19:16:52,659 INFO    MainThread:38652 [wandb_init.py:init():658] updated telemetry
+2023-01-17 19:16:52,679 INFO    MainThread:38652 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2023-01-17 19:16:52,798 INFO    MainThread:38652 [wandb_run.py:_on_init():2000] communicating current version
+2023-01-17 19:16:52,873 INFO    MainThread:38652 [wandb_run.py:_on_init():2004] got version response upgrade_message: "wandb version 0.13.9 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-01-17 19:16:52,873 INFO    MainThread:38652 [wandb_init.py:init():728] starting run threads in backend
+2023-01-17 19:16:55,248 INFO    MainThread:38652 [wandb_run.py:_console_start():1980] atexit reg
+2023-01-17 19:16:55,249 INFO    MainThread:38652 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2023-01-17 19:16:55,249 INFO    MainThread:38652 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2023-01-17 19:16:55,249 INFO    MainThread:38652 [wandb_run.py:_redirect():1925] Redirects installed.
+2023-01-17 19:16:55,250 INFO    MainThread:38652 [wandb_init.py:init():765] run started, returning control to user process
+2023-01-17 19:16:55,255 INFO    MainThread:38652 [wandb_run.py:_config_callback():1160] config_cb None None {'input_length': 256, 'output_length': 128, 'num_train_epochs': 5, 'output_dir': '../outputs/cosmos_qa_4_5e-4.pt', 'dataset': ['cosmos_qa'], 'valid_dataset': ['cosmos_qa'], 'dataset_version': 'full', 'train_batch_size': 4, 'eval_batch_size': 4, 'learning_rate': 0.0005, 'model': 'google/t5-xl-lm-adapt', 'gradient_accumulation_steps': 20, 'ngpu': 4, 'num_workers': 40, 'CUDA_VISIBLE_DEVICES': '4,5,6,7', 'wandb_log': True, 'wandb_project': 'RoE ICML direct', 'wandb_run_name': 'cosmos_qa_4', 'mode': 'zerotune', 'use_lr_scheduling': False, 'eval_with_prompt': False, 'fp16': False, 'accelerator': 'ddp_sharded', 'required_classification': True, 'eval_with_prob': True, 'channel': False, 'ul_loss': False, 'prompt_name': 'description_context_question_answer_text', 'random': False, 'channel_base': False, 'dataset_length': 50000, 'weight_decay': 0.0, 'grad_norm': 0.5, 'output_log': 'log/test.csv', 'bigbench_path': '../BIG-bench/bigbench/benchmark_tasks', 'bigbench': False, 'max_steps': 'None', 'checkpoint_path': '', 'dataset_config': 'None', 'method': 'baseline', 'eos_token': True, 'valid_data_size': 200, 'answer_dict_dir_path': 'None', 'ul_weight': 3, 'channel_checkpoint_path': 'None', 'channel_model': 'None'}
+2023-01-17 19:19:11,136 INFO    MainThread:38652 [wandb_run.py:_config_callback():1160] config_cb None None {}
+2023-01-17 20:09:19,360 WARNING MsgRouterThr:38652 [router.py:message_loop():77] message_loop has been closed

@@ -1,0 +1,10 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "run.py", line 188, in <module>
+    set_seed(42)
+  File "run.py", line 28, in set_seed
+    if torch.cuda.is_available():
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/cuda/__init__.py", line 80, in is_available
+    return torch._C._cuda_getDeviceCount() > 0
+KeyboardInterrupt

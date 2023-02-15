@@ -1,0 +1,441 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [8,9,10,11,12,13,14,15]
+  | Name  | Type                        | Params
+------------------------------------------------------
+0 | model | MT5ForConditionalGeneration | 3.7 B
+------------------------------------------------------
+3.7 B     Trainable params
+0         Non-trainable params
+3.7 B     Total params
+14,970.479Total estimated model params size (MB)
+###############################
+{'document': 'In Wales, councils are responsible for funding and overseeing schools.\nBut in England, Mr Osborne\'s plan will mean local authorities will cease to have a role in providing education.\nAcademies are directly funded by central government and head teachers have more freedom over admissions and to change the way the school works.\nIt is a significant development in the continued divergence of schools systems on either side of Offa\'s Dyke.\nAnd although the Welsh Government will get extra cash to match the money for English schools to extend the school day, it can spend it on any devolved policy area.\nMinisters have no plans to follow suit.\nAt the moment, governing bodies are responsible for setting school hours and they need ministerial permission to make significant changes.\nThere are already more than 2,000 secondary academies in England and its extension to all state schools is unlikely to shake the Welsh Government\'s attachment to what they call a "community, comprehensive model" for schools.\nIt rejects claims that freedom given to academies can help drive up standards, and it points to academy-free Scotland as the best performing school system in the UK.\nEducation Minister Huw Lewis said there was "very little evidence to suggest" academies have a positive impact in driving up standards and Wales would not be following the model.\n"The Tories have wasted hundreds of millions of pounds on academies and free schools and as the Chancellor finalises his budget plans to slash vital services even further, he is committing them to wasting even more on a failing endeavour.\n"We have no plans to introduce the chaos and waste of academies and free schools here in Wales."\nNone of the main parties in May\'s Assembly election - including the Welsh Conservatives - have said they want to introduce academies in Wales.\nOwen Hathway, NUT Cymru\'s policy officer, called the academy plans for England "scandalous.".\n"There is no evidence that academies work, no evidence that they raise standards, no evidence that they offer better quality education and no evidence that they are what parents and communities want," he said.\n"Certainly a commitment to comprehensive education is something we would want, and indeed expect, all parties to hold firm to in their manifestos for the forthcoming Welsh election."\nBut the Welsh and English schools systems are still linked by a joint arrangement for teachers\' pay and conditions.\nAcademies are not tied to these pay scales so in effect Wednesday\'s announcement will take all English schools out of the system and raise questions about the viability of an England and Wales pay and conditions structure.\nThere is already growing momentum for the devolution of teachers\' pay and conditions.\nOriginally sceptical, the Welsh Labour Government is now broadly in favour.\nSome teaching unions remain opposed because of concern that Welsh teachers would end up being paid less than those in England.\nMr Hathway said teachers were concerned it could lead to regional pay.\n"At the same time we do of course recognise that the issue of pay is already becoming a grey area due to the negative changes we see taking place in England," he said.\nBut an even bigger difference between the schools landscape on either side of the border, appears to make separate arrangements for pay increasingly likely in future.', 'summary': 'As Chancellor George Osborne announced all English state schools will become academies, the Welsh Government continues to reject the model here.', 'id': '35821725'}
+###############################
+Length of dataset retrieving is.. 10000
+Epoch 0:   0%|                                                                                                           | 0/1250 [00:00<?, ?it/s]
+WARNING:datasets.builder:Found cached dataset xsum (/home/joel_jang/.cache/huggingface/datasets/xsum/default/1.2.0/082863bf4754ee058a5b6f6525d0cb2b18eadb62c7b370b095d1364050a52b71)
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 366.10it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/xsum/default/1.2.0/082863bf4754ee058a5b6f6525d0cb2b18eadb62c7b370b095d1364050a52b71/cache-0179b5b9071d9bab.arrow
+Process Process-32:
+Process Process-36:
+Process Process-40:
+Process Process-25:
+Process Process-23:
+Process Process-34:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Process Process-39:
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+Process Process-35:
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+Process Process-38:
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 544, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 544, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 435, in convert_to_features
+    source, targets, data_label, options = self.convert_to_feature_tokenizer(input_, target_, options)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 435, in convert_to_features
+    source, targets, data_label, options = self.convert_to_feature_tokenizer(input_, target_, options)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 294, in convert_to_feature_tokenizer
+    source = self.tokenizer.batch_encode_plus([str(input_)], max_length=self.input_length,
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 294, in convert_to_feature_tokenizer
+    source = self.tokenizer.batch_encode_plus([str(input_)], max_length=self.input_length,
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 544, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 435, in convert_to_features
+    source, targets, data_label, options = self.convert_to_feature_tokenizer(input_, target_, options)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 294, in convert_to_feature_tokenizer
+    source = self.tokenizer.batch_encode_plus([str(input_)], max_length=self.input_length,
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 544, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 435, in convert_to_features
+    source, targets, data_label, options = self.convert_to_feature_tokenizer(input_, target_, options)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 294, in convert_to_feature_tokenizer
+    source = self.tokenizer.batch_encode_plus([str(input_)], max_length=self.input_length,
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+Process Process-37:
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 544, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 435, in convert_to_features
+    source, targets, data_label, options = self.convert_to_feature_tokenizer(input_, target_, options)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 294, in convert_to_feature_tokenizer
+    source = self.tokenizer.batch_encode_plus([str(input_)], max_length=self.input_length,
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+Process Process-27:
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 544, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 435, in convert_to_features
+    source, targets, data_label, options = self.convert_to_feature_tokenizer(input_, target_, options)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 294, in convert_to_feature_tokenizer
+    source = self.tokenizer.batch_encode_plus([str(input_)], max_length=self.input_length,
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 544, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 435, in convert_to_features
+    source, targets, data_label, options = self.convert_to_feature_tokenizer(input_, target_, options)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 294, in convert_to_feature_tokenizer
+    source = self.tokenizer.batch_encode_plus([str(input_)], max_length=self.input_length,
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 544, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 435, in convert_to_features
+    source, targets, data_label, options = self.convert_to_feature_tokenizer(input_, target_, options)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 544, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 294, in convert_to_feature_tokenizer
+    source = self.tokenizer.batch_encode_plus([str(input_)], max_length=self.input_length,
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 435, in convert_to_features
+    source, targets, data_label, options = self.convert_to_feature_tokenizer(input_, target_, options)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 294, in convert_to_feature_tokenizer
+    source = self.tokenizer.batch_encode_plus([str(input_)], max_length=self.input_length,
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 544, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 435, in convert_to_features
+    source, targets, data_label, options = self.convert_to_feature_tokenizer(input_, target_, options)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 544, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 294, in convert_to_feature_tokenizer
+    source = self.tokenizer.batch_encode_plus([str(input_)], max_length=self.input_length,
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 435, in convert_to_features
+    source, targets, data_label, options = self.convert_to_feature_tokenizer(input_, target_, options)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 294, in convert_to_feature_tokenizer
+    source = self.tokenizer.batch_encode_plus([str(input_)], max_length=self.input_length,
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 682, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 770, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1193, in _run
+    self._dispatch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1272, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1282, in run_stage
+    return self._run_train()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1312, in _run_train
+    self.fit_loop.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/fit_loop.py", line 234, in advance
+    self.epoch_loop.run(data_fetcher)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 195, in advance
+    batch_output = self.batch_loop.run(batch, batch_idx)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 88, in advance
+    outputs = self.optimizer_loop.run(split_batch, optimizers, batch_idx)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 215, in advance
+    result = self._run_optimization(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 259, in _run_optimization
+    closure()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 160, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 142, in closure
+    step_output = self._step_fn()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 435, in _training_step
+    training_step_output = self.trainer.accelerator.training_step(step_kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 216, in training_step
+    return self.training_type_plugin.training_step(*step_kwargs.values())
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 439, in training_step
+    return self.model(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/fairscale/nn/data_parallel/sharded_ddp.py", line 219, in forward
+    self.refresh_trainable()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/fairscale/nn/data_parallel/sharded_ddp.py", line 300, in refresh_trainable
+    optim.refresh_trainable()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/fairscale/optim/oss.py", line 483, in refresh_trainable
+    self._setup_flat_buffers()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/fairscale/optim/oss.py", line 657, in _setup_flat_buffers
+    bucket.add_param(param)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/fairscale/nn/misc/param_bucket.py", line 69, in add_param
+    self._add_param_as_view(param)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    with self.__class__():
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 15375) exited unexpectedly with exit code 1. Details are lost due to multiprocessing. Rerunning with num_workers=0 may give better error trace.
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "run.py", line 225, in <module>
+    trainer.fit(model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 735, in fit
+    self._call_and_handle_interrupt(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 695, in _call_and_handle_interrupt
+    self.training_type_plugin.reconciliate_processes(traceback.format_exc())
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 533, in reconciliate_processes
+    raise DeadlockDetectedException(f"DeadLock detected from rank: {self.global_rank} \n {trace}")
+pytorch_lightning.utilities.exceptions.DeadlockDetectedException: DeadLock detected from rank: 0
+ Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 682, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 770, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1193, in _run
+    self._dispatch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1272, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1282, in run_stage
+    return self._run_train()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1312, in _run_train
+    self.fit_loop.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/fit_loop.py", line 234, in advance
+    self.epoch_loop.run(data_fetcher)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 195, in advance
+    batch_output = self.batch_loop.run(batch, batch_idx)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 88, in advance
+    outputs = self.optimizer_loop.run(split_batch, optimizers, batch_idx)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 215, in advance
+    result = self._run_optimization(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 259, in _run_optimization
+    closure()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 160, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 142, in closure
+    step_output = self._step_fn()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 435, in _training_step
+    training_step_output = self.trainer.accelerator.training_step(step_kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 216, in training_step
+    return self.training_type_plugin.training_step(*step_kwargs.values())
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 439, in training_step
+    return self.model(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/fairscale/nn/data_parallel/sharded_ddp.py", line 219, in forward
+    self.refresh_trainable()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/fairscale/nn/data_parallel/sharded_ddp.py", line 300, in refresh_trainable
+    optim.refresh_trainable()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/fairscale/optim/oss.py", line 483, in refresh_trainable
+    self._setup_flat_buffers()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/fairscale/optim/oss.py", line 657, in _setup_flat_buffers
+    bucket.add_param(param)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 28, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/fairscale/nn/misc/param_bucket.py", line 69, in add_param
+    self._add_param_as_view(param)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    with self.__class__():
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 15375) exited unexpectedly with exit code 1. Details are lost due to multiprocessing. Rerunning with num_workers=0 may give better error trace.

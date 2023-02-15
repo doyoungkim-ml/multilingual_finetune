@@ -29,7 +29,10 @@ def label_(name, options, answer):
     if name == "Negation template for positive and negative":
         label = options.index(answer.replace(" review.", ""))
     else:
-        label = options.index(answer)
+        if options!=None:
+            label = options.index(answer)
+        else:
+            label = -1
     return label
 def multiple_replace(dictionary, text):
     # Create a regular expression  from the dictionaryary keys
@@ -99,6 +102,7 @@ def prompt_choice(whole_dataset, type_path, prompt, example_batch, args, do_rand
                 prompt_list.remove('…What could happen next, C1 or C2?')
                 prompt_list.remove('…why? C1 or C2')
                 prompt_list.remove('…As a result, C1 or C2?')
+                
             return random.choice(prompt_list)
         else:
             ###channel validation, fixed choice(not given)
@@ -138,6 +142,30 @@ def prompt_choice(whole_dataset, type_path, prompt, example_batch, args, do_rand
         else:
             if args.required_classification==False:
                 prompt_list = list(vars(prompt)['name_to_id_mapping'].keys())
+                if "trec" in whole_dataset:
+                    if example_batch['coarse_label']==0:
+                        prompt_list = ['fine_grained_open_context_first','fine_grained_open','what_category_best_describe','pick_the_best_descriptor','which_category_best_describes','trec1','trec2','fine_grained_DESC','fine_grained_DESC_context_first']
+                    elif example_batch['coarse_label']==1:
+                        prompt_list = ['fine_grained_open_context_first','fine_grained_open','what_category_best_describe','pick_the_best_descriptor','which_category_best_describes','trec1','trec2','fine_grained_ENTY']
+                    elif example_batch['coarse_label']==2:
+                        prompt_list = ['fine_grained_open_context_first','fine_grained_open','what_category_best_describe','pick_the_best_descriptor','which_category_best_describes','trec1','trec2','fine_grained_ABBR','fine_grained_ABBR_context_first']
+                    elif example_batch['coarse_label']==3:
+                        prompt_list = ['fine_grained_open_context_first','fine_grained_open','what_category_best_describe','pick_the_best_descriptor','which_category_best_describes','trec1','trec2','fine_grained_HUM','fine_grained_HUM_context_first']
+                    elif example_batch['coarse_label']==4:
+                        prompt_list = ['fine_grained_open_context_first','fine_grained_open','what_category_best_describe','pick_the_best_descriptor','which_category_best_describes','trec1','trec2','fine_grained_NUM_context_first','fine_grained_NUM']
+                    elif example_batch['coarse_label']==5:
+                        prompt_list = ['fine_grained_open_context_first','fine_grained_open','what_category_best_describe','pick_the_best_descriptor','which_category_best_describes','trec1','trec2','fine_grained_LOC','fine_grained_LOC_context_first']
+                elif 'paws' in whole_dataset:
+                    if example_batch['label']==0:
+                        prompt_list.remove('paraphrase-task')
+                elif 'wiki_qa' in whole_dataset:
+                    if example_batch['label']==0:
+                        prompt_list.remove('Jeopardy style')
+                        prompt_list.remove('Topic Prediction - Question and Answer Pair')
+                        prompt_list.remove('Generate Question from Topic')
+                        prompt_list.remove('Topic Prediction - Question Only')
+                        prompt_list.remove('Topic Prediction - Answer Only')
+                        prompt_list.remove('Direct Answer to Question')
             else:
                 prompt_list = list(filter(lambda x: ('Accuracy' in prompt[x].metadata.metrics) ,list(vars(prompt)['name_to_id_mapping'].keys())))
                 prompt_list = list(filter(lambda x: prompt[x].get_answer_choices_list(example_batch)!=None, prompt_list))
@@ -165,16 +193,37 @@ def dataset_prompt_setting(type_path, dataset_name, dataset_config_name, args):
         return example, instruction, [task_prefix, input_prefix, output_prefix, choice_prefix, append_choices_to_input]
     else:
         if type_path == 'train':
-            unshuffled = load_dataset(dataset_name, dataset_config_name, ignore_verifications= True)[type_path]            
-            if len(unshuffled)>args.dataset_length:
-                shuffled = unshuffled.shuffle(seed=42)
-                unshuffled=shuffled.select(range(args.dataset_length))
-            dataset=unshuffled
-            prompt = DatasetTemplates(
-                f"{dataset_name}"
-                if dataset_config_name is None
-                else f"{dataset_name}/{dataset_config_name}"
-            )
+            if 'tatoeba' in dataset_name:
+                if dataset_name == 'tatoeba':
+                    unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-kor/tatoeba.json', field="data")["train"]
+                elif dataset_name == 'tatoeba_spa':
+                    unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-spa/tatoeba_spa.json', field="data")["train"]
+                elif dataset_name == 'tatoeba_chi':
+                    unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-zho/tatoeba_zho.json', field="data")["train"]
+                elif dataset_name == 'tatoeba_fra':
+                    unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-fra/tatoeba_fra.json', field="data")["train"]
+                elif dataset_name == 'tatoeba_jap':
+                    unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-jpn/tatoeba_jpn.json', field="data")["train"]
+                if len(unshuffled)>args.dataset_length:
+                    shuffled = unshuffled.shuffle(seed=42)
+                    unshuffled=shuffled.select(range(args.dataset_length))
+                dataset=unshuffled
+                
+                prompt = DatasetTemplates('tatoeba')
+            else:
+                unshuffled = load_dataset(dataset_name, dataset_config_name, ignore_verifications= True)[type_path]            
+                if len(unshuffled)>args.dataset_length:
+                    shuffled = unshuffled.shuffle(seed=42)
+                    unshuffled=shuffled.select(range(args.dataset_length))
+                dataset=unshuffled
+                print("###############################")
+                print(dataset[0])
+                print("###############################")
+                prompt = DatasetTemplates(
+                    f"{dataset_name}"
+                    if dataset_config_name is None
+                    else f"{dataset_name}/{dataset_config_name}"
+                )
             return dataset, prompt, ["","","","",""]
         else: 
             if dataset_name == 'imdb' or dataset_name == 'ag_news' or dataset_name == 'amazon_polarity' or dataset_name == 'yelp_review_full' or dataset_name == 'dbpedia_14' or dataset_name == 'trec' or dataset_name == 'dream':
@@ -200,6 +249,21 @@ def dataset_prompt_setting(type_path, dataset_name, dataset_config_name, args):
             elif dataset_name == 'story_cloze':
                 unshuffled = load_dataset("story_cloze","2016", data_dir='../data')[type_path]
                 prompt = DatasetTemplates('story_cloze', '2016')
+            elif dataset_name == 'tatoeba':
+                unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-kor/tatoeba_val.json', field="data")["train"]
+                prompt = DatasetTemplates('tatoeba')
+            elif dataset_name == 'tatoeba_spa':
+                unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-spa/tatoeba_val_spa.json', field="data")["train"]
+                prompt = DatasetTemplates('tatoeba')
+            elif dataset_name == 'tatoeba_chi':
+                unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-zho/tatoeba_val_zho.json', field="data")["train"]
+                prompt = DatasetTemplates('tatoeba')
+            elif dataset_name == 'tatoeba_jap':
+                unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-jpn/tatoeba_val_jpn.json', field="data")["train"]
+                prompt = DatasetTemplates('tatoeba')
+            elif dataset_name == 'tatoeba_fra':
+                unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-fra/tatoeba_val_fra.json', field="data")["train"]
+                prompt = DatasetTemplates('tatoeba')
             elif dataset_name == 'super_glue' or dataset_name == 'hellaswag' or dataset_name == 'winogrande' or dataset_name == 'lambada':
                 unshuffled = load_dataset(dataset_name, dataset_config_name)[type_path]
                 prompt = DatasetTemplates(
@@ -250,7 +314,9 @@ class Pretrain(Dataset):
         ids_to_answers = None       
         # dataset not used for training (anli, story cloze, superglue, hellaswag, winogrande, lambada)
         self.dataset, self.prompt, [self.task_prefix, self.input_prefix, self.output_prefix, self.choice_prefix, self.append_choices_to_input] = dataset_prompt_setting(self.type_path, self.dataset_name, self.dataset_config_name, args)
-        # print("First elem of self.dataset is ", self.dataset[0])
+        
+        
+        print("First elem of self.dataset is ", self.dataset[0])
         print(f'Length of dataset retrieving is.. {len(self.dataset)}')
         self.input_length = input_length
         self.output_length = output_length
@@ -404,6 +470,17 @@ class Pretrain(Dataset):
             name = prompt_choice(self.whole_dataset, self.type_path, self.prompt, example_batch, self.args)
             prompt = self.prompt[name]
             result = prompt.apply(example_batch)
+            # print('#######################')
+            # print(self.prompt)
+            # print()
+            # print(name)
+            # print()
+            # print(prompt)
+            # print()
+            # print(example_batch)
+            # print()
+            # print(result)
+            # print('#######################')
             if self.args.channel_base:
                 target_ = result[0]
                 input_= result[1]

@@ -1,0 +1,206 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [8,9,10,11,12,13,14,15]
+  | Name  | Type                        | Params
+------------------------------------------------------
+0 | model | MT5ForConditionalGeneration | 3.7 B
+------------------------------------------------------
+3.7 B     Trainable params
+0         Non-trainable params
+3.7 B     Total params
+14,970.479Total estimated model params size (MB)
+WARNING:datasets.builder:Found cached dataset xsum (/home/joel_jang/.cache/huggingface/datasets/xsum/default/1.2.0/082863bf4754ee058a5b6f6525d0cb2b18eadb62c7b370b095d1364050a52b71)
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 222.34it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/xsum/default/1.2.0/082863bf4754ee058a5b6f6525d0cb2b18eadb62c7b370b095d1364050a52b71/cache-0179b5b9071d9bab.arrow
+###############################
+{'document': 'In Wales, councils are responsible for funding and overseeing schools.\nBut in England, Mr Osborne\'s plan will mean local authorities will cease to have a role in providing education.\nAcademies are directly funded by central government and head teachers have more freedom over admissions and to change the way the school works.\nIt is a significant development in the continued divergence of schools systems on either side of Offa\'s Dyke.\nAnd although the Welsh Government will get extra cash to match the money for English schools to extend the school day, it can spend it on any devolved policy area.\nMinisters have no plans to follow suit.\nAt the moment, governing bodies are responsible for setting school hours and they need ministerial permission to make significant changes.\nThere are already more than 2,000 secondary academies in England and its extension to all state schools is unlikely to shake the Welsh Government\'s attachment to what they call a "community, comprehensive model" for schools.\nIt rejects claims that freedom given to academies can help drive up standards, and it points to academy-free Scotland as the best performing school system in the UK.\nEducation Minister Huw Lewis said there was "very little evidence to suggest" academies have a positive impact in driving up standards and Wales would not be following the model.\n"The Tories have wasted hundreds of millions of pounds on academies and free schools and as the Chancellor finalises his budget plans to slash vital services even further, he is committing them to wasting even more on a failing endeavour.\n"We have no plans to introduce the chaos and waste of academies and free schools here in Wales."\nNone of the main parties in May\'s Assembly election - including the Welsh Conservatives - have said they want to introduce academies in Wales.\nOwen Hathway, NUT Cymru\'s policy officer, called the academy plans for England "scandalous.".\n"There is no evidence that academies work, no evidence that they raise standards, no evidence that they offer better quality education and no evidence that they are what parents and communities want," he said.\n"Certainly a commitment to comprehensive education is something we would want, and indeed expect, all parties to hold firm to in their manifestos for the forthcoming Welsh election."\nBut the Welsh and English schools systems are still linked by a joint arrangement for teachers\' pay and conditions.\nAcademies are not tied to these pay scales so in effect Wednesday\'s announcement will take all English schools out of the system and raise questions about the viability of an England and Wales pay and conditions structure.\nThere is already growing momentum for the devolution of teachers\' pay and conditions.\nOriginally sceptical, the Welsh Labour Government is now broadly in favour.\nSome teaching unions remain opposed because of concern that Welsh teachers would end up being paid less than those in England.\nMr Hathway said teachers were concerned it could lead to regional pay.\n"At the same time we do of course recognise that the issue of pay is already becoming a grey area due to the negative changes we see taking place in England," he said.\nBut an even bigger difference between the schools landscape on either side of the border, appears to make separate arrangements for pay increasingly likely in future.', 'summary': 'As Chancellor George Osborne announced all English state schools will become academies, the Welsh Government continues to reject the model here.', 'id': '35821725'}
+###############################
+Length of dataset retrieving is.. 10000
+Epoch 0:   0%|                                                                                                           | 0/1250 [00:00<?, ?it/s]
+Process Process-39:
+Process Process-37:
+Process Process-33:
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 548, in __getitem__
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 439, in convert_to_features
+    if self.args.label_generalization!='':
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 298, in convert_to_feature_tokenizer
+    def convert_to_feature_tokenizer(self, input_, target_, options):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+Traceback (most recent call last):
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 548, in __getitem__
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 439, in convert_to_features
+    if self.args.label_generalization!='':
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 298, in convert_to_feature_tokenizer
+    def convert_to_feature_tokenizer(self, input_, target_, options):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+Process Process-30:
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+Process Process-34:
+Traceback (most recent call last):
+Process Process-32:
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 548, in __getitem__
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 439, in convert_to_features
+    if self.args.label_generalization!='':
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 298, in convert_to_feature_tokenizer
+    def convert_to_feature_tokenizer(self, input_, target_, options):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 548, in __getitem__
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 439, in convert_to_features
+    if self.args.label_generalization!='':
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 298, in convert_to_feature_tokenizer
+    def convert_to_feature_tokenizer(self, input_, target_, options):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 548, in __getitem__
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 439, in convert_to_features
+    if self.args.label_generalization!='':
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+Traceback (most recent call last):
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 298, in convert_to_feature_tokenizer
+    def convert_to_feature_tokenizer(self, input_, target_, options):
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 548, in __getitem__
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 439, in convert_to_features
+    if self.args.label_generalization!='':
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 298, in convert_to_feature_tokenizer
+    def convert_to_feature_tokenizer(self, input_, target_, options):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+Process Process-38:
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 548, in __getitem__
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 439, in convert_to_features
+    if self.args.label_generalization!='':
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 298, in convert_to_feature_tokenizer
+    def convert_to_feature_tokenizer(self, input_, target_, options):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2686, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+pyo3_runtime.PanicException: The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 11, kind: WouldBlock, message: "Resource temporarily unavailable" }) }
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/resource_sharer.py", line 149, in _serve
+    send(conn, destination_pid)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/resource_sharer.py", line 50, in send
+    reduction.send_handle(conn, new_fd, pid)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/reduction.py", line 184, in send_handle
+    sendfds(s, [handle])
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/multiprocessing/reduction.py", line 149, in sendfds
+    sock.sendmsg([msg], [(socket.SOL_SOCKET, socket.SCM_RIGHTS, fds)])

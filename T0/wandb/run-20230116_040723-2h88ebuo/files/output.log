@@ -1,0 +1,84 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/7
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 7 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [7,8,9,10,11,12,13]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+WARNING:datasets.builder:Found cached dataset xsum (/home/joel_jang/.cache/huggingface/datasets/xsum/default/1.2.0/082863bf4754ee058a5b6f6525d0cb2b18eadb62c7b370b095d1364050a52b71)
+100%|████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 308.87it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/xsum/default/1.2.0/082863bf4754ee058a5b6f6525d0cb2b18eadb62c7b370b095d1364050a52b71/cache-dd5e4180a7940dfa.arrow
+Validation sanity check: 0it [00:00, ?it/s]Length of dataset retrieving is.. 200
+Validation sanity check:   0%|                                                    | 0/2 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "run.py", line 222, in <module>
+    trainer.fit(model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 735, in fit
+    self._call_and_handle_interrupt(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 682, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 770, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1193, in _run
+    self._dispatch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1272, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1282, in run_stage
+    return self._run_train()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1304, in _run_train
+    self._run_sanity_check(self.lightning_module)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1368, in _run_sanity_check
+    self._evaluation_loop.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 109, in advance
+    dl_outputs = self.epoch_loop.run(dataloader, dataloader_idx, dl_max_batches, self.num_dataloaders)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 140, in run
+    self.on_run_start(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 87, in on_run_start
+    self._dataloader_iter = _update_dataloader_iter(data_fetcher, self.batch_progress.current.ready)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py", line 121, in _update_dataloader_iter
+    dataloader_iter = enumerate(data_fetcher, batch_idx)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/fetching.py", line 199, in __iter__
+    self.prefetching(self.prefetch_batches)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/fetching.py", line 258, in prefetching
+    self._fetch_next_batch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/fetching.py", line 300, in _fetch_next_batch
+    batch = next(self.dataloader_iter)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1203, in _next_data
+    return self._process_data(data)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1229, in _process_data
+    data.reraise()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/_utils.py", line 434, in reraise
+    raise exception
+AttributeError: Caught AttributeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 541, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 405, in convert_to_features
+    label = label_(name, options, prompt.apply(example_batch)[1])
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 32, in label_
+    label = options.index(answer)
+AttributeError: 'NoneType' object has no attribute 'index'

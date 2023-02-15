@@ -1,0 +1,1334 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/15
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 15 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,11,12,13,14,15]
+  | Name  | Type                        | Params
+------------------------------------------------------
+0 | model | MT5ForConditionalGeneration | 3.7 B
+------------------------------------------------------
+3.7 B     Trainable params
+0         Non-trainable params
+3.7 B     Total params
+14,970.479Total estimated model params size (MB)
+WARNING:datasets.builder:Using custom data configuration default-31b186e58a74258f
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-31b186e58a74258f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 205.52it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/json/default-31b186e58a74258f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab/cache-6fa19dc9f0152dbb.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Validation sanity check: 0it [00:00, ?it/s]First elem of self.dataset is  {'en': 'Please come here between two and three this afternoon.\n', 'kor': '오늘 오후 두시에서 세시 사이에 여기로 와 주세요.\n'}
+Length of dataset retrieving is.. 1000
+Validation sanity check:   0%|                                                                                                      | 0/2 [00:00<?, ?it/s]input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: <extra_id_0>: Please come here between two and three this afternoon. <extra_id_1>: <extra_id_2>: <extra_id_3>: <extra_id_4>: Please come here between two and three this afternoon. <extra_id_5>: <extra_id_6>: <extra_id_7>: === Translate into Korean:  <extra_id_8>: === Translate into Korean <extra_id_9>: === Translate into Korean <extra_id_10>: === Translate <extra_id_11>: === Translate <extra_id_12>: === Translate <extra_id_13>: === Translate <extra_id_14>: === Translate <extra_id_15>: === Translate <extra_id_16>: === Translate <extra_id_17>: === Translate <extra_id_18>: <extra_id_19>: === Translate <extra_id_20>: === Translate <extra_id_21>: === Translate <extra_id_22>: === Translate into Korean <extra_id_23>: === Translate <extra_id_24>: === Translate <extra_id_25>
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.0
+Validation sanity check:  50%|███████████████████████████████████████████████                                               | 1/2 [00:06<00:06,  6.94s/it]input: What are those people doing? === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: <extra_id_0>: What are those people doing? === Translate into English <extra_id_1>: What are those people doing?  <extra_id_2>:  <extra_id_3>: ===  <extra_id_4>:  <extra_id_5>:  <extra_id_6>:  <extra_id_7>: ===  <extra_id_8>:  <extra_id_9>:  <extra_id_10>:  <extra_id_11>:  <extra_id_12>:  <extra_id_13>:  <extra_id_14>:  <extra_id_15>:  <extra_id_16>: ===  <extra_id_17>:  <extra_id_18>:  <extra_id_19>:  <extra_id_20>:  <extra_id_21>:  <extra_id_22>:  <extra_id_23>: : : : : :  <extra_id_24>:  <extra_id_25>:  <extra_id_26>:  <extra_id_27>: :  <extra_id_28>: : : :
+ground_truth 그사람들이 뭐 해요?
+rouge score is 0.0
+Validation sanity check: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:13<00:00,  6.50s/it]agg_score is
+WARNING:datasets.builder:Using custom data configuration default-13622ded68bebb9f
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-13622ded68bebb9f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.04it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/json/default-13622ded68bebb9f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab/cache-969e1c7976e2e5f9.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+Validation sanity check: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:13<00:00,  6.50s/it]agg_score is tensor(0., device='cuda:0') 0
+enter
+First elem of self.dataset is  {'en': 'Again am I telling you that the Son of Man will be delivered into the hands of the chief priests and the religious rulers; that they will condemn him and then deliver him into the hands of the gentiles. \n', 'kor': '다시 너희에게 이르노니, 사람의 아들 이 주사제와 종교 지도자들의 손에 넘겨지겠고, 저희가 그를 정죄하고 다음에 이방인들의 손에 넘겨주리라.\n'}
+Length of dataset retrieving is.. 100000
+Training: 0it [00:00, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 2. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  98%|████████████████████████████████████████████████████████████████████████████████▍ | 3334/3401 [37:52<00:45,  1.47it/s, loss=1.8, v_num=i304]
+prediction: 오늘 오후 2시부터 3시 사이에 와주세요.                                                                                                | 0/67 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4285714236734694
+Epoch 0:  98%|████████████████████████████████████████████████████████████████████████████████▍ | 3336/3401 [37:52<00:44,  1.47it/s, loss=1.8, v_num=i304]input: What are those people doing? === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 그 사람들은 뭘하고 있을까?                                                                                                | 1/67 [00:00<00:54,  1.22it/s]
+ground_truth 그사람들이 뭐 해요?
+rouge score is 0.0
+prediction: 돼지는 "모아"라고 하고, 돼지는 "오잉, 오잉"하고, 돼지는 "quack, quack"하고 고양이는 "meow"라고 합니다.                                         | 2/67 [00:01<00:41,  1.55it/s]
+ground_truth 소는 "음메", 닭은 "꼬꼬댁 꼬꼬", 돼지는 "꿀꿀", 오리는 "", 고양이는 "야옹".
+rouge score is 0.1904761854875285
+Epoch 0:  98%|████████████████████████████████████████████████████████████████████████████████▍ | 3338/3401 [37:55<00:42,  1.47it/s, loss=1.8, v_num=i304]input: I am a student. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 저는 학생입니다.▋                                                                                                     | 3/67 [00:03<01:26,  1.36s/it]
+ground_truth 저는 학생이에요.
+rouge score is 0.4999999950000001
+prediction: 이 편지를 등록하고 싶습니다.                                                                                               | 4/67 [00:03<00:59,  1.05it/s]
+ground_truth 이 편지를 등기로 보내고 싶어요.
+rouge score is 0.4444444395061729
+Epoch 0:  98%|████████████████████████████████████████████████████████████████████████████████▌ | 3340/3401 [37:56<00:41,  1.47it/s, loss=1.8, v_num=i304]input: How badly was Tom beaten? === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 톰이 얼마나 치워졌을까?                                                                                                  | 5/67 [00:04<00:48,  1.29it/s]
+ground_truth 톰이 얼마나 심하게 맞았니?
+rouge score is 0.5714285665306124
+                                                                                                                                                          input: There was some taste of lemon in the cake. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 케이크에 레몬의 맛이 있었다.                                                                                               | 6/67 [00:05<00:48,  1.26it/s]
+ground_truth 그 케이크는 레몬 맛이 조금 난다.
+rouge score is 0.1999999952000001
+Epoch 0:  98%|████████████████████████████████████████████████████████████████████████████████▌ | 3342/3401 [37:58<00:40,  1.47it/s, loss=1.8, v_num=i304]
+prediction: 나는 톰이 왜 떠나야 하는지 알고 싶다.                                                                                         | 7/67 [00:05<00:46,  1.30it/s]
+ground_truth 톰이 자신이 왜 떠나야 하는지를 이해했으면 좋겠어.
+rouge score is 0.4285714235714286
+                                                                                                                                                          input: Why not? === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 왜 안 돼?███████████▋                                                                                             | 8/67 [00:06<00:49,  1.20it/s]
+ground_truth 왜아닙니까?
+rouge score is 0.0
+Epoch 0:  98%|████████████████████████████████████████████████████████████████████████████████▋ | 3344/3401 [37:59<00:38,  1.47it/s, loss=1.8, v_num=i304]input: What if someone sees it? === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 누군가가 보면 어떻게 될까요?███▏                                                                                           | 9/67 [00:07<00:41,  1.41it/s]
+ground_truth 누가 보면 어떡해?
+rouge score is 0.2857142808163266
+prediction: 사람들이 말하는 모든 것을 믿지 말라.                                                                                         | 10/67 [00:07<00:40,  1.41it/s]
+ground_truth 사람들이 말하는 전부를 믿지는 마.
+rouge score is 0.36363635867768596
+Epoch 0:  98%|████████████████████████████████████████████████████████████████████████████████▋ | 3346/3401 [38:00<00:37,  1.47it/s, loss=1.8, v_num=i304]input: Women are beautiful. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 여성들은 아름답다.████████████▏                                                                                       | 11/67 [00:08<00:40,  1.38it/s]
+ground_truth 여자들은 아름다워요.
+rouge score is 0.0
+                                                                                                                                                          input: Let's meet in front of the theater. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 공연장 앞에서 만나자.███████████▊                                                                                      | 12/67 [00:09<00:34,  1.58it/s]
+ground_truth 극장 앞에서 만납시다.
+rouge score is 0.3333333283333334
+Epoch 0:  98%|████████████████████████████████████████████████████████████████████████████████▋ | 3348/3401 [38:01<00:36,  1.47it/s, loss=1.8, v_num=i304]
+prediction: 사랑과 우정을 구분하는 것은 매우 어렵습니다.▎                                                                                    | 13/67 [00:09<00:34,  1.56it/s]
+ground_truth 사랑과 우정 사이에 경계선을 긋는 것은 매우 어려운 일이다.
+rouge score is 0.39999999520000007
+                                                                                                                                                          input: Let's keep in touch. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: - 연락해 주세요.████████████████▉                                                                                   | 14/67 [00:10<00:39,  1.35it/s]
+ground_truth 연락하고 지내요.
+rouge score is 0.0
+Epoch 0:  99%|████████████████████████████████████████████████████████████████████████████████▊ | 3350/3401 [38:03<00:34,  1.47it/s, loss=1.8, v_num=i304]input: She's a fascist. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 그녀는 자본주의자다.█████████████████▌                                                                                 | 15/67 [00:11<00:34,  1.51it/s]
+ground_truth 그 사람은 파시스트야.
+rouge score is 0.0
+prediction: 톰은 마리아를 키스할 것이라고 말했다.█████████                                                                                | 16/67 [00:11<00:31,  1.61it/s]
+ground_truth 톰은 메리에게 키스할 것이라고 말했다.
+rouge score is 0.7999999950000002
+Epoch 0:  99%|████████████████████████████████████████████████████████████████████████████████▊ | 3352/3401 [38:04<00:33,  1.47it/s, loss=1.8, v_num=i304]input: "High-functioning autism" isn't an official medical term or diagnosis. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: "높은 기능성 autism"은 공식적인 의료 용어 또는 진단이 아닙니다.                                                                      | 17/67 [00:12<00:33,  1.50it/s]
+ground_truth 고기능 자폐증은 더이상 의학용어나 진단명이 아니야.
+rouge score is 0.0
+prediction: 그는 그의 성공을 열심히 일하는 것에 의지했다.███████▏                                                                            | 18/67 [00:13<00:42,  1.17it/s]
+ground_truth 그는 그의 성공을 그가 열심히 일한것에 대해 공을 돌렸다
+rouge score is 0.4999999950781251
+Epoch 0:  99%|████████████████████████████████████████████████████████████████████████████████▊ | 3354/3401 [38:07<00:32,  1.47it/s, loss=1.8, v_num=i304]
+prediction: 모든 인간은 존엄성과 권리에 대해 자유롭고 동등하게 태어난다. 그들은 이유와 지혜를 가지고 태어났고, 형제애의 정신으로 서로 행동해야 한다.                                | 19/67 [00:14<00:43,  1.09it/s]
+ground_truth 모든 인간은 태어날 때부터 자유로우며 그 존엄과 권리에 있어 동등하다. 인간은 천부적으로 이성과 양심을 부여받았으며 서로 형제애의 정신으로 행동하여야 한다.
+rouge score is 0.3243243193279767
+                                                                                                                                                          input: I'll give this to Tom. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 톰에게 줘야지█████████████████████████████▎                                                                         | 20/67 [00:17<01:07,  1.43s/it]
+ground_truth 내가 이 것을 톰에게 줄거야.
+rouge score is 0.2857142816326531
+Epoch 0:  99%|████████████████████████████████████████████████████████████████████████████████▉ | 3356/3401 [38:10<00:30,  1.47it/s, loss=1.8, v_num=i304]
+prediction: 중국에 안전한 여행을!█████████████████████████▉                                                                        | 21/67 [00:18<00:52,  1.14s/it]
+ground_truth 중국까지 안전한 여행 하세요!
+rouge score is 0.2857142808163266
+                                                                                                                                                          input: I had to wait 20 minutes on the phone before reaching the customer service rep. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 나는 고객 서비스 담당자에게 도착하기 전에 전화에 20 분을 기다렸다.▍                                                                      | 22/67 [00:18<00:41,  1.07it/s]
+ground_truth 통화해서 고객 서비스 상담원에게 말하기 전까지 연결 대기 큐에서 20분이나 기다렸어야 했어.
+rouge score is 0.18181817685950424
+Epoch 0:  99%|████████████████████████████████████████████████████████████████████████████████▉ | 3358/3401 [38:11<00:29,  1.47it/s, loss=1.8, v_num=i304]input: Put it there. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 그거 넣어.███████████████████████████████████                                                                     | 23/67 [00:19<00:43,  1.01it/s]
+ground_truth 저기에 놓으십시오
+rouge score is 0.0
+prediction: 톰은 훌륭한 감독입니다.██████████████████████████████████▎                                                              | 27/67 [00:21<00:26,  1.53it/s]
+ground_truth 저희들을 위한 방이 충분히 있나요?
+rouge score is 0.3999999950000001
+Epoch 0:  99%|█████████████████████████████████████████████████████████████████████████████████ | 3360/3401 [38:12<00:27,  1.47it/s, loss=1.8, v_num=i304]input: I love you. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 너를 사랑한다.████████████████████████████████████▏                                                                 | 25/67 [00:20<00:32,  1.31it/s]
+ground_truth 사랑해요.
+rouge score is 0.0
+                                                                                                                                                          input: The washing machine is out of order. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 샤워 기계는 순서가 없습니다.█████████████████████████████▋                                                                | 26/67 [00:21<00:26,  1.54it/s]
+ground_truth 세탁기가 고장났다.
+rouge score is 0.0
+Epoch 0:  99%|█████████████████████████████████████████████████████████████████████████████████ | 3362/3401 [38:13<00:26,  1.47it/s, loss=1.8, v_num=i304]input: Tom is a great manager. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 톰은 훌륭한 감독입니다.██████████████████████████████████▎                                                              | 27/67 [00:21<00:26,  1.53it/s]
+ground_truth 톰은 훌륭한 관리자야.
+rouge score is 0.6666666616666668
+prediction: 피는 빨간색입니다.██████████████████████████████████████▉                                                             | 28/67 [00:22<00:25,  1.55it/s]
+ground_truth 피는 붉다.
+rouge score is 0.4999999950000001
+Epoch 0:  99%|█████████████████████████████████████████████████████████████████████████████████ | 3364/3401 [38:14<00:25,  1.47it/s, loss=1.8, v_num=i304]input: I've never been so proud of you. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 나는 당신을 그렇게 자랑스럽게 생각하지 않았다.████████████████████████▍                                                           | 29/67 [00:22<00:22,  1.68it/s]
+ground_truth 네가 이렇게 자랑스러운 적은 없었다.
+rouge score is 0.0
+                                                                                                                                                          input: Don't exaggerate! === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 과장하지 마세요!███████████████████████████████████████████                                                          | 30/67 [00:23<00:26,  1.42it/s]
+ground_truth 과장하지 마!
+rouge score is 0.4999999950000001
+Epoch 0:  99%|█████████████████████████████████████████████████████████████████████████████████▏| 3366/3401 [38:16<00:23,  1.47it/s, loss=1.8, v_num=i304]
+Validating:  46%|████████████████████████████████████████████████▌                                                        | 31/67 [00:24<00:22,  1.61it/s]
+prediction: 프랑스어는 매우 유용합니다.████████████████████████████████████████▏                                                      | 32/67 [00:25<00:24,  1.41it/s]
+ground_truth 프랑스어는 아주 유용해.
+rouge score is 0.3333333283333334
+Epoch 0:  99%|█████████████████████████████████████████████████████████████████████████████████▏| 3368/3401 [38:17<00:22,  1.47it/s, loss=1.8, v_num=i304]input: Achoo! === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 아코오!|███████████████████████████████████████████████████▋                                                     | 33/67 [00:25<00:22,  1.50it/s]
+ground_truth 에취!
+rouge score is 0.0
+Validating:  51%|█████████████████████████████████████████████████████▎                                                   | 34/67 [00:25<00:18,  1.81it/s]
+prediction: 그 나라를 좋아하십니까?████████████████████████████████████████████████▍                                                | 36/67 [00:27<00:19,  1.56it/s]
+ground_truth 저 나라를 좋아해?
+rouge score is 0.3333333283333334
+Epoch 0:  99%|█████████████████████████████████████████████████████████████████████████████████▎| 3372/3401 [38:19<00:19,  1.47it/s, loss=1.8, v_num=i304]
+Validating:  55%|█████████████████████████████████████████████████████████▉                                               | 37/67 [00:27<00:17,  1.69it/s]
+prediction: Hello, world!██████████████████████████████████████████████████████▋                                          | 40/67 [00:29<00:14,  1.89it/s]
+ground_truth 안녕하세요세계
+rouge score is 0.0
+Epoch 0:  99%|█████████████████████████████████████████████████████████████████████████████████▍| 3376/3401 [38:22<00:17,  1.47it/s, loss=1.8, v_num=i304]
+Validating:  61%|████████████████████████████████████████████████████████████████▎                                        | 41/67 [00:30<00:13,  1.95it/s]
+Validating:  66%|████████████████████████████████████████████████████████████████████▉                                    | 44/67 [00:32<00:15,  1.48it/s]
+prediction: 저는 그 책을 사랑했어요!███████████████████████████████████████████████████████████▉                                    | 44/67 [00:32<00:15,  1.48it/s]
+prediction: 그런 일이 당신에게 일어났다면 어떻게 하겠습니까?█████████████████████████████████████████████████████▏                             | 48/67 [00:34<00:13,  1.44it/s]
+prediction: 그런 일이 당신에게 일어났다면 어떻게 하겠습니까?█████████████████████████████████████████████████████▏                             | 48/67 [00:34<00:13,  1.44it/s]
+prediction: 프랑스어는 흥미롭다.███████████████████████████████████████████████████████████████████████████▍                       | 52/67 [00:38<00:11,  1.31it/s]
+Validating:  84%|███████████████████████████████████████████████████████████████████████████████████████▊                 | 56/67 [00:41<00:10,  1.01it/s]
+prediction: 끝났어?|███████████████████████████████████████████████████████████████████████████████████████▊                 | 56/67 [00:41<00:10,  1.01it/s]
+prediction: 메시지를 보낼 수 있습니까?████████████████████████████████████████████████████████████████████████████████████           | 60/67 [00:44<00:05,  1.28it/s]
+prediction: 축하합니다!███████████████████████████████████████████████████████████████████████████████████████████████████▎    | 64/67 [00:47<00:02,  1.31it/s]
+prediction: 축하합니다!███████████████████████████████████████████████████████████████████████████████████████████████████▎    | 64/67 [00:47<00:02,  1.31it/s]
+prediction: 축하합니다!███████████████████████████████████████████████████████████████████████████████████████████████████▎    | 64/67 [00:47<00:02,  1.31it/s]
+prediction: 축하합니다!███████████████████████████████████████████████████████████████████████████████████████████████████▎    | 64/67 [00:47<00:02,  1.31it/s]
+prediction: 축하합니다!███████████████████████████████████████████████████████████████████████████████████████████████████▎    | 64/67 [00:47<00:02,  1.31it/s]
+prediction: 축하합니다!███████████████████████████████████████████████████████████████████████████████████████████████████▎    | 64/67 [00:47<00:02,  1.31it/s]
+prediction: 축하합니다!███████████████████████████████████████████████████████████████████████████████████████████████████▎    | 64/67 [00:47<00:02,  1.31it/s]

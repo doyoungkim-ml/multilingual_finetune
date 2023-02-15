@@ -1,0 +1,174 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/7
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 7 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+Validation sanity check: 0it [00:00, ?it/s]Length of dataset retrieving is.. 200
+Validation sanity check:   0%|                                                                                              | 0/2 [00:00<?, ?it/s]
+WARNING:datasets.builder:Found cached dataset cosmos_qa (/home/joel_jang/.cache/huggingface/datasets/cosmos_qa/default/0.1.0/3e18538cbfdb2c04189b16642715f0f6da3e97ed5df0aadcec3641245b2cf157)
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 620.12it/s]
+Validation sanity check:   0%|                                                                                              | 0/2 [00:00<?, ?it/s]no_prompt_textno_prompt_textno_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 4. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Validation sanity check: 100%|██████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:07<00:00,  3.17s/it]agg_score is tensor(0.0893, device='cuda:0') 0
+enter
+WARNING:datasets.builder:Found cached dataset cosmos_qa (/home/joel_jang/.cache/huggingface/datasets/cosmos_qa/default/0.1.0/3e18538cbfdb2c04189b16642715f0f6da3e97ed5df0aadcec3641245b2cf157)
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 540.06it/s]
+###############################
+{'id': '3Q9SPIIRWJKVQ8244310E8TUS6YWAC##34V1S5K3GTZMDUBNBIGY93FLDOB690##A1S1K7134S2VUC##Blog_1044056##q1_a1##3XU9MCX6VQQG7YPLCSAFDPQNH4GR20', 'context': "Good Old War and person L : I saw both of these bands Wednesday night , and they both blew me away . seriously . Good Old War is acoustic and makes me smile . I really can not help but be happy when I listen to them ; I think it 's the fact that they seemed so happy themselves when they played .", 'question': 'In the future , will this person go to see other bands play ?', 'answer0': 'None of the above choices .', 'answer1': 'This person likes music and likes to see the show , they will see other bands play .', 'answer2': 'This person only likes Good Old War and Person L , no other bands .', 'answer3': 'Other Bands is not on tour and this person can not see them .', 'label': 1}
+###############################
+Length of dataset retrieving is.. 25262
+
+
+Epoch 0:   1%|▍                                                                          | 10/1623 [00:18<48:59,  1.82s/it, loss=1.47, v_num=4jrc]
+Validating:   0%|                                                                                                           | 0/8 [00:00<?, ?it/s]
+no_prompt_text
+no_prompt_textno_prompt_textno_prompt_text
+no_prompt_textno_prompt_textno_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_textno_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+Epoch 0:   1%|▌                                                                        | 12/1623 [00:27<1:00:38,  2.26s/it, loss=1.47, v_num=4jrc]
+
+
+Validating:  88%|██████████████████████████████████████████████████████████████████████████████████████▋            | 7/8 [00:12<00:00,  1.08it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+enterating: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [00:13<00:00,  1.13it/s]
+
+
+Epoch 0:   2%|▍                       | 29/1623 [01:40<1:32:08,  3.47s/it, loss=1.03, v_num=4jrc, acc_score_cosmos_qa=0.345, acc_score_mean=0.345]
+no_prompt_text0%|                                                                                                           | 0/8 [00:00<?, ?it/s]
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_textno_prompt_textno_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+no_prompt_text
+Epoch 0:   2%|▍                       | 31/1623 [01:50<1:34:56,  3.58s/it, loss=1.03, v_num=4jrc, acc_score_cosmos_qa=0.345, acc_score_mean=0.345]
+
+
+
+enterating: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [00:14<00:00,  1.03it/s]
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/serialization.py", line 379, in save
+    _save(obj, opened_zipfile, pickle_module, pickle_protocol)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/serialization.py", line 499, in _save
+    zip_file.write_record(name, storage.data_ptr(), num_bytes)
+KeyboardInterrupt
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "run.py", line 222, in <module>
+    trainer.fit(model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 735, in fit
+    self._call_and_handle_interrupt(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 682, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 770, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1193, in _run
+    self._dispatch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1272, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1282, in run_stage
+    return self._run_train()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1312, in _run_train
+    self.fit_loop.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/fit_loop.py", line 234, in advance
+    self.epoch_loop.run(data_fetcher)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 146, in run
+    self.on_advance_end()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 246, in on_advance_end
+    self._run_validation()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 341, in _run_validation
+    self.val_loop.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 151, in run
+    output = self.on_run_end()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 130, in on_run_end
+    self._evaluation_epoch_end(outputs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 235, in _evaluation_epoch_end
+    model.validation_epoch_end(outputs)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 320, in validation_epoch_end
+    torch.save(param_dict, self.args.output_dir[:-3]+'_last.pt')
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/serialization.py", line 380, in save
+    return
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/serialization.py", line 259, in __exit__
+    self.file_like.write_end_of_file()
+RuntimeError: [enforce fail at inline_container.cc:300] . unexpected pos 7260065024 vs 7260064920

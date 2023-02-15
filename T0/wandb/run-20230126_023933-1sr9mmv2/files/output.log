@@ -1,0 +1,1319 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/15
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 15 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,11,12,13,14,15]
+  | Name  | Type                        | Params
+------------------------------------------------------
+0 | model | MT5ForConditionalGeneration | 3.7 B
+------------------------------------------------------
+3.7 B     Trainable params
+0         Non-trainable params
+3.7 B     Total params
+14,970.479Total estimated model params size (MB)
+WARNING:datasets.builder:Using custom data configuration default-a2884f8bb396b7bd
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-a2884f8bb396b7bd/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|██████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 192.61it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/json/default-a2884f8bb396b7bd/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab/cache-e12f2aaba7fd35ad.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Validation sanity check: 0it [00:00, ?it/s]First elem of self.dataset is  {'en': "In fact, it's a great surprise to see you here.\n", 'fra': "En effet, c'est une belle surprise de vous voir ici.\n"}
+Length of dataset retrieving is.. 1000
+Validation sanity check:   0%|                                          | 0/2 [00:00<?, ?it/s]input: In fact, it's a great surprise to see you here. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: <extra_id_0>: === Translate the above sentence into English: === Translate the above sentence into German: === Translate the above sentence into English <extra_id_1>: === Translate <extra_id_2>: === Translate <extra_id_3>: === Translate <extra_id_4>: === Translate <extra_id_5>: === Translate <extra_id_6>: === Translate <extra_id_7>: === Translate <extra_id_8>: <extra_id_9>: === Translate <extra_id_10>: <extra_id_11>: === Translate <extra_id_12>: === Translate <extra_id_13>: === Translate <extra_id_14>: <extra_id_15>: === Translate <extra_id_16>: === Translate <extra_id_17>: <extra_id_18>: === Translate <extra_id_19>: === Translate <extra_id_20>: <extra_id_21>: === Translate <extra_id_22>: === Translate <extra_id_23>: === Translate <extra_id_24>: === Translate <extra_id_25>: === Translate <extra_id_26>: === Translate <extra_id_27>: === Translate <extra_id_28>
+ground_truth En effet, c'est une belle surprise de vous voir ici.
+rouge score is 0.0
+Validation sanity check:  50%|█████████████████                 | 1/2 [00:06<00:06,  6.88s/it]input: Have you heard this story already? === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: <extra_id_0>: === Translate the above sentence into Spanish: Translate the above sentence into English <extra_id_1>: Translate the above sentence into German <extra_id_2>: Translate <extra_id_3>: Translate <extra_id_4>: Translate <extra_id_5>: Translate <extra_id_6>: Translate <extra_id_7>: Translate <extra_id_8>: Translate <extra_id_9>: === Translate <extra_id_10>: === Translate <extra_id_11>: Translate <extra_id_12>: === Translate <extra_id_13>: === Translate <extra_id_14>: Translate <extra_id_15>: Translate <extra_id_16>: Translate <extra_id_17>: === Translate <extra_id_18>: === Translate <extra_id_19>: Translate <extra_id_20>: === Translate <extra_id_21>: === Translate <extra_id_22>: === Translate <extra_id_23>: === Translate <extra_id_24>: === Translate <extra_id_25>: === Translate <extra_id_26>: === Translate into German <extra_id_27>: === Translate into English <extra_id_28>: ===
+ground_truth As-tu déjà entendu cette histoire?
+rouge score is 0.0
+Validation sanity check: 100%|██████████████████████████████████| 2/2 [00:13<00:00,  6.45s/it]agg_score is tensor(0.0043, device='cuda:0') 0
+enter
+WARNING:datasets.builder:Using custom data configuration default-24da50b413da07a6
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-24da50b413da07a6/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|███████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 79.65it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+First elem of self.dataset is  {'en': "It's basically what Fallout 76 should have been … Lol\n", 'fra': 'Pas forcément le genre de chose dont Fallout 76 avait (encore) besoin !\n'}
+Length of dataset retrieving is.. 100000
+Training: 0it [00:00, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 2. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  98%|████████████████████▌| 3334/3401 [37:55<00:45,  1.47it/s, loss=1.34, v_num=mmv2]input: In fact, it's a great surprise to see you here. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: En fait, c'est une grande surprise de te voir ici.         | 0/67 [00:00<?, ?it/s]
+ground_truth En effet, c'est une belle surprise de vous voir ici.
+rouge score is 0.699999995
+Epoch 0:  98%|████████████████████▌| 3336/3401 [37:56<00:44,  1.47it/s, loss=1.34, v_num=mmv2]input: Have you heard this story already? === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Avez-vous entendu cette histoire?                  | 1/67 [00:00<00:58,  1.13it/s]
+ground_truth As-tu déjà entendu cette histoire?
+rouge score is 0.6666666617283951
+prediction: Peut-on me dire comment faire ça?                  | 2/67 [00:01<00:50,  1.29it/s]
+ground_truth Est-ce que quelqu'un peut me dire comment faire ça?
+rouge score is 0.6666666618666668
+Epoch 0:  98%|████████████████████▌| 3338/3401 [37:57<00:42,  1.47it/s, loss=1.34, v_num=mmv2]input: I hope she's safe. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: J'espère qu'elle est en sécurité.                  | 3/67 [00:02<00:47,  1.34it/s]
+ground_truth J'espère qu'elle est saine et sauve.
+rouge score is 0.5454545404958678
+                                                                                              input: It's unnecessary. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Il n'est pas nécessaire.                           | 4/67 [00:03<00:46,  1.36it/s]
+ground_truth Ce n'est pas nécessaire.
+rouge score is 0.749999995
+Epoch 0:  98%|████████████████████▌| 3340/3401 [37:59<00:41,  1.47it/s, loss=1.34, v_num=mmv2]
+prediction: Vous avez apprécié le film?                        | 5/67 [00:03<00:41,  1.48it/s]
+ground_truth As-tu aimé le film?
+rouge score is 0.4444444395061729
+                                                                                              input: Tom doesn't deserve this. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Tom ne mérite pas ça.                              | 6/67 [00:04<00:40,  1.51it/s]
+ground_truth Tom ne mérite pas cela.
+rouge score is 0.7999999950000002
+Epoch 0:  98%|████████████████████▋| 3342/3401 [38:00<00:40,  1.47it/s, loss=1.34, v_num=mmv2]input: Paul is a natty dresser. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Paul est un dresser.                               | 7/67 [00:04<00:37,  1.58it/s]
+ground_truth Paul s'habille très chic.
+rouge score is 0.24999999500000009
+prediction: Vous êtes plus haut que moi.                       | 8/67 [00:05<00:34,  1.73it/s]
+ground_truth Vous êtes plus grandes que moi.
+rouge score is 0.8333333283333335
+Epoch 0:  98%|████████████████████▋| 3344/3401 [38:01<00:38,  1.47it/s, loss=1.34, v_num=mmv2]input: I like social networking web sites. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: J'aime les sites de réseaux sociaux.               | 9/67 [00:05<00:33,  1.74it/s]
+ground_truth J'aime les sites de réseaux sociaux.
+rouge score is 0.999999995
+                                                                                              input: I'm by your side. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Je suis de votre côté.                            | 10/67 [00:06<00:33,  1.70it/s]
+ground_truth Je suis à ton côté.
+rouge score is 0.5999999950000001
+Epoch 0:  98%|████████████████████▋| 3346/3401 [38:02<00:37,  1.47it/s, loss=1.34, v_num=mmv2]
+prediction: J'ai levé plus tôt que d'habitude pour prendre le premier train.<00:31,  1.75it/s]
+ground_truth Je me suis levée plus tôt que d'habitude afin d'attraper le premier train.
+rouge score is 0.5833333283680556
+                                                                                              input: Moscow is in Russia. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Moscou est en Russie.                             | 12/67 [00:08<00:39,  1.40it/s]
+ground_truth Moscou est en Russie.
+rouge score is 0.999999995
+Epoch 0:  98%|████████████████████▋| 3348/3401 [38:03<00:36,  1.47it/s, loss=1.34, v_num=mmv2]input: That'll buy us a little time. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: C'est ça qui nous fera gagner du temps.           | 13/67 [00:08<00:33,  1.59it/s]
+ground_truth Cela nous fera gagner un peu de temps.
+rouge score is 0.4999999950000001
+prediction: J'aime l'été, mais je ne supporte pas la chaleur. | 14/67 [00:09<00:33,  1.56it/s]
+ground_truth J'aime l'été mais je ne supporte pas la chaleur.
+rouge score is 0.888888883888889
+Epoch 0:  99%|████████████████████▋| 3350/3401 [38:05<00:34,  1.47it/s, loss=1.34, v_num=mmv2]input: Do you know how much you weigh? === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Tu sais combien tu pèses?                         | 15/67 [00:10<00:38,  1.34it/s]
+ground_truth Sais-tu combien tu pèses?
+rouge score is 0.6666666617283951
+                                                                                              input: Have you ever been wounded by a bullet? === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Avez-vous jamais été blessé par une balle?        | 16/67 [00:10<00:35,  1.42it/s]
+ground_truth Avez-vous déjà été blessée par balle?
+rouge score is 0.6153846104142012
+Epoch 0:  99%|████████████████████▋| 3352/3401 [38:07<00:33,  1.47it/s, loss=1.34, v_num=mmv2]
+prediction: Elle a été conseillée par lui de faire plus d’exercice.67 [00:11<00:37,  1.33it/s]
+ground_truth Il lui conseilla de faire davantage d'exercice.
+rouge score is 0.3529411716262976
+                                                                                              input: The bill was eviscerated before being passed by the legislature. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Le projet de loi a été évacué avant d’être adopté par la législature.9,  1.24it/s]
+ground_truth Le projet de loi fut fortement allégé avant d'être voté par le parlement.
+rouge score is 0.4615384565384616
+Epoch 0:  99%|████████████████████▋| 3354/3401 [38:09<00:32,  1.47it/s, loss=1.34, v_num=mmv2]
+prediction: Je n'aime pas la viande.                          | 19/67 [00:13<00:44,  1.08it/s]
+ground_truth Je n'aime pas la viande.
+rouge score is 0.999999995
+                                                                                              input: I wonder when a caveman said something like this. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Je me demande quand un caveman a dit quelque chose comme ça.0:14<00:38,  1.23it/s]
+ground_truth Je me demande quand un homme des cavernes a dit quelque chose comme ça.
+rouge score is 0.8461538411834321
+Epoch 0:  99%|████████████████████▋| 3356/3401 [38:10<00:30,  1.47it/s, loss=1.34, v_num=mmv2]
+prediction: J'en sais beaucoup.                               | 21/67 [00:15<00:39,  1.17it/s]
+ground_truth J'en sais long là-dessus.
+rouge score is 0.5714285665306124
+                                                                                              input: I think Tom is looking at us. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Je pense que Tom nous regarde.                    | 22/67 [00:15<00:35,  1.28it/s]
+ground_truth Je pense que Tom nous regarde.
+rouge score is 0.999999995
+Epoch 0:  99%|████████████████████▋| 3358/3401 [38:11<00:29,  1.47it/s, loss=1.34, v_num=mmv2]input: I'd be careful if I were you. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: J'aurais dû faire attention si je t'étais.        | 23/67 [00:16<00:30,  1.46it/s]
+ground_truth Je ferais attention si j'étais toi.
+rouge score is 0.3076923027218935
+                                                                                              input: She may use this typewriter. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Elle peut utiliser ce typewriter.                 | 24/67 [00:17<00:32,  1.33it/s]
+ground_truth Elle peut utiliser cette machine à écrire.
+rouge score is 0.499999995138889
+Epoch 0:  99%|████████████████████▋| 3360/3401 [38:13<00:27,  1.47it/s, loss=1.34, v_num=mmv2]
+prediction: Je suis très occupée depuis ce matin.             | 25/67 [00:17<00:28,  1.48it/s]
+ground_truth Je suis très occupée depuis ce matin.
+rouge score is 0.999999995
+                                                                                              input: I'll leave it up to you. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Je te laisserai.██████▍                           | 26/67 [00:18<00:28,  1.43it/s]
+ground_truth Je te laisserai en décider.
+rouge score is 0.7499999953125
+Epoch 0:  99%|████████████████████▊| 3362/3401 [38:14<00:26,  1.47it/s, loss=1.34, v_num=mmv2]input: Isn't this place great? === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: N'est-ce pas génial?███▏                          | 27/67 [00:18<00:25,  1.59it/s]
+ground_truth Cet endroit n'est il pas terrible?
+rouge score is 0.22222221777777784
+Validating:  42%|██████████████████▊                          | 28/67 [00:19<00:24,  1.60it/s]
+prediction: Votre fil doit être retiré dans quelques jours.   | 29/67 [00:20<00:25,  1.47it/s]
+ground_truth Tes points de suture devront être retirés dans quelques jours.
+rouge score is 0.4444444395061729
+                                                                                              input: You smoke far too much. You should cut back. === Translate the above sentence into French:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: Vous fumez trop loin.████▏                        | 30/67 [00:21<00:26,  1.39it/s]
+ground_truth Tu fumes beaucoup trop. Tu devrais freiner ta consommation.
+rouge score is 0.16666666222222234
+Epoch 0:  99%|████████████████████▊| 3366/3401 [38:17<00:23,  1.47it/s, loss=1.34, v_num=mmv2]
+Validating:  46%|████████████████████▊                        | 31/67 [00:21<00:23,  1.55it/s]
+Validating:  49%|██████████████████████▏                      | 33/67 [00:23<00:28,  1.18it/s]
+prediction: Ce zoo possède deux okapis.▏                      | 33/67 [00:23<00:28,  1.18it/s]
+prediction: C'est un mot difficile à traduire.                | 37/67 [00:25<00:20,  1.48it/s]
+prediction: Ne me donne pas ce regard triste.                 | 41/67 [00:29<00:21,  1.23it/s]
+prediction: Ne me donne pas ce regard triste.                 | 41/67 [00:29<00:21,  1.23it/s]
+prediction: Il tire.███████████████████████████▏              | 45/67 [00:32<00:15,  1.39it/s]
+prediction: Tom est amusant.█████████████████████▉            | 49/67 [00:34<00:11,  1.58it/s]
+Validating:  79%|███████████████████████████████████▌         | 53/67 [00:36<00:07,  1.76it/s]
+prediction: En conversation, on peut découvrir certaines choses sur l’autre personne assez facilement.
+prediction: Je croyais que tu avais perdu.█████████████▎      | 57/67 [00:40<00:07,  1.37it/s]ilement.
+prediction: Je ne pouvais pas m'empêcher de rire.████████▉    | 61/67 [00:42<00:03,  1.80it/s]ilement.
+prediction: Le soleil s’élèvera et le parti continuera.█████▋ | 65/67 [00:45<00:01,  1.61it/s]ilement.
+prediction: Le soleil s’élèvera et le parti continuera.█████▋ | 65/67 [00:45<00:01,  1.61it/s]ilement.
+prediction: Le soleil s’élèvera et le parti continuera.█████▋ | 65/67 [00:45<00:01,  1.61it/s]ilement.
+prediction: Le soleil s’élèvera et le parti continuera.█████▋ | 65/67 [00:45<00:01,  1.61it/s]ilement.
+prediction: Le soleil s’élèvera et le parti continuera.█████▋ | 65/67 [00:45<00:01,  1.61it/s]ilement.
+prediction: Le soleil s’élèvera et le parti continuera.█████▋ | 65/67 [00:45<00:01,  1.61it/s]ilement.
+prediction: Le soleil s’élèvera et le parti continuera.█████▋ | 65/67 [00:45<00:01,  1.61it/s]ilement.

@@ -1,0 +1,280 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/7
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 7 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+Validation sanity check: 0it [00:00, ?it/s]Length of dataset retrieving is.. 200
+WARNING:datasets.builder:Found cached dataset anli (/home/joel_jang/.cache/huggingface/datasets/anli/plain_text/0.1.0/aabce88453b06dff21c201855ea83283bab0390bff746deadb30b65695755c0b)
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/anli/plain_text/0.1.0/aabce88453b06dff21c201855ea83283bab0390bff746deadb30b65695755c0b/cache-dbd480aaa3b28ed4.arrow
+WARNING:datasets.builder:Found cached dataset anli (/home/joel_jang/.cache/huggingface/datasets/anli/plain_text/0.1.0/aabce88453b06dff21c201855ea83283bab0390bff746deadb30b65695755c0b)
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/anli/plain_text/0.1.0/aabce88453b06dff21c201855ea83283bab0390bff746deadb30b65695755c0b/cache-43c60239ac6b1f79.arrow
+Length of dataset retrieving is.. 200
+Length of dataset retrieving is.. 200
+Length of dataset retrieving is.. 200
+WARNING:datasets.builder:Found cached dataset anli (/home/joel_jang/.cache/huggingface/datasets/anli/plain_text/0.1.0/aabce88453b06dff21c201855ea83283bab0390bff746deadb30b65695755c0b)
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/anli/plain_text/0.1.0/aabce88453b06dff21c201855ea83283bab0390bff746deadb30b65695755c0b/cache-5173ea8bb950a64d.arrow
+WARNING:datasets.builder:Found cached dataset paws (/home/joel_jang/.cache/huggingface/datasets/paws/labeled_final/1.1.0/8d567c6472623f42bd2cc635cad06932d0f0cd2f897db56013c1180f4317d338)
+100%|█████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 851.81it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/paws/labeled_final/1.1.0/8d567c6472623f42bd2cc635cad06932d0f0cd2f897db56013c1180f4317d338/cache-09220ed5a1919bcc.arrow
+WARNING:datasets.builder:Found cached dataset cos_e (/home/joel_jang/.cache/huggingface/datasets/cos_e/v1.11/1.11.0/e8dc57a5b321a2a97063efb8d316d6d8a0d9a2d3a392dafc913e55bed42736d2)
+100%|█████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 745.19it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/cos_e/v1.11/1.11.0/e8dc57a5b321a2a97063efb8d316d6d8a0d9a2d3a392dafc913e55bed42736d2/cache-0be146401659c9c9.arrow
+Length of dataset retrieving is.. 200
+Length of dataset retrieving is.. 200
+Length of dataset retrieving is.. 200
+WARNING:datasets.builder:Found cached dataset super_glue (/home/joel_jang/.cache/huggingface/datasets/super_glue/rte/1.0.3/bb9675f958ebfee0d5d6dc5476fafe38c79123727a7258d515c450873dbdbbed)
+100%|█████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 881.65it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/super_glue/rte/1.0.3/bb9675f958ebfee0d5d6dc5476fafe38c79123727a7258d515c450873dbdbbed/cache-ddc6f475405b3d20.arrow
+WARNING:datasets.builder:Found cached dataset super_glue (/home/joel_jang/.cache/huggingface/datasets/super_glue/wic/1.0.3/bb9675f958ebfee0d5d6dc5476fafe38c79123727a7258d515c450873dbdbbed)
+100%|█████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 765.99it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/super_glue/wic/1.0.3/bb9675f958ebfee0d5d6dc5476fafe38c79123727a7258d515c450873dbdbbed/cache-163b382cdb37b2aa.arrow
+WARNING:datasets.builder:Found cached dataset hellaswag (/home/joel_jang/.cache/huggingface/datasets/hellaswag/default/0.1.0/c37cd37196278995f42bc32f532730ae9b0d5f0f4a2d3b97735c17ff3ad67169)
+100%|██████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 82.74it/s]
+  0%|                                                                                          | 0/3 [00:00<?, ?it/s]
+Length of dataset retrieving is.. 200
+WARNING:datasets.builder:Found cached dataset super_glue (/home/joel_jang/.cache/huggingface/datasets/super_glue/copa/1.0.3/bb9675f958ebfee0d5d6dc5476fafe38c79123727a7258d515c450873dbdbbed)
+100%|█████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 723.65it/s]
+WARNING:datasets.builder:Found cached dataset winogrande (/home/joel_jang/.cache/huggingface/datasets/winogrande/winogrande_xl/1.1.0/a826c3d3506aefe0e9e9390dcb53271070536586bab95849876b2c1743df56e2)
+100%|█████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 830.17it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/winogrande/winogrande_xl/1.1.0/a826c3d3506aefe0e9e9390dcb53271070536586bab95849876b2c1743df56e2/cache-5aca6c830a1dfa33.arrow
+Length of dataset retrieving is.. 200
+Length of dataset retrieving is.. 56
+Length of dataset retrieving is.. 104
+WARNING:datasets.builder:Found cached dataset super_glue (/home/joel_jang/.cache/huggingface/datasets/super_glue/cb/1.0.3/bb9675f958ebfee0d5d6dc5476fafe38c79123727a7258d515c450873dbdbbed)
+100%|█████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 865.64it/s]
+WARNING:datasets.builder:Found cached dataset super_glue (/home/joel_jang/.cache/huggingface/datasets/super_glue/wsc.fixed/1.0.3/bb9675f958ebfee0d5d6dc5476fafe38c79123727a7258d515c450873dbdbbed)
+100%|█████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 800.19it/s]
+Downloading builder script: 100%|███████████████████████████████████████████████| 4.31k/4.31k [00:00<00:00, 2.65MB/s]
+WARNING:datasets.builder:Found cached dataset imdb (/home/joel_jang/.cache/huggingface/datasets/imdb/plain_text/1.0.0/2fdd8b9bcadd6e7055e742a706876ba43f19faee861df134affd7a3f60fc38a1)
+100%|█████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 551.50it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/imdb/plain_text/1.0.0/2fdd8b9bcadd6e7055e742a706876ba43f19faee861df134affd7a3f60fc38a1/cache-2eff9f118d84c6fe.arrow
+Length of dataset retrieving is.. 200
+Length of dataset retrieving is.. 200
+Validation sanity check:   0%|                                                                | 0/28 [00:00<?, ?it/s]
+Downloading builder script: 100%|███████████████████████████████████████████████| 4.06k/4.06k [00:00<00:00, 4.63MB/s]
+Downloading metadata: 100%|█████████████████████████████████████████████████████| 2.65k/2.65k [00:00<00:00, 3.32MB/s]
+Downloading readme: 100%|███████████████████████████████████████████████████████| 7.94k/7.94k [00:00<00:00, 8.70MB/s]
+WARNING:datasets.builder:Found cached dataset ag_news (/home/joel_jang/.cache/huggingface/datasets/ag_news/default/0.0.0/bc2bcb40336ace1a0374767fc29bb0296cdaf8a6da7298436239c54d79180548)
+100%|█████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 745.52it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/ag_news/default/0.0.0/bc2bcb40336ace1a0374767fc29bb0296cdaf8a6da7298436239c54d79180548/cache-12f3c4e4bf422cce.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Validation sanity check: 100%|███████████████████████████████████████████████████████| 28/28 [01:34<00:00,  2.48s/it]agg_score is tensor(2.5000, device='cuda:0') 0
+Downloading builder script: 100%|███████████████████████████████████████████████| 4.32k/4.32k [00:00<00:00, 3.37MB/s]
+WARNING:datasets.builder:Found cached dataset cosmos_qa (/home/joel_jang/.cache/huggingface/datasets/cosmos_qa/default/0.1.0/3e18538cbfdb2c04189b16642715f0f6da3e97ed5df0aadcec3641245b2cf157)
+100%|█████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 326.55it/s]
+###############################
+{'id': '3Q9SPIIRWJKVQ8244310E8TUS6YWAC##34V1S5K3GTZMDUBNBIGY93FLDOB690##A1S1K7134S2VUC##Blog_1044056##q1_a1##3XU9MCX6VQQG7YPLCSAFDPQNH4GR20', 'context': "Good Old War and person L : I saw both of these bands Wednesday night , and they both blew me away . seriously . Good Old War is acoustic and makes me smile . I really can not help but be happy when I listen to them ; I think it 's the fact that they seemed so happy themselves when they played .", 'question': 'In the future , will this person go to see other bands play ?', 'answer0': 'None of the above choices .', 'answer1': 'This person likes music and likes to see the show , they will see other bands play .', 'answer2': 'This person only likes Good Old War and Person L , no other bands .', 'answer3': 'Other Bands is not on tour and this person can not see them .', 'label': 1}
+###############################
+Length of dataset retrieving is.. 25262
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:   1%|▎                                          | 100/16461 [00:36<1:38:39,  2.76it/s, loss=1.4, v_num=xv00]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:   3%| | 558/16461 [04:14<2:00:55,  2.19it/s, loss=1.47, v_num=xv00, acc_score_anli/dev_r1=0.271, acc_score_a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:   6%| | 1016/16461 [12:57<3:17:01,  1.31it/s, loss=1.18, v_num=xv00, acc_score_anli/dev_r1=0.271, acc_score_anli/dev_r2=0.350, acc_score_
+Validating:   0%|                                                                                                         | 0/357 [00:00<?, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py:685: UserWarning: Detected KeyboardInterrupt, attempting graceful shutdown...
+  rank_zero_warn("Detected KeyboardInterrupt, attempting graceful shutdown...")
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7fe566a55af0>
+Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1328, in __del__
+    self._shutdown_workers()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1295, in _shutdown_workers
+    if self._persistent_workers or self._workers_status[worker_id]:
+AttributeError: '_MultiProcessingDataLoaderIter' object has no attribute '_workers_status'

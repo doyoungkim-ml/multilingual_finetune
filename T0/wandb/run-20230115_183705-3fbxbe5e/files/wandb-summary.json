@@ -1,0 +1,1 @@
+{"acc_score_cosmos_qa": 0.8620691299438477, "acc_score_mean": 0.8620691299438477, "epoch": 4, "trainer/global_step": 229, "_timestamp": 1673810104.4583626, "_runtime": 2278.8437554836273, "_step": 8, "train_loss": 0.000867136346641928, "_wandb": {"runtime": 2298}}

@@ -1,0 +1,647 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+###############################
+{'id': 1, 'sentence1': 'In Paris , in October 1560 , he secretly met the English ambassador , Nicolas Throckmorton , asking him for a passport to return to England through Scotland .', 'sentence2': 'In October 1560 , he secretly met with the English ambassador , Nicolas Throckmorton , in Paris , and asked him for a passport to return to Scotland through England .', 'label': 0}
+###############################
+First elem of self.dataset is  {'id': 1, 'sentence1': 'In Paris , in October 1560 , he secretly met the English ambassador , Nicolas Throckmorton , asking him for a passport to return to England through Scotland .', 'sentence2': 'In October 1560 , he secretly met with the English ambassador , Nicolas Throckmorton , in Paris , and asked him for a passport to return to Scotland through England .', 'label': 0}
+Length of dataset retrieving is.. 49401
+Epoch 0:   0%|                                                                                             | 0/12351 [00:00<?, ?it/s]
+WARNING:datasets.builder:Found cached dataset paws (/home/joel_jang/.cache/huggingface/datasets/paws/labeled_final/1.1.0/8d567c6472623f42bd2cc635cad06932d0f0cd2f897db56013c1180f4317d338)
+Epoch 0:   0%|                                                                                             | 0/12351 [00:00<?, ?it/s]#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+paraphrase-task
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a1f0>
+{'id': 16731, 'sentence1': 'Mike McCoy was the head coach of the Aviators , and Carl Caldwell was the General Manager .', 'sentence2': 'The main coach of the aviators was Carl Carl Caldwell , and the general manager was Mike McCoy .', 'label': 0}
+['']
+##############################################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0><promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+Meaning-no-labelRewrite-no-label
+##########################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0><promptsource.promptsource.templates.Template object at 0x7f83aa80a160><promptsource.promptsource.templates.Template object at 0x7f83aa7e9f10>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>Meaning
+{'id': 23152, 'sentence1': 'It was expanded in 1910 from Laura to the Booleroo Centre and finally to Wilmington in 1915 .', 'sentence2': 'It was expanded in 1910 from Laura to Wilmington and finally to the Booleroo Centre in 1915 .', 'label': 0}
+{'id': 1595, 'sentence1': 'Lord Hartington , who had refused to serve under Gladstone because of his Irish policy , became leader of liberal Unionists .', 'sentence2': 'Lord Hartington , who had refused to serve under Gladstone because of his Liberal policies , became leader of the Irish Unionists .', 'label': 0}
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>Rewrite-no-label
+paraphrase-task<promptsource.promptsource.templates.Template object at 0x7f83aa806f70>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+{'id': 44172, 'sentence1': "In the flat spacetime and linear coordination `` differences '' can be treated in coordinates as a contravariant vector .", 'sentence2': 'In flat spacetime and contravariant coordinatization , differences in coordinates , can be treated as a linear vector .', 'label': 0}
+Rewrite-no-labelMeaning-no-label<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>Rewrite-no-label<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.Template object at 0x7f83aa7e9f10>
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a160>
+["Sentence 1: In the flat spacetime and linear coordination `` differences '' can be treated in coordinates as a contravariant vector .\nSentence 2: In flat spacetime and contravariant coordinatization , differences in coordinates , can be treated as a linear vector .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?", 'No']
+context-question-no-label
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+{'id': 46694, 'sentence1': 'He died on June 18 , 1936 in Daytona Beach , Florida , and was buried in Melbourne , Florida .', 'sentence2': 'He died on June 18 , 1936 in Melbourne , Florida , and was buried in Daytona Beach , Florida .', 'label': 0}
+{'id': 21811, 'sentence1': 'The family moved to Tasmania , when he was still a child , and then emigrated again to New Zealand in 1864 .', 'sentence2': 'The family moved to Tasmania when he was still a child , and then emigrated to New Zealand again in 1864 .', 'label': 1}context-question
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0><promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+['Sentence 1: He died on June 18 , 1936 in Daytona Beach , Florida , and was buried in Melbourne , Florida .\nSentence 2: He died on June 18 , 1936 in Melbourne , Florida , and was buried in Daytona Beach , Florida .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning?', 'No']<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+Sentence 1: In the flat spacetime and linear coordination `` differences '' can be treated in coordinates as a contravariant vector .
+Sentence 2: In flat spacetime and contravariant coordinatization , differences in coordinates , can be treated as a linear vector .
+Question: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0><promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>['Sentence 1: The family moved to Tasmania , when he was still a child , and then emigrated again to New Zealand in 1864 .\nSentence 2: The family moved to Tasmania when he was still a child , and then emigrated to New Zealand again in 1864 .\nQuestion: Can we rewrite Sentence 1 to Sentence 2?', 'Yes']
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>paraphrase-task<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+context-question-no-label<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+task_description-no-label
+<promptsource.promptsource.templates.Template object at 0x7f83aa7e9f10>
+Rewrite
+Sentence 1: The family moved to Tasmania , when he was still a child , and then emigrated again to New Zealand in 1864 .
+Sentence 2: The family moved to Tasmania when he was still a child , and then emigrated to New Zealand again in 1864 .
+Question: Can we rewrite Sentence 1 to Sentence 2?
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>Meaning
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>task_description-no-label
+Sentence 1: He died on June 18 , 1936 in Daytona Beach , Florida , and was buried in Melbourne , Florida .
+Sentence 2: He died on June 18 , 1936 in Melbourne , Florida , and was buried in Daytona Beach , Florida .
+Question: Do Sentence 1 and Sentence 2 express the same meaning?
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.Template object at 0x7f83aa7e9eb0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.Template object at 0x7f83aa7e9eb0><promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>PAWS-ANLI GPT3-no-label<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>Rewrite<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0><promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0><promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>Rewrite-no-label
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+task_description-no-label
+Concatenation
+context-question-no-label<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0><promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+Meaning
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>Concatenation-no-label
+Yes
+PAWS-ANLI GPT3
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a190>
+<promptsource.promptsource.templates.Template object at 0x7f83aa7e9eb0>{'id': 15279, 'sentence1': 'Prakash was the International CIO of Avaya , then the Group CIO of Sage Group and later the CIO of iSoft in UK .', 'sentence2': 'Prakash was the international CIO of Avaya , then the Group CIO of Sage Group and later the CIO of iSoft in England .', 'label': 1}
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a1f0>Rewrite
+No<promptsource.promptsource.templates.Template object at 0x7f83aa806f70><promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+paraphrase-task
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a0d0><promptsource.promptsource.templates.Template object at 0x7f83aa80a220>
+<promptsource.promptsource.templates.Template object at 0x7f83aa806fa0>#######################
+No
+<promptsource.promptsource.templates.Template object at 0x7f83aa806f70>
+paraphrase-task
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a130><promptsource.promptsource.templates.Template object at 0x7f83aa80a070><promptsource.promptsource.templates.Template object at 0x7f83aa7e9f10>
+<promptsource.promptsource.templates.Template object at 0x7f83aa806fa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>Concatenation-no-label
+Meaning-no-label
+context-question-no-labelcontext-question-no-label
+MeaningMeaning-no-labelConcatenation-no-label
+Meaning
+{'id': 42182, 'sentence1': 'Cebu Strait connects the western part of the Bohol Sea with the Camotes Sea and separates the island provinces of Cebu and Bohol .', 'sentence2': 'The Cebu Strait connects the western part of the Bohol Sea with the Camotes Sea , and separates the island provinces of Cebu and Bohol .', 'label': 1}
+['Sentence 1: Lord Hartington , who had refused to serve under Gladstone because of his Irish policy , became leader of liberal Unionists .\nSentence 2: Lord Hartington , who had refused to serve under Gladstone because of his Liberal policies , became leader of the Irish Unionists .\nQuestion: Can we rewrite Sentence 1 to Sentence 2?', 'No']context-question
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a1c0>
+#######################
+#######################<promptsource.promptsource.templates.Template object at 0x7f83aa7e9eb0>
+{'id': 42007, 'sentence1': 'On 7 July 2011 , Russell was traded for Michael Blunden as Columbus Blue Jackets and joined his brother Kris Russell with the Blue Jackets organization .', 'sentence2': 'On 7 July 2011 , Russell was traded for Kris Russell on the Columbus Blue Jackets and joined his brother Michael Blunden with the organization Blue Jackets .', 'label': 0}<promptsource.promptsource.templates.Template object at 0x7f83aa806fa0><promptsource.promptsource.templates.Template object at 0x7f83aa80a130>
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a1f0>
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a1f0>
+{'id': 48629, 'sentence1': 'These include replicas in Ramat Shlomo in Jerusalem and Kfar Chabad in Israel .', 'sentence2': 'These include replicas in the Shlomo Ramat in Israel and Kfar Chabad in Jerusalem .', 'label': 0}
+<promptsource.promptsource.templates.Template object at 0x7f83aa7e9eb0>
+{'id': 48033, 'sentence1': 'Neustadtl an der Donau is a city located in the district of Amstetten in Lower Austria in Austria .', 'sentence2': 'Neustadtl an der Donau is a town in the district of Amstetten in Lower Austria in Austria .', 'label': 1}
+PAWS-ANLI GPT3-no-label
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a130>{'id': 9767, 'sentence1': 'The 2000 Oldham Council election took place on 4 May 2000 to elect members of Oldham Metropolitan Borough Council in Greater Manchester , England .', 'sentence2': 'The election of the Oldham Metropolitan Borough Council in 2000 took place on 4 May 2000 to elect members of the Oldham Council in the Greater Manchester , England .', 'label': 0}<promptsource.promptsource.templates.Template object at 0x7f83aa80a0d0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+{'id': 44669, 'sentence1': 'There is no railway station & airport in Sultanpur . You can reach here by bus from Kadipur .', 'sentence2': 'There is no railway station in Kadipur airport that you can reach from Sultanpur by bus .', 'label': 0}<promptsource.promptsource.templates.Template object at 0x7f83aa806f70>{'id': 48199, 'sentence1': 'With a strong start to the season and the new Arise Racing team bringing new cars and new competition to the series it brought 3 great races .', 'sentence2': 'With a strong start into the season and the new Arise Racing Team , which brought new cars and great competition to the series , it took 3 new races .', 'label': 0}<promptsource.promptsource.templates.Template object at 0x7f83aa80a160>
+['Paraphrase the sentence: Cebu Strait connects the western part of the Bohol Sea with the Camotes Sea and separates the island provinces of Cebu and Bohol .', 'The Cebu Strait connects the western part of the Bohol Sea with the Camotes Sea , and separates the island provinces of Cebu and Bohol .']
+['Sentence 1: It was expanded in 1910 from Laura to the Booleroo Centre and finally to Wilmington in 1915 .\nSentence 2: It was expanded in 1910 from Laura to Wilmington and finally to the Booleroo Centre in 1915 .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning?', 'No']<promptsource.promptsource.templates.Template object at 0x7f83aa80a1f0>
+Rewrite<promptsource.promptsource.templates.Template object at 0x7f83aa806f70>{'id': 18708, 'sentence1': 'After receiving a second Nobel Prize in 1903 with her husband Pierre , Marie Curie won the Nobel Prize for Chemistry in 1911 .', 'sentence2': 'After the Nobel Prize in 1903 with her husband Pierre , Marie Curie won a second Nobel Prize for Chemistry in 1911 .', 'label': 0}{'id': 19602, 'sentence1': 'He founded the citadel of Erebuni in 782 BC , the present capital of Armenia , Yerevan .', 'sentence2': 'He founded the citadel of Erebuni in 782 BC , which is the present capital of Armenia , Yerevan .', 'label': 1}
+['Neustadtl an der Donau is a city located in the district of Amstetten in Lower Austria in Austria .\nIs that a paraphrase of the following sentence?\nNeustadtl an der Donau is a town in the district of Amstetten in Lower Austria in Austria .?', 'Yes']
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a160>
+Neustadtl an der Donau is a city located in the district of Amstetten in Lower Austria in Austria .
+Is that a paraphrase of the following sentence?
+Neustadtl an der Donau is a town in the district of Amstetten in Lower Austria in Austria .?
+{'id': 18409, 'sentence1': "The Soviet cosmonaut was Yuri Gagarin 's first air force pilot , also the first man in space .", 'sentence2': 'The first cosmonaut was Soviet Air Force pilot Yuri Gagarin , also the first person in space .', 'label': 0}
+Yes
+["Sentence 1: The Soviet cosmonaut was Yuri Gagarin 's first air force pilot , also the first man in space .\nSentence 2: The first cosmonaut was Soviet Air Force pilot Yuri Gagarin , also the first person in space .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning?", 'No']
+['Sentence 1: Prakash was the International CIO of Avaya , then the Group CIO of Sage Group and later the CIO of iSoft in UK .\nSentence 2: Prakash was the international CIO of Avaya , then the Group CIO of Sage Group and later the CIO of iSoft in England .\nQuestion: Can we rewrite Sentence 1 to Sentence 2?', 'Yes']{'id': 39327, 'sentence1': 'Youth Jason played youth football in the same league which his brother Aaron Humble Area Football League HAFL did', 'sentence2': 'Aaron played youth football in the same league his brother Jason did Humble Area Football League HAFL', 'label': 0}
+#######################
+Sentence 1: Prakash was the International CIO of Avaya , then the Group CIO of Sage Group and later the CIO of iSoft in UK .
+Sentence 2: Prakash was the international CIO of Avaya , then the Group CIO of Sage Group and later the CIO of iSoft in England .
+Question: Can we rewrite Sentence 1 to Sentence 2?
+['Youth Jason played youth football in the same league which his brother Aaron Humble Area Football League HAFL did Question: Aaron played youth football in the same league his brother Jason did Humble Area Football League HAFL True or False?', 'False']Sentence 1: The Soviet cosmonaut was Yuri Gagarin 's first air force pilot , also the first man in space .
+Sentence 2: The first cosmonaut was Soviet Air Force pilot Yuri Gagarin , also the first person in space .
+Question: Do Sentence 1 and Sentence 2 express the same meaning?{'id': 31537, 'sentence1': 'St. James Parish is a member of the Benefice of Culworth with Chipping Wardens and Thorpe Mandeville and Sulgrave with Edgcote and Moreton Pinkney .', 'sentence2': "St. James ' ; Parish Church is a member of the Culworth Benefit with Sulgrave and Thorpe Mandeville and Chipping Warden with Edgcote and Moreton Pinkney .", 'label': 0}
+Yes
+{'id': 35996, 'sentence1': 'Founders of the Charta 77 Foundation František Janouch and Ada Kolman or the German activist Rainer Höss with the Israeli journalist Tal Bashan have participated in the debates .', 'sentence2': 'The founders of the Charter 77 Foundation , František Janouch and Ada Kolman , or the German activist Rainer Höss participated in the debates with the Israeli journalist Tal Bashan .', 'label': 1}
+Youth Jason played youth football in the same league which his brother Aaron Humble Area Football League HAFL did Question: Aaron played youth football in the same league his brother Jason did Humble Area Football League HAFL True or False?{'id': 33212, 'sentence1': 'In the absence of a transverse load , formula _ 5 , we have the free vibration equation .', 'sentence2': 'In the absence of a cross load , Formula 5 , we have the equation of free vibration .', 'label': 1}{'id': 40786, 'sentence1': 'Similarly , each node of a cluster has access to a large distributed shared memory in shared memory , in addition to the limited non-shared private storage of each node .', 'sentence2': "Similarly , in distributed shared memory each node of a cluster has access to a large shared memory in addition to each node 's limited non-shared private memory .", 'label': 0}No
+#######################
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a190>
+#######################
+["Sentence 1: St. James Parish is a member of the Benefice of Culworth with Chipping Wardens and Thorpe Mandeville and Sulgrave with Edgcote and Moreton Pinkney .\nSentence 2: St. James ' ; Parish Church is a member of the Culworth Benefit with Sulgrave and Thorpe Mandeville and Chipping Warden with Edgcote and Moreton Pinkney .\nQuestion: Can we rewrite Sentence 1 to Sentence 2?", 'No']
+['Determine if the following two sentences paraphrase each other or not.\nSent 1: Founders of the Charta 77 Foundation František Janouch and Ada Kolman or the German activist Rainer Höss with the Israeli journalist Tal Bashan have participated in the debates .\nSent 2: The founders of the Charter 77 Foundation , František Janouch and Ada Kolman , or the German activist Rainer Höss participated in the debates with the Israeli journalist Tal Bashan .', 'Yes']['Sentence 1: The 2000 Oldham Council election took place on 4 May 2000 to elect members of Oldham Metropolitan Borough Council in Greater Manchester , England .\nSentence 2: The election of the Oldham Metropolitan Borough Council in 2000 took place on 4 May 2000 to elect members of the Oldham Council in the Greater Manchester , England .\nQuestion: Can we rewrite Sentence 1 to Sentence 2? Yes or No?', 'No']
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a0d0>
+["Similarly , each node of a cluster has access to a large distributed shared memory in shared memory , in addition to the limited non-shared private storage of each node . Question: Similarly , in distributed shared memory each node of a cluster has access to a large shared memory in addition to each node 's limited non-shared private memory . Paraphrase or not?", 'No']False
+{'id': 27907, 'sentence1': '7 -- 6 , 7 -- 6 defeated Arnaud Boetsch', 'sentence2': 'Marc Rosset defeated Arnaud Boetsch 7 -- 6 , 7 -- 6', 'label': 1}{'id': 1058, 'sentence1': 'It aims to appeal to those who love wood and varnish , or the look and feeling of well-built and well-drawn boats .', 'sentence2': 'It aims to appeal to those who love wood and varnish , or the look and feel of well-built and well-drawn boats .', 'label': 1}
+['Sentence 1: In the absence of a transverse load , formula _ 5 , we have the free vibration equation .\nSentence 2: In the absence of a cross load , Formula 5 , we have the equation of free vibration .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?', 'Yes']
+{'id': 43755, 'sentence1': 'He is a member of ACM , the IEEE , the AAAS and the EATCS .', 'sentence2': 'He is a fellow of the IEEE , the ACM , the AAAS , and EATCS .', 'label': 1}
+['These include replicas in Ramat Shlomo in Jerusalem and Kfar Chabad in Israel .\nIs that a paraphrase of the following sentence?\nThese include replicas in the Shlomo Ramat in Israel and Kfar Chabad in Jerusalem .?', 'No']<promptsource.promptsource.templates.Template object at 0x7f83aa7e9f10>#######################Sentence 1: The 2000 Oldham Council election took place on 4 May 2000 to elect members of Oldham Metropolitan Borough Council in Greater Manchester , England .
+Sentence 2: The election of the Oldham Metropolitan Borough Council in 2000 took place on 4 May 2000 to elect members of the Oldham Council in the Greater Manchester , England .
+Question: Can we rewrite Sentence 1 to Sentence 2? Yes or No?
+{'id': 44376, 'sentence1': 'Meridian Charter Township is a charter township of Ingham County in the U.S. state of Michigan .', 'sentence2': 'Meridian Charter Township is a charter township of Ingham County in the US state of Michigan .', 'label': 1}Sentence 1: St. James Parish is a member of the Benefice of Culworth with Chipping Wardens and Thorpe Mandeville and Sulgrave with Edgcote and Moreton Pinkney .
+Sentence 2: St. James ' ; Parish Church is a member of the Culworth Benefit with Sulgrave and Thorpe Mandeville and Chipping Warden with Edgcote and Moreton Pinkney .
+Question: Can we rewrite Sentence 1 to Sentence 2?{'id': 23473, 'sentence1': 'If a Teredo client wants to contact a native IPv6 node , it must in practice locate the corresponding Teredo - Relay , e.g .', 'sentence2': 'In practice , when a Teredo client wants to locate a corresponding node , it must contact the native IPv6 Teredo relay , `` i.e .', 'label': 0}['It aims to appeal to those who love wood and varnish , or the look and feeling of well-built and well-drawn boats .\nIs that a paraphrase of the following sentence?\nIt aims to appeal to those who love wood and varnish , or the look and feel of well-built and well-drawn boats .?\nYes or No.', 'Yes']
+Determine if the following two sentences paraphrase each other or not.
+Sent 1: Founders of the Charta 77 Foundation František Janouch and Ada Kolman or the German activist Rainer Höss with the Israeli journalist Tal Bashan have participated in the debates .
+Sent 2: The founders of the Charter 77 Foundation , František Janouch and Ada Kolman , or the German activist Rainer Höss participated in the debates with the Israeli journalist Tal Bashan .
+['Sentence 1: 7 -- 6 , 7 -- 6 defeated Arnaud Boetsch\nSentence 2: Marc Rosset defeated Arnaud Boetsch 7 -- 6 , 7 -- 6\nQuestion: Can we rewrite Sentence 1 to Sentence 2? Yes or No?', 'Yes']
+Similarly , each node of a cluster has access to a large distributed shared memory in shared memory , in addition to the limited non-shared private storage of each node . Question: Similarly , in distributed shared memory each node of a cluster has access to a large shared memory in addition to each node 's limited non-shared private memory . Paraphrase or not?{'id': 30322, 'sentence1': 'Björn Freiberg ( born March 28 , 1970 in Isny , Allgäu ) is a German actor , painter , author , translator and former university teacher .', 'sentence2': 'Björn Freiberg ( born March 28 , 1970 in Isny , Allgäu ) is a former actor , writer , translator , and German university teacher .', 'label': 0}
+['Sentence 1: Meridian Charter Township is a charter township of Ingham County in the U.S. state of Michigan .\nSentence 2: Meridian Charter Township is a charter township of Ingham County in the US state of Michigan .\nQuestion: Can we rewrite Sentence 1 to Sentence 2? Yes or No?', 'Yes']
+No
+['Sentence 1: He is a member of ACM , the IEEE , the AAAS and the EATCS .\nSentence 2: He is a fellow of the IEEE , the ACM , the AAAS , and EATCS .\nQuestion: Does Sentence 1 paraphrase Sentence 2? Yes or No?', 'Yes']
+Yes
+It aims to appeal to those who love wood and varnish , or the look and feeling of well-built and well-drawn boats .
+Is that a paraphrase of the following sentence?
+It aims to appeal to those who love wood and varnish , or the look and feel of well-built and well-drawn boats .?
+Yes or No.['Determine if the following two sentences paraphrase each other or not.\nSent 1: On 7 July 2011 , Russell was traded for Michael Blunden as Columbus Blue Jackets and joined his brother Kris Russell with the Blue Jackets organization .\nSent 2: On 7 July 2011 , Russell was traded for Kris Russell on the Columbus Blue Jackets and joined his brother Michael Blunden with the organization Blue Jackets .', 'No']['Sentence 1: If a Teredo client wants to contact a native IPv6 node , it must in practice locate the corresponding Teredo - Relay , e.g .\nSentence 2: In practice , when a Teredo client wants to locate a corresponding node , it must contact the native IPv6 Teredo relay , `` i.e .\nQuestion: Does Sentence 1 paraphrase Sentence 2?', 'No']
+{'id': 41993, 'sentence1': 'On 6 May 2016 , it was announced that Palafox had signed the National Premier Soccer League B of New York Cosmos .', 'sentence2': 'On May 6 , 2016 it was announced that Palafox signed to National Premier Soccer League B of the New York Cosmos .', 'label': 1}No
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a220>
+These include replicas in Ramat Shlomo in Jerusalem and Kfar Chabad in Israel .
+Is that a paraphrase of the following sentence?
+These include replicas in the Shlomo Ramat in Israel and Kfar Chabad in Jerusalem .?
+Sentence 1: In the absence of a transverse load , formula _ 5 , we have the free vibration equation .
+Sentence 2: In the absence of a cross load , Formula 5 , we have the equation of free vibration .
+Question: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?
+No{'id': 8106, 'sentence1': "Linda Lou was seen as Cody in the Actors Fund of America benefit concert of `` The Best Little Whorehouse in Texas '' on October 6 , 2006 .", 'sentence2': "Linda Lou was viewed as a cody on 6 October 2006 in the benefit concert of the `` Actors Fund of America '' by `` The Best Little Whorehouse in Texas '' .", 'label': 1}Sentence 1: 7 -- 6 , 7 -- 6 defeated Arnaud Boetsch
+Sentence 2: Marc Rosset defeated Arnaud Boetsch 7 -- 6 , 7 -- 6
+Question: Can we rewrite Sentence 1 to Sentence 2? Yes or No?#######################['Determine if the following two sentences paraphrase each other or not.\nSent 1: Björn Freiberg ( born March 28 , 1970 in Isny , Allgäu ) is a German actor , painter , author , translator and former university teacher .\nSent 2: Björn Freiberg ( born March 28 , 1970 in Isny , Allgäu ) is a former actor , writer , translator , and German university teacher .', 'No']
+{'id': 19422, 'sentence1': "Pruitt Taylor Vince was played by actor Bowers in the film `` JFK '' from 1991 .", 'sentence2': "Pruitt Taylor Vince was played by Bowers in the 1991 film `` JFK '' .", 'label': 1}
+['Sentence 1: On 6 May 2016 , it was announced that Palafox had signed the National Premier Soccer League B of New York Cosmos .\nSentence 2: On May 6 , 2016 it was announced that Palafox signed to National Premier Soccer League B of the New York Cosmos .\nQuestion: Can we rewrite Sentence 1 to Sentence 2?', 'Yes']
+Sentence 1: On 6 May 2016 , it was announced that Palafox had signed the National Premier Soccer League B of New York Cosmos .
+Sentence 2: On May 6 , 2016 it was announced that Palafox signed to National Premier Soccer League B of the New York Cosmos .
+Question: Can we rewrite Sentence 1 to Sentence 2?
+{'id': 22315, 'sentence1': 'Santa Ana Nopalucan is a municipality in Mexico in south-eastern Tlaxcala .', 'sentence2': 'Santa Ana Nopalucan is a municipality in Mexico , in the south-eastern Tlaxcala .', 'label': 1}
+{'id': 35649, 'sentence1': 'Elizabeth Smylie and Patrick McEnroe won 7 - 5 , 6 - 3 against Jana Novotná and Jim Pugh in the final .', 'sentence2': 'Elizabeth Smylie and Patrick McEnroe won in the final 7 -- 5 , 6 -- 3 against Jana Novotná and Jim Pugh .', 'label': 1}
+Sentence 1: Lord Hartington , who had refused to serve under Gladstone because of his Irish policy , became leader of liberal Unionists .
+Sentence 2: Lord Hartington , who had refused to serve under Gladstone because of his Liberal policies , became leader of the Irish Unionists .
+Question: Can we rewrite Sentence 1 to Sentence 2?{'id': 26375, 'sentence1': 'This version was published on August 18 , 2016 in North America and on January 5 , 2017 in Europe and Australia .', 'sentence2': 'This version was released in North America on August 18 , 2016 , and Europe and Australia on January 5 , 2017 .', 'label': 1}
+['There is no railway station & airport in Sultanpur . You can reach here by bus from Kadipur .\nIs that a paraphrase of the following sentence?\nThere is no railway station in Kadipur airport that you can reach from Sultanpur by bus .?\nYes or No.', 'No']
+Rewrite
+['Sentence 1: With a strong start to the season and the new Arise Racing team bringing new cars and new competition to the series it brought 3 great races .\nSentence 2: With a strong start into the season and the new Arise Racing Team , which brought new cars and great competition to the series , it took 3 new races .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?', 'No']{'id': 6149, 'sentence1': 'Week 1 : The teams have to move from Santa Barbara , California to Venice Beach , California .', 'sentence2': 'Week 1 : Teams have to move from Santa Barbara , California , to Venice Beach , California .', 'label': 1}
+There is no railway station & airport in Sultanpur . You can reach here by bus from Kadipur .
+Is that a paraphrase of the following sentence?
+There is no railway station in Kadipur airport that you can reach from Sultanpur by bus .?
+Yes or No.
+['Sentence 1: Santa Ana Nopalucan is a municipality in Mexico in south-eastern Tlaxcala .\nSentence 2: Santa Ana Nopalucan is a municipality in Mexico , in the south-eastern Tlaxcala .\nQuestion: Does Sentence 1 paraphrase Sentence 2?', 'Yes']{'id': 36772, 'sentence1': 'Wing commander PS Nara was injured in misadventure , while wing commander SV Munje was killed .', 'sentence2': 'The wing commander PS Nara was killed in misfortune , while wing commander SV Munje was injured .', 'label': 0}
+['After receiving a second Nobel Prize in 1903 with her husband Pierre , Marie Curie won the Nobel Prize for Chemistry in 1911 .\nIs that a paraphrase of the following sentence?\nAfter the Nobel Prize in 1903 with her husband Pierre , Marie Curie won a second Nobel Prize for Chemistry in 1911 .?', 'No']
+Sentence 1: With a strong start to the season and the new Arise Racing team bringing new cars and new competition to the series it brought 3 great races .
+Sentence 2: With a strong start into the season and the new Arise Racing Team , which brought new cars and great competition to the series , it took 3 new races .
+Question: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?
+Sentence 1: Santa Ana Nopalucan is a municipality in Mexico in south-eastern Tlaxcala .
+Sentence 2: Santa Ana Nopalucan is a municipality in Mexico , in the south-eastern Tlaxcala .
+Question: Does Sentence 1 paraphrase Sentence 2?
+Paraphrase the sentence: Cebu Strait connects the western part of the Bohol Sea with the Camotes Sea and separates the island provinces of Cebu and Bohol .
+No<promptsource.promptsource.templates.Template object at 0x7f83aa80a0d0>#######################{'id': 48919, 'sentence1': 'The best-known version of the song was recorded by Dick Rowe and produced in 1953 by The Stargazers in England .', 'sentence2': 'Probably the most famous version of the song was produced by Dick Rowe and was recorded in 1953 by The Stargazers in the UK .', 'label': 0}
+Sentence 1: It was expanded in 1910 from Laura to the Booleroo Centre and finally to Wilmington in 1915 .
+Sentence 2: It was expanded in 1910 from Laura to Wilmington and finally to the Booleroo Centre in 1915 .
+Question: Do Sentence 1 and Sentence 2 express the same meaning?
+['He founded the citadel of Erebuni in 782 BC , the present capital of Armenia , Yerevan .\nIs that a paraphrase of the following sentence?\nHe founded the citadel of Erebuni in 782 BC , which is the present capital of Armenia , Yerevan .?', 'Yes']
+After receiving a second Nobel Prize in 1903 with her husband Pierre , Marie Curie won the Nobel Prize for Chemistry in 1911 .
+Is that a paraphrase of the following sentence?
+After the Nobel Prize in 1903 with her husband Pierre , Marie Curie won a second Nobel Prize for Chemistry in 1911 .?#######################No
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a0d0>['Sentence 1: Week 1 : The teams have to move from Santa Barbara , California to Venice Beach , California .\nSentence 2: Week 1 : Teams have to move from Santa Barbara , California , to Venice Beach , California .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning?', 'Yes']['This version was published on August 18 , 2016 in North America and on January 5 , 2017 in Europe and Australia .\nIs that a paraphrase of the following sentence?\nThis version was released in North America on August 18 , 2016 , and Europe and Australia on January 5 , 2017 .?', 'Yes']
+#######################
+['']
+Yes
+Sentence 1: He is a member of ACM , the IEEE , the AAAS and the EATCS .
+Sentence 2: He is a fellow of the IEEE , the ACM , the AAAS , and EATCS .
+Question: Does Sentence 1 paraphrase Sentence 2? Yes or No?
+He founded the citadel of Erebuni in 782 BC , the present capital of Armenia , Yerevan .
+Is that a paraphrase of the following sentence?
+He founded the citadel of Erebuni in 782 BC , which is the present capital of Armenia , Yerevan .?
+The Cebu Strait connects the western part of the Bohol Sea with the Camotes Sea , and separates the island provinces of Cebu and Bohol .
+{'id': 12768, 'sentence1': 'In 1932 , the company moved cigar production from Cuba to Trenton after a strike at the Cuban factory , in order to avoid high customs duties .', 'sentence2': 'The company moved cigar production from Trenton to Cuba in 1932 after a strike at the Cuban factory , and in order to avoid high tariffs .', 'label': 0}{'id': 28356, 'sentence1': 'Of course , these inscriptions are only dated from the Sixth Dynasty , but it still tells us a little bit about what they valued .', 'sentence2': 'Of course , these inscriptions are only dated from the Sixth Dynasty , but it still tells us a little bit about what they have valued .', 'label': 1}YesSentence 1: Meridian Charter Township is a charter township of Ingham County in the U.S. state of Michigan .
+Sentence 2: Meridian Charter Township is a charter township of Ingham County in the US state of Michigan .
+Question: Can we rewrite Sentence 1 to Sentence 2? Yes or No?No
+Yes
+Yes
+Determine if the following two sentences paraphrase each other or not.
+Sent 1: Björn Freiberg ( born March 28 , 1970 in Isny , Allgäu ) is a German actor , painter , author , translator and former university teacher .
+Sent 2: Björn Freiberg ( born March 28 , 1970 in Isny , Allgäu ) is a former actor , writer , translator , and German university teacher .#######################{'id': 36910, 'sentence1': 'Lucas is represented by Sadie Coles HQ , London , Barbara Gladstone , New York , and Contemporary Fine Arts , Berlin ( CFA ) .', 'sentence2': 'is represented by Sadie Coles HQ , London , Barbara Gladstone , New York , and Contemporary Fine Arts , Berlin ( CFA ) .', 'label': 0}No{'id': 22067, 'sentence1': 'Georges Braque , a resident of Montmartre , attended the Bateau Lavoir at that time and exhibited with Metzinger at the Berthe Weill Gallery .', 'sentence2': 'A resident of Montmartre , Georges Braque frequented the Bateau Lavoir at this time and exhibited with Metzinger at the Berthe Weill gallery .', 'label': 1}YesSentence 1: Week 1 : The teams have to move from Santa Barbara , California to Venice Beach , California .
+Sentence 2: Week 1 : Teams have to move from Santa Barbara , California , to Venice Beach , California .
+Question: Do Sentence 1 and Sentence 2 express the same meaning?#######################No
+Yes#######################
+Yes#######################
+["Paraphrase the sentence: Pruitt Taylor Vince was played by actor Bowers in the film `` JFK '' from 1991 .", "Pruitt Taylor Vince was played by Bowers in the 1991 film `` JFK '' ."]['Sentence 1: The best-known version of the song was recorded by Dick Rowe and produced in 1953 by The Stargazers in England .\nSentence 2: Probably the most famous version of the song was produced by Dick Rowe and was recorded in 1953 by The Stargazers in the UK .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?', 'No']#############################################################################################################################################################################################################################################################
+Determine if the following two sentences paraphrase each other or not.
+Sent 1: On 7 July 2011 , Russell was traded for Michael Blunden as Columbus Blue Jackets and joined his brother Kris Russell with the Blue Jackets organization .
+Sent 2: On 7 July 2011 , Russell was traded for Kris Russell on the Columbus Blue Jackets and joined his brother Michael Blunden with the organization Blue Jackets .
+Sentence 1: If a Teredo client wants to contact a native IPv6 node , it must in practice locate the corresponding Teredo - Relay , e.g .
+Sentence 2: In practice , when a Teredo client wants to locate a corresponding node , it must contact the native IPv6 Teredo relay , `` i.e .
+Question: Does Sentence 1 paraphrase Sentence 2?
+Yes
+#######################
+No
+#######################['Sentence 1: In 1932 , the company moved cigar production from Cuba to Trenton after a strike at the Cuban factory , in order to avoid high customs duties .\nSentence 2: The company moved cigar production from Trenton to Cuba in 1932 after a strike at the Cuban factory , and in order to avoid high tariffs .\nQuestion: Can we rewrite Sentence 1 to Sentence 2? Yes or No?', 'No']##############################################
+#######################
+['Sentence 1: Of course , these inscriptions are only dated from the Sixth Dynasty , but it still tells us a little bit about what they valued .\nSentence 2: Of course , these inscriptions are only dated from the Sixth Dynasty , but it still tells us a little bit about what they have valued .\nQuestion: Does Sentence 1 paraphrase Sentence 2?', 'Yes']
+["Paraphrase the sentence: Linda Lou was seen as Cody in the Actors Fund of America benefit concert of `` The Best Little Whorehouse in Texas '' on October 6 , 2006 .", "Linda Lou was viewed as a cody on 6 October 2006 in the benefit concert of the `` Actors Fund of America '' by `` The Best Little Whorehouse in Texas '' ."]
+#######################Sentence 1: In 1932 , the company moved cigar production from Cuba to Trenton after a strike at the Cuban factory , in order to avoid high customs duties .
+Sentence 2: The company moved cigar production from Trenton to Cuba in 1932 after a strike at the Cuban factory , and in order to avoid high tariffs .
+Question: Can we rewrite Sentence 1 to Sentence 2? Yes or No?
+#######################This version was published on August 18 , 2016 in North America and on January 5 , 2017 in Europe and Australia .
+Is that a paraphrase of the following sentence?
+This version was released in North America on August 18 , 2016 , and Europe and Australia on January 5 , 2017 .?No
+['Sentence 1: Georges Braque , a resident of Montmartre , attended the Bateau Lavoir at that time and exhibited with Metzinger at the Berthe Weill Gallery .\nSentence 2: A resident of Montmartre , Georges Braque frequented the Bateau Lavoir at this time and exhibited with Metzinger at the Berthe Weill gallery .\nQuestion: Can we rewrite Sentence 1 to Sentence 2? Yes or No?', 'Yes']
+No##############################################Paraphrase the sentence: Linda Lou was seen as Cody in the Actors Fund of America benefit concert of `` The Best Little Whorehouse in Texas '' on October 6 , 2006 .
+['Lucas is represented by Sadie Coles HQ , London , Barbara Gladstone , New York , and Contemporary Fine Arts , Berlin ( CFA ) . Question: is represented by Sadie Coles HQ , London , Barbara Gladstone , New York , and Contemporary Fine Arts , Berlin ( CFA ) . Paraphrase or not?', 'No']
+No
+No
+#######################Sentence 1: Of course , these inscriptions are only dated from the Sixth Dynasty , but it still tells us a little bit about what they valued .
+Sentence 2: Of course , these inscriptions are only dated from the Sixth Dynasty , but it still tells us a little bit about what they have valued .
+Question: Does Sentence 1 paraphrase Sentence 2?Yes#######################
+['Sentence 1: Elizabeth Smylie and Patrick McEnroe won 7 - 5 , 6 - 3 against Jana Novotná and Jim Pugh in the final .\nSentence 2: Elizabeth Smylie and Patrick McEnroe won in the final 7 -- 5 , 6 -- 3 against Jana Novotná and Jim Pugh .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?', 'Yes']
+#######################Paraphrase the sentence: Pruitt Taylor Vince was played by actor Bowers in the film `` JFK '' from 1991 .
+#######################
+#######################
+##############################################
+Lucas is represented by Sadie Coles HQ , London , Barbara Gladstone , New York , and Contemporary Fine Arts , Berlin ( CFA ) . Question: is represented by Sadie Coles HQ , London , Barbara Gladstone , New York , and Contemporary Fine Arts , Berlin ( CFA ) . Paraphrase or not?
+Linda Lou was viewed as a cody on 6 October 2006 in the benefit concert of the `` Actors Fund of America '' by `` The Best Little Whorehouse in Texas '' .Sentence 1: Georges Braque , a resident of Montmartre , attended the Bateau Lavoir at that time and exhibited with Metzinger at the Berthe Weill Gallery .
+Sentence 2: A resident of Montmartre , Georges Braque frequented the Bateau Lavoir at this time and exhibited with Metzinger at the Berthe Weill gallery .
+Question: Can we rewrite Sentence 1 to Sentence 2? Yes or No?Yes
+Yes
+Sentence 1: The best-known version of the song was recorded by Dick Rowe and produced in 1953 by The Stargazers in England .
+Sentence 2: Probably the most famous version of the song was produced by Dick Rowe and was recorded in 1953 by The Stargazers in the UK .
+Question: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?
+#######################
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+Pruitt Taylor Vince was played by Bowers in the 1991 film `` JFK '' .#######################
+Sentence 1: Elizabeth Smylie and Patrick McEnroe won 7 - 5 , 6 - 3 against Jana Novotná and Jim Pugh in the final .
+Sentence 2: Elizabeth Smylie and Patrick McEnroe won in the final 7 -- 5 , 6 -- 3 against Jana Novotná and Jim Pugh .
+Question: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>No<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+Yes
+#######################No
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+#######################context-question-no-labelPAWS-ANLI GPT3Yes
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>#######################
+Concatenation-no-label
+context-question
+#######################
+PAWS-ANLI GPT3
+<promptsource.promptsource.templates.Template object at 0x7f83aa7e9eb0>
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a130>
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a070>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+{'id': 22975, 'sentence1': 'The 12th and last months contain 30 days and the even numbered months 29 days , the odd month in a leap year contains 30 days .', 'sentence2': 'The 12th and final numbered months contain 30 days and the even numbered months 29 days , the odd month in a leap year contains 30 days .', 'label': 1}<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0><promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+{'id': 17144, 'sentence1': 'It is separated by the Limbang - district of Sarawak in two parts .', 'sentence2': 'It is separated by the Sarawak district of Limbang in two parts .', 'label': 0}context-question-no-label
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a070><promptsource.promptsource.templates.Template object at 0x7f83aa80a190>{'id': 45349, 'sentence1': 'Sara Varga ( born 14 April 1982 ) , professionally known as Sara Varga Madeleine Jonsson , is a Swedish vispop singer , songwriter , author and DJ .', 'sentence2': 'Sara Varga Madeleine Jonsson ( born April 14 , 1982 ) , known professionally as Sara Varga , is a Swedish Vispop singer , songwriter , author and DJ .', 'label': 0}
+Concatenation
+Meaning-no-label
+Concatenation-no-labelparaphrase-taskConcatenation-no-label
+['Sentence 1: It is separated by the Limbang - district of Sarawak in two parts .\nSentence 2: It is separated by the Sarawak district of Limbang in two parts .\nQuestion: Does Sentence 1 paraphrase Sentence 2?', 'No']
+<promptsource.promptsource.templates.Template object at 0x7f83aa7e9eb0>
+['The 12th and last months contain 30 days and the even numbered months 29 days , the odd month in a leap year contains 30 days .\nIs that a paraphrase of the following sentence?\nThe 12th and final numbered months contain 30 days and the even numbered months 29 days , the odd month in a leap year contains 30 days .?', 'Yes']
+{'id': 4860, 'sentence1': 'The Tuticorin Port is located about 8 kilometers from the station and the nearest airport is the Thoothukudi Airport situated 18 kilometers away .', 'sentence2': 'The Thoothukudi port is located about 8 kilometers from the railway station and the nearest airport is the Tuticorin airport , 18 kilometers away .', 'label': 0}
+{'id': 46136, 'sentence1': 'The river Nadeş is a tributary of the River Ciortosu in Romania .', 'sentence2': 'The Ciortosu River is a tributary of the Nadeş River in Romania .', 'label': 0}['Sara Varga ( born 14 April 1982 ) , professionally known as Sara Varga Madeleine Jonsson , is a Swedish vispop singer , songwriter , author and DJ . Question: Sara Varga Madeleine Jonsson ( born April 14 , 1982 ) , known professionally as Sara Varga , is a Swedish Vispop singer , songwriter , author and DJ . True or False?', 'False']<promptsource.promptsource.templates.Template object at 0x7f83aa80a1c0>
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a130><promptsource.promptsource.templates.Template object at 0x7f83aa80a160><promptsource.promptsource.templates.Template object at 0x7f83aa80a130>
+{'id': 41480, 'sentence1': 'The underlying typology ( according to the nature of the second amount ) is determined by the needs of users of the variance information and may include e.g . :', 'sentence2': 'The underlying typology ( according to the type of second amount ) is determined by the needs of the users of the variance information and may z .', 'label': 1}<promptsource.promptsource.templates.Template object at 0x7f83aa80a1f0>
+['The Tuticorin Port is located about 8 kilometers from the station and the nearest airport is the Thoothukudi Airport situated 18 kilometers away .\nIs that a paraphrase of the following sentence?\nThe Thoothukudi port is located about 8 kilometers from the railway station and the nearest airport is the Tuticorin airport , 18 kilometers away .?\nYes or No.', 'No']
+Sentence 1: It is separated by the Limbang - district of Sarawak in two parts .
+Sentence 2: It is separated by the Sarawak district of Limbang in two parts .
+Question: Does Sentence 1 paraphrase Sentence 2?['The river Nadeş is a tributary of the River Ciortosu in Romania . Question: The Ciortosu River is a tributary of the Nadeş River in Romania . True or False?', 'False']
+['The underlying typology ( according to the nature of the second amount ) is determined by the needs of users of the variance information and may include e.g . :\nIs that a paraphrase of the following sentence?\nThe underlying typology ( according to the type of second amount ) is determined by the needs of the users of the variance information and may z .?', 'Yes']
+The underlying typology ( according to the nature of the second amount ) is determined by the needs of users of the variance information and may include e.g . :
+Is that a paraphrase of the following sentence?
+The underlying typology ( according to the type of second amount ) is determined by the needs of the users of the variance information and may z .?
+Sara Varga ( born 14 April 1982 ) , professionally known as Sara Varga Madeleine Jonsson , is a Swedish vispop singer , songwriter , author and DJ . Question: Sara Varga Madeleine Jonsson ( born April 14 , 1982 ) , known professionally as Sara Varga , is a Swedish Vispop singer , songwriter , author and DJ . True or False?
+Yes
+{'id': 27708, 'sentence1': 'Silver became the engine of the Spanish colonial economy , both in New Spain and in Peru .', 'sentence2': 'Silver became the motor of the Spanish colonial economy both in New Spain and in Peru .', 'label': 1}
+{'id': 4379, 'sentence1': "Cunningham Elementary School was selected in 2003 by Governor Jim McGreevey as one of 25 schools awarded nationwide for the first annual Governor 's School of Excellence .", 'sentence2': 'Cunningham Elementary School was recognized in 2003 by Governor Jim McGreevey as one of 25 schools selected nationwide for the first annual governor of the School of Excellence Award .', 'label': 0}
+#######################
+False
+{'id': 26101, 'sentence1': 'It has some weak functionality in moving the knee and the ankle , but is generally considered redundant and is often used as a source of tendons for transplants .', 'sentence2': 'It has some redundant functionality in moving the knee and ankle , but is generally considered weak and is often used as a source of tendon for grafts .', 'label': 0}
+{'id': 23428, 'sentence1': 'The mountain was named in 1863 by Charles Lyell after the geologist Charles Gould , a follower of Charles Darwin .', 'sentence2': 'The mountain was named by Charles Lyell in 1863 after geologist Charles Gould , a supporter of Charles Darwin .', 'label': 1}['Sentence 1: Silver became the engine of the Spanish colonial economy , both in New Spain and in Peru .\nSentence 2: Silver became the motor of the Spanish colonial economy both in New Spain and in Peru .\nQuestion: Does Sentence 1 paraphrase Sentence 2? Yes or No?', 'Yes']
+['']#######################
+The 12th and last months contain 30 days and the even numbered months 29 days , the odd month in a leap year contains 30 days .
+Is that a paraphrase of the following sentence?
+The 12th and final numbered months contain 30 days and the even numbered months 29 days , the odd month in a leap year contains 30 days .?
+The Tuticorin Port is located about 8 kilometers from the station and the nearest airport is the Thoothukudi Airport situated 18 kilometers away .
+Is that a paraphrase of the following sentence?
+The Thoothukudi port is located about 8 kilometers from the railway station and the nearest airport is the Tuticorin airport , 18 kilometers away .?
+Yes or No.
+['Sentence 1: It has some weak functionality in moving the knee and the ankle , but is generally considered redundant and is often used as a source of tendons for transplants .\nSentence 2: It has some redundant functionality in moving the knee and ankle , but is generally considered weak and is often used as a source of tendon for grafts .\nQuestion: Does Sentence 1 paraphrase Sentence 2?', 'No']
+Sentence 1: Silver became the engine of the Spanish colonial economy , both in New Spain and in Peru .
+Sentence 2: Silver became the motor of the Spanish colonial economy both in New Spain and in Peru .
+Question: Does Sentence 1 paraphrase Sentence 2? Yes or No?['Sentence 1: The mountain was named in 1863 by Charles Lyell after the geologist Charles Gould , a follower of Charles Darwin .\nSentence 2: The mountain was named by Charles Lyell in 1863 after geologist Charles Gould , a supporter of Charles Darwin .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning?', 'Yes']
+{'id': 5193, 'sentence1': 'The two main water systems are in the north of the Esmeraldas and in the south the Guayas .', 'sentence2': 'The two main water systems are the Guayas in the north and the Esmeraldas in the south .', 'label': 0}
+Yes
+No
+No
+#######################
+['Sentence 1: The two main water systems are in the north of the Esmeraldas and in the south the Guayas .\nSentence 2: The two main water systems are the Guayas in the north and the Esmeraldas in the south .\nQuestion: Does Sentence 1 paraphrase Sentence 2?', 'No']#######################The river Nadeş is a tributary of the River Ciortosu in Romania . Question: The Ciortosu River is a tributary of the Nadeş River in Romania . True or False?Sentence 1: It has some weak functionality in moving the knee and the ankle , but is generally considered redundant and is often used as a source of tendons for transplants .
+Sentence 2: It has some redundant functionality in moving the knee and ankle , but is generally considered weak and is often used as a source of tendon for grafts .
+Question: Does Sentence 1 paraphrase Sentence 2?Sentence 1: The mountain was named in 1863 by Charles Lyell after the geologist Charles Gould , a follower of Charles Darwin .
+Sentence 2: The mountain was named by Charles Lyell in 1863 after geologist Charles Gould , a supporter of Charles Darwin .
+Question: Do Sentence 1 and Sentence 2 express the same meaning?Yes#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+##############################################
+Sentence 1: The two main water systems are in the north of the Esmeraldas and in the south the Guayas .
+Sentence 2: The two main water systems are the Guayas in the north and the Esmeraldas in the south .
+Question: Does Sentence 1 paraphrase Sentence 2?
+False
+ConcatenationNo
+#######################
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a1c0>No
+#######################
+#######################{'id': 13293, 'sentence1': 'Following the departure of Richie Towell in December 2015 , Finn was played in a more advanced position .', 'sentence2': 'Finn was played in a more advanced position after the departure of Richie Towell in December 2015 .', 'label': 1}
+['Sentence 1: Following the departure of Richie Towell in December 2015 , Finn was played in a more advanced position .\nSentence 2: Finn was played in a more advanced position after the departure of Richie Towell in December 2015 .\nQuestion: Does Sentence 1 paraphrase Sentence 2? Yes or No?', 'Yes']Yes
+#######################
+Sentence 1: Following the departure of Richie Towell in December 2015 , Finn was played in a more advanced position .
+Sentence 2: Finn was played in a more advanced position after the departure of Richie Towell in December 2015 .
+Question: Does Sentence 1 paraphrase Sentence 2? Yes or No?
+Yes
+#######################
+###################################################################################################################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>#######################
+##############################################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>#######################
+#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+#######################
+#######################Concatenation
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+Concatenation<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>##############################################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a1c0>Concatenation
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+#######################
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+Meaning<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>#######################Meaning-no-label#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>#######################
+paraphrase-task<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>#######################
+context-question-no-label
+#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.Template object at 0x7f83aa806f70><promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0><promptsource.promptsource.templates.Template object at 0x7f83aa80a1c0>task_description-no-label
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+paraphrase-task
+{'id': 29598, 'sentence1': 'Kirk Deighton is served over the Route 780 , Harrogate to Wetherby , and Route X70 , Kirk Deighton to Knaresborough via Wetherby and Spofforth .', 'sentence2': 'Kirk Deighton is served by route 780 , Harrogate to Wetherby , and route X70 , Kirk Deighton to Knaresborough via Wetherby and Spofforth .', 'label': 1}
+#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+#######################
+{'id': 20660, 'sentence1': 'Ferguson remained in Liberia until his death , Monrovia in 1916 , in 1916', 'sentence2': 'Ferguson stayed in Monrovia until his death in 1916 in Liberia .', 'label': 0}
+task_description-no-label['Sentence 1: Kirk Deighton is served over the Route 780 , Harrogate to Wetherby , and Route X70 , Kirk Deighton to Knaresborough via Wetherby and Spofforth .\nSentence 2: Kirk Deighton is served by route 780 , Harrogate to Wetherby , and route X70 , Kirk Deighton to Knaresborough via Wetherby and Spofforth .\nQuestion: Does Sentence 1 paraphrase Sentence 2? Yes or No?', 'Yes']
+Concatenation
+Meaning
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a160>context-question
+Sentence 1: Kirk Deighton is served over the Route 780 , Harrogate to Wetherby , and Route X70 , Kirk Deighton to Knaresborough via Wetherby and Spofforth .
+Sentence 2: Kirk Deighton is served by route 780 , Harrogate to Wetherby , and route X70 , Kirk Deighton to Knaresborough via Wetherby and Spofforth .
+Question: Does Sentence 1 paraphrase Sentence 2? Yes or No?
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+['Sentence 1: Ferguson remained in Liberia until his death , Monrovia in 1916 , in 1916\nSentence 2: Ferguson stayed in Monrovia until his death in 1916 in Liberia .\nQuestion: Does Sentence 1 paraphrase Sentence 2? Yes or No?', 'No']context-question-no-label
+<promptsource.promptsource.templates.Template object at 0x7f83aa806f70>
+{'id': 48014, 'sentence1': 'He lives in New York City and teaches at Queens College in Flushing , New York , Hebrew language , literature and culture , and Middle East studies .', 'sentence2': 'Chetrit lives in New York City . He teaches Hebrew language , literature and culture , and Middle Eastern studies at Queens College in Flushing , New York .', 'label': 1}Yes<promptsource.promptsource.templates.Template object at 0x7f83aa80a1c0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+##############################################
+Sentence 1: Ferguson remained in Liberia until his death , Monrovia in 1916 , in 1916
+Sentence 2: Ferguson stayed in Monrovia until his death in 1916 in Liberia .
+Question: Does Sentence 1 paraphrase Sentence 2? Yes or No?
+{'id': 39632, 'sentence1': 'Karen and Kristoffer together have eight children .', 'sentence2': 'Together with Karen , Kristoffer had eight children .', 'label': 1}
+['Sentence 1: He lives in New York City and teaches at Queens College in Flushing , New York , Hebrew language , literature and culture , and Middle East studies .\nSentence 2: Chetrit lives in New York City . He teaches Hebrew language , literature and culture , and Middle Eastern studies at Queens College in Flushing , New York .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning?', 'Yes']
+{'id': 3239, 'sentence1': 'Abbie Carmichael ( played by Jamie Ross ) replaced Carey Lowell ( Angie Harmon ) of the season 8 in the role of Assistant District Attorney .', 'sentence2': "Abbie Carmichael ( played by Angie Harmon ) replaced season 8 's Jamie Ross ( Carey Lowell ) in the role of Assistant District Attorney .", 'label': 0}
+Meaning
+['Sentence 1: Karen and Kristoffer together have eight children .\nSentence 2: Together with Karen , Kristoffer had eight children .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?', 'Yes']
+<promptsource.promptsource.templates.Template object at 0x7f83aa7e9eb0>Sentence 1: He lives in New York City and teaches at Queens College in Flushing , New York , Hebrew language , literature and culture , and Middle East studies .
+Sentence 2: Chetrit lives in New York City . He teaches Hebrew language , literature and culture , and Middle Eastern studies at Queens College in Flushing , New York .
+Question: Do Sentence 1 and Sentence 2 express the same meaning?<promptsource.promptsource.templates.Template object at 0x7f83aa80a190>
+<promptsource.promptsource.templates.Template object at 0x7f83aa806f70>Concatenation-no-label
+<promptsource.promptsource.templates.Template object at 0x7f83aa806fa0>
+["Sentence 1: Abbie Carmichael ( played by Jamie Ross ) replaced Carey Lowell ( Angie Harmon ) of the season 8 in the role of Assistant District Attorney .\nSentence 2: Abbie Carmichael ( played by Angie Harmon ) replaced season 8 's Jamie Ross ( Carey Lowell ) in the role of Assistant District Attorney .\nQuestion: Does Sentence 1 paraphrase Sentence 2? Yes or No?", 'No']No
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a1f0>
+Meaning-no-label<promptsource.promptsource.templates.Template object at 0x7f83aa80a1f0>Yes
+Sentence 1: Karen and Kristoffer together have eight children .
+Sentence 2: Together with Karen , Kristoffer had eight children .
+Question: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?
+{'id': 16838, 'sentence1': 'Refers to the action of the body in turning figures ; turning the opposite hip and shoulder towards the direction of the moving foot .', 'sentence2': 'Refers to the action of the body when turning figures : turning the opposite hip and shoulder in the direction of the moving foot .', 'label': 1}
+{'id': 29638, 'sentence1': 'If the used assay varies , the selective pressure changes on the cells and can therefore change what properties are selected in the transformed cells .', 'sentence2': 'Varying the assay selected , changes the selective pressure on the cells and therefore can change what properties are used in the transformed cells .', 'label': 0}PAWS-ANLI GPT3task_description-no-label
+#######################
+Rewrite-no-label<promptsource.promptsource.templates.Template object at 0x7f83aa80a1c0>
+<promptsource.promptsource.templates.Template object at 0x7f83aa7e9eb0>
+Sentence 1: Abbie Carmichael ( played by Jamie Ross ) replaced Carey Lowell ( Angie Harmon ) of the season 8 in the role of Assistant District Attorney .
+Sentence 2: Abbie Carmichael ( played by Angie Harmon ) replaced season 8 's Jamie Ross ( Carey Lowell ) in the role of Assistant District Attorney .
+Question: Does Sentence 1 paraphrase Sentence 2? Yes or No?
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a160>
+Meaning
+#######################<promptsource.promptsource.templates.Template object at 0x7f83aa7e9f10>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+['Sentence 1: Refers to the action of the body in turning figures ; turning the opposite hip and shoulder towards the direction of the moving foot .\nSentence 2: Refers to the action of the body when turning figures : turning the opposite hip and shoulder in the direction of the moving foot .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?', 'Yes']
+Yestask_description-no-labelNo<promptsource.promptsource.templates.Template object at 0x7f83aa806f70>
+<promptsource.promptsource.templates.Template object at 0x7f83aa806fa0>
+['If the used assay varies , the selective pressure changes on the cells and can therefore change what properties are selected in the transformed cells .\nIs that a paraphrase of the following sentence?\nVarying the assay selected , changes the selective pressure on the cells and therefore can change what properties are used in the transformed cells .?', 'No']{'id': 18215, 'sentence1': 'They stood under the mentorship of Coach Glenn Capacio and Coach Norman Black .', 'sentence2': 'They were under the mentorship of Coach Glenn Capacio and Coach Norman Black .', 'label': 1}
+{'id': 11549, 'sentence1': 'Saghar has written over 2,000 songs for Pakistani films , radio and television for many singers and music directors .', 'sentence2': 'Saghar has written over 2,000 songs for Pakistani singers and music directors for many films , radio and TV .', 'label': 0}context-question-no-label
+{'id': 42734, 'sentence1': 'Hosni Mubarak came to power after the murder of Sadat in a referendum in which he was the only candidate .', 'sentence2': 'Hosni Mubarak came to power after the assassination of Sadat in a referendum in which he was the only candidate .', 'label': 1}
+context-question-no-label
+Meaning
+<promptsource.promptsource.templates.Template object at 0x7f83aa806fa0>
+#######################
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a070>
+If the used assay varies , the selective pressure changes on the cells and can therefore change what properties are selected in the transformed cells .
+Is that a paraphrase of the following sentence?
+Varying the assay selected , changes the selective pressure on the cells and therefore can change what properties are used in the transformed cells .?
+{'id': 17916, 'sentence1': 'The last possession of the Genoese in the Mediterranean , the island fort of Tunis , was lost to Tabarka in 1742 .', 'sentence2': 'In 1742 , the last possession of the Genoese in the Mediterranean , the island fortress of Tunis , was lost to Tabarka .', 'label': 1}
+{'id': 7330, 'sentence1': 'Nick Folland has appeared most for the county , playing in eighteen games , followed closely by Andrew Pugh , who made sixteen appearances .', 'sentence2': 'Nick Folland has appeared the most times for the county , playing in eighteen matches , closely followed by Andrew Pugh , who made sixteen appearances .', 'label': 1}{'id': 30569, 'sentence1': 'This time Custine did not defend Robespierre .', 'sentence2': 'This time , Custine Robespierre did not defend .', 'label': 0}
+{'id': 24759, 'sentence1': 'The development will include 4,000 houses , apartments , hotels and commercial & mixed use plots .', 'sentence2': 'The development will include 4,000 houses , apartments , hotels and mixed and commercial plots .', 'label': 1}Sentence 1: Refers to the action of the body in turning figures ; turning the opposite hip and shoulder towards the direction of the moving foot .
+Sentence 2: Refers to the action of the body when turning figures : turning the opposite hip and shoulder in the direction of the moving foot .
+Question: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?
+Concatenation-no-label<promptsource.promptsource.templates.DatasetTemplates object at 0x7f828beabfa0>
+#######################{'id': 37373, 'sentence1': 'A counterclockwise angle in one figure would correspond to a clockwise angle in the other .', 'sentence2': 'A clockwise angle in a character would correspond to a counterclockwise angle in the other figure .', 'label': 0}
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a130>
+{'id': 27465, 'sentence1': 'Members of the G.723.1 patent pool are Nokia , Université de Sherbrooke , Nippon Telegraph and Telephone Corporation , AudioCodes and France Telecom .', 'sentence2': 'Members of the G.723.1 patent pool are AudioCodes , France Télécom , Université de Sherbrooke , Nippon Telegraph and Telephone Corporation and Nokia .', 'label': 1}
+{'id': 43410, 'sentence1': 'A smaller Sedgwick Avenue continues into Yonkers , north of Van Cortlandt Park and east of the Saw Mill River Parkway .', 'sentence2': 'A smaller Van Cortlandt Park continues to Yonkers , to the north of Sedgwick Avenue and east of Saw Mill River Parkway .', 'label': 0}
+{'id': 18410, 'sentence1': "He supported John Barrymore in `` Maryland '' ( 1940 ) and Walter Brennan in `` The Great Profile '' ( 1940 ) .", 'sentence2': "He is supporting Walter Brennan in `` Maryland '' ( 1940 ) and John Barrymore in `` The Great Profile '' ( 1940 ) .", 'label': 0}
+['Paraphrase the sentence: Members of the G.723.1 patent pool are Nokia , Université de Sherbrooke , Nippon Telegraph and Telephone Corporation , AudioCodes and France Telecom .', 'Members of the G.723.1 patent pool are AudioCodes , France Télécom , Université de Sherbrooke , Nippon Telegraph and Telephone Corporation and Nokia .']['Paraphrase the sentence: The development will include 4,000 houses , apartments , hotels and commercial & mixed use plots .', 'The development will include 4,000 houses , apartments , hotels and mixed and commercial plots .']
+['Determine if the following two sentences paraphrase each other or not.\nSent 1: A counterclockwise angle in one figure would correspond to a clockwise angle in the other .\nSent 2: A clockwise angle in a character would correspond to a counterclockwise angle in the other figure .', 'No']
+{'id': 38884, 'sentence1': 'The two secondary schools , Heatherhill Secondary College and Coomoora Secondary College , have been merged with Springvale Secondary College and Chandler Secondary College in Keysborough Secondary College .', 'sentence2': 'The two secondary schools , Heatherhill Secondary College , Springvale Secondary College and Chandler Secondary College , have been merged to Keysborough Secondary College with Coomoora Secondary College .', 'label': 0}
+{'id': 17580, 'sentence1': "Tuckerton is located in the 9th Congressional District and is part of the second state of New Jersey 's Legislative District .", 'sentence2': "Tuckerton is located in the 2nd Congressional District and is part of the ninth state 's legislative district of New Jersey .", 'label': 0}
+['Sentence 1: Nick Folland has appeared most for the county , playing in eighteen games , followed closely by Andrew Pugh , who made sixteen appearances .\nSentence 2: Nick Folland has appeared the most times for the county , playing in eighteen matches , closely followed by Andrew Pugh , who made sixteen appearances .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?', 'Yes']
+['Sentence 1: They stood under the mentorship of Coach Glenn Capacio and Coach Norman Black .\nSentence 2: They were under the mentorship of Coach Glenn Capacio and Coach Norman Black .\nQuestion: Does Sentence 1 paraphrase Sentence 2? Yes or No?', 'Yes']['Determine if the following two sentences paraphrase each other or not.\nSent 1: A smaller Sedgwick Avenue continues into Yonkers , north of Van Cortlandt Park and east of the Saw Mill River Parkway .\nSent 2: A smaller Van Cortlandt Park continues to Yonkers , to the north of Sedgwick Avenue and east of Saw Mill River Parkway .', 'No']{'id': 13235, 'sentence1': 'Shops in Matiari , Oderolal Station , Tajpur , Allah Dino Saand and Shahpur Chakar have been closed out of respect .', 'sentence2': 'Shops in Matiari , Oderolal station , Tajpur , Allah Dino Saand and Shahpur Chakar remained closed out of respect .', 'label': 1}NoYes
+<promptsource.promptsource.templates.Template object at 0x7f83aa806f70>
+["Tuckerton is located in the 9th Congressional District and is part of the second state of New Jersey 's Legislative District .\nIs that a paraphrase of the following sentence?\nTuckerton is located in the 2nd Congressional District and is part of the ninth state 's legislative district of New Jersey .?", 'No']
+['Sentence 1: The two secondary schools , Heatherhill Secondary College and Coomoora Secondary College , have been merged with Springvale Secondary College and Chandler Secondary College in Keysborough Secondary College .\nSentence 2: The two secondary schools , Heatherhill Secondary College , Springvale Secondary College and Chandler Secondary College , have been merged to Keysborough Secondary College with Coomoora Secondary College .\nQuestion: Does Sentence 1 paraphrase Sentence 2?', 'No']
+['Sentence 1: Saghar has written over 2,000 songs for Pakistani films , radio and television for many singers and music directors .\nSentence 2: Saghar has written over 2,000 songs for Pakistani singers and music directors for many films , radio and TV .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning?', 'No']Meaning
+#######################
+<promptsource.promptsource.templates.Template object at 0x7f83aa7e9eb0>
+<promptsource.promptsource.templates.Template object at 0x7f83aa806fa0>['Shops in Matiari , Oderolal Station , Tajpur , Allah Dino Saand and Shahpur Chakar have been closed out of respect . Question: Shops in Matiari , Oderolal station , Tajpur , Allah Dino Saand and Shahpur Chakar remained closed out of respect . True or False?', 'True']Tuckerton is located in the 9th Congressional District and is part of the second state of New Jersey 's Legislative District .
+Is that a paraphrase of the following sentence?
+Tuckerton is located in the 2nd Congressional District and is part of the ninth state 's legislative district of New Jersey .?
+Sentence 1: The two secondary schools , Heatherhill Secondary College and Coomoora Secondary College , have been merged with Springvale Secondary College and Chandler Secondary College in Keysborough Secondary College .
+Sentence 2: The two secondary schools , Heatherhill Secondary College , Springvale Secondary College and Chandler Secondary College , have been merged to Keysborough Secondary College with Coomoora Secondary College .
+Question: Does Sentence 1 paraphrase Sentence 2?['Determine if the following two sentences paraphrase each other or not.\nSent 1: The last possession of the Genoese in the Mediterranean , the island fort of Tunis , was lost to Tabarka in 1742 .\nSent 2: In 1742 , the last possession of the Genoese in the Mediterranean , the island fortress of Tunis , was lost to Tabarka .', 'Yes']
+['Sentence 1: Hosni Mubarak came to power after the murder of Sadat in a referendum in which he was the only candidate .\nSentence 2: Hosni Mubarak came to power after the assassination of Sadat in a referendum in which he was the only candidate .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?', 'Yes']
+Paraphrase the sentence: Members of the G.723.1 patent pool are Nokia , Université de Sherbrooke , Nippon Telegraph and Telephone Corporation , AudioCodes and France Telecom .
+context-question-no-label
+<promptsource.promptsource.templates.Template object at 0x7f83aa806f70>
+Determine if the following two sentences paraphrase each other or not.
+Sent 1: A counterclockwise angle in one figure would correspond to a clockwise angle in the other .
+Sent 2: A clockwise angle in a character would correspond to a counterclockwise angle in the other figure .
+Sentence 1: Nick Folland has appeared most for the county , playing in eighteen games , followed closely by Andrew Pugh , who made sixteen appearances .
+Sentence 2: Nick Folland has appeared the most times for the county , playing in eighteen matches , closely followed by Andrew Pugh , who made sixteen appearances .
+Question: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?Members of the G.723.1 patent pool are AudioCodes , France Télécom , Université de Sherbrooke , Nippon Telegraph and Telephone Corporation and Nokia .
+{'id': 31108, 'sentence1': "Max Nettlau wrote to historian Goldman that the Haymarket affair had awakened the social consciousness of `` hundreds , perhaps thousands , of people '' .", 'sentence2': "Goldman wrote to historian Max Nettlau that the Haymarket affair had awakened the social awareness of `` hundreds , perhaps thousands of people '' .", 'label': 0}
+<promptsource.promptsource.templates.Template object at 0x7f83aa7e9eb0>
+<promptsource.promptsource.templates.Template object at 0x7f83aa80a130>
+Sentence 1: Saghar has written over 2,000 songs for Pakistani films , radio and television for many singers and music directors .
+Sentence 2: Saghar has written over 2,000 songs for Pakistani singers and music directors for many films , radio and TV .
+Question: Do Sentence 1 and Sentence 2 express the same meaning?
+["Sentence 1: He supported John Barrymore in `` Maryland '' ( 1940 ) and Walter Brennan in `` The Great Profile '' ( 1940 ) .\nSentence 2: He is supporting Walter Brennan in `` Maryland '' ( 1940 ) and John Barrymore in `` The Great Profile '' ( 1940 ) .\nQuestion: Can we rewrite Sentence 1 to Sentence 2?", 'No']
+Sentence 1: They stood under the mentorship of Coach Glenn Capacio and Coach Norman Black .
+Sentence 2: They were under the mentorship of Coach Glenn Capacio and Coach Norman Black .
+Question: Does Sentence 1 paraphrase Sentence 2? Yes or No?
+NoNo
+No
+Determine if the following two sentences paraphrase each other or not.
+Sent 1: The last possession of the Genoese in the Mediterranean , the island fort of Tunis , was lost to Tabarka in 1742 .
+Sent 2: In 1742 , the last possession of the Genoese in the Mediterranean , the island fortress of Tunis , was lost to Tabarka .Determine if the following two sentences paraphrase each other or not.
+Sent 1: A smaller Sedgwick Avenue continues into Yonkers , north of Van Cortlandt Park and east of the Saw Mill River Parkway .
+Sent 2: A smaller Van Cortlandt Park continues to Yonkers , to the north of Sedgwick Avenue and east of Saw Mill River Parkway .
+Shops in Matiari , Oderolal Station , Tajpur , Allah Dino Saand and Shahpur Chakar have been closed out of respect . Question: Shops in Matiari , Oderolal station , Tajpur , Allah Dino Saand and Shahpur Chakar remained closed out of respect . True or False?
+Yes
+#######################
+{'id': 4725, 'sentence1': 'Before the unification of Yemen in 1990 , the law set the minimum age of marriage at 16 in South Yemen and 15 in the north .', 'sentence2': 'Prior to the unification of Yemen in 1990 , the law set the minimum age of marriage at 16 in South Yemen and 15 in the north .', 'label': 1}Paraphrase the sentence: The development will include 4,000 houses , apartments , hotels and commercial & mixed use plots .#######################
+#######################
+Sentence 1: Hosni Mubarak came to power after the murder of Sadat in a referendum in which he was the only candidate .
+Sentence 2: Hosni Mubarak came to power after the assassination of Sadat in a referendum in which he was the only candidate .
+Question: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?#######################<promptsource.promptsource.templates.Template object at 0x7f83aa7e9eb0>
+["Sentence 1: Max Nettlau wrote to historian Goldman that the Haymarket affair had awakened the social consciousness of `` hundreds , perhaps thousands , of people '' .\nSentence 2: Goldman wrote to historian Max Nettlau that the Haymarket affair had awakened the social awareness of `` hundreds , perhaps thousands of people '' .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?", 'No']{'id': 18592, 'sentence1': 'He has spent 2012 -- 13 in Israeli Basketball Super League with Bnei Herzliya .', 'sentence2': 'Season 2012 -- 13 he spent in Bnei Herzliya with Israeli Basketball Super League .', 'label': 0}
+#######################
+{'id': 27610, 'sentence1': 'The number of aircraft operated by the 507th and 137th machines was increased simultaneously by the transfer of KC-135s from the 939th air refuelling wing .', 'sentence2': 'The number of aircraft operated by the 507th and 137th was simultaneously increased by the transfer of KC-135s from the 939th Air Refueling Wing .', 'label': 1}{'id': 47287, 'sentence1': 'The 2015 -- 16 Barangay Ginebra San Miguel season is the 37th season of the franchise in the Philippine Basketball Association ( PBA ) .', 'sentence2': 'The 2015 season -- 16 Barangay Ginebra San Miguel is the 37th season of the franchise at the Philippine Basketball Association ( PBA ) .', 'label': 1}#######################No{'id': 12392, 'sentence1': 'The 913th Troop Carrier Squadron was consolidated with the 13th Air Refueling Squadron in September 1985 but the active squadron has not been consolidated since .', 'sentence2': 'The 13th Troop Carrier Squadron was consolidated in September 1985 with the 913th Air Refueling Squadron , but since then the consolidated squadron has not been active anymore .', 'label': 0}['This time Custine did not defend Robespierre .\nIs that a paraphrase of the following sentence?\nThis time , Custine Robespierre did not defend .?\nYes or No.', 'No']No
+Sentence 1: He supported John Barrymore in `` Maryland '' ( 1940 ) and Walter Brennan in `` The Great Profile '' ( 1940 ) .
+Sentence 2: He is supporting Walter Brennan in `` Maryland '' ( 1940 ) and John Barrymore in `` The Great Profile '' ( 1940 ) .
+Question: Can we rewrite Sentence 1 to Sentence 2?
+Yes
+['Before the unification of Yemen in 1990 , the law set the minimum age of marriage at 16 in South Yemen and 15 in the north .\nIs that a paraphrase of the following sentence?\nPrior to the unification of Yemen in 1990 , the law set the minimum age of marriage at 16 in South Yemen and 15 in the north .?', 'Yes']
+No
+True
+Sentence 1: Max Nettlau wrote to historian Goldman that the Haymarket affair had awakened the social consciousness of `` hundreds , perhaps thousands , of people '' .
+Sentence 2: Goldman wrote to historian Max Nettlau that the Haymarket affair had awakened the social awareness of `` hundreds , perhaps thousands of people '' .
+Question: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?
+#######################The development will include 4,000 houses , apartments , hotels and mixed and commercial plots .Yes['Determine if the following two sentences paraphrase each other or not.\nSent 1: The 2015 -- 16 Barangay Ginebra San Miguel season is the 37th season of the franchise in the Philippine Basketball Association ( PBA ) .\nSent 2: The 2015 season -- 16 Barangay Ginebra San Miguel is the 37th season of the franchise at the Philippine Basketball Association ( PBA ) .', 'Yes']
+#######################
+#######################
+{'id': 25742, 'sentence1': 'Cobian Backup was a free , written backup software for Microsoft Windows and is supported by Luis Cobian of Umeå University in Delphi .', 'sentence2': 'Cobian Backup was a free , donation-supported backup software for Microsoft Windows and was written by Luis Cobian of Umeå University in Delphi .', 'label': 0}
+['Sentence 1: He has spent 2012 -- 13 in Israeli Basketball Super League with Bnei Herzliya .\nSentence 2: Season 2012 -- 13 he spent in Bnei Herzliya with Israeli Basketball Super League .\nQuestion: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?', 'No']This time Custine did not defend Robespierre .
+Is that a paraphrase of the following sentence?
+This time , Custine Robespierre did not defend .?
+Yes or No.
+['The number of aircraft operated by the 507th and 137th machines was increased simultaneously by the transfer of KC-135s from the 939th air refuelling wing .\nIs that a paraphrase of the following sentence?\nThe number of aircraft operated by the 507th and 137th was simultaneously increased by the transfer of KC-135s from the 939th Air Refueling Wing .?', 'Yes']
+Yes#######################Before the unification of Yemen in 1990 , the law set the minimum age of marriage at 16 in South Yemen and 15 in the north .
+Is that a paraphrase of the following sentence?
+Prior to the unification of Yemen in 1990 , the law set the minimum age of marriage at 16 in South Yemen and 15 in the north .?
+Determine if the following two sentences paraphrase each other or not.
+Sent 1: The 2015 -- 16 Barangay Ginebra San Miguel season is the 37th season of the franchise in the Philippine Basketball Association ( PBA ) .
+Sent 2: The 2015 season -- 16 Barangay Ginebra San Miguel is the 37th season of the franchise at the Philippine Basketball Association ( PBA ) .
+##############################################
+#######################
+['Sentence 1: The 913th Troop Carrier Squadron was consolidated with the 13th Air Refueling Squadron in September 1985 but the active squadron has not been consolidated since .\nSentence 2: The 13th Troop Carrier Squadron was consolidated in September 1985 with the 913th Air Refueling Squadron , but since then the consolidated squadron has not been active anymore .\nQuestion: Does Sentence 1 paraphrase Sentence 2?', 'No']
+#######################The number of aircraft operated by the 507th and 137th machines was increased simultaneously by the transfer of KC-135s from the 939th air refuelling wing .
+Is that a paraphrase of the following sentence?
+The number of aircraft operated by the 507th and 137th was simultaneously increased by the transfer of KC-135s from the 939th Air Refueling Wing .?No
+Yes['Cobian Backup was a free , written backup software for Microsoft Windows and is supported by Luis Cobian of Umeå University in Delphi .\nIs that a paraphrase of the following sentence?\nCobian Backup was a free , donation-supported backup software for Microsoft Windows and was written by Luis Cobian of Umeå University in Delphi .?', 'No']
+No
+Yes
+Sentence 1: He has spent 2012 -- 13 in Israeli Basketball Super League with Bnei Herzliya .
+Sentence 2: Season 2012 -- 13 he spent in Bnei Herzliya with Israeli Basketball Super League .
+Question: Do Sentence 1 and Sentence 2 express the same meaning? Yes or No?Yes#######################
+#######################
+#######################
+Cobian Backup was a free , written backup software for Microsoft Windows and is supported by Luis Cobian of Umeå University in Delphi .
+Is that a paraphrase of the following sentence?
+Cobian Backup was a free , donation-supported backup software for Microsoft Windows and was written by Luis Cobian of Umeå University in Delphi .?##############################################Sentence 1: The 913th Troop Carrier Squadron was consolidated with the 13th Air Refueling Squadron in September 1985 but the active squadron has not been consolidated since .
+Sentence 2: The 13th Troop Carrier Squadron was consolidated in September 1985 with the 913th Air Refueling Squadron , but since then the consolidated squadron has not been active anymore .
+Question: Does Sentence 1 paraphrase Sentence 2?
+No
+No
+#######################No#######################
+#######################
+Traceback (most recent call last):
+  File "run.py", line 227, in <module>
+    trainer.fit(model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 735, in fit
+    self._call_and_handle_interrupt(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 682, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 770, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1193, in _run
+    self._dispatch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1272, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1282, in run_stage
+    return self._run_train()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1312, in _run_train
+    self.fit_loop.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/fit_loop.py", line 234, in advance
+    self.epoch_loop.run(data_fetcher)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 140, in run
+    self.on_run_start(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 141, in on_run_start
+    self._dataloader_iter = _update_dataloader_iter(data_fetcher, self.batch_idx + 1)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py", line 121, in _update_dataloader_iter
+    dataloader_iter = enumerate(data_fetcher, batch_idx)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/fetching.py", line 199, in __iter__
+    self.prefetching(self.prefetch_batches)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/fetching.py", line 258, in prefetching
+    self._fetch_next_batch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/fetching.py", line 300, in _fetch_next_batch
+    batch = next(self.dataloader_iter)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/supporters.py", line 536, in __next__
+    return self.request_next_batch(self.loader_iters)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/supporters.py", line 548, in request_next_batch
+    return apply_to_collection(loader_iters, Iterator, next)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/apply_func.py", line 92, in apply_to_collection
+    return function(data, *args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1203, in _next_data
+    return self._process_data(data)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1229, in _process_data
+    data.reraise()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/_utils.py", line 434, in reraise
+    raise exception
+IndexError: Caught IndexError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 588, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 455, in convert_to_features
+    print(result[1])
+IndexError: list index out of range

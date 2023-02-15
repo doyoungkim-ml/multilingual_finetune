@@ -1,0 +1,58 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [8,9,10,11]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+Downloading builder script: 100%|███████████████████████████████████████████████████████████████| 5.21k/5.21k [00:00<00:00, 3.59MB/s]
+Downloading metadata: 100%|█████████████████████████████████████████████████████████████████████| 4.77k/4.77k [00:00<00:00, 2.72MB/s]
+Downloading readme: 100%|███████████████████████████████████████████████████████████████████████| 9.12k/9.12k [00:00<00:00, 5.09MB/s]
+WARNING:datasets.builder:Found cached dataset duorc (/home/joel_jang/.cache/huggingface/datasets/duorc/ParaphraseRC/1.0.0/7a96356b7615d573abcd03a9328292c38348547971989538a771c32089bff199)
+  0%|                                                                                                          | 0/3 [00:00<?, ?it/s]
+###############################
+{'plot_id': '/m/03vyhn', 'plot': 'Set in the second half of the 22nd century, Mars has been 84% terraformed, allowing humans to walk on the surface without pressure suits. Martian society has become matriarchal, with women in most positions of authority. The story concerns police officer Melanie Ballard (Natasha Henstridge), second in command of a team alongside Sergeant Jericho (Jason Statham) sent to a remote mining outpost to transport prisoner Desolation Williams (Ice Cube). Arriving at the remote mining town, Ballard finds all of the people missing. She learns that they had discovered an underground doorway created by an ancient Martian civilization. When the door was opened it released disembodied spirits or "ghosts", which took possession of the miners.\nThe possessed miners commit horrific acts of death and destruction, along with self-mutilation. When team leader Helena Bradock (Pam Grier) is murdered, Ballard must assume command, fight off the possessed miners, escape the town and hopefully destroy the ghosts. Unfortunately, killing a possessed human merely releases the Martian spirit to possess another human. The team eventually decides to blow up a nuclear reactor to vaporize all of the ghosts.\nBallard\'s crew, along with survivors who gathered in the jail, are eventually wiped out by the miners. At one point, Ballard is nearly possessed, but resists when she is given a drug and discovers that the spirits are attacking them as they believe that the humans are invaders and plan to exterminate the humans on Mars (as it is presumed that the spirits are unaware of the fact that the humans believed that life on Mars died out). Only Ballard and Williams are left after Sergeant Jericho and the other officers, along with the two train operators, are killed when they try to finish the fight. Not wanting to be blamed for the massacre, Williams handcuffs Ballard to her cot and escapes from the train. Returning home, Ballard delivers her report, which her superiors refuse to believe. While Ballard recuperates in the hospital, the released spirits, unharmed from the nuclear explosion, attack the city. Ballard and Williams are going to fight to stay alive.', 'title': 'Ghosts of Mars', 'question_id': '28ded42d-f6d5-aac6-cf6f-9e6e0820c5aa', 'question': 'who is there with Melanie Ballard?', 'answers': ['second in command Sergeant  Jericho and prisoner Desolation Williams', 'Williams'], 'no_answer': False}
+###############################
+First elem of self.dataset is  {'plot_id': '/m/03vyhn', 'plot': 'Set in the second half of the 22nd century, Mars has been 84% terraformed, allowing humans to walk on the surface without pressure suits. Martian society has become matriarchal, with women in most positions of authority. The story concerns police officer Melanie Ballard (Natasha Henstridge), second in command of a team alongside Sergeant Jericho (Jason Statham) sent to a remote mining outpost to transport prisoner Desolation Williams (Ice Cube). Arriving at the remote mining town, Ballard finds all of the people missing. She learns that they had discovered an underground doorway created by an ancient Martian civilization. When the door was opened it released disembodied spirits or "ghosts", which took possession of the miners.\nThe possessed miners commit horrific acts of death and destruction, along with self-mutilation. When team leader Helena Bradock (Pam Grier) is murdered, Ballard must assume command, fight off the possessed miners, escape the town and hopefully destroy the ghosts. Unfortunately, killing a possessed human merely releases the Martian spirit to possess another human. The team eventually decides to blow up a nuclear reactor to vaporize all of the ghosts.\nBallard\'s crew, along with survivors who gathered in the jail, are eventually wiped out by the miners. At one point, Ballard is nearly possessed, but resists when she is given a drug and discovers that the spirits are attacking them as they believe that the humans are invaders and plan to exterminate the humans on Mars (as it is presumed that the spirits are unaware of the fact that the humans believed that life on Mars died out). Only Ballard and Williams are left after Sergeant Jericho and the other officers, along with the two train operators, are killed when they try to finish the fight. Not wanting to be blamed for the massacre, Williams handcuffs Ballard to her cot and escapes from the train. Returning home, Ballard delivers her report, which her superiors refuse to believe. While Ballard recuperates in the hospital, the released spirits, unharmed from the nuclear explosion, attack the city. Ballard and Williams are going to fight to stay alive.', 'title': 'Ghosts of Mars', 'question_id': '28ded42d-f6d5-aac6-cf6f-9e6e0820c5aa', 'question': 'who is there with Melanie Ballard?', 'answers': ['second in command Sergeant  Jericho and prisoner Desolation Williams', 'Williams'], 'no_answer': False}
+Length of dataset retrieving is.. 69524
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 39.08it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+Epoch 0:   0%|                                                            | 7/17381 [00:11<8:10:31,  1.69s/it, loss=6.76, v_num=mh8j]save
+
+
+
+
+
+Epoch 1:   0%|                                                           | 24/17381 [00:16<3:13:44,  1.49it/s, loss=7.24, v_num=mh8j]save
+
+
+Epoch 2:   0%|                                                           | 5/17381 [00:13<13:26:17,  2.78s/it, loss=6.25, v_num=mh8j]save
+
+
+
+Epoch 3:   0%|                                                           | 17/17381 [00:18<5:09:11,  1.07s/it, loss=5.87, v_num=mh8j]save
+
+
+
+
+
+Epoch 4:   0%|                                                           | 29/17381 [00:17<2:51:36,  1.69it/s, loss=6.07, v_num=mh8j]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py:685: UserWarning: Detected KeyboardInterrupt, attempting graceful shutdown...
+
+Epoch 4:   0%|                                                           | 29/17381 [00:17<2:51:36,  1.69it/s, loss=6.07, v_num=mh8j]Time: 771.2644362449646

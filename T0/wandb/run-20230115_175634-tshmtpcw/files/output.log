@@ -1,0 +1,26 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/7
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 7 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [7,8,9,10,11,12,13]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+Downloading builder script: 100%|██████████████████████████████████| 4.67k/4.67k [00:00<00:00, 2.92MB/s]
+###############################
+{'context': 'Cameron decided to have a barbecue and gathered her friends together.', 'question': 'How would Others feel as a result?', 'answerA': 'like attending', 'answerB': 'like staying home', 'answerC': 'a good friend to have', 'label': '1'}
+###############################
+Length of dataset retrieving is.. 33410
+Downloading readme: 100%|██████████████████████████████████████████| 6.81k/6.81k [00:00<00:00, 4.32MB/s]
+WARNING:datasets.builder:Found cached dataset social_i_qa (/home/joel_jang/.cache/huggingface/datasets/social_i_qa/default/0.1.0/674d85e42ac7430d3dcd4de7007feaffcb1527c535121e09bab2803fbcc925f8)

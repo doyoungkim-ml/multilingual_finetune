@@ -1,0 +1,1318 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/15
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 15 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,11,12,13,14,15]
+  | Name  | Type                        | Params
+------------------------------------------------------
+0 | model | MT5ForConditionalGeneration | 3.7 B
+------------------------------------------------------
+3.7 B     Trainable params
+0         Non-trainable params
+3.7 B     Total params
+14,970.479Total estimated model params size (MB)
+Validation sanity check: 0it [00:00, ?it/s]First elem of self.dataset is  {'en': 'That elder brother is taller than that elder brother.\n', 'zho': '嗰個哥哥高過嗰個哥哥。\n'}
+Length of dataset retrieving is.. 1000
+Validation sanity check:   0%|                                                     | 0/2 [00:00<?, ?it/s]
+WARNING:datasets.builder:Using custom data configuration default-43f91cccd810b985
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-43f91cccd810b985/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|█████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 243.83it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/json/default-43f91cccd810b985/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab/cache-0a220b38707aa17e.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+Validation sanity check:   0%|                                                     | 0/2 [00:00<?, ?it/s]input: That elder brother is taller than that elder brother. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: <extra_id_0> sentence into Chinese: === Translate the above sentence into English:  <extra_id_1>: = = = = = = = =  <extra_id_2>: <extra_id_3>: <extra_id_4>: ===  <extra_id_5>: <extra_id_6>: ===  <extra_id_7>: ===  <extra_id_8>: ===  <extra_id_9>: ===  <extra_id_10>: ===  <extra_id_11>: === <extra_id_12>: === <extra_id_13>: ===  <extra_id_14>: ===  <extra_id_15>: <extra_id_16>: ===  <extra_id_17>: <extra_id_18>: <extra_id_19>: ===  <extra_id_20>: ===  <extra_id_21>: ===  <extra_id_22>: ===  <extra_id_23>: ===  <extra_id_24>: ===  <extra_id_25>: ===  <extra_id_26>: === =  <extra_id_27>: ===
+ground_truth 嗰個哥哥高過嗰個哥哥。
+rouge score is 0.0
+Validation sanity check:  50%|██████████████████████▌                      | 1/2 [00:07<00:07,  7.23s/it]input: Show me your passport, please. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: <extra_id_0> passport, please. === Translate the above sentence into English: Please show your passport. Show me your passport <extra_id_7>  <extra_id_8>  <extra_id_9> <extra_id_14>: Show <extra_id_15>: Show <extra_id_16>: Show <extra_id_17>: Show me your passport <extra_id_18>: Show <extra_id_19>: Show <extra_id_20>: Show me your passport <extra_id_21>: Show me your passport <extra_id_22>: Show me your passport <extra_id_23>: Show me your passport <extra_id_24> Show <extra_id_25>: Show me your passport <extra_id_26>: Show
+ground_truth 请把您的护照给我看一下。
+rouge score is 0.0
+Validation sanity check: 100%|█████████████████████████████████████████████| 2/2 [00:12<00:00,  6.05s/it]agg_score is tensor(0., device='cuda:0') 0
+enter
+First elem of self.dataset is  {'en': '" (g) Blood and blood products\n', 'zho': '" (g) 血液和血制品\n'}
+Length of dataset retrieving is.. 100000
+Epoch 0:   0%|                                                                  | 0/3401 [00:00<?, ?it/s]
+WARNING:datasets.builder:Using custom data configuration default-8803eb1f9af63a88
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-8803eb1f9af63a88/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|█████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 140.09it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/json/default-8803eb1f9af63a88/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab/cache-f337651640625b89.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 2. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  98%|███████████████████████████████▎| 3334/3401 [37:45<00:45,  1.47it/s, loss=2.47, v_num=z1gw]input: That elder brother is taller than that elder brother. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 那个大哥哥比那个大哥哥高。                                                         | 0/67 [00:00<?, ?it/s]
+ground_truth 嗰個哥哥高過嗰個哥哥。
+rouge score is 0.0
+Epoch 0:  98%|███████████████████████████████▍| 3336/3401 [37:45<00:44,  1.47it/s, loss=2.47, v_num=z1gw]input: Show me your passport, please. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 请给我你的护照。                                                      | 1/67 [00:00<00:39,  1.66it/s]
+ground_truth 请把您的护照给我看一下。
+rouge score is 0.0
+prediction: 我们的会议很少在时间上开始。                                                | 2/67 [00:01<00:33,  1.92it/s]
+ground_truth 我哋啲會好少準時開始。
+rouge score is 0.0
+Epoch 0:  98%|███████████████████████████████▍| 3338/3401 [37:46<00:42,  1.47it/s, loss=2.47, v_num=z1gw]input: He likes traveling and so do I. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 他喜欢旅行,我也喜欢。                                                   | 3/67 [00:01<00:33,  1.94it/s]
+ground_truth 佢鍾意旅行,我都係喎。
+rouge score is 0.0
+                                                                                                         input: Traffic conditions on the highway are normal this morning. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 高速公路上的交通状况今天早上是正常的。                                           | 4/67 [00:02<00:31,  2.02it/s]
+ground_truth 今天早上高速公路上的交通状况正常。
+rouge score is 0.0
+Epoch 0:  98%|███████████████████████████████▍| 3340/3401 [37:47<00:41,  1.47it/s, loss=2.47, v_num=z1gw]input: Jim has not yet returned home. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 杰米还没有回家。█▎                                                    | 5/67 [00:02<00:33,  1.87it/s]
+ground_truth Jim还没回家。
+rouge score is 0.0
+prediction: 并不是很多外国人喜欢日本的食物。                                              | 6/67 [00:03<00:33,  1.84it/s]
+ground_truth 也有不少外國人喜歡日本料理。
+rouge score is 0.0
+Epoch 0:  98%|███████████████████████████████▍| 3342/3401 [37:49<00:40,  1.47it/s, loss=2.47, v_num=z1gw]input: Your voice reminds me of my late grandmother. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 你的声音让我想起了我的祖母。                                                | 7/67 [00:03<00:32,  1.82it/s]
+ground_truth 我的声音让我想起了我已故的祖母。
+rouge score is 0.0
+                                                                                                         input: I still don't write Chinese well. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 我仍然不会写中文。██▊                                                  | 8/67 [00:04<00:33,  1.76it/s]
+ground_truth 我还是写不好汉语。
+rouge score is 0.0
+Epoch 0:  98%|███████████████████████████████▍| 3344/3401 [37:50<00:38,  1.47it/s, loss=2.47, v_num=z1gw]
+prediction: 你已经写了所有的新年卡了吗?                                                | 9/67 [00:04<00:31,  1.86it/s]
+ground_truth 你寫好晒啲賀年咭未呀?
+rouge score is 0.0
+                                                                                                         input: I am blind in the right eye. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 我眼睛瞎了。███████▎                                               | 10/67 [00:05<00:31,  1.83it/s]
+ground_truth 我的右眼瞎了。
+rouge score is 0.0
+Epoch 0:  98%|███████████████████████████████▍| 3346/3401 [37:51<00:37,  1.47it/s, loss=2.47, v_num=z1gw]input: A horse pulled the cart along the road. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 一匹马把车拉到路上。████▏                                              | 11/67 [00:05<00:27,  2.02it/s]
+ground_truth 一匹马拉着大车沿着大路走。
+rouge score is 0.0
+                                                                                                         input: She did everything she could for him. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 她为他做了一切她能为他做的事。                                              | 12/67 [00:06<00:29,  1.88it/s]
+ground_truth 她为了他竭尽所能。
+rouge score is 0.0
+Epoch 0:  98%|███████████████████████████████▌| 3348/3401 [37:52<00:35,  1.47it/s, loss=2.47, v_num=z1gw]
+prediction: 等他回来|██████████▊                                             | 13/67 [00:07<00:31,  1.70it/s]
+ground_truth 讓我們在這裡等他直到他回來。
+rouge score is 0.0
+                                                                                                         input: He looked asleep, but he was really dead. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 他看着睡着了,但他真的死了。██▋                                            | 14/67 [00:07<00:27,  1.91it/s]
+ground_truth 他看起来像是睡着了,其实已经死了。
+rouge score is 0.0
+Epoch 0:  99%|███████████████████████████████▌| 3350/3401 [37:53<00:34,  1.47it/s, loss=2.47, v_num=z1gw]input: You all right? === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 你好吗?|████████████▌                                           | 15/67 [00:08<00:29,  1.76it/s]
+ground_truth 你冇嘢吖嘛?
+rouge score is 0.0
+prediction: 她必须接受她的命运。████████▎                                          | 16/67 [00:08<00:25,  1.96it/s]
+ground_truth 她该接受她的命运。
+rouge score is 0.0
+Epoch 0:  99%|███████████████████████████████▌| 3352/3401 [37:54<00:33,  1.47it/s, loss=2.47, v_num=z1gw]input: She got good grades in English. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 她在英语上取得了很好的成绩。█████▏                                         | 17/67 [00:08<00:24,  2.07it/s]
+ground_truth 她的英文成績很好。
+rouge score is 0.0
+                                                                                                         input: Sow the wind, reap the whirlwind. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 播种风,收获旋风。███████████                                         | 18/67 [00:09<00:24,  2.03it/s]
+ground_truth 種的是風,而收獲的是旋風。
+rouge score is 0.0
+Epoch 0:  99%|███████████████████████████████▌| 3354/3401 [37:55<00:31,  1.47it/s, loss=2.47, v_num=z1gw]input: Don't play baseball here. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 不要在这里打棒球。███████████▉                                        | 19/67 [00:10<00:24,  1.99it/s]
+ground_truth 不要在這裡打棒球。
+rouge score is 0.0
+prediction: 差不多十点了 我们就到床上了███████▋                                       | 20/67 [00:10<00:22,  2.08it/s]
+ground_truth 已将近十点了。该是睡觉的时候了。
+rouge score is 0.0
+Epoch 0:  99%|███████████████████████████████▌| 3356/3401 [37:56<00:30,  1.47it/s, loss=2.47, v_num=z1gw]input: Can I speak to the head nurse? === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 我能和护士谈谈吗?█████████████▌                                      | 21/67 [00:11<00:24,  1.85it/s]
+ground_truth 我能跟護士長說話嗎?
+rouge score is 0.0
+                                                                                                         input: I've heard this story before. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 我以前听过这个故事。█████████████▍                                     | 22/67 [00:11<00:24,  1.87it/s]
+ground_truth 我以前听过这个故事。
+rouge score is 0.999999995
+Epoch 0:  99%|███████████████████████████████▌| 3358/3401 [37:57<00:29,  1.47it/s, loss=2.47, v_num=z1gw]input: There used to be a post office here. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 这里曾经有一家邮局。██████████████▏                                    | 23/67 [00:12<00:22,  1.94it/s]
+ground_truth 这里以前有邮局。
+rouge score is 0.0
+prediction: 他是瑞士人。█████████████████████▌                                 | 27/67 [00:14<00:20,  1.98it/s]
+ground_truth 关于那件事你欠我一个道歉。
+rouge score is 0.0
+Epoch 0:  99%|███████████████████████████████▌| 3360/3401 [37:58<00:27,  1.47it/s, loss=2.47, v_num=z1gw]input: They're closed today. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 他们今天关闭了。█████████████████▉                                   | 25/67 [00:13<00:20,  2.03it/s]
+ground_truth 他们今天关闭。
+rouge score is 0.0
+                                                                                                         input: He said to me, 'Let's eat out tonight.' === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 他对我说:“今晚吃点东西吧。████████████▋                                  | 26/67 [00:13<00:18,  2.18it/s]
+ground_truth 佢同我講話:「今晚不如出去食吖。」
+rouge score is 0.0
+Epoch 0:  99%|███████████████████████████████▋| 3362/3401 [37:59<00:26,  1.48it/s, loss=2.47, v_num=z1gw]input: He is Swiss. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 他是瑞士人。█████████████████████▌                                 | 27/67 [00:14<00:20,  1.98it/s]
+ground_truth 他是瑞士人。
+rouge score is 0.999999995
+                                                                                                         input: We don't have another choice. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 我们没有其他选择。███████████████████▍                                | 28/67 [00:14<00:18,  2.15it/s]
+ground_truth 我们没有别的选择。
+rouge score is 0.0
+Epoch 0:  99%|███████████████████████████████▋| 3364/3401 [38:00<00:25,  1.48it/s, loss=2.47, v_num=z1gw]
+prediction: 她不能参加那场派对,因为她生病。█████████████▏                               | 29/67 [00:14<00:16,  2.29it/s]
+ground_truth 她因病不能出席会议。
+rouge score is 0.0
+                                                                                                         input: I can't put up with this noise. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 我不能忍受这种噪音。████████████████████                               | 30/67 [00:15<00:19,  1.88it/s]
+ground_truth 我不能忍受這個噪音。
+rouge score is 0.0
+Epoch 0:  99%|███████████████████████████████▋| 3366/3401 [38:01<00:23,  1.48it/s, loss=2.47, v_num=z1gw]input: I will go even if it rains tomorrow. === Translate the above sentence into Chinese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 即使明天下雨,我也会去。██████████████████▉                              | 31/67 [00:16<00:18,  1.90it/s]
+ground_truth 就算明天下雨,我也會去的。
+rouge score is 0.0
+Validating:  48%|██████████████████████████▋                             | 32/67 [00:16<00:18,  1.86it/s]
+prediction: 你对某些食物有强烈的喜欢和厌恶吗?████████████████▍                           | 34/67 [00:17<00:19,  1.68it/s]
+ground_truth 侬啊有啥个食物是特别欢喜个或者勿欢喜个伐?
+rouge score is 0.0
+Epoch 0:  99%|███████████████████████████████▋| 3370/3401 [38:03<00:21,  1.48it/s, loss=2.47, v_num=z1gw]
+Validating:  52%|█████████████████████████████▎                          | 35/67 [00:18<00:21,  1.52it/s]
+prediction: 你对某些食物有强烈的喜欢和厌恶吗?████████████████▍                           | 34/67 [00:17<00:19,  1.68it/s]
+prediction: 蝴蝶飞走了。███████████████████████████████▌                       | 39/67 [00:20<00:16,  1.68it/s]
+prediction: 我每天喝1.7升水。███████████████████████████████▊                   | 44/67 [00:23<00:10,  2.21it/s]
+prediction: 你值得成功。███████████████████████████████████████▉               | 49/67 [00:26<00:10,  1.75it/s]
+prediction: 我似乎有温度。███████████████████████████████████████████▏          | 54/67 [00:28<00:06,  2.06it/s]
+prediction: 我似乎有温度。███████████████████████████████████████████▏          | 54/67 [00:28<00:06,  2.06it/s]
+prediction: 我喜欢你对别人的需求比自己的需求更重要。██████████████████████████████████▎      | 59/67 [00:31<00:04,  1.74it/s]
+prediction: 汤姆想知道玛丽有没有男朋友。████████████████████████████████████████████▍  | 64/67 [00:33<00:01,  1.94it/s]
+prediction: 汤姆想知道玛丽有没有男朋友。████████████████████████████████████████████▍  | 64/67 [00:33<00:01,  1.94it/s]
+prediction: 汤姆想知道玛丽有没有男朋友。████████████████████████████████████████████▍  | 64/67 [00:33<00:01,  1.94it/s]
+prediction: 汤姆想知道玛丽有没有男朋友。████████████████████████████████████████████▍  | 64/67 [00:33<00:01,  1.94it/s]
+prediction: 汤姆想知道玛丽有没有男朋友。████████████████████████████████████████████▍  | 64/67 [00:33<00:01,  1.94it/s]
+prediction: 汤姆想知道玛丽有没有男朋友。████████████████████████████████████████████▍  | 64/67 [00:33<00:01,  1.94it/s]
+prediction: 汤姆想知道玛丽有没有男朋友。████████████████████████████████████████████▍  | 64/67 [00:33<00:01,  1.94it/s]
+prediction: 汤姆想知道玛丽有没有男朋友。████████████████████████████████████████████▍  | 64/67 [00:33<00:01,  1.94it/s]

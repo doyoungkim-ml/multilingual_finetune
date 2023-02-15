@@ -1,0 +1,102 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/7
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 7 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+WARNING:datasets.builder:Found cached dataset anli (/home/joel_jang/.cache/huggingface/datasets/anli/plain_text/0.1.0/aabce88453b06dff21c201855ea83283bab0390bff746deadb30b65695755c0b)
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/anli/plain_text/0.1.0/aabce88453b06dff21c201855ea83283bab0390bff746deadb30b65695755c0b/cache-dbd480aaa3b28ed4.arrow
+Validation sanity check: 0it [00:00, ?it/s]Length of dataset retrieving is.. 200
+Length of dataset retrieving is.. 200
+WARNING:datasets.builder:Found cached dataset anli (/home/joel_jang/.cache/huggingface/datasets/anli/plain_text/0.1.0/aabce88453b06dff21c201855ea83283bab0390bff746deadb30b65695755c0b)
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/anli/plain_text/0.1.0/aabce88453b06dff21c201855ea83283bab0390bff746deadb30b65695755c0b/cache-43c60239ac6b1f79.arrow
+WARNING:datasets.builder:Found cached dataset anli (/home/joel_jang/.cache/huggingface/datasets/anli/plain_text/0.1.0/aabce88453b06dff21c201855ea83283bab0390bff746deadb30b65695755c0b)
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/anli/plain_text/0.1.0/aabce88453b06dff21c201855ea83283bab0390bff746deadb30b65695755c0b/cache-5173ea8bb950a64d.arrow
+WARNING:datasets.builder:Found cached dataset paws (/home/joel_jang/.cache/huggingface/datasets/paws/labeled_final/1.1.0/8d567c6472623f42bd2cc635cad06932d0f0cd2f897db56013c1180f4317d338)
+100%|█████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 850.02it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/paws/labeled_final/1.1.0/8d567c6472623f42bd2cc635cad06932d0f0cd2f897db56013c1180f4317d338/cache-09220ed5a1919bcc.arrow
+Length of dataset retrieving is.. 200
+Length of dataset retrieving is.. 200
+WARNING:datasets.builder:Found cached dataset cos_e (/home/joel_jang/.cache/huggingface/datasets/cos_e/v1.11/1.11.0/e8dc57a5b321a2a97063efb8d316d6d8a0d9a2d3a392dafc913e55bed42736d2)
+100%|█████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 778.67it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/cos_e/v1.11/1.11.0/e8dc57a5b321a2a97063efb8d316d6d8a0d9a2d3a392dafc913e55bed42736d2/cache-0be146401659c9c9.arrow
+WARNING:datasets.builder:Using custom data configuration 2016-data_dir=..%2Fdata
+Generating validation split:   0%|                                                   | 0/1871 [00:00<?, ? examples/s]
+Length of dataset retrieving is.. 200
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/datasets/builder.py", line 1514, in _prepare_split_single
+    for key, record in generator:
+  File "/home/joel_jang/.cache/huggingface/modules/datasets_modules/datasets/story_cloze/45cead0538c3deb72d731a7990e60835c2c9c5d5d5b1e95a7dd47ccf593671e4/story_cloze.py", line 112, in _generate_examples
+    with open(filepath, encoding="utf-8") as csv_file:
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/datasets/streaming.py", line 69, in wrapper
+    return function(*args, use_auth_token=use_auth_token, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/datasets/download/streaming_download_manager.py", line 456, in xopen
+    return open(file, mode, *args, **kwargs)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/joel_jang/seungone/Flipped-Learning/data/cloze_test_val__spring2016 - cloze_test_ALL_val.csv'
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "run.py", line 224, in <module>
+    trainer.fit(model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 735, in fit
+    self._call_and_handle_interrupt(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 682, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 770, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1193, in _run
+    self._dispatch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1272, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1282, in run_stage
+    return self._run_train()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1304, in _run_train
+    self._run_sanity_check(self.lightning_module)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1364, in _run_sanity_check
+    self._evaluation_loop._reload_evaluation_dataloaders()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 169, in _reload_evaluation_dataloaders
+    self.trainer.reset_val_dataloader()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py", line 509, in reset_val_dataloader
+    self.num_val_batches, self.val_dataloaders = self._reset_eval_dataloader(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py", line 415, in _reset_eval_dataloader
+    dataloaders = self.request_dataloader(mode, model=model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py", line 566, in request_dataloader
+    dataloader = source.dataloader()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 296, in dataloader
+    return self.instance.trainer.call_hook(self.name, pl_module=self.instance)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1483, in call_hook
+    output = model_fx(*args, **kwargs)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 349, in val_dataloader
+    dataset_elem = self.get_dataset(dataset=dataset, tokenizer=self.tokenizer, type_path="validation", args=self.args)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 38, in get_dataset
+    dataset = Pretrain(dataset=dataset, tokenizer=tokenizer, type_path=type_path, input_length=args.max_input_length,
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 255, in __init__
+    self.dataset, self.prompt, [self.task_prefix, self.input_prefix, self.output_prefix, self.choice_prefix, self.append_choices_to_input] = dataset_prompt_setting(self.type_path, self.dataset_name, self.dataset_config_name, args)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 204, in dataset_prompt_setting
+    unshuffled = load_dataset("story_cloze","2016", data_dir='../data')[type_path]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/datasets/load.py", line 1741, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/datasets/builder.py", line 822, in download_and_prepare
+    self._download_and_prepare(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/datasets/builder.py", line 1555, in _download_and_prepare
+    super()._download_and_prepare(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/datasets/builder.py", line 913, in _download_and_prepare
+    self._prepare_split(split_generator, **prepare_split_kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/datasets/builder.py", line 1396, in _prepare_split
+    for job_id, done, content in self._prepare_split_single(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/datasets/builder.py", line 1550, in _prepare_split_single
+    raise DatasetGenerationError("An error occurred while generating the dataset") from e
+datasets.builder.DatasetGenerationError: An error occurred while generating the dataset

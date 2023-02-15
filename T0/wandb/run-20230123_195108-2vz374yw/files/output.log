@@ -1,0 +1,898 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/16
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 16 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+  | Name  | Type                        | Params
+------------------------------------------------------
+0 | model | MT5ForConditionalGeneration | 3.7 B
+------------------------------------------------------
+3.7 B     Trainable params
+0         Non-trainable params
+3.7 B     Total params
+14,970.479Total estimated model params size (MB)
+WARNING:datasets.builder:Using custom data configuration default-31b186e58a74258f
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-31b186e58a74258f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 252.68it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/json/default-31b186e58a74258f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab/cache-6fa19dc9f0152dbb.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Validation sanity check: 0it [00:00, ?it/s]First elem of self.dataset is  {'en': 'Please come here between two and three this afternoon.\n', 'kor': '오늘 오후 두시에서 세시 사이에 여기로 와 주세요.\n'}
+Length of dataset retrieving is.. 1000
+Validation sanity check:   0%|                                                                    | 0/2 [00:00<?, ?it/s]prediction: <extra_id_0>. Translate the following from English to Korean Please come here between two and three this afternoon. Translate the following from English to Korean Translate the following from English to Korean  <extra_id_1>  <extra_id_7>  <extra_id_8>  <extra_id_9>  <extra_id_10>  <extra_id_11>  <extra_id_12>. Translate <extra_id_13>  <extra_id_14>  <extra_id_15>  <extra_id_16>. Translate <extra_id_17>  <extra_id_18>. Translate the following from English to Korean Translate <extra_id_19>  <extra_id_20>  <extra_id_21>. Translate the following from English to Korean <extra_id_22>  <extra_id_23>. Translate <extra_id_24>  <extra_id_25>. Translate the following from English to Korean Translate the following from English to Korean <extra_id_26>  <extra_id_31>
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.0
+Validation sanity check:  50%|██████████████████████████████                              | 1/2 [00:07<00:07,  7.37s/it]
+WARNING:datasets.builder:Using custom data configuration default-c680fa9162bf47b5
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-c680fa9162bf47b5/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 125.30it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+Validation sanity check:  50%|██████████████████████████████                              | 1/2 [00:07<00:07,  7.37s/it]prediction: <extra_id_0> until he gets what he wants. Tom won't leave until he gets what he wants. <extra_id_1> until he gets what he wants. Tom won't leave until he gets what he wants <extra_id_8>  <extra_id_9>  <extra_id_10>  <extra_id_11>  <extra_id_12>  <extra_id_13>  <extra_id_14>  <extra_id_15>  <extra_id_16>  <extra_id_17>  <extra_id_18>  <extra_id_19>  <extra_id_20> until he gets what he wants <extra_id_21>  <extra_id_22>  <extra_id_23> until he gets what he wants. Tom <extra_id_24>  <extra_id_25>  <extra_id_26>  <extra_id_27> until he gets what he wants. Tom won't leave
+ground_truth 톰은 원하는 걸 얻을 때까지는 떠나지 않을 거야.
+rouge score is 0.0
+Validation sanity check: 100%|████████████████████████████████████████████████████████████| 2/2 [00:13<00:00,  6.63s/it]agg_score is tensor(0., device='cuda:0') 0
+enter
+First elem of self.dataset is  {'eng': 'As we continue our own transformation to better serve our community of more than 50,000 customers and 1 million+ users, I want to make you aware of some changes coming to Claris in the near future. \n', 'kor': '50,000명이 넘는 고객과 100만 명 이상의 사용자로 구성된 커뮤니티에 더 나은 서비스를 제공하기 위해 변화를 거듭하는 Claris에 찾아올 몇 가지 변화를 알려드리고자 합니다.\n'}
+Length of dataset retrieving is.. 500000
+Training: 0it [00:00, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 2. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:   5%|██                                           | 781/16885 [08:40<2:58:49,  1.50it/s, loss=3.73, v_num=74yw]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.0
+Epoch 0:   5%|██                                           | 783/16885 [08:41<2:58:39,  1.50it/s, loss=3.73, v_num=74yw]prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 톰은 원하는 걸 얻을 때까지는 떠나지 않을 거야.                                                 | 1/63 [00:00<00:56,  1.10it/s]
+rouge score is 0.0
+ground_truth 다리 하나만으로는 뛰기 어렵다.                                                           | 2/63 [00:01<00:55,  1.10it/s]
+rouge score is 0.0
+Epoch 0:   5%|██                                           | 785/16885 [08:43<2:58:48,  1.50it/s, loss=3.73, v_num=74yw]prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 톰은 충격을 받은 것 같다.                                                             | 3/63 [00:02<00:54,  1.10it/s]
+rouge score is 0.0
+ground_truth 나는 내가 말하고 싶은 것은 거의 다 말할 수 있을 정도로 불어를 잘 한다고 생각한다.                            | 4/63 [00:03<00:53,  1.10it/s]
+rouge score is 0.0
+Epoch 0:   5%|██                                           | 787/16885 [08:44<2:58:56,  1.50it/s, loss=3.73, v_num=74yw]prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 이제 나는 너무 늙어서 걷기 어렵다.                                                        | 5/63 [00:04<00:52,  1.10it/s]
+rouge score is 0.0
+                                                                                                                        prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 그 밭은 들꽃이 가득하다.                                                              | 6/63 [00:05<00:51,  1.10it/s]
+rouge score is 0.0
+Epoch 0:   5%|██                                           | 789/16885 [08:46<2:59:05,  1.50it/s, loss=3.73, v_num=74yw]
+ground_truth 한국말을 공부합니다.█                                                                | 7/63 [00:06<00:50,  1.10it/s]
+rouge score is 0.0
+                                                                                                                        prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 저는 춤을 잘 못 춰요.▏                                                              | 8/63 [00:07<00:49,  1.10it/s]
+rouge score is 0.0
+Epoch 0:   5%|██                                           | 791/16885 [08:48<2:59:13,  1.50it/s, loss=3.73, v_num=74yw]
+ground_truth 그 여자가 파티에 입고 온 드레스가 사람들의 눈길을 끌었지.                                           | 9/63 [00:08<00:49,  1.10it/s]
+rouge score is 0.0
+                                                                                                                        prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 5814를 반올림한 가장 가까운 천 단위 숫자가 뭐지?                                             | 10/63 [00:09<00:48,  1.10it/s]
+rouge score is 0.0
+Epoch 0:   5%|██                                           | 793/16885 [08:50<2:59:22,  1.50it/s, loss=3.73, v_num=74yw]
+ground_truth 충분한 RAM 메모리가 없어요.                                                          | 11/63 [00:09<00:47,  1.10it/s]
+rouge score is 0.0
+                                                                                                                        prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 사용설명서 자세히 읽으시요.██▌                                                         | 12/63 [00:10<00:46,  1.09it/s]
+rouge score is 0.0
+Epoch 0:   5%|██                                           | 795/16885 [08:52<2:59:31,  1.49it/s, loss=3.73, v_num=74yw]
+ground_truth 이보다 더 좋았던 적이 없다.██▋                                                        | 13/63 [00:11<00:45,  1.09it/s]
+rouge score is 0.0
+                                                                                                                        prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 공업 배기가스가 공기를 오염시킨다.▊                                                       | 14/63 [00:12<00:44,  1.09it/s]
+rouge score is 0.0
+Epoch 0:   5%|██                                           | 797/16885 [08:54<2:59:40,  1.49it/s, loss=3.73, v_num=74yw]
+ground_truth 톰은 메리에게 키스할 것이라고 말했다.                                                      | 15/63 [00:13<00:44,  1.09it/s]
+rouge score is 0.0
+                                                                                                                        prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 이건 절대 끝나지 않을거야.███████                                                     | 16/63 [00:14<00:43,  1.09it/s]
+rouge score is 0.0
+Epoch 0:   5%|██▏                                          | 799/16885 [08:55<2:59:49,  1.49it/s, loss=3.73, v_num=74yw]prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 이 에디션은 7000 카피 한정판이다.██▏                                                   | 17/63 [00:15<00:42,  1.08it/s]
+rouge score is 0.0
+ground_truth 아무나 할 수 있는 것이 아닙니다.█████▎                                                  | 18/63 [00:16<00:41,  1.08it/s]
+rouge score is 0.0
+Epoch 0:   5%|██▏                                          | 801/16885 [08:57<2:59:57,  1.49it/s, loss=3.73, v_num=74yw]prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 그는 항상 배운다.███████████████▍                                                 | 19/63 [00:17<00:40,  1.08it/s]
+rouge score is 0.0
+ground_truth 9시 반 이후엔 버스가 다니지 않아요.█████▌                                                | 20/63 [00:18<00:39,  1.08it/s]
+rouge score is 0.0
+Epoch 0:   5%|██▏                                          | 803/16885 [08:59<3:00:06,  1.49it/s, loss=3.73, v_num=74yw]prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 무슨 일인지 얘기해봐.███████████████▋                                               | 21/63 [00:19<00:38,  1.08it/s]
+rouge score is 0.0
+ground_truth 그 일은 일년 전 쯤 일어났다.███████████▊                                              | 22/63 [00:20<00:37,  1.09it/s]
+rouge score is 0.0
+Epoch 0:   5%|██▏                                          | 805/16885 [09:01<3:00:14,  1.49it/s, loss=3.73, v_num=74yw]prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 어디가는지 말해줘.███████████████████▉                                             | 23/63 [00:21<00:36,  1.10it/s]
+rouge score is 0.0
+ground_truth 메리는 탐과 콘치타가 손잡고 있는 걸 보았다.██████                                            | 24/63 [00:21<00:35,  1.11it/s]
+rouge score is 0.0
+Epoch 0:   5%|██▏                                          | 807/16885 [09:03<3:00:22,  1.49it/s, loss=3.73, v_num=74yw]prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 그들은 그에게서 권위를 보았다.███████████████▏                                          | 25/63 [00:22<00:34,  1.10it/s]
+rouge score is 0.0
+ground_truth 그 건물은 앞에서 보면 커 보이지만 옆에서 보면 그렇지 않다.                                         | 26/63 [00:23<00:33,  1.10it/s]
+rouge score is 0.0
+Epoch 0:   5%|██▏                                          | 809/16885 [09:05<3:00:30,  1.48it/s, loss=3.73, v_num=74yw]prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 오랫동안 편지를 못 써서 죄송해요.███████████████▍                                        | 27/63 [00:24<00:32,  1.10it/s]
+rouge score is 0.0
+                                                                                                                        prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 그는 변기 물을 쳐다보고 있었다.█████████████████▌                                       | 28/63 [00:25<00:32,  1.09it/s]
+rouge score is 0.0
+Epoch 0:   5%|██▏                                          | 811/16885 [09:06<3:00:38,  1.48it/s, loss=3.73, v_num=74yw]
+rouge score is 0.0 뭐야?███████████████████████████▋                                      | 29/63 [00:26<00:31,  1.09it/s]
+rouge score is 0.0 뭐야?███████████████████████████▋                                      | 29/63 [00:26<00:31,  1.09it/s]
+                                                                                                                        prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 프랑스어는 아주 유용해.████████████████████████▊                                     | 30/63 [00:27<00:30,  1.10it/s]
+rouge score is 0.0
+Epoch 0:   5%|██▏                                          | 813/16885 [09:08<3:00:46,  1.48it/s, loss=3.73, v_num=74yw]
+Validating:  52%|█████████████████████████████████████▏                                 | 33/63 [00:30<00:27,  1.10it/s]
+rouge score is 0.0
+                                                                                                                        prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 좀더 크게 말해라.██████████████████████████████                                   | 32/63 [00:29<00:28,  1.10it/s]
+rouge score is 0.0
+Epoch 0:   5%|██▏                                          | 815/16885 [09:10<3:00:54,  1.48it/s, loss=3.73, v_num=74yw]
+Validating:  56%|███████████████████████████████████████▍                               | 35/63 [00:31<00:25,  1.10it/s]
+rouge score is 0.0
+                                                                                                                        prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 극제비갈매기라는 새를 들어 본 적 있습니까?██████████████████▎                                | 34/63 [00:31<00:26,  1.10it/s]
+rouge score is 0.0
+Epoch 0:   5%|██▏                                          | 817/16885 [09:12<3:01:02,  1.48it/s, loss=3.73, v_num=74yw]
+Validating:  59%|█████████████████████████████████████████▋                             | 37/63 [00:33<00:23,  1.10it/s]
+rouge score is 0.0
+                                                                                                                        prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 내가 그것에 대한 너의 말을 믿어도 되겠니?████████████████████▌                              | 36/63 [00:32<00:24,  1.10it/s]
+rouge score is 0.1666666618055557
+Epoch 0:   5%|██▏                                          | 819/16885 [09:14<3:01:10,  1.48it/s, loss=3.73, v_num=74yw]
+ground_truth 여기는 이주 전부터 비가 하나도 오지 않았다.██████████████████████▉                           | 39/63 [00:35<00:21,  1.10it/s]
+rouge score is 0.0
+                                                                                                                        prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 우리는 톰의 도움없이 이것을 할 수 있다.███████████████████████▊                            | 38/63 [00:34<00:22,  1.10it/s]
+rouge score is 0.0
+Epoch 0:   5%|██▏                                          | 821/16885 [09:15<3:01:18,  1.48it/s, loss=3.73, v_num=74yw]prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 여기는 이주 전부터 비가 하나도 오지 않았다.██████████████████████▉                           | 39/63 [00:35<00:21,  1.10it/s]
+rouge score is 0.0
+ground_truth 가만히 좀 들어.████████████████████████████████████████                          | 40/63 [00:36<00:20,  1.10it/s]
+rouge score is 0.0
+Epoch 0:   5%|██▏                                          | 823/16885 [09:17<3:01:25,  1.48it/s, loss=3.73, v_num=74yw]prediction: - 너는 너의 마음을 잃어버렸어
+ground_truth 모든 고양이가 회색인 건 아니야.████████████████████████████████▏                        | 41/63 [00:37<00:20,  1.10it/s]
+rouge score is 0.0
+Validating:  67%|███████████████████████████████████████████████▎                       | 42/63 [00:38<00:19,  1.10it/s]
+ground_truth 저는 다섯 개의 언어를 합니다.███████████████████████████████████▍                      | 43/63 [00:39<00:18,  1.09it/s]
+rouge score is 0.0
+Validating:  70%|█████████████████████████████████████████████████▌                     | 44/63 [00:40<00:17,  1.09it/s]
+Validating:  73%|███████████████████████████████████████████████████▊                   | 46/63 [00:41<00:15,  1.10it/s]
+ground_truth 둘 다 프랑스어를 할 줄 알아.██████████████████████████████████████▊                   | 46/63 [00:41<00:15,  1.10it/s]
+ground_truth 아이들이 자전거를 타고 있다.███████████████████████████████████████████▏               | 49/63 [00:44<00:12,  1.10it/s]
+ground_truth 저는 내일 오전 6시에 체크아웃 하겠습니다.██████████████████████████████████████▌            | 52/63 [00:47<00:10,  1.10it/s]
+Validating:  87%|█████████████████████████████████████████████████████████████▉         | 55/63 [00:50<00:07,  1.09it/s]
+ground_truth 새미는 자신을 보호하려고 했다.████████████████████████████████████████████████▉         | 55/63 [00:50<00:07,  1.09it/s]
+ground_truth 난 몰라.████████████████████████████████████████████████████████████████▎     | 58/63 [00:52<00:04,  1.10it/s]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [00:55<00:01,  1.09it/s]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [00:55<00:01,  1.09it/s]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [00:55<00:01,  1.09it/s]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [00:55<00:01,  1.09it/s]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [00:55<00:01,  1.09it/s]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [00:55<00:01,  1.09it/s]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [00:55<00:01,  1.09it/s]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [00:55<00:01,  1.09it/s]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [00:55<00:01,  1.09it/s]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [00:55<00:01,  1.09it/s]
+Epoch 0:   5%| | 872/16885 [09:56<3:02:34,  1.46it/s, loss=3.8, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.0
+Epoch 0:   5%| | 875/16885 [09:58<3:02:31,  1.46it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 878/16885 [10:00<3:02:30,  1.46it/s, loss=3.88, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 881/16885 [10:02<3:02:29,  1.46it/s, loss=3.95, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 884/16885 [10:04<3:02:26,  1.46it/s, loss=3.83, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 887/16885 [10:06<3:02:23,  1.46it/s, loss=3.88, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 890/16885 [10:08<3:02:19,  1.46it/s, loss=3.93, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 893/16885 [10:10<3:02:16,  1.46it/s, loss=3.98, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 896/16885 [10:12<3:02:12,  1.46it/s, loss=3.99, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 899/16885 [10:14<3:02:09,  1.46it/s, loss=4.09, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 902/16885 [10:16<3:02:07,  1.46it/s, loss=3.9, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.0
+Epoch 0:   5%| | 905/16885 [10:18<3:02:03,  1.46it/s, loss=3.84, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 908/16885 [10:20<3:02:00,  1.46it/s, loss=3.92, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 911/16885 [10:22<3:01:56,  1.46it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 914/16885 [10:24<3:01:54,  1.46it/s, loss=3.64, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 917/16885 [10:26<3:01:51,  1.46it/s, loss=3.55, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 920/16885 [10:28<3:01:48,  1.46it/s, loss=3.67, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 923/16885 [10:30<3:01:45,  1.46it/s, loss=3.81, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   5%| | 926/16885 [10:32<3:01:41,  1.46it/s, loss=3.96, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 929/16885 [10:34<3:01:38,  1.46it/s, loss=3.91, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 933/16885 [10:37<3:01:34,  1.46it/s, loss=4.05, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 936/16885 [10:39<3:01:30,  1.46it/s, loss=3.97, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 939/16885 [10:41<3:01:27,  1.46it/s, loss=4, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.003
+Epoch 0:   6%| | 942/16885 [10:43<3:01:24,  1.46it/s, loss=3.97, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 945/16885 [10:45<3:01:20,  1.46it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 948/16885 [10:47<3:01:17,  1.47it/s, loss=3.8, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.0
+Epoch 0:   6%| | 951/16885 [10:49<3:01:14,  1.47it/s, loss=3.8, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.0
+Epoch 0:   6%| | 954/16885 [10:50<3:01:10,  1.47it/s, loss=3.77, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 957/16885 [10:52<3:01:07,  1.47it/s, loss=3.9, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.0
+Epoch 0:   6%| | 960/16885 [10:54<3:01:04,  1.47it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 963/16885 [10:56<3:01:00,  1.47it/s, loss=3.58, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 966/16885 [10:58<3:00:57,  1.47it/s, loss=3.63, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 969/16885 [11:00<3:00:54,  1.47it/s, loss=3.61, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 972/16885 [11:02<3:00:51,  1.47it/s, loss=3.57, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 975/16885 [11:04<3:00:48,  1.47it/s, loss=3.54, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 978/16885 [11:06<3:00:45,  1.47it/s, loss=3.44, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 981/16885 [11:08<3:00:42,  1.47it/s, loss=3.61, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 984/16885 [11:10<3:00:39,  1.47it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 987/16885 [11:12<3:00:36,  1.47it/s, loss=3.77, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 990/16885 [11:14<3:00:33,  1.47it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 993/16885 [11:16<3:00:30,  1.47it/s, loss=4.01, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 996/16885 [11:18<3:00:26,  1.47it/s, loss=4.08, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 999/16885 [11:20<3:00:23,  1.47it/s, loss=4.01, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 1003/16885 [11:23<3:00:19,  1.47it/s, loss=4.07, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1006/16885 [11:25<3:00:16,  1.47it/s, loss=4.02, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1009/16885 [11:27<3:00:13,  1.47it/s, loss=4.05, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1012/16885 [11:29<3:00:10,  1.47it/s, loss=4.05, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1015/16885 [11:31<3:00:08,  1.47it/s, loss=4.01, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1018/16885 [11:33<3:00:05,  1.47it/s, loss=3.97, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1021/16885 [11:35<3:00:02,  1.47it/s, loss=3.94, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1024/16885 [11:37<2:59:59,  1.47it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1027/16885 [11:39<2:59:57,  1.47it/s, loss=3.84, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1030/16885 [11:41<2:59:54,  1.47it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1033/16885 [11:43<2:59:51,  1.47it/s, loss=3.73, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1036/16885 [11:45<2:59:48,  1.47it/s, loss=3.75, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1039/16885 [11:47<2:59:45,  1.47it/s, loss=3.9, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 1042/16885 [11:49<2:59:42,  1.47it/s, loss=3.95, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1045/16885 [11:51<2:59:39,  1.47it/s, loss=4.1, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 1048/16885 [11:53<2:59:36,  1.47it/s, loss=4.04, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1051/16885 [11:55<2:59:33,  1.47it/s, loss=3.92, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1054/16885 [11:57<2:59:31,  1.47it/s, loss=3.93, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1057/16885 [11:59<2:59:28,  1.47it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1060/16885 [12:01<2:59:25,  1.47it/s, loss=3.87, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1063/16885 [12:03<2:59:22,  1.47it/s, loss=3.73, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1066/16885 [12:05<2:59:19,  1.47it/s, loss=3.66, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1069/16885 [12:07<2:59:17,  1.47it/s, loss=3.74, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1072/16885 [12:09<2:59:14,  1.47it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1075/16885 [12:11<2:59:11,  1.47it/s, loss=3.8, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   6%| | 1078/16885 [12:13<2:59:08,  1.47it/s, loss=3.92, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1081/16885 [12:15<2:59:06,  1.47it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1084/16885 [12:17<2:59:03,  1.47it/s, loss=3.97, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1087/16885 [12:19<2:59:01,  1.47it/s, loss=4.04, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1090/16885 [12:21<2:58:59,  1.47it/s, loss=3.96, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1093/16885 [12:23<2:58:56,  1.47it/s, loss=3.88, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   6%| | 1096/16885 [12:25<2:58:55,  1.47it/s, loss=3.99, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1099/16885 [12:27<2:58:52,  1.47it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1102/16885 [12:29<2:58:49,  1.47it/s, loss=3.93, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1105/16885 [12:31<2:58:46,  1.47it/s, loss=3.87, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1108/16885 [12:33<2:58:44,  1.47it/s, loss=3.74, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1111/16885 [12:35<2:58:41,  1.47it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1114/16885 [12:37<2:58:38,  1.47it/s, loss=3.78, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1117/16885 [12:39<2:58:36,  1.47it/s, loss=3.68, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1120/16885 [12:41<2:58:33,  1.47it/s, loss=3.75, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1123/16885 [12:43<2:58:32,  1.47it/s, loss=3.64, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1126/16885 [12:45<2:58:29,  1.47it/s, loss=3.74, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1129/16885 [12:47<2:58:28,  1.47it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1132/16885 [12:49<2:58:24,  1.47it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1135/16885 [12:51<2:58:22,  1.47it/s, loss=4.01, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1138/16885 [12:53<2:58:19,  1.47it/s, loss=3.95, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1141/16885 [12:55<2:58:16,  1.47it/s, loss=3.95, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1144/16885 [12:57<2:58:13,  1.47it/s, loss=3.95, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1147/16885 [12:59<2:58:11,  1.47it/s, loss=3.93, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1150/16885 [13:01<2:58:08,  1.47it/s, loss=3.88, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1153/16885 [13:03<2:58:05,  1.47it/s, loss=3.74, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1156/16885 [13:05<2:58:02,  1.47it/s, loss=3.66, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1159/16885 [13:07<2:58:02,  1.47it/s, loss=3.62, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1162/16885 [13:09<2:57:59,  1.47it/s, loss=3.69, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1165/16885 [13:11<2:57:58,  1.47it/s, loss=3.76, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1168/16885 [13:13<2:57:56,  1.47it/s, loss=3.68, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1171/16885 [13:15<2:57:53,  1.47it/s, loss=3.87, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1174/16885 [13:17<2:57:50,  1.47it/s, loss=3.88, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1177/16885 [13:19<2:57:47,  1.47it/s, loss=3.9, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   7%| | 1180/16885 [13:21<2:57:44,  1.47it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1183/16885 [13:23<2:57:41,  1.47it/s, loss=3.75, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1186/16885 [13:25<2:57:38,  1.47it/s, loss=3.75, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1189/16885 [13:27<2:57:36,  1.47it/s, loss=3.59, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1192/16885 [13:29<2:57:33,  1.47it/s, loss=3.41, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1195/16885 [13:31<2:57:32,  1.47it/s, loss=3.49, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1198/16885 [13:33<2:57:33,  1.47it/s, loss=3.49, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1201/16885 [13:35<2:57:30,  1.47it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1204/16885 [13:37<2:57:27,  1.47it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1207/16885 [13:39<2:57:26,  1.47it/s, loss=3.76, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1210/16885 [13:41<2:57:23,  1.47it/s, loss=3.83, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1213/16885 [13:43<2:57:20,  1.47it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1216/16885 [13:45<2:57:17,  1.47it/s, loss=3.77, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1219/16885 [13:47<2:57:16,  1.47it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1222/16885 [13:49<2:57:13,  1.47it/s, loss=3.62, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1225/16885 [13:51<2:57:10,  1.47it/s, loss=3.51, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1228/16885 [13:53<2:57:07,  1.47it/s, loss=3.62, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1231/16885 [13:55<2:57:05,  1.47it/s, loss=3.73, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1234/16885 [13:57<2:57:02,  1.47it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1237/16885 [13:59<2:56:59,  1.47it/s, loss=3.78, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1240/16885 [14:01<2:56:56,  1.47it/s, loss=3.81, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1243/16885 [14:03<2:56:53,  1.47it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1246/16885 [14:05<2:56:50,  1.47it/s, loss=3.83, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1249/16885 [14:07<2:56:47,  1.47it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1252/16885 [14:09<2:56:44,  1.47it/s, loss=3.63, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1255/16885 [14:11<2:56:42,  1.47it/s, loss=3.63, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1258/16885 [14:13<2:56:41,  1.47it/s, loss=3.56, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1261/16885 [14:15<2:56:38,  1.47it/s, loss=3.49, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   7%| | 1264/16885 [14:17<2:56:35,  1.47it/s, loss=3.56, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1267/16885 [14:19<2:56:32,  1.47it/s, loss=3.62, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1270/16885 [14:21<2:56:29,  1.47it/s, loss=3.59, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1273/16885 [14:23<2:56:26,  1.47it/s, loss=3.52, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1276/16885 [14:25<2:56:23,  1.47it/s, loss=3.58, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1279/16885 [14:27<2:56:21,  1.47it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1282/16885 [14:29<2:56:18,  1.48it/s, loss=3.69, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1285/16885 [14:31<2:56:15,  1.48it/s, loss=3.63, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1288/16885 [14:33<2:56:12,  1.48it/s, loss=3.58, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1292/16885 [14:35<2:56:09,  1.48it/s, loss=3.58, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1295/16885 [14:37<2:56:06,  1.48it/s, loss=3.68, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1298/16885 [14:39<2:56:03,  1.48it/s, loss=3.58, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1301/16885 [14:41<2:56:01,  1.48it/s, loss=3.55, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1304/16885 [14:43<2:55:59,  1.48it/s, loss=3.69, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1307/16885 [14:45<2:55:56,  1.48it/s, loss=3.7, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   8%| | 1310/16885 [14:47<2:55:53,  1.48it/s, loss=3.75, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1313/16885 [14:49<2:55:52,  1.48it/s, loss=3.65, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1316/16885 [14:51<2:55:49,  1.48it/s, loss=3.65, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1319/16885 [14:53<2:55:47,  1.48it/s, loss=3.75, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1321/16885 [14:55<2:55:46,  1.48it/s, loss=3.71, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1325/16885 [14:57<2:55:43,  1.48it/s, loss=3.55, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1328/16885 [14:59<2:55:40,  1.48it/s, loss=3.68, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1331/16885 [15:01<2:55:37,  1.48it/s, loss=3.65, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1333/16885 [15:03<2:55:35,  1.48it/s, loss=3.66, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1337/16885 [15:05<2:55:33,  1.48it/s, loss=3.53, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1340/16885 [15:07<2:55:30,  1.48it/s, loss=3.54, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1343/16885 [15:09<2:55:28,  1.48it/s, loss=3.55, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1346/16885 [15:11<2:55:25,  1.48it/s, loss=3.48, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1349/16885 [15:13<2:55:22,  1.48it/s, loss=3.52, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1352/16885 [15:15<2:55:19,  1.48it/s, loss=3.64, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1355/16885 [15:17<2:55:17,  1.48it/s, loss=3.65, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1358/16885 [15:19<2:55:15,  1.48it/s, loss=3.67, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1361/16885 [15:21<2:55:12,  1.48it/s, loss=3.51, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1364/16885 [15:23<2:55:09,  1.48it/s, loss=3.48, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1367/16885 [15:25<2:55:07,  1.48it/s, loss=3.46, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1370/16885 [15:27<2:55:05,  1.48it/s, loss=3.41, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1373/16885 [15:29<2:55:02,  1.48it/s, loss=3.37, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1376/16885 [15:31<2:54:59,  1.48it/s, loss=3.58, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1379/16885 [15:33<2:54:56,  1.48it/s, loss=3.49, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1382/16885 [15:35<2:54:54,  1.48it/s, loss=3.59, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1385/16885 [15:37<2:54:51,  1.48it/s, loss=3.81, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1388/16885 [15:39<2:54:48,  1.48it/s, loss=3.81, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1391/16885 [15:41<2:54:46,  1.48it/s, loss=3.81, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1394/16885 [15:43<2:54:43,  1.48it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1397/16885 [15:45<2:54:42,  1.48it/s, loss=3.78, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1400/16885 [15:47<2:54:39,  1.48it/s, loss=3.8, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   8%| | 1403/16885 [15:49<2:54:37,  1.48it/s, loss=3.73, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1406/16885 [15:51<2:54:34,  1.48it/s, loss=3.8, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   8%| | 1409/16885 [15:53<2:54:32,  1.48it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1412/16885 [15:55<2:54:29,  1.48it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1415/16885 [15:57<2:54:27,  1.48it/s, loss=3.9, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   8%| | 1418/16885 [15:59<2:54:26,  1.48it/s, loss=3.94, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1421/16885 [16:01<2:54:23,  1.48it/s, loss=3.97, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1424/16885 [16:03<2:54:21,  1.48it/s, loss=3.94, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1427/16885 [16:05<2:54:18,  1.48it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1430/16885 [16:07<2:54:15,  1.48it/s, loss=3.73, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   8%| | 1433/16885 [16:09<2:54:13,  1.48it/s, loss=3.67, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1436/16885 [16:11<2:54:10,  1.48it/s, loss=3.56, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1439/16885 [16:13<2:54:07,  1.48it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1443/16885 [16:15<2:54:04,  1.48it/s, loss=3.73, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1446/16885 [16:17<2:54:01,  1.48it/s, loss=3.83, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1449/16885 [16:19<2:53:59,  1.48it/s, loss=3.83, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1452/16885 [16:21<2:53:56,  1.48it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1455/16885 [16:23<2:53:54,  1.48it/s, loss=3.78, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1458/16885 [16:25<2:53:51,  1.48it/s, loss=3.7, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0.
+Epoch 0:   9%| | 1461/16885 [16:27<2:53:49,  1.48it/s, loss=3.58, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1464/16885 [16:29<2:53:47,  1.48it/s, loss=3.48, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1467/16885 [16:31<2:53:44,  1.48it/s, loss=3.44, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1470/16885 [16:33<2:53:41,  1.48it/s, loss=3.49, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1473/16885 [16:35<2:53:39,  1.48it/s, loss=3.62, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1476/16885 [16:37<2:53:37,  1.48it/s, loss=3.69, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1479/16885 [16:39<2:53:34,  1.48it/s, loss=3.76, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1482/16885 [16:41<2:53:33,  1.48it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1485/16885 [16:43<2:53:31,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1488/16885 [16:45<2:53:29,  1.48it/s, loss=3.94, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1491/16885 [16:47<2:53:26,  1.48it/s, loss=4.01, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1494/16885 [16:49<2:53:24,  1.48it/s, loss=3.89, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1497/16885 [16:51<2:53:21,  1.48it/s, loss=3.78, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1500/16885 [16:53<2:53:19,  1.48it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1503/16885 [16:55<2:53:16,  1.48it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1506/16885 [16:57<2:53:14,  1.48it/s, loss=3.64, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1509/16885 [16:59<2:53:12,  1.48it/s, loss=3.52, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1512/16885 [17:01<2:53:09,  1.48it/s, loss=3.46, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1515/16885 [17:03<2:53:07,  1.48it/s, loss=3.62, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1518/16885 [17:05<2:53:04,  1.48it/s, loss=3.65, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1521/16885 [17:07<2:53:03,  1.48it/s, loss=3.77, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1524/16885 [17:09<2:53:00,  1.48it/s, loss=3.75, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1527/16885 [17:11<2:52:58,  1.48it/s, loss=3.73, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1530/16885 [17:13<2:52:55,  1.48it/s, loss=3.81, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1533/16885 [17:15<2:52:52,  1.48it/s, loss=3.77, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1536/16885 [17:17<2:52:50,  1.48it/s, loss=3.68, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1539/16885 [17:19<2:52:48,  1.48it/s, loss=3.65, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1542/16885 [17:21<2:52:46,  1.48it/s, loss=3.54, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1545/16885 [17:23<2:52:43,  1.48it/s, loss=3.53, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1548/16885 [17:25<2:52:41,  1.48it/s, loss=3.56, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1551/16885 [17:27<2:52:39,  1.48it/s, loss=3.54, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1554/16885 [17:29<2:52:36,  1.48it/s, loss=3.51, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1557/16885 [17:31<2:52:35,  1.48it/s, loss=3.54, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1560/16885 [17:33<2:52:32,  1.48it/s, loss=3.46, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1563/16885 [17:35<2:52:31,  1.48it/s, loss=3.48, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1565/16885 [17:37<2:52:30,  1.48it/s, loss=3.49, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1568/16885 [17:39<2:52:27,  1.48it/s, loss=3.53, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1571/16885 [17:41<2:52:25,  1.48it/s, loss=3.55, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1574/16885 [17:43<2:52:23,  1.48it/s, loss=3.59, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1577/16885 [17:45<2:52:21,  1.48it/s, loss=3.53, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1580/16885 [17:47<2:52:18,  1.48it/s, loss=3.53, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1583/16885 [17:49<2:52:16,  1.48it/s, loss=3.64, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1586/16885 [17:51<2:52:13,  1.48it/s, loss=3.67, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1589/16885 [17:53<2:52:11,  1.48it/s, loss=3.68, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1592/16885 [17:55<2:52:09,  1.48it/s, loss=3.69, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1595/16885 [17:57<2:52:07,  1.48it/s, loss=3.58, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1598/16885 [17:59<2:52:05,  1.48it/s, loss=3.71, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1601/16885 [18:01<2:52:04,  1.48it/s, loss=3.89, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:   9%| | 1604/16885 [18:03<2:52:01,  1.48it/s, loss=3.97, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:  10%| | 1607/16885 [18:05<2:51:59,  1.48it/s, loss=4.01, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:  10%| | 1610/16885 [18:07<2:51:56,  1.48it/s, loss=4.07, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:  10%| | 1613/16885 [18:09<2:51:54,  1.48it/s, loss=3.97, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:  10%| | 1616/16885 [18:11<2:51:52,  1.48it/s, loss=4.17, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:  10%| | 1619/16885 [18:13<2:51:50,  1.48it/s, loss=4.05, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:  10%| | 1622/16885 [18:15<2:51:47,  1.48it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:  10%| | 1625/16885 [18:17<2:51:44,  1.48it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0
+Epoch 0:  10%| | 1627/16885 [18:18<2:51:37,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+Epoch 0:  10%| | 1627/16885 [18:18<2:51:37,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+Epoch 0:  10%| | 1627/16885 [18:18<2:51:37,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일일 뿐이다.
+Epoch 0:  10%| | 1627/16885 [18:18<2:51:37,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일일 뿐이다.
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일일 뿐이다.
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다..
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일일 뿐이다.
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일일 뿐이다.적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다..적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다.상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다.상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다.상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다.상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일일 뿐이다.적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다..적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다..적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다.상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다.상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일일 뿐이다.적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1637/16885 [18:27<2:51:58,  1.48it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다.상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다.상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일일 뿐이다.적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 또한 일종의 고통입니다.다.적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일 뿐이다.상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일일 뿐이다.적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0prediction: 그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0agg_score is그러나 그것은 단지 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1670/16885 [19:37<2:58:46,  1.42it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.0035, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1696/16885 [21:22<3:11:26,  1.32it/s, loss=3.91, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1698/16885 [21:23<3:11:23,  1.32it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1702/16885 [21:26<3:11:17,  1.32it/s, loss=3.73, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1705/16885 [21:28<3:11:12,  1.32it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1708/16885 [21:30<3:11:07,  1.32it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1711/16885 [21:32<3:11:02,  1.32it/s, loss=3.77, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1714/16885 [21:34<3:10:57,  1.32it/s, loss=3.62, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1717/16885 [21:36<3:10:52,  1.32it/s, loss=3.64, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1720/16885 [21:38<3:10:47,  1.32it/s, loss=3.71, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1723/16885 [21:40<3:10:43,  1.32it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1726/16885 [21:42<3:10:38,  1.33it/s, loss=3.81, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1729/16885 [21:44<3:10:33,  1.33it/s, loss=3.73, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1732/16885 [21:46<3:10:28,  1.33it/s, loss=3.73, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1735/16885 [21:48<3:10:24,  1.33it/s, loss=3.66, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1738/16885 [21:50<3:10:19,  1.33it/s, loss=3.68, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1741/16885 [21:52<3:10:14,  1.33it/s, loss=3.57, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1744/16885 [21:54<3:10:09,  1.33it/s, loss=3.5, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1747/16885 [21:56<3:10:04,  1.33it/s, loss=3.52, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1750/16885 [21:58<3:10:00,  1.33it/s, loss=3.56, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1753/16885 [22:00<3:09:55,  1.33it/s, loss=3.76, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1756/16885 [22:02<3:09:51,  1.33it/s, loss=3.85, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1759/16885 [22:04<3:09:46,  1.33it/s, loss=3.93, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1762/16885 [22:06<3:09:43,  1.33it/s, loss=3.94, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1764/16885 [22:07<3:09:40,  1.33it/s, loss=4.03, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1768/16885 [22:10<3:09:33,  1.33it/s, loss=3.93, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  10%| | 1771/16885 [22:12<3:09:29,  1.33it/s, loss=4, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0.0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1774/16885 [22:14<3:09:24,  1.33it/s, loss=3.88, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1777/16885 [22:16<3:09:20,  1.33it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1780/16885 [22:18<3:09:15,  1.33it/s, loss=3.78, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1783/16885 [22:20<3:09:11,  1.33it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1786/16885 [22:22<3:09:06,  1.33it/s, loss=3.81, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1789/16885 [22:24<3:09:02,  1.33it/s, loss=3.76, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1792/16885 [22:26<3:08:57,  1.33it/s, loss=3.77, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1796/16885 [22:28<3:08:51,  1.33it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1799/16885 [22:30<3:08:46,  1.33it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1802/16885 [22:32<3:08:42,  1.33it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1805/16885 [22:34<3:08:38,  1.33it/s, loss=3.75, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1808/16885 [22:36<3:08:33,  1.33it/s, loss=3.76, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1811/16885 [22:38<3:08:28,  1.33it/s, loss=3.64, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1814/16885 [22:40<3:08:24,  1.33it/s, loss=3.62, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1817/16885 [22:42<3:08:19,  1.33it/s, loss=3.6, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1820/16885 [22:44<3:08:16,  1.33it/s, loss=3.62, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1823/16885 [22:46<3:08:12,  1.33it/s, loss=3.66, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1826/16885 [22:48<3:08:08,  1.33it/s, loss=3.64, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1829/16885 [22:50<3:08:03,  1.33it/s, loss=3.75, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1832/16885 [22:52<3:07:59,  1.33it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1835/16885 [22:54<3:07:55,  1.33it/s, loss=3.74, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1838/16885 [22:56<3:07:50,  1.34it/s, loss=3.76, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1841/16885 [22:58<3:07:46,  1.34it/s, loss=3.76, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1844/16885 [23:00<3:07:42,  1.34it/s, loss=3.74, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1847/16885 [23:02<3:07:37,  1.34it/s, loss=3.77, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1850/16885 [23:04<3:07:32,  1.34it/s, loss=3.91, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1853/16885 [23:06<3:07:28,  1.34it/s, loss=3.84, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1856/16885 [23:08<3:07:25,  1.34it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1859/16885 [23:10<3:07:20,  1.34it/s, loss=3.95, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1862/16885 [23:12<3:07:16,  1.34it/s, loss=4.04, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1865/16885 [23:14<3:07:12,  1.34it/s, loss=3.99, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1868/16885 [23:16<3:07:08,  1.34it/s, loss=3.84, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1871/16885 [23:18<3:07:03,  1.34it/s, loss=3.73, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1874/16885 [23:20<3:06:59,  1.34it/s, loss=3.77, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1877/16885 [23:22<3:06:55,  1.34it/s, loss=3.95, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1880/16885 [23:24<3:06:51,  1.34it/s, loss=3.8, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1883/16885 [23:26<3:06:47,  1.34it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1886/16885 [23:28<3:06:43,  1.34it/s, loss=3.84, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1889/16885 [23:30<3:06:38,  1.34it/s, loss=3.8, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1892/16885 [23:32<3:06:34,  1.34it/s, loss=3.8, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1895/16885 [23:34<3:06:30,  1.34it/s, loss=3.63, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1898/16885 [23:36<3:06:26,  1.34it/s, loss=3.5, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1901/16885 [23:38<3:06:22,  1.34it/s, loss=3.54, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1904/16885 [23:40<3:06:19,  1.34it/s, loss=3.62, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1907/16885 [23:42<3:06:15,  1.34it/s, loss=3.66, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1910/16885 [23:44<3:06:10,  1.34it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1913/16885 [23:46<3:06:06,  1.34it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1916/16885 [23:48<3:06:02,  1.34it/s, loss=3.78, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1919/16885 [23:50<3:05:57,  1.34it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1922/16885 [23:52<3:05:53,  1.34it/s, loss=3.93, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1925/16885 [23:54<3:05:49,  1.34it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1928/16885 [23:56<3:05:45,  1.34it/s, loss=3.91, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1931/16885 [23:58<3:05:40,  1.34it/s, loss=3.97, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1934/16885 [24:00<3:05:37,  1.34it/s, loss=4, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0.0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1937/16885 [24:02<3:05:33,  1.34it/s, loss=4.06, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  11%| | 1940/16885 [24:04<3:05:29,  1.34it/s, loss=3.89, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1943/16885 [24:06<3:05:25,  1.34it/s, loss=3.87, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1946/16885 [24:08<3:05:20,  1.34it/s, loss=3.89, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1949/16885 [24:10<3:05:16,  1.34it/s, loss=3.73, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1952/16885 [24:12<3:05:12,  1.34it/s, loss=3.92, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1955/16885 [24:14<3:05:08,  1.34it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1958/16885 [24:16<3:05:04,  1.34it/s, loss=3.89, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1961/16885 [24:18<3:05:00,  1.34it/s, loss=3.89, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1964/16885 [24:20<3:04:56,  1.34it/s, loss=3.92, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1967/16885 [24:22<3:04:52,  1.34it/s, loss=4.01, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1970/16885 [24:24<3:04:48,  1.35it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1973/16885 [24:26<3:04:44,  1.35it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1976/16885 [24:28<3:04:40,  1.35it/s, loss=3.83, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1979/16885 [24:30<3:04:36,  1.35it/s, loss=3.93, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1982/16885 [24:32<3:04:33,  1.35it/s, loss=3.89, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1985/16885 [24:34<3:04:29,  1.35it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1988/16885 [24:36<3:04:25,  1.35it/s, loss=3.6, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1991/16885 [24:38<3:04:21,  1.35it/s, loss=3.63, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1994/16885 [24:40<3:04:17,  1.35it/s, loss=3.6, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 1997/16885 [24:42<3:04:13,  1.35it/s, loss=3.63, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2000/16885 [24:44<3:04:08,  1.35it/s, loss=3.56, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2003/16885 [24:46<3:04:04,  1.35it/s, loss=3.6, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2006/16885 [24:48<3:04:00,  1.35it/s, loss=3.65, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2010/16885 [24:51<3:03:54,  1.35it/s, loss=3.67, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2013/16885 [24:53<3:03:50,  1.35it/s, loss=3.61, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2016/16885 [24:55<3:03:46,  1.35it/s, loss=3.6, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2019/16885 [24:56<3:03:42,  1.35it/s, loss=3.69, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2022/16885 [24:58<3:03:38,  1.35it/s, loss=3.7, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2025/16885 [25:00<3:03:34,  1.35it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2028/16885 [25:02<3:03:30,  1.35it/s, loss=3.8, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2031/16885 [25:04<3:03:26,  1.35it/s, loss=3.87, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2034/16885 [25:06<3:03:21,  1.35it/s, loss=3.87, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2037/16885 [25:08<3:03:17,  1.35it/s, loss=3.93, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2040/16885 [25:10<3:03:15,  1.35it/s, loss=3.78, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2043/16885 [25:12<3:03:11,  1.35it/s, loss=3.75, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2046/16885 [25:14<3:03:07,  1.35it/s, loss=3.63, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2049/16885 [25:17<3:03:04,  1.35it/s, loss=3.49, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2052/16885 [25:19<3:03:00,  1.35it/s, loss=3.54, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2055/16885 [25:21<3:02:57,  1.35it/s, loss=3.57, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2058/16885 [25:23<3:02:53,  1.35it/s, loss=3.53, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2061/16885 [25:25<3:02:49,  1.35it/s, loss=3.52, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2064/16885 [25:27<3:02:45,  1.35it/s, loss=3.78, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2067/16885 [25:29<3:02:41,  1.35it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2070/16885 [25:31<3:02:38,  1.35it/s, loss=3.81, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2073/16885 [25:33<3:02:34,  1.35it/s, loss=3.81, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2076/16885 [25:35<3:02:30,  1.35it/s, loss=3.95, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2079/16885 [25:37<3:02:27,  1.35it/s, loss=4, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0.0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2082/16885 [25:39<3:02:23,  1.35it/s, loss=4.03, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2085/16885 [25:41<3:02:19,  1.35it/s, loss=3.98, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2088/16885 [25:43<3:02:16,  1.35it/s, loss=3.94, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2091/16885 [25:45<3:02:12,  1.35it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2094/16885 [25:47<3:02:08,  1.35it/s, loss=3.86, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2097/16885 [25:49<3:02:04,  1.35it/s, loss=3.75, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2100/16885 [25:51<3:02:00,  1.35it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2103/16885 [25:53<3:01:57,  1.35it/s, loss=3.74, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2105/16885 [25:54<3:01:54,  1.35it/s, loss=3.69, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  12%| | 2109/16885 [25:57<3:01:49,  1.35it/s, loss=3.65, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2112/16885 [25:59<3:01:46,  1.35it/s, loss=3.81, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2115/16885 [26:01<3:01:42,  1.35it/s, loss=3.77, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2118/16885 [26:03<3:01:39,  1.35it/s, loss=3.71, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2121/16885 [26:05<3:01:35,  1.36it/s, loss=3.72, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2124/16885 [26:07<3:01:31,  1.36it/s, loss=3.75, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2127/16885 [26:09<3:01:27,  1.36it/s, loss=3.83, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2130/16885 [26:11<3:01:23,  1.36it/s, loss=3.92, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2133/16885 [26:13<3:01:19,  1.36it/s, loss=3.88, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2136/16885 [26:15<3:01:16,  1.36it/s, loss=3.87, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2139/16885 [26:17<3:01:12,  1.36it/s, loss=3.87, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2142/16885 [26:19<3:01:09,  1.36it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2145/16885 [26:21<3:01:05,  1.36it/s, loss=3.82, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2148/16885 [26:23<3:01:01,  1.36it/s, loss=3.8, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2151/16885 [26:25<3:00:58,  1.36it/s, loss=3.76, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2154/16885 [26:27<3:00:54,  1.36it/s, loss=3.79, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2157/16885 [26:29<3:00:50,  1.36it/s, loss=3.7, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=0agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2160/16885 [26:31<3:00:46,  1.36it/s, loss=3.63, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2163/16885 [26:33<3:00:43,  1.36it/s, loss=3.54, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2166/16885 [26:35<3:00:39,  1.36it/s, loss=3.55, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=agg_score is tensor(0.0015, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2167/16885 [26:35<3:00:38,  1.36it/s, loss=3.53, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=Time: 1823.009878158569315, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+Epoch 0:  13%|▏| 2167/16885 [26:35<3:00:38,  1.36it/s, loss=3.53, v_num=74yw, acc_score_tatoeba=0.00148, acc_score_mean=Time: 1823.009878158569315, device='cuda:0') 2인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상적인 일상
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py:685: UserWarning: Detected KeyboardInterrupt, attempting graceful shutdown...
+  rank_zero_warn("Detected KeyboardInterrupt, attempting graceful shutdown...")

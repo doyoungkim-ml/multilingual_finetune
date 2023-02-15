@@ -1,0 +1,1402 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/15
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 15 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,11,12,13,14,15]
+  | Name  | Type                        | Params
+------------------------------------------------------
+0 | model | MT5ForConditionalGeneration | 3.7 B
+------------------------------------------------------
+3.7 B     Trainable params
+0         Non-trainable params
+3.7 B     Total params
+14,970.479Total estimated model params size (MB)
+Validation sanity check: 0it [00:00, ?it/s]First elem of self.dataset is  {'en': 'Japan is a group of islands with many mountains and almost no forests.\n', 'jpn': '日本は列島であり、山が多く、森は殆どない。\n'}
+Length of dataset retrieving is.. 1000
+Validation sanity check:   0%|                                          | 0/2 [00:00<?, ?it/s]
+WARNING:datasets.builder:Using custom data configuration default-a2b69e7004eaf94e
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-a2b69e7004eaf94e/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|██████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 367.18it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/json/default-a2b69e7004eaf94e/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab/cache-fa9be358c4288b1a.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+Validation sanity check:   0%|                                          | 0/2 [00:00<?, ?it/s]input: Japan is a group of islands with many mountains and almost no forests. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: <extra_id_0>u. === Translate the above sentence into English: Japan is a group of islands with many mountains and no forests. <extra_id_1>: <extra_id_2>: Japan is <extra_id_3>: === Japan is a group of islands with many mountains and no forests. Japan <extra_id_4>: Japan <extra_id_5>: Japan <extra_id_6>: Japan <extra_id_7>: === Japan <extra_id_8>: === Japan <extra_id_9>: Japan <extra_id_10>: Japan <extra_id_11>: === Japan <extra_id_12>: <extra_id_13>: === Japan <extra_id_14>: === Japan <extra_id_15>: === <extra_id_16>: <extra_id_17>: === Japan <extra_id_18>: <extra_id_19>: === Translate <extra_id_20>: <extra_id_21>: === Japan <extra_id_22>: === Japan <extra_id_23>: === Japan <extra_id_24>: === Japan <extra_id_25>
+ground_truth 日本は列島であり、山が多く、森は殆どない。
+rouge score is 0.0
+Validation sanity check:  50%|█████████████████                 | 1/2 [00:06<00:06,  6.59s/it]input: Because just a few lines once a month are sufficient, if you write a blog, your ability in English will increase just from doing this. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: <extra_id_0>: Because just a few lines once a month are sufficient, if you write a blog. === Translate into English:  <extra_id_1>:  <extra_id_2>:  <extra_id_3>:  <extra_id_4>: ===  <extra_id_5>:  <extra_id_6>: ===  <extra_id_7>: ===  <extra_id_8>: ===  <extra_id_9>: ===  <extra_id_10>: ===  <extra_id_11>: ===  <extra_id_12>: ===  <extra_id_13>: ===  <extra_id_14>: ===  <extra_id_15>: ===  <extra_id_16>: ===  <extra_id_17>: ===  <extra_id_18>: <extra_id_19>: ===  <extra_id_20>: ===  <extra_id_21>: ===  <extra_id_22>: ===  <extra_id_23>: ===  <extra_id_24>: ===  <extra_id_25>: ===
+ground_truth 月に1回ほんの2、3行でいいからブログを書いていればそれだけで英語力が上がります。
+rouge score is 0.0
+Validation sanity check: 100%|██████████████████████████████████| 2/2 [00:12<00:00,  6.26s/it]agg_score is tensor(0., device='cuda:0') 0
+enter
+WARNING:datasets.builder:Using custom data configuration default-7de4317357dfce3d
+First elem of self.dataset is  {'en': "So let's look at what this last century has been to see where we're going. \n", 'jpn': '将来がどうなるか 理解するために この１世紀がどんなものだったか 振り返って見てみましょう\n'}
+Length of dataset retrieving is.. 100000
+Training: 0it [00:00, ?it/s]
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-7de4317357dfce3d/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|██████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 119.63it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+
+Epoch 0:   0%|                                                       | 0/3401 [00:00<?, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 2. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  98%|████████████████████▌| 3334/3401 [37:51<00:45,  1.47it/s, loss=2.57, v_num=g5e0]input: Japan is a group of islands with many mountains and almost no forests. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 日本は山々が多く、ほとんど森がない島々です。                                     | 0/67 [00:00<?, ?it/s]
+ground_truth 日本は列島であり、山が多く、森は殆どない。
+rouge score is 0.0
+Epoch 0:  98%|████████████████████▌| 3336/3401 [37:52<00:44,  1.47it/s, loss=2.57, v_num=g5e0]
+prediction: 毎月数枚のラインは、ブログを書くのに十分です。 これをするだけで、英語の能力は上昇します。      | 1/67 [00:00<00:50,  1.31it/s]
+ground_truth 月に1回ほんの2、3行でいいからブログを書いていればそれだけで英語力が上がります。
+rouge score is 0.0
+                                                                                              input: I know your father. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: あなたの父親を知っている。                                      | 2/67 [00:02<01:11,  1.09s/it]
+ground_truth 私は君のお父さんを知っている。
+rouge score is 0.0
+Epoch 0:  98%|████████████████████▌| 3338/3401 [37:54<00:42,  1.47it/s, loss=2.57, v_num=g5e0]input: I can't speak French as well as Tom. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: トムもフランス語を話せない。                                     | 3/67 [00:02<00:49,  1.29it/s]
+ground_truth 私はトムほどフランス語が上手くはない。
+rouge score is 0.0
+prediction: まだ動きます。▋                                           | 4/67 [00:03<00:42,  1.47it/s]
+ground_truth まだ動いてるよ。
+rouge score is 0.0
+Epoch 0:  98%|████████████████████▌| 3340/3401 [37:55<00:41,  1.47it/s, loss=2.57, v_num=g5e0]input: He was laughed at for a stupid act. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 馬鹿げた行動に笑われた。                                       | 5/67 [00:03<00:34,  1.80it/s]
+ground_truth 彼はばかげた行いをして笑いものになった。
+rouge score is 0.0
+                                                                                              input: Do you have relatives abroad? === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 国外に親戚がいるのでしょうか。                                    | 6/67 [00:03<00:32,  1.89it/s]
+ground_truth 海外にご親族はいらっしゃいますか?
+rouge score is 0.0
+Epoch 0:  98%|████████████████████▋| 3342/3401 [37:56<00:40,  1.47it/s, loss=2.57, v_num=g5e0]input: He succeeded in solving the question. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 彼は問題を解決することに成功した。                                  | 7/67 [00:04<00:30,  1.95it/s]
+ground_truth 彼はうまくその問題が解けた。
+rouge score is 0.0
+prediction: なぜ耳で歌わないのか。                                        | 8/67 [00:04<00:30,  1.95it/s]
+ground_truth 臨機応変にやろうよ。
+rouge score is 0.0
+Epoch 0:  98%|████████████████████▋| 3344/3401 [37:57<00:38,  1.47it/s, loss=2.57, v_num=g5e0]input: I want to open a restaurant of my own. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 自分のレストランを開きたい。                                     | 9/67 [00:05<00:29,  1.99it/s]
+ground_truth レストランを開業したいんだ。
+rouge score is 0.0
+                                                                                              input: Where could I hide? === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: どこに隠れる?████▋                                      | 10/67 [00:05<00:27,  2.09it/s]
+ground_truth どこに隠れたらいいですか?
+rouge score is 0.0
+Epoch 0:  98%|████████████████████▋| 3346/3401 [37:58<00:37,  1.47it/s, loss=2.57, v_num=g5e0]input: Father has just come home. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 父が帰ってきました。██▍                                     | 11/67 [00:06<00:25,  2.23it/s]
+ground_truth 父は今ちょうど帰宅したところだ。
+rouge score is 0.0
+                                                                                              input: It's too expensive! === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: あまりにも高価です!███                                     | 12/67 [00:06<00:24,  2.26it/s]
+ground_truth 値段が高すぎる!
+rouge score is 0.0
+Epoch 0:  98%|████████████████████▋| 3348/3401 [37:58<00:36,  1.47it/s, loss=2.57, v_num=g5e0]
+prediction: テレビだけ見てません。██▋                                    | 13/67 [00:06<00:22,  2.45it/s]
+ground_truth テレビばっかり見ないの。
+rouge score is 0.0
+                                                                                              input: You can get there only by sea. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 海からしか行けません。███▍                                   | 14/67 [00:07<00:21,  2.50it/s]
+ground_truth 船じゃないと、そこには行けないよ。
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▋| 3350/3401 [37:59<00:34,  1.47it/s, loss=2.57, v_num=g5e0]input: The girl did nothing but cry. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 少女は、泣くこと以外に何もしなかった。                               | 15/67 [00:07<00:21,  2.47it/s]
+ground_truth その少女は泣いてばかりいた。
+rouge score is 0.0
+                                                                                              input: The shell of an egg is easily broken. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 卵の殻は簡単に壊れる。████▋                                  | 16/67 [00:08<00:23,  2.20it/s]
+ground_truth 卵の殻は壊れやすい。
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▋| 3352/3401 [38:00<00:33,  1.47it/s, loss=2.57, v_num=g5e0]
+prediction: 彼は今日、遅く帰ってきました。█▍                                 | 17/67 [00:08<00:23,  2.11it/s]
+ground_truth 彼は今日も帰りが遅い。
+rouge score is 0.0
+                                                                                              input: You can't win if you don't try. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: あなたが試さなければ勝てません。█                                 | 18/67 [00:09<00:23,  2.04it/s]
+ground_truth やらなきゃ勝てっこないよ。
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▋| 3354/3401 [38:01<00:31,  1.47it/s, loss=2.57, v_num=g5e0]input: She showed me which dress to wear. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 彼女は私に何を着るべきか教えてくれた。                               | 19/67 [00:09<00:23,  2.07it/s]
+ground_truth 彼女は私にどの服を着ていったらよいか教えてくれた。
+rouge score is 0.0
+                                                                                              input: The queen of the witches is dead. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 魔女たちの女王は死んだ。██████▍                               | 20/67 [00:10<00:23,  1.97it/s]
+ground_truth 魔女の女王は死ぬ。
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▋| 3356/3401 [38:02<00:30,  1.47it/s, loss=2.57, v_num=g5e0]
+prediction: きちんと野菜を育てる。████████                               | 21/67 [00:10<00:24,  1.90it/s]
+ground_truth もぐもぐして食べようね。
+rouge score is 0.0
+                                                                                              input: They stood up and made their speeches one by one. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 彼らは立ち上がり、一人ひとりの演説を行った。                            | 22/67 [00:11<00:22,  2.01it/s]
+ground_truth 彼らは、一人づつ立ち上がってスピーチした。
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▋| 3358/3401 [38:04<00:29,  1.47it/s, loss=2.57, v_num=g5e0]input: I think this is Esperanto. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: これはエスペラントだと思います。████▍                             | 23/67 [00:12<00:25,  1.74it/s]
+ground_truth これはエスペラント語だと思うよ。
+rouge score is 0.0
+                                                                                              input: He is a cheerful boy. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 彼は元気な男の子です。██████████                             | 24/67 [00:12<00:22,  1.89it/s]
+ground_truth 彼は明るい少年だ。
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▋| 3360/3401 [38:04<00:27,  1.47it/s, loss=2.57, v_num=g5e0]
+Validating:  43%|███████████████████▍                         | 29/67 [00:14<00:18,  2.02it/s]
+ground_truth それのことなら、私より彼女が上手ですが。
+rouge score is 0.0
+                                                                                              input: Is it Tom's birthday tomorrow? === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: トムの誕生日は明日ですか?█████████▍                           | 26/67 [00:13<00:18,  2.17it/s]
+ground_truth 明日はトムの誕生日なの?
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▊| 3362/3401 [38:05<00:26,  1.47it/s, loss=2.57, v_num=g5e0]input: Yesterday Mary smiled at me. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 昨日、メアリーは私を笑った。█████████▏                          | 27/67 [00:13<00:18,  2.16it/s]
+ground_truth 昨日さ、メアリーが俺に笑いかけてくれたんだ。
+rouge score is 0.0
+                                                                                              input: Did you go fishing last weekend? === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 先週は釣りに行ったか?████████████▊                          | 28/67 [00:14<00:20,  1.90it/s]
+ground_truth 先週末って、釣りに行ったの?
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▊| 3364/3401 [38:06<00:25,  1.47it/s, loss=2.57, v_num=g5e0]
+prediction: rainbowパスタを食べたい。████████▍                         | 29/67 [00:14<00:18,  2.02it/s]
+ground_truth レインボーパスタが食べたいです。
+rouge score is 0.0
+                                                                                              input: Maybe it's about time I started learning to program. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: ちょうど、私はプログラムを勉強する時期だった。██▏                        | 30/67 [00:15<00:17,  2.17it/s]
+ground_truth そろそろプログラミングを覚えようかな。
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▊| 3366/3401 [38:07<00:23,  1.47it/s, loss=2.57, v_num=g5e0]
+Validating:  46%|████████████████████▊                        | 31/67 [00:15<00:18,  1.96it/s]
+prediction: 昨日、叔父が本をくれました。これが本です。██████▏                      | 33/67 [00:17<00:22,  1.53it/s]
+ground_truth おじは私に昨日本をくれました。これがその本です。
+rouge score is 0.0
+                                                                                              input: We're not open on Mondays. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 月曜日は営業していません。██████████████▊                      | 34/67 [00:18<00:23,  1.43it/s]
+ground_truth 月曜日は定休日です。
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▊| 3370/3401 [38:10<00:21,  1.47it/s, loss=2.57, v_num=g5e0]
+Validating:  52%|███████████████████████▌                     | 35/67 [00:18<00:19,  1.67it/s]
+prediction: 良い音楽を満喫しました。█████████████████▊                    | 37/67 [00:19<00:15,  1.98it/s]
+ground_truth 私達はよい音楽をじゅうぶんに楽しんだ。
+rouge score is 0.0
+                                                                                              input: He's not the kind of person who finds fault with others. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 他人に罪を犯すような人間ではない。█████████████▌                   | 38/67 [00:20<00:14,  2.02it/s]
+ground_truth 彼は他人のあら探しをするような人間ではない。
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▊| 3374/3401 [38:12<00:18,  1.47it/s, loss=2.57, v_num=g5e0]
+Validating:  58%|██████████████████████████▏                  | 39/67 [00:20<00:14,  1.88it/s]
+prediction: これを一人でやる必要がある。██████████████████▌                 | 41/67 [00:21<00:13,  1.91it/s]
+ground_truth 私は一人でこれをしなければならない。
+rouge score is 0.0
+                                                                                              input: His illness comes of drinking too much. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 彼の病気は、飲み過ぎてしまう。██████████████████▏                | 42/67 [00:22<00:11,  2.09it/s]
+ground_truth 彼の病気は過度の飲酒から来ている。
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▊| 3378/3401 [38:14<00:15,  1.47it/s, loss=2.57, v_num=g5e0]input: I will tell you a secret. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 秘密を話します。█████████████████████████▉                | 43/67 [00:22<00:11,  2.04it/s]
+ground_truth 君に秘密を打ち明けよう。
+rouge score is 0.0
+Validating:  66%|█████████████████████████████▌               | 44/67 [00:23<00:10,  2.13it/s]
+prediction: マネージャーは素敵です。███████████████████████▏              | 45/67 [00:23<00:10,  2.01it/s]
+ground_truth マネジャーって、いい人なんだよ。
+rouge score is 0.0
+                                                                                              input: I am a dancer by trade and I teach jazz dance. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 僕はジャズダンスを習っている。████████████████████▉              | 46/67 [00:24<00:09,  2.17it/s]
+ground_truth 私は舞踏家が職業で、ジャズダンスを教えています。
+rouge score is 0.0
+Epoch 0:  99%|████████████████████▉| 3382/3401 [38:16<00:12,  1.47it/s, loss=2.57, v_num=g5e0]input: The rain is beating against the window. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 雨が窓にかかっています。████████████████████████▌             | 47/67 [00:24<00:09,  2.16it/s]
+ground_truth 雨が窓に打ち付けている。
+rouge score is 0.0
+Validating:  72%|████████████████████████████████▏            | 48/67 [00:25<00:08,  2.15it/s]
+Validating:  79%|███████████████████████████████████▌         | 53/67 [00:27<00:05,  2.36it/s]
+ground_truth 池は一面に氷がはった。
+rouge score is 0.0
+                                                                                              input: Who knows that? === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: それを知っているのは誰ですか?███████████████████████▌           | 50/67 [00:25<00:07,  2.35it/s]
+ground_truth 誰が知っているだろうか。
+rouge score is 0.0
+Epoch 0: 100%|████████████████████▉| 3386/3401 [38:18<00:10,  1.47it/s, loss=2.57, v_num=g5e0]input: I'm sitting in the sun, but I'm still cold. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 太陽に座っているけど、まだ寒い。███████████████████████▎          | 51/67 [00:26<00:06,  2.36it/s]
+ground_truth 日なたに座ってるけど、まだ寒いなぁ。
+rouge score is 0.0
+                                                                                              input: The red house is new. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 赤い家は新しい。███████████████████████████████▉          | 52/67 [00:26<00:06,  2.16it/s]
+ground_truth その赤い家は新しい。
+rouge score is 0.0
+Epoch 0: 100%|████████████████████▉| 3388/3401 [38:19<00:08,  1.47it/s, loss=2.57, v_num=g5e0]
+prediction: 彼は大統領に選ばれた。█████████████████████████████▌         | 53/67 [00:27<00:05,  2.36it/s]
+ground_truth 彼は大統領に選ばれた。
+rouge score is 0.999999995
+                                                                                              input: The meeting was called off. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 会議は中止された。████████████████████████████████▎        | 54/67 [00:27<00:05,  2.36it/s]
+ground_truth その会合は、中止になった。
+rouge score is 0.0
+Epoch 0: 100%|████████████████████▉| 3390/3401 [38:19<00:07,  1.47it/s, loss=2.57, v_num=g5e0]input: My grandma made us some meat and potato stew. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: おばあちゃんが肉とポテトスライスを作ってくれました。███████████████▉        | 55/67 [00:27<00:04,  2.44it/s]
+ground_truth おばあちゃんが、肉じゃがを作ってくれました。
+rouge score is 0.0
+Validating:  84%|█████████████████████████████████████▌       | 56/67 [00:28<00:05,  1.98it/s]
+prediction: 彼は、彼を離して、闇の中に消えた。██████████████████████████▎      | 57/67 [00:29<00:05,  1.78it/s]
+ground_truth 彼は別れを告げて、暗闇の中を出発した。
+rouge score is 0.0
+                                                                                              input: I finally started summer vacation on August 1st, but I only get ten days off. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 8月1日に夏休みが始まりましたが、たった10日しか休みがありません。█████████▉      | 58/67 [00:30<00:05,  1.65it/s]
+ground_truth 8月の1日からやっと夏休みになるんだけど、なんか10日しか夏休みがないのよね。
+rouge score is 0.0
+Epoch 0: 100%|████████████████████▉| 3394/3401 [38:22<00:04,  1.47it/s, loss=2.57, v_num=g5e0]
+Validating:  88%|███████████████████████████████████████▋     | 59/67 [00:30<00:05,  1.47it/s]
+prediction: 私たちは大きな家族を望んでいます。████████████████████████████▉    | 61/67 [00:31<00:03,  1.64it/s]
+ground_truth 私たちは子供がたくさんほしい。
+rouge score is 0.0
+                                                                                              input: We'll check on it right now. === Translate the above sentence into Japanese:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 早速チェックします。████████████████████████████████████▋   | 62/67 [00:32<00:02,  1.77it/s]
+ground_truth すぐに点検します。
+rouge score is 0.0
+Epoch 0: 100%|████████████████████▉| 3398/3401 [38:24<00:02,  1.47it/s, loss=2.57, v_num=g5e0]
+Validating:  94%|██████████████████████████████████████████▎  | 63/67 [00:32<00:01,  2.03it/s]
+prediction: 飛行機は混雑するのでしょうか。█████████████████████████████████▋ | 65/67 [00:33<00:01,  1.89it/s]
+ground_truth 飛行機は込み入ってそうですか。
+rouge score is 0.0
+Validating:  99%|████████████████████████████████████████████▎| 66/67 [00:34<00:00,  2.01it/s]
+prediction: 飛行機は混雑するのでしょうか。█████████████████████████████████▋ | 65/67 [00:33<00:01,  1.89it/s]
+prediction: 飛行機は混雑するのでしょうか。█████████████████████████████████▋ | 65/67 [00:33<00:01,  1.89it/s]
+prediction: 飛行機は混雑するのでしょうか。█████████████████████████████████▋ | 65/67 [00:33<00:01,  1.89it/s]
+prediction: 飛行機は混雑するのでしょうか。█████████████████████████████████▋ | 65/67 [00:33<00:01,  1.89it/s]
+prediction: 飛行機は混雑するのでしょうか。█████████████████████████████████▋ | 65/67 [00:33<00:01,  1.89it/s]
+prediction: 飛行機は混雑するのでしょうか。█████████████████████████████████▋ | 65/67 [00:33<00:01,  1.89it/s]
+prediction: 飛行機は混雑するのでしょうか。█████████████████████████████████▋ | 65/67 [00:33<00:01,  1.89it/s]

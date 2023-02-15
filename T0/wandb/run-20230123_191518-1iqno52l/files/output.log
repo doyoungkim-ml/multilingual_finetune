@@ -1,0 +1,1035 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/16
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 16 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+Validation sanity check: 0it [00:00, ?it/s]First elem of self.dataset is  {'en': 'Please come here between two and three this afternoon.\n', 'kor': '오늘 오후 두시에서 세시 사이에 여기로 와 주세요.\n'}
+Length of dataset retrieving is.. 1000
+Validation sanity check:   0%|                                                                    | 0/2 [00:00<?, ?it/s]
+  | Name  | Type                        | Params
+------------------------------------------------------
+0 | model | MT5ForConditionalGeneration | 3.7 B
+------------------------------------------------------
+3.7 B     Trainable params
+0         Non-trainable params
+3.7 B     Total params
+14,970.479Total estimated model params size (MB)
+WARNING:datasets.builder:Using custom data configuration default-31b186e58a74258f
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-31b186e58a74258f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 452.46it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/json/default-31b186e58a74258f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab/cache-6fa19dc9f0152dbb.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+Validation sanity check:   0%|                                                                    | 0/2 [00:00<?, ?it/s]prediction: <extra_id_0>: Please come here between two and three this afternoon. <extra_id_1>: <extra_id_2>: <extra_id_3>: <extra_id_4>: Please come here between two and three this afternoon. <extra_id_5>: <extra_id_6>: <extra_id_7>: === Translate into Korean:  <extra_id_8>: === Translate into Korean <extra_id_9>: === Translate into Korean <extra_id_10>: === Translate <extra_id_11>: === Translate <extra_id_12>: === Translate <extra_id_13>: === Translate <extra_id_14>: === Translate <extra_id_15>: === Translate <extra_id_16>: === Translate <extra_id_17>: === Translate <extra_id_18>: <extra_id_19>: === Translate <extra_id_20>: === Translate <extra_id_21>: === Translate <extra_id_22>: === Translate into Korean <extra_id_23>: === Translate <extra_id_24>: === Translate <extra_id_25>
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.0
+Validation sanity check:  50%|██████████████████████████████                              | 1/2 [00:07<00:07,  7.12s/it]
+WARNING:datasets.builder:Using custom data configuration default-c680fa9162bf47b5
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-c680fa9162bf47b5/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 121.05it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+Validation sanity check:  50%|██████████████████████████████                              | 1/2 [00:07<00:07,  7.12s/it]prediction: <extra_id_0>eul === Please help me translate this sentence into Korean: Please help me translate this sentence into Korean <extra_id_3>ul <extra_id_4>: Please help me translate this sentence into Korean <extra_id_5>  <extra_id_6>  <extra_id_7>  <extra_id_8>  <extra_id_9>  <extra_id_10>  <extra_id_11>  <extra_id_12>  <extra_id_13>  <extra_id_14>  <extra_id_15>  <extra_id_16> === Please help me translate this sentence into Korean <extra_id_17>  <extra_id_18>  <extra_id_19>  <extra_id_20>  <extra_id_21>  <extra_id_22>  <extra_id_23> Korean: Please help me translate this sentence into Korean <extra_id_24> Korean <extra_id_25> Korean <extra_id_26> Korean Korean Korean Korean Korean Korean Korean Korean
+ground_truth 톰은 원하는 걸 얻을 때까지는 떠나지 않을 거야.
+rouge score is 0.0
+Validation sanity check: 100%|████████████████████████████████████████████████████████████| 2/2 [00:13<00:00,  6.63s/it]agg_score is tensor(0., device='cuda:0') 0
+enter
+First elem of self.dataset is  {'eng': 'As we continue our own transformation to better serve our community of more than 50,000 customers and 1 million+ users, I want to make you aware of some changes coming to Claris in the near future. \n', 'kor': '50,000명이 넘는 고객과 100만 명 이상의 사용자로 구성된 커뮤니티에 더 나은 서비스를 제공하기 위해 변화를 거듭하는 Claris에 찾아올 몇 가지 변화를 알려드리고자 합니다.\n'}
+Length of dataset retrieving is.. 500000
+Training: 0it [00:00, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 2. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  10%|████▏                                       | 1562/16255 [17:26<2:44:02,  1.49it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▏                                       | 1564/16255 [17:27<2:43:57,  1.49it/s, loss=3.85, v_num=o52l]
+ground_truth 톰은 원하는 걸 얻을 때까지는 떠나지 않을 거야.                                                 | 1/63 [00:00<01:00,  1.03it/s]
+rouge score is 0.0
+                                                                                                                        prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 다리 하나만으로는 뛰기 어렵다.                                                           | 2/63 [00:01<00:59,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▏                                       | 1566/16255 [17:29<2:44:02,  1.49it/s, loss=3.85, v_num=o52l]
+ground_truth 톰은 충격을 받은 것 같다.                                                             | 3/63 [00:02<00:58,  1.03it/s]
+rouge score is 0.0
+                                                                                                                        prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 나는 내가 말하고 싶은 것은 거의 다 말할 수 있을 정도로 불어를 잘 한다고 생각한다.                            | 4/63 [00:03<00:57,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▏                                       | 1568/16255 [17:31<2:44:06,  1.49it/s, loss=3.85, v_num=o52l]
+ground_truth 이제 나는 너무 늙어서 걷기 어렵다.                                                        | 5/63 [00:04<00:56,  1.03it/s]
+rouge score is 0.0
+                                                                                                                        prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 그 밭은 들꽃이 가득하다.                                                              | 6/63 [00:05<00:55,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▏                                       | 1570/16255 [17:33<2:44:11,  1.49it/s, loss=3.85, v_num=o52l]
+ground_truth 한국말을 공부합니다.█                                                                | 7/63 [00:06<00:54,  1.02it/s]
+rouge score is 0.0
+                                                                                                                        prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 저는 춤을 잘 못 춰요.▏                                                              | 8/63 [00:07<00:53,  1.02it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1572/16255 [17:35<2:44:15,  1.49it/s, loss=3.85, v_num=o52l]
+ground_truth 그 여자가 파티에 입고 온 드레스가 사람들의 눈길을 끌었지.                                           | 9/63 [00:08<00:52,  1.03it/s]
+rouge score is 0.0
+                                                                                                                        prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 5814를 반올림한 가장 가까운 천 단위 숫자가 뭐지?                                             | 10/63 [00:09<00:51,  1.02it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1574/16255 [17:37<2:44:19,  1.49it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 충분한 RAM 메모리가 없어요.                                                          | 11/63 [00:10<00:50,  1.02it/s]
+rouge score is 0.0
+ground_truth 사용설명서 자세히 읽으시요.██▌                                                         | 12/63 [00:11<00:49,  1.02it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1576/16255 [17:39<2:44:24,  1.49it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 이보다 더 좋았던 적이 없다.██▋                                                        | 13/63 [00:12<00:48,  1.03it/s]
+rouge score is 0.0
+ground_truth 공업 배기가스가 공기를 오염시킨다.▊                                                       | 14/63 [00:13<00:47,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1578/16255 [17:40<2:44:28,  1.49it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 톰은 메리에게 키스할 것이라고 말했다.                                                      | 15/63 [00:14<00:46,  1.03it/s]
+rouge score is 0.0
+ground_truth 이건 절대 끝나지 않을거야.███████                                                     | 16/63 [00:15<00:45,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1580/16255 [17:42<2:44:32,  1.49it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 이 에디션은 7000 카피 한정판이다.██▏                                                   | 17/63 [00:16<00:44,  1.03it/s]
+rouge score is 0.0
+ground_truth 아무나 할 수 있는 것이 아닙니다.█████▎                                                  | 18/63 [00:17<00:43,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1582/16255 [17:44<2:44:36,  1.49it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 그는 항상 배운다.███████████████▍                                                 | 19/63 [00:18<00:42,  1.03it/s]
+rouge score is 0.0
+ground_truth 9시 반 이후엔 버스가 다니지 않아요.█████▌                                                | 20/63 [00:19<00:41,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1584/16255 [17:46<2:44:41,  1.48it/s, loss=3.85, v_num=o52l]prediction:
+ground_truth 무슨 일인지 얘기해봐.███████████████▋                                               | 21/63 [00:20<00:41,  1.02it/s]
+rouge score is 0.0
+                                                                                                                        prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 그 일은 일년 전 쯤 일어났다.███████████▊                                              | 22/63 [00:21<00:40,  1.02it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1586/16255 [17:48<2:44:45,  1.48it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 어디가는지 말해줘.███████████████████▉                                             | 23/63 [00:22<00:39,  1.02it/s]
+rouge score is 0.0
+ground_truth 메리는 탐과 콘치타가 손잡고 있는 걸 보았다.██████                                            | 24/63 [00:23<00:38,  1.02it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1588/16255 [17:50<2:44:49,  1.48it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 그들은 그에게서 권위를 보았다.███████████████▏                                          | 25/63 [00:24<00:36,  1.03it/s]
+rouge score is 0.0
+ground_truth 그 건물은 앞에서 보면 커 보이지만 옆에서 보면 그렇지 않다.                                         | 26/63 [00:25<00:35,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1590/16255 [17:52<2:44:53,  1.48it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 오랫동안 편지를 못 써서 죄송해요.███████████████▍                                        | 27/63 [00:26<00:34,  1.03it/s]
+rouge score is 0.0
+ground_truth 그는 변기 물을 쳐다보고 있었다.█████████████████▌                                       | 28/63 [00:27<00:33,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1592/16255 [17:54<2:44:57,  1.48it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 이게 대체 뭐야?███████████████████████████▋                                      | 29/63 [00:28<00:32,  1.03it/s]
+rouge score is 0.0
+rouge score is 0.0 아주 유용해.████████████████████████▊                                     | 30/63 [00:29<00:32,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1594/16255 [17:56<2:45:01,  1.48it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 그여자 결혼는지 궁금한데.████████████████████████▉                                    | 31/63 [00:30<00:31,  1.02it/s]
+rouge score is 0.0 아주 유용해.████████████████████████▊                                     | 30/63 [00:29<00:32,  1.03it/s]
+Validating:  54%|██████████████████████████████████████▎                                | 34/63 [00:33<00:28,  1.02it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1596/16255 [17:58<2:45:06,  1.48it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 너 바보 아냐!█████████████████████████████████▏                                 | 33/63 [00:32<00:29,  1.02it/s]
+rouge score is 0.0
+Validating:  57%|████████████████████████████████████████▌                              | 36/63 [00:35<00:26,  1.02it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1598/16255 [18:00<2:45:10,  1.48it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 톰은 후보야.████████████████████████████████████▍                               | 35/63 [00:34<00:27,  1.03it/s]
+rouge score is 0.0
+Validating:  60%|██████████████████████████████████████████▊                            | 38/63 [00:37<00:24,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1600/16255 [18:02<2:45:14,  1.48it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 나는 학생일 때 영어로 일기를 쓰곤 했다.██████████████████████▋                             | 37/63 [00:36<00:25,  1.02it/s]
+rouge score is 0.0
+Validating:  63%|█████████████████████████████████████████████                          | 40/63 [00:39<00:22,  1.02it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1602/16255 [18:04<2:45:18,  1.48it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 여기는 이주 전부터 비가 하나도 오지 않았다.██████████████████████▉                           | 39/63 [00:38<00:23,  1.02it/s]
+rouge score is 0.0
+Validating:  67%|███████████████████████████████████████████████▎                       | 42/63 [00:40<00:20,  1.02it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1604/16255 [18:06<2:45:22,  1.48it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 모든 고양이가 회색인 건 아니야.████████████████████████████████▏                        | 41/63 [00:39<00:21,  1.03it/s]
+rouge score is 0.0
+Validating:  70%|█████████████████████████████████████████████████▌                     | 44/63 [00:42<00:18,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1606/16255 [18:08<2:45:26,  1.48it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 저는 다섯 개의 언어를 합니다.███████████████████████████████████▍                      | 43/63 [00:41<00:19,  1.02it/s]
+rouge score is 0.0
+Validating:  73%|███████████████████████████████████████████████████▊                   | 46/63 [00:44<00:16,  1.02it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1608/16255 [18:10<2:45:30,  1.47it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 그런 일이 생긴다면 어쩔 거야?█████████████████████████████████████▋                    | 45/63 [00:43<00:17,  1.02it/s]
+rouge score is 0.0
+ground_truth 시작이 반이다.██████████████████████████████████████████████████                 | 48/63 [00:46<00:14,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1610/16255 [18:12<2:45:34,  1.47it/s, loss=3.85, v_num=o52l]prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 내 마지막 편지는 찢어 버렸길 바란다.███████████████████████████████████▉                  | 47/63 [00:45<00:15,  1.03it/s]
+rouge score is 0.0
+                                                                                                                        prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 시작이 반이다.██████████████████████████████████████████████████                 | 48/63 [00:46<00:14,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1612/16255 [18:14<2:45:38,  1.47it/s, loss=3.85, v_num=o52l]
+ground_truth 아이들이 자전거를 타고 있다.███████████████████████████████████████████▏               | 49/63 [00:47<00:13,  1.03it/s]
+rouge score is 0.0
+                                                                                                                        prediction: 그러나 그것은 단지 일상적인 일 뿐이다.
+ground_truth 정면돌파해야 한다.██████████████████████████████████████████████████▎              | 50/63 [00:48<00:12,  1.03it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1614/16255 [18:16<2:45:42,  1.47it/s, loss=3.85, v_num=o52l]
+Validating:  81%|█████████████████████████████████████████████████████████▍             | 51/63 [00:49<00:11,  1.03it/s]
+ground_truth 저는 내일 오전 6시에 체크아웃 하겠습니다.██████████████████████████████████████▌            | 52/63 [00:50<00:10,  1.02it/s]
+rouge score is 0.0
+Epoch 0:  10%|████▎                                       | 1616/16255 [18:18<2:45:46,  1.47it/s, loss=3.85, v_num=o52l]
+Validating:  84%|███████████████████████████████████████████████████████████▋           | 53/63 [00:51<00:09,  1.03it/s]
+Validating:  87%|█████████████████████████████████████████████████████████████▉         | 55/63 [00:53<00:07,  1.03it/s]
+ground_truth 새미는 자신을 보호하려고 했다.████████████████████████████████████████████████▉         | 55/63 [00:53<00:07,  1.03it/s]
+ground_truth 난 몰라.████████████████████████████████████████████████████████████████▎     | 58/63 [00:56<00:04,  1.03it/s]
+ground_truth 난 몰라.████████████████████████████████████████████████████████████████▎     | 58/63 [00:56<00:04,  1.03it/s]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [01:04<00:05,  2.58s/it]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [01:04<00:05,  2.58s/it]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [01:04<00:05,  2.58s/it]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [01:04<00:05,  2.58s/it]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [01:04<00:05,  2.58s/it]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [01:04<00:05,  2.58s/it]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [01:04<00:05,  2.58s/it]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [01:04<00:05,  2.58s/it]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [01:04<00:05,  2.58s/it]
+ground_truth 그걸 어디에 숨겼어?█████████████████████████████████████████████████████████████▋  | 61/63 [01:04<00:05,  2.58s/it]
+Epoch 0:  10%| | 1651/16255 [18:58<2:47:47,  1.45it/s, loss=3.62, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1654/16255 [19:00<2:47:45,  1.45it/s, loss=3.63, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1657/16255 [19:02<2:47:42,  1.45it/s, loss=3.73, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1660/16255 [19:04<2:47:39,  1.45it/s, loss=3.85, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1663/16255 [19:06<2:47:37,  1.45it/s, loss=3.83, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1666/16255 [19:08<2:47:34,  1.45it/s, loss=3.73, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1669/16255 [19:10<2:47:32,  1.45it/s, loss=3.71, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1671/16255 [19:11<2:47:30,  1.45it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1675/16255 [19:14<2:47:27,  1.45it/s, loss=3.62, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1677/16255 [19:15<2:47:25,  1.45it/s, loss=3.55, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1680/16255 [19:17<2:47:23,  1.45it/s, loss=3.48, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1683/16255 [19:19<2:47:20,  1.45it/s, loss=3.5, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  10%| | 1686/16255 [19:21<2:47:18,  1.45it/s, loss=3.54, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1689/16255 [19:23<2:47:15,  1.45it/s, loss=3.75, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1693/16255 [19:26<2:47:11,  1.45it/s, loss=3.88, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1695/16255 [19:27<2:47:09,  1.45it/s, loss=3.94, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1698/16255 [19:29<2:47:06,  1.45it/s, loss=3.95, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1701/16255 [19:31<2:47:04,  1.45it/s, loss=4.03, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  10%| | 1704/16255 [19:33<2:47:01,  1.45it/s, loss=3.95, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1707/16255 [19:35<2:46:59,  1.45it/s, loss=4.01, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1710/16255 [19:37<2:46:56,  1.45it/s, loss=3.89, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1713/16255 [19:39<2:46:53,  1.45it/s, loss=3.79, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1716/16255 [19:41<2:46:50,  1.45it/s, loss=3.78, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1719/16255 [19:43<2:46:48,  1.45it/s, loss=3.71, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1722/16255 [19:45<2:46:45,  1.45it/s, loss=3.81, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1725/16255 [19:47<2:46:42,  1.45it/s, loss=3.75, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1728/16255 [19:49<2:46:40,  1.45it/s, loss=3.76, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1731/16255 [19:51<2:46:37,  1.45it/s, loss=3.82, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1734/16255 [19:53<2:46:34,  1.45it/s, loss=3.78, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1737/16255 [19:55<2:46:32,  1.45it/s, loss=3.79, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1740/16255 [19:57<2:46:30,  1.45it/s, loss=3.74, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1743/16255 [19:59<2:46:27,  1.45it/s, loss=3.7, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  11%| | 1746/16255 [20:01<2:46:24,  1.45it/s, loss=3.67, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1749/16255 [20:03<2:46:22,  1.45it/s, loss=3.61, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1752/16255 [20:05<2:46:19,  1.45it/s, loss=3.55, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1755/16255 [20:07<2:46:16,  1.45it/s, loss=3.68, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1758/16255 [20:09<2:46:14,  1.45it/s, loss=3.67, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1761/16255 [20:11<2:46:11,  1.45it/s, loss=3.62, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1764/16255 [20:13<2:46:08,  1.45it/s, loss=3.76, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1767/16255 [20:15<2:46:05,  1.45it/s, loss=3.75, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1770/16255 [20:17<2:46:03,  1.45it/s, loss=3.7, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  11%| | 1773/16255 [20:19<2:46:00,  1.45it/s, loss=3.72, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1776/16255 [20:21<2:45:58,  1.45it/s, loss=3.75, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1779/16255 [20:23<2:45:55,  1.45it/s, loss=3.69, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1782/16255 [20:25<2:45:53,  1.45it/s, loss=3.82, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1785/16255 [20:27<2:45:50,  1.45it/s, loss=3.85, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1788/16255 [20:29<2:45:48,  1.45it/s, loss=3.88, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1791/16255 [20:31<2:45:45,  1.45it/s, loss=3.88, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1794/16255 [20:33<2:45:43,  1.45it/s, loss=3.84, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1797/16255 [20:35<2:45:40,  1.45it/s, loss=3.95, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1800/16255 [20:37<2:45:37,  1.45it/s, loss=4.05, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1803/16255 [20:39<2:45:35,  1.45it/s, loss=3.9, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  11%| | 1806/16255 [20:41<2:45:33,  1.45it/s, loss=3.75, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1809/16255 [20:43<2:45:30,  1.45it/s, loss=3.8, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  11%| | 1812/16255 [20:45<2:45:28,  1.45it/s, loss=3.85, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1815/16255 [20:47<2:45:26,  1.45it/s, loss=3.92, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1818/16255 [20:49<2:45:24,  1.45it/s, loss=3.79, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1821/16255 [20:51<2:45:22,  1.45it/s, loss=3.8, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  11%| | 1824/16255 [20:53<2:45:19,  1.45it/s, loss=3.81, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1827/16255 [20:55<2:45:17,  1.45it/s, loss=3.78, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1830/16255 [20:57<2:45:14,  1.45it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1833/16255 [20:59<2:45:12,  1.45it/s, loss=3.56, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1836/16255 [21:01<2:45:09,  1.46it/s, loss=3.57, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1839/16255 [21:03<2:45:06,  1.46it/s, loss=3.56, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1842/16255 [21:05<2:45:04,  1.46it/s, loss=3.6, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  11%| | 1845/16255 [21:07<2:45:01,  1.46it/s, loss=3.73, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1848/16255 [21:09<2:45:00,  1.46it/s, loss=3.75, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1851/16255 [21:11<2:44:57,  1.46it/s, loss=3.73, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1854/16255 [21:13<2:44:54,  1.46it/s, loss=3.8, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  11%| | 1857/16255 [21:15<2:44:51,  1.46it/s, loss=3.89, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1860/16255 [21:17<2:44:49,  1.46it/s, loss=3.85, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1863/16255 [21:19<2:44:46,  1.46it/s, loss=3.95, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1866/16255 [21:21<2:44:44,  1.46it/s, loss=3.96, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  11%| | 1869/16255 [21:23<2:44:41,  1.46it/s, loss=3.96, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1872/16255 [21:25<2:44:38,  1.46it/s, loss=4.06, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1875/16255 [21:27<2:44:36,  1.46it/s, loss=3.97, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1878/16255 [21:29<2:44:34,  1.46it/s, loss=3.83, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1881/16255 [21:31<2:44:32,  1.46it/s, loss=3.9, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  12%| | 1884/16255 [21:33<2:44:30,  1.46it/s, loss=3.7, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  12%| | 1887/16255 [21:35<2:44:27,  1.46it/s, loss=3.87, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1890/16255 [21:37<2:44:24,  1.46it/s, loss=3.92, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1893/16255 [21:39<2:44:22,  1.46it/s, loss=3.88, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1896/16255 [21:41<2:44:19,  1.46it/s, loss=3.88, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1899/16255 [21:43<2:44:16,  1.46it/s, loss=3.85, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1902/16255 [21:46<2:44:15,  1.46it/s, loss=3.87, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1905/16255 [21:48<2:44:13,  1.46it/s, loss=3.99, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1908/16255 [21:50<2:44:10,  1.46it/s, loss=3.81, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1910/16255 [21:51<2:44:08,  1.46it/s, loss=3.76, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1913/16255 [21:53<2:44:08,  1.46it/s, loss=3.8, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  12%| | 1916/16255 [21:55<2:44:05,  1.46it/s, loss=3.78, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1919/16255 [21:57<2:44:02,  1.46it/s, loss=3.84, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1922/16255 [21:59<2:44:00,  1.46it/s, loss=3.72, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1925/16255 [22:01<2:43:57,  1.46it/s, loss=3.57, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1928/16255 [22:03<2:43:55,  1.46it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1931/16255 [22:05<2:43:52,  1.46it/s, loss=3.58, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1935/16255 [22:08<2:43:49,  1.46it/s, loss=3.48, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1938/16255 [22:10<2:43:46,  1.46it/s, loss=3.56, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1941/16255 [22:12<2:43:44,  1.46it/s, loss=3.58, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1944/16255 [22:14<2:43:41,  1.46it/s, loss=3.66, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1947/16255 [22:16<2:43:38,  1.46it/s, loss=3.62, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1950/16255 [22:18<2:43:36,  1.46it/s, loss=3.66, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1953/16255 [22:20<2:43:33,  1.46it/s, loss=3.55, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1956/16255 [22:22<2:43:31,  1.46it/s, loss=3.73, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1959/16255 [22:24<2:43:29,  1.46it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1962/16255 [22:26<2:43:27,  1.46it/s, loss=3.81, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1965/16255 [22:28<2:43:24,  1.46it/s, loss=3.9, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  12%| | 1968/16255 [22:30<2:43:22,  1.46it/s, loss=3.93, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1971/16255 [22:32<2:43:19,  1.46it/s, loss=3.9, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  12%| | 1974/16255 [22:34<2:43:16,  1.46it/s, loss=3.93, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1977/16255 [22:36<2:43:14,  1.46it/s, loss=3.82, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1979/16255 [22:37<2:43:12,  1.46it/s, loss=3.75, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1982/16255 [22:39<2:43:11,  1.46it/s, loss=3.63, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1986/16255 [22:42<2:43:07,  1.46it/s, loss=3.53, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1989/16255 [22:44<2:43:04,  1.46it/s, loss=3.51, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1992/16255 [22:46<2:43:02,  1.46it/s, loss=3.51, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1995/16255 [22:48<2:42:59,  1.46it/s, loss=3.56, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 1998/16255 [22:50<2:42:57,  1.46it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 2001/16255 [22:52<2:42:54,  1.46it/s, loss=3.78, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 2003/16255 [22:53<2:42:52,  1.46it/s, loss=3.84, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 2007/16255 [22:56<2:42:50,  1.46it/s, loss=3.81, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 2010/16255 [22:58<2:42:48,  1.46it/s, loss=3.85, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 2013/16255 [23:00<2:42:45,  1.46it/s, loss=3.93, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 2016/16255 [23:02<2:42:43,  1.46it/s, loss=4.04, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 2019/16255 [23:04<2:42:40,  1.46it/s, loss=3.96, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 2022/16255 [23:06<2:42:38,  1.46it/s, loss=3.9, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  12%| | 2025/16255 [23:08<2:42:35,  1.46it/s, loss=3.88, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 2028/16255 [23:10<2:42:33,  1.46it/s, loss=3.83, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  12%| | 2031/16255 [23:12<2:42:30,  1.46it/s, loss=3.8, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  13%|▏| 2034/16255 [23:14<2:42:28,  1.46it/s, loss=3.69, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2037/16255 [23:16<2:42:25,  1.46it/s, loss=3.73, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2040/16255 [23:18<2:42:23,  1.46it/s, loss=3.78, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2043/16255 [23:20<2:42:21,  1.46it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2046/16255 [23:22<2:42:18,  1.46it/s, loss=3.62, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2049/16255 [23:24<2:42:16,  1.46it/s, loss=3.74, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2052/16255 [23:26<2:42:13,  1.46it/s, loss=3.75, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2055/16255 [23:28<2:42:10,  1.46it/s, loss=3.73, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2058/16255 [23:30<2:42:08,  1.46it/s, loss=3.71, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2061/16255 [23:32<2:42:05,  1.46it/s, loss=3.77, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2064/16255 [23:34<2:42:03,  1.46it/s, loss=3.86, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2067/16255 [23:36<2:42:00,  1.46it/s, loss=3.8, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  13%|▏| 2070/16255 [23:38<2:41:58,  1.46it/s, loss=3.82, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2073/16255 [23:40<2:41:55,  1.46it/s, loss=3.87, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2076/16255 [23:42<2:41:53,  1.46it/s, loss=3.82, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2079/16255 [23:44<2:41:50,  1.46it/s, loss=3.82, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2082/16255 [23:46<2:41:48,  1.46it/s, loss=3.77, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2085/16255 [23:48<2:41:45,  1.46it/s, loss=3.82, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2088/16255 [23:50<2:41:43,  1.46it/s, loss=3.72, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2091/16255 [23:52<2:41:40,  1.46it/s, loss=3.68, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2094/16255 [23:54<2:41:37,  1.46it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2097/16255 [23:56<2:41:35,  1.46it/s, loss=3.63, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2100/16255 [23:58<2:41:32,  1.46it/s, loss=3.54, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2103/16255 [23:59<2:41:30,  1.46it/s, loss=3.53, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2106/16255 [24:01<2:41:27,  1.46it/s, loss=3.45, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2109/16255 [24:03<2:41:25,  1.46it/s, loss=3.37, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2112/16255 [24:06<2:41:23,  1.46it/s, loss=3.31, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2115/16255 [24:08<2:41:21,  1.46it/s, loss=3.39, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2118/16255 [24:10<2:41:19,  1.46it/s, loss=3.4, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  13%|▏| 2121/16255 [24:12<2:41:16,  1.46it/s, loss=3.45, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2124/16255 [24:14<2:41:14,  1.46it/s, loss=3.48, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2127/16255 [24:16<2:41:11,  1.46it/s, loss=3.58, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2130/16255 [24:18<2:41:09,  1.46it/s, loss=3.53, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2133/16255 [24:20<2:41:06,  1.46it/s, loss=3.57, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2136/16255 [24:22<2:41:04,  1.46it/s, loss=3.67, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2139/16255 [24:24<2:41:02,  1.46it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2142/16255 [24:26<2:40:59,  1.46it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2145/16255 [24:28<2:40:58,  1.46it/s, loss=3.74, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2148/16255 [24:30<2:40:55,  1.46it/s, loss=3.76, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2151/16255 [24:32<2:40:53,  1.46it/s, loss=3.94, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2154/16255 [24:34<2:40:50,  1.46it/s, loss=3.9, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  13%|▏| 2157/16255 [24:36<2:40:49,  1.46it/s, loss=3.91, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2160/16255 [24:38<2:40:46,  1.46it/s, loss=3.82, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2163/16255 [24:40<2:40:44,  1.46it/s, loss=3.76, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2166/16255 [24:42<2:40:42,  1.46it/s, loss=3.61, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2169/16255 [24:44<2:40:40,  1.46it/s, loss=3.63, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2172/16255 [24:46<2:40:37,  1.46it/s, loss=3.52, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2175/16255 [24:48<2:40:35,  1.46it/s, loss=3.38, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2178/16255 [24:50<2:40:32,  1.46it/s, loss=3.51, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2181/16255 [24:52<2:40:30,  1.46it/s, loss=3.54, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2184/16255 [24:54<2:40:27,  1.46it/s, loss=3.49, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2187/16255 [24:56<2:40:25,  1.46it/s, loss=3.49, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2190/16255 [24:58<2:40:22,  1.46it/s, loss=3.52, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  13%|▏| 2193/16255 [25:00<2:40:20,  1.46it/s, loss=3.6, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  14%|▏| 2196/16255 [25:02<2:40:18,  1.46it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2199/16255 [25:04<2:40:16,  1.46it/s, loss=3.6, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  14%|▏| 2202/16255 [25:06<2:40:13,  1.46it/s, loss=3.61, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2205/16255 [25:08<2:40:10,  1.46it/s, loss=3.73, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2208/16255 [25:10<2:40:08,  1.46it/s, loss=3.78, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2211/16255 [25:12<2:40:05,  1.46it/s, loss=3.74, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2214/16255 [25:14<2:40:03,  1.46it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2217/16255 [25:16<2:40:01,  1.46it/s, loss=3.68, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2220/16255 [25:18<2:39:59,  1.46it/s, loss=3.81, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2223/16255 [25:20<2:39:56,  1.46it/s, loss=3.88, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2226/16255 [25:22<2:39:54,  1.46it/s, loss=3.72, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2229/16255 [25:24<2:39:51,  1.46it/s, loss=3.74, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2232/16255 [25:26<2:39:49,  1.46it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2235/16255 [25:28<2:39:48,  1.46it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2238/16255 [25:30<2:39:46,  1.46it/s, loss=3.73, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2241/16255 [25:32<2:39:43,  1.46it/s, loss=3.51, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2244/16255 [25:34<2:39:41,  1.46it/s, loss=3.55, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2247/16255 [25:36<2:39:38,  1.46it/s, loss=3.63, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2250/16255 [25:38<2:39:36,  1.46it/s, loss=3.68, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2253/16255 [25:40<2:39:34,  1.46it/s, loss=3.79, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2255/16255 [25:41<2:39:33,  1.46it/s, loss=3.95, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2258/16255 [25:44<2:39:31,  1.46it/s, loss=3.87, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2261/16255 [25:46<2:39:29,  1.46it/s, loss=3.83, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2264/16255 [25:48<2:39:26,  1.46it/s, loss=3.69, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2267/16255 [25:50<2:39:24,  1.46it/s, loss=3.77, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2270/16255 [25:52<2:39:22,  1.46it/s, loss=3.72, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2273/16255 [25:54<2:39:19,  1.46it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2277/16255 [25:56<2:39:16,  1.46it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2279/16255 [25:58<2:39:14,  1.46it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2282/16255 [26:00<2:39:12,  1.46it/s, loss=3.63, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2286/16255 [26:02<2:39:09,  1.46it/s, loss=3.61, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2289/16255 [26:04<2:39:06,  1.46it/s, loss=3.58, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2292/16255 [26:06<2:39:04,  1.46it/s, loss=3.67, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2295/16255 [26:08<2:39:02,  1.46it/s, loss=3.52, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2298/16255 [26:10<2:38:59,  1.46it/s, loss=3.5, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  14%|▏| 2301/16255 [26:12<2:38:57,  1.46it/s, loss=3.54, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2304/16255 [26:14<2:38:55,  1.46it/s, loss=3.6, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  14%|▏| 2307/16255 [26:16<2:38:52,  1.46it/s, loss=3.67, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2310/16255 [26:18<2:38:50,  1.46it/s, loss=3.55, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2313/16255 [26:20<2:38:48,  1.46it/s, loss=3.46, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2315/16255 [26:22<2:38:47,  1.46it/s, loss=3.56, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2318/16255 [26:24<2:38:44,  1.46it/s, loss=3.63, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2321/16255 [26:26<2:38:42,  1.46it/s, loss=3.54, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2324/16255 [26:28<2:38:40,  1.46it/s, loss=3.44, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2327/16255 [26:30<2:38:38,  1.46it/s, loss=3.36, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2330/16255 [26:32<2:38:36,  1.46it/s, loss=3.36, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2333/16255 [26:34<2:38:34,  1.46it/s, loss=3.56, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2336/16255 [26:36<2:38:31,  1.46it/s, loss=3.53, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2339/16255 [26:38<2:38:29,  1.46it/s, loss=3.44, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2342/16255 [26:40<2:38:27,  1.46it/s, loss=3.47, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2345/16255 [26:42<2:38:24,  1.46it/s, loss=3.61, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2348/16255 [26:44<2:38:22,  1.46it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  14%|▏| 2351/16255 [26:46<2:38:20,  1.46it/s, loss=3.7, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  14%|▏| 2354/16255 [26:48<2:38:18,  1.46it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2357/16255 [26:50<2:38:16,  1.46it/s, loss=3.57, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2360/16255 [26:52<2:38:14,  1.46it/s, loss=3.71, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2363/16255 [26:54<2:38:11,  1.46it/s, loss=3.81, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2366/16255 [26:56<2:38:09,  1.46it/s, loss=3.72, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2369/16255 [26:58<2:38:07,  1.46it/s, loss=3.72, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2372/16255 [27:00<2:38:05,  1.46it/s, loss=3.68, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2375/16255 [27:02<2:38:02,  1.46it/s, loss=3.73, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2378/16255 [27:04<2:38:00,  1.46it/s, loss=3.72, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2381/16255 [27:06<2:37:58,  1.46it/s, loss=3.72, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2384/16255 [27:08<2:37:56,  1.46it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2387/16255 [27:10<2:37:54,  1.46it/s, loss=3.63, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2390/16255 [27:12<2:37:52,  1.46it/s, loss=3.68, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2393/16255 [27:14<2:37:49,  1.46it/s, loss=3.58, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2396/16255 [27:16<2:37:47,  1.46it/s, loss=3.63, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2399/16255 [27:18<2:37:44,  1.46it/s, loss=3.59, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2402/16255 [27:20<2:37:42,  1.46it/s, loss=3.54, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2405/16255 [27:22<2:37:40,  1.46it/s, loss=3.68, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2408/16255 [27:24<2:37:38,  1.46it/s, loss=3.61, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2411/16255 [27:26<2:37:35,  1.46it/s, loss=3.67, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2414/16255 [27:28<2:37:33,  1.46it/s, loss=3.76, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2417/16255 [27:30<2:37:30,  1.46it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2420/16255 [27:32<2:37:28,  1.46it/s, loss=3.68, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2423/16255 [27:34<2:37:25,  1.46it/s, loss=3.6, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  15%|▏| 2426/16255 [27:36<2:37:23,  1.46it/s, loss=3.37, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2429/16255 [27:38<2:37:20,  1.46it/s, loss=3.42, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2432/16255 [27:40<2:37:18,  1.46it/s, loss=3.3, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  15%|▏| 2435/16255 [27:42<2:37:16,  1.46it/s, loss=3.33, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2438/16255 [27:44<2:37:13,  1.46it/s, loss=3.29, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2441/16255 [27:46<2:37:11,  1.46it/s, loss=3.37, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2444/16255 [27:48<2:37:08,  1.46it/s, loss=3.48, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2447/16255 [27:50<2:37:06,  1.46it/s, loss=3.51, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2450/16255 [27:52<2:37:04,  1.46it/s, loss=3.59, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2453/16255 [27:54<2:37:01,  1.46it/s, loss=3.58, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2456/16255 [27:56<2:36:59,  1.46it/s, loss=3.62, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2459/16255 [27:58<2:36:56,  1.47it/s, loss=3.66, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2462/16255 [28:00<2:36:54,  1.47it/s, loss=3.74, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2465/16255 [28:02<2:36:52,  1.47it/s, loss=3.7, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  15%|▏| 2468/16255 [28:04<2:36:50,  1.47it/s, loss=3.77, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2471/16255 [28:06<2:36:47,  1.47it/s, loss=3.8, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  15%|▏| 2474/16255 [28:08<2:36:45,  1.47it/s, loss=3.86, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2477/16255 [28:10<2:36:42,  1.47it/s, loss=3.97, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2480/16255 [28:12<2:36:40,  1.47it/s, loss=3.92, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2483/16255 [28:14<2:36:38,  1.47it/s, loss=3.91, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2486/16255 [28:16<2:36:35,  1.47it/s, loss=3.96, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2489/16255 [28:18<2:36:33,  1.47it/s, loss=3.87, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2492/16255 [28:20<2:36:31,  1.47it/s, loss=3.88, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2496/16255 [28:23<2:36:27,  1.47it/s, loss=3.83, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2499/16255 [28:25<2:36:25,  1.47it/s, loss=3.85, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2501/16255 [28:26<2:36:24,  1.47it/s, loss=3.9, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  15%|▏| 2504/16255 [28:28<2:36:21,  1.47it/s, loss=3.89, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2507/16255 [28:30<2:36:19,  1.47it/s, loss=3.84, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2511/16255 [28:33<2:36:16,  1.47it/s, loss=3.83, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2514/16255 [28:35<2:36:14,  1.47it/s, loss=3.79, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  15%|▏| 2517/16255 [28:37<2:36:11,  1.47it/s, loss=3.64, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2520/16255 [28:39<2:36:09,  1.47it/s, loss=3.67, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2523/16255 [28:41<2:36:06,  1.47it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2525/16255 [28:42<2:36:06,  1.47it/s, loss=3.69, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2528/16255 [28:44<2:36:03,  1.47it/s, loss=3.63, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2531/16255 [28:46<2:36:01,  1.47it/s, loss=3.66, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2534/16255 [28:48<2:35:59,  1.47it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2537/16255 [28:50<2:35:57,  1.47it/s, loss=3.7, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=0
+Epoch 0:  16%|▏| 2540/16255 [28:52<2:35:55,  1.47it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2543/16255 [28:54<2:35:53,  1.47it/s, loss=3.63, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2546/16255 [28:56<2:35:50,  1.47it/s, loss=3.59, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2549/16255 [28:58<2:35:48,  1.47it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2552/16255 [29:00<2:35:46,  1.47it/s, loss=3.65, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2555/16255 [29:02<2:35:44,  1.47it/s, loss=3.72, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2558/16255 [29:04<2:35:41,  1.47it/s, loss=3.75, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2561/16255 [29:06<2:35:39,  1.47it/s, loss=3.66, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=
+Epoch 0:  16%|▏| 2564/16255 [29:08<2:35:37,  1.47it/s, loss=3.73, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=Time: 1969.0382957458496
+Epoch 0:  16%|▏| 2564/16255 [29:08<2:35:37,  1.47it/s, loss=3.73, v_num=o52l, acc_score_tatoeba=0.00154, acc_score_mean=Time: 1969.0382957458496
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py:685: UserWarning: Detected KeyboardInterrupt, attempting graceful shutdown...
+  rank_zero_warn("Detected KeyboardInterrupt, attempting graceful shutdown...")

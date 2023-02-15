@@ -1,0 +1,19 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+Traceback (most recent call last):
+  File "run.py", line 223, in <module>
+    trainer= pl.Trainer(**train_params)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/env_vars_connector.py", line 38, in insert_env_defaults
+    return fn(self, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 426, in __init__
+    gpu_ids, tpu_cores = self._parse_devices(gpus, auto_select_gpus, tpu_cores)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1525, in _parse_devices
+    gpu_ids = device_parser.parse_gpu_ids(gpus)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/device_parser.py", line 89, in parse_gpu_ids
+    return _sanitize_gpu_ids(gpus)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/device_parser.py", line 151, in _sanitize_gpu_ids
+    raise MisconfigurationException(
+pytorch_lightning.utilities.exceptions.MisconfigurationException: You requested GPUs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+ But your machine only has: [0]

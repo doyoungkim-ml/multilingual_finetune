@@ -1,0 +1,34 @@
+[nltk_data] Error loading punkt: <urlopen error [Errno 104] Connection
+[nltk_data]     reset by peer>
+Traceback (most recent call last):
+  File "run.py", line 199, in <module>
+    model = T5_small(args)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 29, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path) if args.multilingual else T5Tokenizer.from_pretrained(args.model_name_or_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 579, in from_pretrained
+    return tokenizer_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1722, in from_pretrained
+    resolved_vocab_files[file_id] = cached_path(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/utils/hub.py", line 284, in cached_path
+    output_path = get_from_cache(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/utils/hub.py", line 494, in get_from_cache
+    r = requests.head(url, headers=headers, allow_redirects=False, proxies=proxies, timeout=etag_timeout)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/requests/api.py", line 100, in head
+    return request("head", url, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/requests/adapters.py", line 456, in send
+    conn = self.get_connection(request.url, proxies)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/requests/adapters.py", line 358, in get_connection
+    conn = self.poolmanager.connection_from_url(url)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/urllib3/poolmanager.py", line 298, in connection_from_url
+    u = parse_url(url)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/urllib3/util/url.py", line 390, in parse_url
+    path = _encode_invalid_chars(path, PATH_CHARS)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/urllib3/util/url.py", line 222, in _encode_invalid_chars
+    component, percent_encodings = PERCENT_RE.subn(
+KeyboardInterrupt

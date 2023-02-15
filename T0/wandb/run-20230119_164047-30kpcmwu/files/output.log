@@ -1,0 +1,111 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [8,9,10,11]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+###############################
+{'id': 'QRQA-10385-4', 'question': "John's town used to have lots of water, back when there were only a few hundred people. However, now that the town holds several thousand people, the water availability is", 'choices': {'label': ['A', 'B'], 'text': ['scarce', 'plentiful']}, 'answerKey': 'A', 'para': 'Many of the worlds people live with water scarcity, and that percentage will increase as populations increase and climate changes.', 'para_id': 'QRSent-10385', 'para_anno': {'effect_prop': 'population growth', 'cause_dir_str': 'increase', 'effect_dir_str': 'increase', 'cause_dir_sign': 'MORE', 'effect_dir_sign': 'MORE', 'cause_prop': 'scarcity'}, 'question_anno': {'more_effect_dir': 'several thousand', 'less_effect_dir': 'a few hundred', 'less_cause_prop': 'water', 'more_effect_prop': 'people', 'less_effect_prop': 'people', 'less_cause_dir': 'people'}}
+###############################
+First elem of self.dataset is  {'id': 'QRQA-10385-4', 'question': "John's town used to have lots of water, back when there were only a few hundred people. However, now that the town holds several thousand people, the water availability is", 'choices': {'label': ['A', 'B'], 'text': ['scarce', 'plentiful']}, 'answerKey': 'A', 'para': 'Many of the worlds people live with water scarcity, and that percentage will increase as populations increase and climate changes.', 'para_id': 'QRSent-10385', 'para_anno': {'effect_prop': 'population growth', 'cause_dir_str': 'increase', 'effect_dir_str': 'increase', 'cause_dir_sign': 'MORE', 'effect_dir_sign': 'MORE', 'cause_prop': 'scarcity'}, 'question_anno': {'more_effect_dir': 'several thousand', 'less_effect_dir': 'a few hundred', 'less_cause_prop': 'water', 'more_effect_prop': 'people', 'less_effect_prop': 'people', 'less_cause_dir': 'people'}}
+Length of dataset retrieving is.. 2696
+Epoch 0:   0%|                                                          | 0/674 [00:00<?, ?it/s]
+Downloading builder script: 100%|██████████████████████████| 7.48k/7.48k [00:00<00:00, 2.47MB/s]
+WARNING:datasets.builder:Found cached dataset quartz (/home/joel_jang/.cache/huggingface/datasets/quartz/default/0.1.0/6e5195fb88ecd7a75eda5d8f3549c262c8b15267366f38f9c153f40da92724a6)
+100%|████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 417.33it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  38%|█████████▏              | 257/674 [03:00<04:52,  1.43it/s, loss=0.836, v_num=cmwu]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py:685: UserWarning: Detected KeyboardInterrupt, attempting graceful shutdown...
+
+Epoch 0:  38%|█████████▏              | 257/674 [03:00<04:52,  1.43it/s, loss=0.836, v_num=cmwu]Time: 362.06694650650024

@@ -1,0 +1,8 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "run.py", line 198, in <module>
+    model = T5_small(args)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 29, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path) if args.multilingual else T5Tokenizer.from_pretrained(args.model_name_or_path)
+AttributeError: 'Namespace' object has no attribute 'multilingual'

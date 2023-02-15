@@ -1,0 +1,1 @@
+{"train_loss": 1.6563736200332642, "epoch": 0, "trainer/global_step": 6666, "_timestamp": 1674724634.3575916, "_runtime": 4829.005085706711, "_step": 133, "acc_score_tatoeba_spa": 0.6353732347488403, "acc_score_mean": 0.6353732347488403, "_wandb": {"runtime": 4982}}

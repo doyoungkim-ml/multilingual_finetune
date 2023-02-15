@@ -1,0 +1,138 @@
+[nltk_data] Error loading punkt: <urlopen error [Errno 104] Connection
+[nltk_data]     reset by peer>
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/16
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 16 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+  | Name  | Type                        | Params
+------------------------------------------------------
+0 | model | MT5ForConditionalGeneration | 3.7 B
+------------------------------------------------------
+3.7 B     Trainable params
+0         Non-trainable params
+3.7 B     Total params
+14,970.479Total estimated model params size (MB)
+WARNING:datasets.builder:Using custom data configuration default-31b186e58a74258f
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-31b186e58a74258f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 227.69it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/json/default-31b186e58a74258f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab/cache-6fa19dc9f0152dbb.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Validation sanity check: 0it [00:00, ?it/s]First elem of self.dataset is  {'en': 'Please come here between two and three this afternoon.\n', 'kor': '오늘 오후 두시에서 세시 사이에 여기로 와 주세요.\n'}
+Length of dataset retrieving is.. 1000
+Validation sanity check:   0%|                                                                    | 0/2 [00:00<?, ?it/s]prediction: <extra_id_0>: Please come here between two and three this afternoon. <extra_id_1>: <extra_id_2>: <extra_id_3>: <extra_id_4>: Please come here between two and three this afternoon. <extra_id_5>: <extra_id_6>: <extra_id_7>: === Translate into Korean:  <extra_id_8>: === Translate into Korean <extra_id_9>: === Translate into Korean <extra_id_10>: === Translate <extra_id_11>: === Translate <extra_id_12>: === Translate <extra_id_13>: === Translate <extra_id_14>: === Translate <extra_id_15>: === Translate <extra_id_16>: === Translate <extra_id_17>: === Translate <extra_id_18>: <extra_id_19>: === Translate <extra_id_20>: === Translate <extra_id_21>: === Translate <extra_id_22>: === Translate into Korean <extra_id_23>: === Translate <extra_id_24>: === Translate <extra_id_25> tatoeba
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요. tatoeba
+rouge score is 0.0
+Validation sanity check:  50%|██████████████████████████████                              | 1/2 [00:06<00:06,  6.94s/it]prediction: <extra_id_0>eul === Please help me translate this sentence into Korean: Please help me translate this sentence into Korean <extra_id_3>ul <extra_id_4>: Please help me translate this sentence into Korean <extra_id_5>  <extra_id_6>  <extra_id_7>  <extra_id_8>  <extra_id_9>  <extra_id_10>  <extra_id_11>  <extra_id_12>  <extra_id_13>  <extra_id_14>  <extra_id_15>  <extra_id_16> === Please help me translate this sentence into Korean <extra_id_17>  <extra_id_18>  <extra_id_19>  <extra_id_20>  <extra_id_21>  <extra_id_22>  <extra_id_23> Korean: Please help me translate this sentence into Korean <extra_id_24> Korean <extra_id_25> Korean <extra_id_26> Korean Korean Korean Korean Korean Korean Korean Korean tatoeba
+ground_truth 톰은 원하는 걸 얻을 때까지는 떠나지 않을 거야. tatoeba
+rouge score is 0.0
+Validation sanity check: 100%|████████████████████████████████████████████████████████████| 2/2 [00:13<00:00,  6.46s/it]agg_score is
+WARNING:datasets.builder:Using custom data configuration default-c680fa9162bf47b5
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-c680fa9162bf47b5/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 120.56it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/json/default-c680fa9162bf47b5/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab/cache-b59223449c27edda.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+Validation sanity check: 100%|████████████████████████████████████████████████████████████| 2/2 [00:13<00:00,  6.46s/it]agg_score is tensor(0., device='cuda:0') 0
+enter
+First elem of self.dataset is  {'eng': '79017 The Battle of the Five Armies\n', 'kor': '[레고 호\ufeff 79017 다섯 군대™의 전투\n'}
+Length of dataset retrieving is.. 50000
+Epoch 0:   0%|                                                                                  | 0/161 [00:00<?, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 32. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Traceback (most recent call last):
+  File "run.py", line 227, in <module>
+    trainer.fit(model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 735, in fit
+    self._call_and_handle_interrupt(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 682, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 770, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1193, in _run
+    self._dispatch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1272, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1282, in run_stage
+    return self._run_train()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1312, in _run_train
+    self.fit_loop.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/fit_loop.py", line 234, in advance
+    self.epoch_loop.run(data_fetcher)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 195, in advance
+    batch_output = self.batch_loop.run(batch, batch_idx)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 88, in advance
+    outputs = self.optimizer_loop.run(split_batch, optimizers, batch_idx)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 215, in advance
+    result = self._run_optimization(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 259, in _run_optimization
+    closure()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 160, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 142, in closure
+    step_output = self._step_fn()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 435, in _training_step
+    training_step_output = self.trainer.accelerator.training_step(step_kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 216, in training_step
+    return self.training_type_plugin.training_step(*step_kwargs.values())
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/ddp.py", line 439, in training_step
+    return self.model(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/fairscale/nn/data_parallel/sharded_ddp.py", line 230, in forward
+    return self.module(*inputs, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/overrides/base.py", line 81, in forward
+    output = self.module.training_step(*inputs, **kwargs)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 263, in training_step
+    loss = self._step(batch)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 58, in _step
+    outputs = self(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 45, in forward
+    return self.model(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 1601, in forward
+    encoder_outputs = self.encoder(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 1033, in forward
+    layer_outputs = layer_module(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 716, in forward
+    hidden_states = self.layer[-1](hidden_states)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 326, in forward
+    forwarded_states = self.DenseReluDense(forwarded_states)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 305, in forward
+    hidden_gelu = self.act(self.wi_0(hidden_states))
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/activations.py", line 34, in forward
+    return 0.5 * input * (1.0 + torch.tanh(math.sqrt(2.0 / math.pi) * (input + 0.044715 * torch.pow(input, 3.0))))
+RuntimeError: CUDA out of memory. Tried to allocate 80.00 MiB (GPU 0; 39.59 GiB total capacity; 36.76 GiB already allocated; 64.19 MiB free; 36.87 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

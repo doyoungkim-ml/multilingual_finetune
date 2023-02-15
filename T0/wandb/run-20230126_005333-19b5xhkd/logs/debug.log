@@ -1,0 +1,26 @@
+2023-01-26 00:53:33,411 INFO    MainThread:41419 [wandb_setup.py:_flush():68] Configure stats pid to 41419
+2023-01-26 00:53:33,411 INFO    MainThread:41419 [wandb_setup.py:_flush():68] Loading settings from /home/joel_jang/.config/wandb/settings
+2023-01-26 00:53:33,411 INFO    MainThread:41419 [wandb_setup.py:_flush():68] Loading settings from /home/joel_jang/seungone/Flipped-Learning/T0/wandb/settings
+2023-01-26 00:53:33,411 INFO    MainThread:41419 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-01-26 00:53:33,411 INFO    MainThread:41419 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'T0/run.py', 'program': 'run.py'}
+2023-01-26 00:53:33,412 INFO    MainThread:41419 [wandb_init.py:_log_setup():476] Logging user logs to /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_005333-19b5xhkd/logs/debug.log
+2023-01-26 00:53:33,412 INFO    MainThread:41419 [wandb_init.py:_log_setup():477] Logging internal logs to /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_005333-19b5xhkd/logs/debug-internal.log
+2023-01-26 00:53:33,412 INFO    MainThread:41419 [wandb_init.py:init():516] calling init triggers
+2023-01-26 00:53:33,412 INFO    MainThread:41419 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2023-01-26 00:53:33,412 INFO    MainThread:41419 [wandb_init.py:init():569] starting backend
+2023-01-26 00:53:33,412 INFO    MainThread:41419 [wandb_init.py:init():573] setting up manager
+2023-01-26 00:53:33,417 INFO    MainThread:41419 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-01-26 00:53:33,421 INFO    MainThread:41419 [wandb_init.py:init():580] backend started and connected
+2023-01-26 00:53:33,426 INFO    MainThread:41419 [wandb_init.py:init():658] updated telemetry
+2023-01-26 00:53:33,452 INFO    MainThread:41419 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2023-01-26 00:53:33,569 INFO    MainThread:41419 [wandb_run.py:_on_init():2000] communicating current version
+2023-01-26 00:53:33,597 INFO    MainThread:41419 [wandb_run.py:_on_init():2004] got version response 
+2023-01-26 00:53:33,598 INFO    MainThread:41419 [wandb_init.py:init():728] starting run threads in backend
+2023-01-26 00:53:35,992 INFO    MainThread:41419 [wandb_run.py:_console_start():1980] atexit reg
+2023-01-26 00:53:35,992 INFO    MainThread:41419 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2023-01-26 00:53:35,992 INFO    MainThread:41419 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2023-01-26 00:53:35,993 INFO    MainThread:41419 [wandb_run.py:_redirect():1925] Redirects installed.
+2023-01-26 00:53:35,993 INFO    MainThread:41419 [wandb_init.py:init():765] run started, returning control to user process
+2023-01-26 00:53:35,998 INFO    MainThread:41419 [wandb_run.py:_config_callback():1160] config_cb None None {'input_length': 128, 'output_length': 128, 'dataset_length': 100000, 'multilingual': True, 'num_train_epochs': 1, 'output_dir': '../outputs/tatoeba_1_chi.pt', 'dataset': ['tatoeba_chi'], 'valid_dataset': ['tatoeba_chi'], 'dataset_version': 'full', 'train_batch_size': 2, 'eval_batch_size': 1, 'learning_rate': 0.0001, 'model': 'google/mt5-xl', 'gradient_accumulation_steps': 1, 'ngpu': 15, 'num_workers': 0, 'wandb_log': True, 'wandb_project': 'RoE ICML direct', 'wandb_run_name': 'tatoeba_1_chi', 'mode': 'zerotune', 'use_lr_scheduling': False, 'eval_with_prompt': False, 'fp16': False, 'accelerator': 'ddp_sharded', 'required_classification': False, 'eval_with_prob': False, 'channel': False, 'ul_loss': False, 'prompt_name': 'translate from eng to chi', 'random': False, 'channel_base': False, 'weight_decay': 0.0, 'grad_norm': 0.5, 'output_log': 'log/test.csv', 'bigbench_path': '../BIG-bench/bigbench/benchmark_tasks', 'bigbench': False, 'max_steps': 'None', 'checkpoint_path': '', 'dataset_config': 'None', 'method': 'baseline', 'eos_token': True, 'valid_data_size': 1000, 'answer_dict_dir_path': 'None', 'ul_weight': 3, 'channel_checkpoint_path': 'None', 'channel_model': 'None'}
+2023-01-26 00:53:46,562 WARNING MsgRouterThr:41419 [router.py:message_loop():77] message_loop has been closed

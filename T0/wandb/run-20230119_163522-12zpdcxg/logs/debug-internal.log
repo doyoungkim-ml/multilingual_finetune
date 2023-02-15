@@ -1,0 +1,534 @@
+2023-01-19 16:35:22,797 INFO    StreamThr :78613 [internal.py:wandb_internal():88] W&B internal server running at pid: 78613, started at: 2023-01-19 16:35:22.796687
+2023-01-19 16:35:22,801 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: status
+2023-01-19 16:35:22,802 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: status
+2023-01-19 16:35:22,804 DEBUG   SenderThread:78613 [sender.py:send():303] send: header
+2023-01-19 16:35:22,804 INFO    WriterThread:78613 [datastore.py:open_for_write():75] open: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/run-12zpdcxg.wandb
+2023-01-19 16:35:22,827 DEBUG   SenderThread:78613 [sender.py:send():303] send: run
+2023-01-19 16:35:22,830 INFO    SenderThread:78613 [sender.py:_maybe_setup_resume():593] checking resume status for lklab_kaist/RoE ICML direct/12zpdcxg
+2023-01-19 16:35:24,815 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: check_version
+2023-01-19 16:35:24,862 INFO    SenderThread:78613 [dir_watcher.py:__init__():216] watching files in: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files
+2023-01-19 16:35:24,863 INFO    SenderThread:78613 [sender.py:_start_run_threads():928] run started: 12zpdcxg with start time 1674146122.794983
+2023-01-19 16:35:24,863 DEBUG   SenderThread:78613 [sender.py:send():303] send: summary
+2023-01-19 16:35:24,864 INFO    SenderThread:78613 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-01-19 16:35:24,865 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: check_version
+2023-01-19 16:35:25,049 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: run_start
+2023-01-19 16:35:25,687 DEBUG   HandlerThread:78613 [system_info.py:__init__():31] System info init
+2023-01-19 16:35:25,687 DEBUG   HandlerThread:78613 [system_info.py:__init__():46] System info init done
+2023-01-19 16:35:25,687 INFO    HandlerThread:78613 [system_monitor.py:start():150] Starting system monitor
+2023-01-19 16:35:25,698 INFO    SystemMonitor:78613 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-01-19 16:35:25,698 INFO    HandlerThread:78613 [system_monitor.py:probe():168] Collecting system info
+2023-01-19 16:35:25,730 INFO    SystemMonitor:78613 [interfaces.py:start():168] Started cpu
+2023-01-19 16:35:25,735 INFO    SystemMonitor:78613 [interfaces.py:start():168] Started disk
+2023-01-19 16:35:25,739 INFO    SystemMonitor:78613 [interfaces.py:start():168] Started gpu
+2023-01-19 16:35:25,748 INFO    SystemMonitor:78613 [interfaces.py:start():168] Started memory
+2023-01-19 16:35:25,757 INFO    SystemMonitor:78613 [interfaces.py:start():168] Started network
+2023-01-19 16:35:25,850 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_created():275] file/dir created: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/wandb-summary.json
+2023-01-19 16:35:27,559 DEBUG   HandlerThread:78613 [system_info.py:probe():195] Probing system
+2023-01-19 16:35:27,572 DEBUG   HandlerThread:78613 [system_info.py:_probe_git():180] Probing git
+2023-01-19 16:35:27,594 DEBUG   HandlerThread:78613 [system_info.py:_probe_git():188] Probing git done
+2023-01-19 16:35:27,594 DEBUG   HandlerThread:78613 [system_info.py:probe():241] Probing system done
+2023-01-19 16:35:27,594 DEBUG   HandlerThread:78613 [system_monitor.py:probe():177] {'os': 'Linux-5.4.0-1093-gcp-x86_64-with-glibc2.17', 'python': '3.8.15', 'heartbeatAt': '2023-01-19T16:35:27.560981', 'startedAt': '2023-01-19T16:35:22.782510', 'docker': None, 'cuda': None, 'args': ('--config', '../configs/dataset_task_vectors/commonsense_qa.json'), 'state': 'running', 'program': 'run.py', 'codePath': 'T0/run.py', 'git': {'remote': 'https://github.com/seonghyeonye/Flipped-Learning.git', 'commit': 'eb4b98dc94056f35ade2f88f3c2ad12b14cb9b18'}, 'email': 'louisdebroglie@yonsei.ac.kr', 'root': '/home/joel_jang/seungone/Flipped-Learning', 'host': 'lgair-fr-2022-17', 'username': 'joel_jang', 'executable': '/home/joel_jang/miniconda3/envs/zeroshot/bin/python3', 'cpu_count': 48, 'cpu_count_logical': 96, 'cpu_freq': {'current': 2200.160000000003, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 1984.6844749450684, 'used': 1932.1574478149414}, 'gpu': 'A100-SXM4-40GB', 'gpu_count': 16, 'gpu_devices': [{'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}], 'memory': {'total': 1338.6314010620117}}
+2023-01-19 16:35:27,595 INFO    HandlerThread:78613 [system_monitor.py:probe():178] Finished collecting system info
+2023-01-19 16:35:27,595 INFO    HandlerThread:78613 [system_monitor.py:probe():181] Publishing system info
+2023-01-19 16:35:27,595 DEBUG   HandlerThread:78613 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-01-19 16:35:27,596 DEBUG   HandlerThread:78613 [system_info.py:_save_pip():67] Saving pip packages done
+2023-01-19 16:35:27,596 DEBUG   HandlerThread:78613 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-01-19 16:35:27,848 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_created():275] file/dir created: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/requirements.txt
+2023-01-19 16:35:27,849 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_created():275] file/dir created: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/conda-environment.yaml
+2023-01-19 16:35:32,327 DEBUG   HandlerThread:78613 [system_info.py:_save_conda():86] Saving conda packages done
+2023-01-19 16:35:32,331 INFO    HandlerThread:78613 [system_monitor.py:probe():183] Finished publishing system info
+2023-01-19 16:35:32,502 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:35:32,505 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:35:32,585 DEBUG   SenderThread:78613 [sender.py:send():303] send: telemetry
+2023-01-19 16:35:32,588 DEBUG   SenderThread:78613 [sender.py:send():303] send: metric
+2023-01-19 16:35:32,589 DEBUG   SenderThread:78613 [sender.py:send():303] send: telemetry
+2023-01-19 16:35:32,590 DEBUG   SenderThread:78613 [sender.py:send():303] send: metric
+2023-01-19 16:35:32,590 WARNING SenderThread:78613 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-01-19 16:35:32,590 DEBUG   SenderThread:78613 [sender.py:send():303] send: config
+2023-01-19 16:35:32,608 DEBUG   SenderThread:78613 [sender.py:send():303] send: files
+2023-01-19 16:35:32,609 INFO    SenderThread:78613 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2023-01-19 16:35:32,850 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/conda-environment.yaml
+2023-01-19 16:35:32,851 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_created():275] file/dir created: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:35:32,851 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_created():275] file/dir created: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/wandb-metadata.json
+2023-01-19 16:35:32,930 INFO    Thread-16 :78613 [upload_job.py:push():143] Uploaded file /tmp/tmpyesru7z4wandb/3e1ln157-wandb-metadata.json
+2023-01-19 16:35:34,851 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:35:53,358 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:35:53,359 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:35:53,861 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/config.yaml
+2023-01-19 16:36:08,408 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:36:08,409 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:36:23,505 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:36:23,506 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:36:25,758 DEBUG   SystemMonitor:78613 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-01-19 16:36:25,762 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:36:38,565 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:36:38,565 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:36:53,596 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:36:53,597 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:36:55,764 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:37:09,219 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:37:09,220 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:37:10,931 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:37:24,939 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:37:25,771 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:37:55,775 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:38:25,776 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:38:55,779 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:38:57,600 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:38:57,601 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:38:59,005 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:39:12,962 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:39:12,963 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:39:25,781 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:39:28,087 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:39:28,088 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:39:43,151 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:39:43,152 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:39:45,091 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:39:55,784 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:39:58,208 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:39:58,208 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:40:13,284 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:40:13,284 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:40:15,583 DEBUG   SenderThread:78613 [sender.py:send():303] send: metric
+2023-01-19 16:40:15,584 DEBUG   SenderThread:78613 [sender.py:send():303] send: metric
+2023-01-19 16:40:15,584 WARNING SenderThread:78613 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-01-19 16:40:15,584 DEBUG   SenderThread:78613 [sender.py:send():303] send: config
+2023-01-19 16:40:25,789 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:40:26,120 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/config.yaml
+2023-01-19 16:40:28,471 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:40:28,471 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:40:29,135 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:40:31,136 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:40:41,152 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:40:43,531 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:40:43,531 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:40:53,158 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:40:55,791 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:40:58,574 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:40:58,574 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:41:01,162 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:03,163 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:05,165 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:07,165 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:09,166 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:11,168 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:13,169 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:13,626 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:41:13,627 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:41:15,173 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:17,174 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:19,175 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:21,176 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:23,178 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:25,178 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:25,793 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:41:27,180 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:28,704 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:41:28,704 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:41:29,181 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:31,190 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:35,194 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:37,194 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:39,195 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:41,197 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:43,198 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:43,751 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:41:43,752 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:41:45,199 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:47,200 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:49,201 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:51,202 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:53,203 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:55,204 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:55,800 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:41:57,205 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:41:58,824 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:41:58,824 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:41:59,206 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:01,208 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:03,209 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:05,210 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:07,211 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:09,212 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:11,213 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:13,214 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:13,906 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:42:13,907 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:42:15,215 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:17,216 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:19,221 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:21,239 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:23,240 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:25,242 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:25,801 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:42:27,243 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:28,997 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:42:28,997 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:42:29,244 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:31,245 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:33,246 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:35,247 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:37,248 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:39,249 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:41,251 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:43,251 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:44,043 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:42:44,043 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:42:45,253 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:47,254 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:49,259 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:51,256 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:53,257 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:55,258 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:55,804 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:42:57,259 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:42:59,128 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:42:59,128 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:42:59,260 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:01,261 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:03,263 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:05,264 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:07,265 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:09,266 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:11,269 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:13,270 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:14,170 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:43:14,171 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:43:15,271 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:17,273 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:19,274 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:21,275 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:23,276 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:25,277 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:25,812 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:43:27,278 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:29,242 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:43:29,242 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:43:29,279 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:31,281 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:33,282 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:35,283 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:37,284 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:39,285 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:41,286 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:43,288 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:44,303 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:43:44,303 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:43:45,289 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:47,290 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:49,291 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:51,292 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:53,293 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:55,294 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:55,813 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:43:57,295 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:59,297 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:43:59,380 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:43:59,381 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:44:01,307 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:03,315 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:05,316 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:07,318 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:09,319 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:11,320 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:13,321 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:14,417 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:44:14,417 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:44:15,322 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:17,323 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:19,324 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:21,325 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:23,326 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:25,327 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:25,817 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:44:27,328 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:29,331 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:29,488 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:44:29,489 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:44:31,333 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:33,334 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:35,335 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:37,336 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:39,337 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:41,338 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:43,339 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:44,540 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:44:44,540 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:44:45,340 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:47,341 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:49,342 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:51,344 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:53,347 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:55,347 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:55,820 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:44:57,348 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:59,356 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:44:59,591 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:44:59,592 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:45:01,357 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:03,359 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:05,360 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:07,361 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:09,362 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:11,363 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:13,364 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:14,691 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:45:14,692 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:45:15,365 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:17,368 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:19,369 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:21,370 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:23,371 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:25,373 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:25,823 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:45:27,374 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:29,375 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:29,824 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:45:29,825 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:45:31,376 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:33,377 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:35,378 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:37,379 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:39,380 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:41,381 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:43,382 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:44,888 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:45:44,889 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:45:45,384 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:47,385 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:49,386 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:51,387 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:53,389 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:55,391 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:55,824 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:45:57,392 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:59,393 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:45:59,957 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:45:59,957 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:46:01,394 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:03,396 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:05,397 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:07,398 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:09,399 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:11,400 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:13,401 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:15,021 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:46:15,021 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:46:15,403 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:17,404 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:19,405 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:21,406 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:23,407 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:25,408 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:25,831 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:46:27,409 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:29,411 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:30,222 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:46:30,223 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:46:31,412 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:33,413 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:35,414 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:37,415 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:39,416 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:41,417 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:43,419 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:45,261 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:46:45,262 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:46:45,420 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:47,424 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:49,424 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:51,426 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:53,428 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:55,428 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:55,835 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:46:57,430 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:46:59,431 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:00,379 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:47:00,379 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:47:01,431 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:03,432 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:05,434 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:07,435 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:09,436 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:11,437 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:13,439 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:15,422 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:47:15,423 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:47:15,440 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:17,441 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:19,442 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:23,444 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:25,445 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:25,838 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:47:27,446 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:29,447 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:30,511 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:47:30,512 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:47:31,448 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:33,450 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:35,451 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:37,452 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:39,466 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:41,468 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:43,469 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:45,471 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:45,559 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:47:45,560 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:47:47,472 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:49,487 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:51,492 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:53,493 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:55,494 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:55,842 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:47:57,496 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:47:59,497 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:00,628 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:48:00,629 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:48:01,498 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:03,499 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:05,500 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:07,501 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:09,502 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:11,503 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:13,504 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:15,507 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:15,666 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:48:15,667 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:48:17,508 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:19,508 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:21,510 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:23,511 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:25,512 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:25,843 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:48:27,513 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:29,514 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:30,807 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-19 16:48:30,809 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: stop_status
+2023-01-19 16:48:31,515 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:33,516 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:35,518 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:37,519 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:39,520 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:39,807 DEBUG   SenderThread:78613 [sender.py:send():303] send: exit
+2023-01-19 16:48:39,807 INFO    SenderThread:78613 [sender.py:send_exit():442] handling exit code: 0
+2023-01-19 16:48:39,808 INFO    SenderThread:78613 [sender.py:send_exit():444] handling runtime: 794
+2023-01-19 16:48:39,809 INFO    SenderThread:78613 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-01-19 16:48:39,809 INFO    SenderThread:78613 [sender.py:send_exit():450] send defer
+2023-01-19 16:48:39,810 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:39,810 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 0
+2023-01-19 16:48:39,811 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:39,811 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 0
+2023-01-19 16:48:39,811 INFO    SenderThread:78613 [sender.py:transition_state():463] send defer: 1
+2023-01-19 16:48:39,811 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:39,812 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 1
+2023-01-19 16:48:39,812 INFO    HandlerThread:78613 [system_monitor.py:finish():160] Stopping system monitor
+2023-01-19 16:48:39,813 DEBUG   SystemMonitor:78613 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-01-19 16:48:39,813 DEBUG   SystemMonitor:78613 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-01-19 16:48:39,817 INFO    HandlerThread:78613 [interfaces.py:finish():173] Joined cpu
+2023-01-19 16:48:39,817 INFO    HandlerThread:78613 [interfaces.py:finish():173] Joined disk
+2023-01-19 16:48:40,520 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/wandb-summary.json
+2023-01-19 16:48:41,530 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:42,530 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:49,946 INFO    HandlerThread:78613 [interfaces.py:finish():173] Joined gpu
+2023-01-19 16:48:49,946 INFO    HandlerThread:78613 [interfaces.py:finish():173] Joined memory
+2023-01-19 16:48:49,946 INFO    HandlerThread:78613 [interfaces.py:finish():173] Joined network
+2023-01-19 16:48:49,947 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:49,948 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: poll_exit
+2023-01-19 16:48:49,948 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 1
+2023-01-19 16:48:49,948 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: keepalive
+2023-01-19 16:48:49,948 INFO    SenderThread:78613 [sender.py:transition_state():463] send defer: 2
+2023-01-19 16:48:49,949 DEBUG   SenderThread:78613 [sender.py:send():303] send: stats
+2023-01-19 16:48:49,950 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: poll_exit
+2023-01-19 16:48:49,951 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:49,952 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 2
+2023-01-19 16:48:49,952 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:49,952 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 2
+2023-01-19 16:48:49,952 INFO    SenderThread:78613 [sender.py:transition_state():463] send defer: 3
+2023-01-19 16:48:49,953 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:49,953 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 3
+2023-01-19 16:48:49,953 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:49,953 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 3
+2023-01-19 16:48:49,953 INFO    SenderThread:78613 [sender.py:transition_state():463] send defer: 4
+2023-01-19 16:48:49,954 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:49,954 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 4
+2023-01-19 16:48:49,954 DEBUG   SenderThread:78613 [sender.py:send():303] send: summary
+2023-01-19 16:48:49,955 INFO    SenderThread:78613 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-01-19 16:48:49,955 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:49,955 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 4
+2023-01-19 16:48:49,955 INFO    SenderThread:78613 [sender.py:transition_state():463] send defer: 5
+2023-01-19 16:48:49,956 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:49,956 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 5
+2023-01-19 16:48:49,956 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:49,956 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 5
+2023-01-19 16:48:49,956 INFO    SenderThread:78613 [sender.py:transition_state():463] send defer: 6
+2023-01-19 16:48:49,957 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:49,957 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 6
+2023-01-19 16:48:49,957 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:49,957 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 6
+2023-01-19 16:48:50,535 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/wandb-summary.json
+2023-01-19 16:48:50,825 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: keepalive
+2023-01-19 16:48:53,462 INFO    SenderThread:78613 [sender.py:transition_state():463] send defer: 7
+2023-01-19 16:48:53,463 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:53,463 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 7
+2023-01-19 16:48:53,463 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:53,463 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 7
+2023-01-19 16:48:53,463 INFO    SenderThread:78613 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-01-19 16:48:53,536 INFO    Thread-13 :78613 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:53,537 INFO    SenderThread:78613 [dir_watcher.py:finish():392] scan: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files
+2023-01-19 16:48:53,538 INFO    SenderThread:78613 [dir_watcher.py:finish():406] scan save: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log output.log
+2023-01-19 16:48:53,538 INFO    SenderThread:78613 [dir_watcher.py:finish():406] scan save: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/wandb-metadata.json wandb-metadata.json
+2023-01-19 16:48:53,539 INFO    SenderThread:78613 [dir_watcher.py:finish():406] scan save: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/requirements.txt requirements.txt
+2023-01-19 16:48:53,539 INFO    SenderThread:78613 [dir_watcher.py:finish():406] scan save: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/config.yaml config.yaml
+2023-01-19 16:48:53,540 INFO    SenderThread:78613 [dir_watcher.py:finish():406] scan save: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/wandb-summary.json wandb-summary.json
+2023-01-19 16:48:53,540 INFO    SenderThread:78613 [dir_watcher.py:finish():406] scan save: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/conda-environment.yaml conda-environment.yaml
+2023-01-19 16:48:53,546 INFO    SenderThread:78613 [sender.py:transition_state():463] send defer: 8
+2023-01-19 16:48:53,547 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:53,547 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 8
+2023-01-19 16:48:53,548 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:53,548 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 8
+2023-01-19 16:48:53,548 INFO    SenderThread:78613 [file_pusher.py:finish():168] shutting down file pusher
+2023-01-19 16:48:53,850 INFO    Thread-18 :78613 [upload_job.py:push():143] Uploaded file /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/requirements.txt
+2023-01-19 16:48:53,873 INFO    Thread-21 :78613 [upload_job.py:push():143] Uploaded file /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/conda-environment.yaml
+2023-01-19 16:48:53,907 INFO    Thread-17 :78613 [upload_job.py:push():143] Uploaded file /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/output.log
+2023-01-19 16:48:53,928 INFO    Thread-19 :78613 [upload_job.py:push():143] Uploaded file /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/config.yaml
+2023-01-19 16:48:54,112 INFO    Thread-20 :78613 [upload_job.py:push():143] Uploaded file /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/files/wandb-summary.json
+2023-01-19 16:48:54,313 INFO    Thread-12 :78613 [sender.py:transition_state():463] send defer: 9
+2023-01-19 16:48:54,313 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:54,314 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 9
+2023-01-19 16:48:54,314 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:54,314 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 9
+2023-01-19 16:48:54,314 INFO    SenderThread:78613 [file_pusher.py:join():173] waiting for file pusher
+2023-01-19 16:48:54,314 INFO    SenderThread:78613 [sender.py:transition_state():463] send defer: 10
+2023-01-19 16:48:54,314 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:54,315 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 10
+2023-01-19 16:48:54,315 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:54,315 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 10
+2023-01-19 16:48:54,493 INFO    SenderThread:78613 [sender.py:transition_state():463] send defer: 11
+2023-01-19 16:48:54,493 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:54,493 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 11
+2023-01-19 16:48:54,494 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:54,494 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 11
+2023-01-19 16:48:54,494 INFO    SenderThread:78613 [sender.py:transition_state():463] send defer: 12
+2023-01-19 16:48:54,494 DEBUG   SenderThread:78613 [sender.py:send():303] send: final
+2023-01-19 16:48:54,495 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: defer
+2023-01-19 16:48:54,495 DEBUG   SenderThread:78613 [sender.py:send():303] send: footer
+2023-01-19 16:48:54,495 INFO    HandlerThread:78613 [handler.py:handle_request_defer():162] handle defer: 12
+2023-01-19 16:48:54,495 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: defer
+2023-01-19 16:48:54,495 INFO    SenderThread:78613 [sender.py:send_request_defer():459] handle sender defer: 12
+2023-01-19 16:48:54,497 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: poll_exit
+2023-01-19 16:48:54,497 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: server_info
+2023-01-19 16:48:54,497 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: poll_exit
+2023-01-19 16:48:54,498 DEBUG   SenderThread:78613 [sender.py:send_request():317] send_request: server_info
+2023-01-19 16:48:54,500 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: get_summary
+2023-01-19 16:48:54,501 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: sampled_history
+2023-01-19 16:48:54,565 INFO    MainThread:78613 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2023-01-19 16:48:54,565 INFO    MainThread:78613 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2023-01-19 16:48:54,565 INFO    MainThread:78613 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2023-01-19 16:48:54,566 DEBUG   HandlerThread:78613 [handler.py:handle_request():139] handle_request: shutdown
+2023-01-19 16:48:54,566 INFO    HandlerThread:78613 [handler.py:finish():814] shutting down handler
+2023-01-19 16:48:55,495 INFO    WriterThread:78613 [datastore.py:close():279] close: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230119_163522-12zpdcxg/run-12zpdcxg.wandb
+2023-01-19 16:48:55,564 INFO    SenderThread:78613 [sender.py:finish():1331] shutting down sender
+2023-01-19 16:48:55,564 INFO    SenderThread:78613 [file_pusher.py:finish():168] shutting down file pusher
+2023-01-19 16:48:55,565 INFO    SenderThread:78613 [file_pusher.py:join():173] waiting for file pusher
+2023-01-19 16:48:55,570 INFO    MainThread:78613 [internal.py:handle_exit():78] Internal process exited

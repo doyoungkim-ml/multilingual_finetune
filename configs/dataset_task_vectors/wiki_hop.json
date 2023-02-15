@@ -1,0 +1,32 @@
+{
+    "input_length": 512,
+    "output_length": 128,
+    "dataset_length": 100000,
+    "num_train_epochs": 5,
+    "output_dir": "/mnt/disks/sdc/outputs/wiki_hop.pt",
+    "dataset": [
+        "wiki_hop/original"
+    ],
+    "valid_dataset": [],
+    "dataset_version": "full",
+    "train_batch_size": 1,
+    "eval_batch_size": 1,
+    "learning_rate": 0.0001,
+    "model": "google/t5-xl-lm-adapt",
+    "gradient_accumulation_steps": 32,
+    "ngpu": 4,
+    "num_workers": 40,
+    "CUDA_VISIBLE_DEVICES": "4,5,6,7",
+    "wandb_log": true,
+    "wandb_project": "RoE ICML direct",
+    "wandb_run_name": "wiki_hop",
+    "mode": "zerotune",
+    "use_lr_scheduling": false,
+    "eval_with_prompt": false,
+    "fp16": false,
+    "accelerator": "ddp_sharded",
+    "required_classification": false,
+    "eval_with_prob": false,
+    "channel": false,
+    "ul_loss": false
+}

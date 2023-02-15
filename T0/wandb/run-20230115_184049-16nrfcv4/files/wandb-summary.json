@@ -1,0 +1,1 @@
+{"acc_score_dream": 0.7290641069412231, "acc_score_mean": 0.7290641069412231, "epoch": 4, "trainer/global_step": 54, "_timestamp": 1673809138.7017276, "_runtime": 1088.7268245220184, "_step": 5, "train_loss": 0.19811275601387024, "_wandb": {"runtime": 1106}}

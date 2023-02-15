@@ -1,0 +1,1758 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/16
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 16 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+  | Name  | Type                        | Params
+------------------------------------------------------
+0 | model | MT5ForConditionalGeneration | 3.7 B
+------------------------------------------------------
+3.7 B     Trainable params
+0         Non-trainable params
+3.7 B     Total params
+14,970.479Total estimated model params size (MB)
+WARNING:datasets.builder:Using custom data configuration default-31b186e58a74258f
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-31b186e58a74258f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 248.32it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/json/default-31b186e58a74258f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab/cache-6fa19dc9f0152dbb.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Validation sanity check: 0it [00:00, ?it/s]First elem of self.dataset is  {'en': 'Please come here between two and three this afternoon.\n', 'kor': '오늘 오후 두시에서 세시 사이에 여기로 와 주세요.\n'}
+Length of dataset retrieving is.. 1000
+Validation sanity check:   0%|                                                                    | 0/2 [00:00<?, ?it/s]input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: <extra_id_0>: Please come here between two and three this afternoon. <extra_id_1>: <extra_id_2>: <extra_id_3>: <extra_id_4>: Please come here between two and three this afternoon. <extra_id_5>: <extra_id_6>: <extra_id_7>: === Translate into Korean:  <extra_id_8>: === Translate into Korean <extra_id_9>: === Translate into Korean <extra_id_10>: === Translate <extra_id_11>: === Translate <extra_id_12>: === Translate <extra_id_13>: === Translate <extra_id_14>: === Translate <extra_id_15>: === Translate <extra_id_16>: === Translate <extra_id_17>: === Translate <extra_id_18>: <extra_id_19>: === Translate <extra_id_20>: === Translate <extra_id_21>: === Translate <extra_id_22>: === Translate into Korean <extra_id_23>: === Translate <extra_id_24>: === Translate <extra_id_25>
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.0
+Validation sanity check:  50%|██████████████████████████████                              | 1/2 [00:06<00:06,  6.69s/it]input: Tom won't leave until he gets what he wants. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: <extra_id_0>eul === Please help me translate this sentence into Korean: Please help me translate this sentence into Korean <extra_id_3>ul <extra_id_4>: Please help me translate this sentence into Korean <extra_id_5>  <extra_id_6>  <extra_id_7>  <extra_id_8>  <extra_id_9>  <extra_id_10>  <extra_id_11>  <extra_id_12>  <extra_id_13>  <extra_id_14>  <extra_id_15>  <extra_id_16> === Please help me translate this sentence into Korean <extra_id_17>  <extra_id_18>  <extra_id_19>  <extra_id_20>  <extra_id_21>  <extra_id_22>  <extra_id_23> Korean: Please help me translate this sentence into Korean <extra_id_24> Korean <extra_id_25> Korean <extra_id_26> Korean Korean Korean Korean Korean Korean Korean Korean
+ground_truth 톰은 원하는 걸 얻을 때까지는 떠나지 않을 거야.
+rouge score is 0.0
+Validation sanity check: 100%|████████████████████████████████████████████████████████████| 2/2 [00:12<00:00,  6.29s/it]agg_score is tensor(0., device='cuda:0') 0
+enter
+WARNING:datasets.builder:Using custom data configuration default-13622ded68bebb9f
+WARNING:datasets.builder:Found cached dataset json (/home/joel_jang/.cache/huggingface/datasets/json/default-13622ded68bebb9f/0.0.0/e6070c77f18f01a5ad4551a8b7edfba20b8438b7cad4d94e6ad9378022ce4aab)
+100%|████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 105.36it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+First elem of self.dataset is  {'en': 'Again am I telling you that the Son of Man will be delivered into the hands of the chief priests and the religious rulers; that they will condemn him and then deliver him into the hands of the gentiles. \n', 'kor': '다시 너희에게 이르노니, 사람의 아들 이 주사제와 종교 지도자들의 손에 넘겨지겠고, 저희가 그를 정죄하고 다음에 이방인들의 손에 넘겨주리라.\n'}
+Length of dataset retrieving is.. 50000
+Training: 0it [00:00, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 2. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:   3%|█▎                                               | 78/2823 [00:54<31:45,  1.44it/s, loss=2.95, v_num=j3l7]input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2~3시 사이에 오십시오.                                                                 | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4615384568047337
+Epoch 0:   3%|█▍                                               | 80/2823 [00:54<31:24,  1.46it/s, loss=2.95, v_num=j3l7]
+prediction: 톰은 그가 원하는 것을 얻기 전까지 도착하지 않을 것이다.                                             | 1/63 [00:00<00:49,  1.26it/s]
+ground_truth 톰은 원하는 걸 얻을 때까지는 떠나지 않을 거야.
+rouge score is 0.35294117148788934
+                                                                                                                        input: One leg is not enough for running. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 하나의 발은 뛰기 위해 충분하다.                                                           | 2/63 [00:01<00:59,  1.02it/s]
+ground_truth 다리 하나만으로는 뛰기 어렵다.
+rouge score is 0.22222221728395072
+Epoch 0:   3%|█▍                                               | 82/2823 [00:56<31:37,  1.44it/s, loss=2.95, v_num=j3l7]input: Tom looks shocked. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 톰은 놀랐다.█▍                                                                    | 3/63 [00:02<00:50,  1.18it/s]
+ground_truth 톰은 충격을 받은 것 같다.
+rouge score is 0.2857142816326531
+prediction: 프랑스어를 아주 잘 할 수 있을 것 같습니다.                                                    | 4/63 [00:03<00:44,  1.33it/s]
+ground_truth 나는 내가 말하고 싶은 것은 거의 다 말할 수 있을 정도로 불어를 잘 한다고 생각한다.
+rouge score is 0.173913038941399
+Epoch 0:   3%|█▍                                               | 84/2823 [00:58<31:37,  1.44it/s, loss=2.95, v_num=j3l7]input: Now I am too old to walk. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 이제 걷기에는 너무 어렸습니다.                                                            | 5/63 [00:04<00:45,  1.29it/s]
+ground_truth 이제 나는 너무 늙어서 걷기 어렵다.
+rouge score is 0.39999999520000007
+prediction: 밭은 야생 꽃들로 가득 차 있습니다.                                                         | 6/63 [00:04<00:42,  1.34it/s]
+ground_truth 그 밭은 들꽃이 가득하다.
+rouge score is 0.1999999952000001
+Epoch 0:   3%|█▍                                               | 86/2823 [00:59<31:37,  1.44it/s, loss=2.95, v_num=j3l7]input: I study Korean. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 한국어를 공부합니다.██                                                                | 7/63 [00:05<00:41,  1.34it/s]
+ground_truth 한국말을 공부합니다.
+rouge score is 0.4999999950000001
+                                                                                                                        input: I'm not good at dancing. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 춤추는 것에 능숙하지 않습니다.                                                            | 8/63 [00:05<00:35,  1.56it/s]
+ground_truth 저는 춤을 잘 못 춰요.
+rouge score is 0.0
+Epoch 0:   3%|█▌                                               | 88/2823 [01:00<31:27,  1.45it/s, loss=2.95, v_num=j3l7]input: Her dress attracted everyone's attention at the party. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 그녀의 옷은 모두의 관심을 끌었다.                                                          | 9/63 [00:06<00:35,  1.52it/s]
+ground_truth 그 여자가 파티에 입고 온 드레스가 사람들의 눈길을 끌었지.
+rouge score is 0.0
+prediction: 5814는 어떤 숫자로 곱해져 있습니까?                                                      | 10/63 [00:07<00:37,  1.41it/s]
+ground_truth 5814를 반올림한 가장 가까운 천 단위 숫자가 뭐지?
+rouge score is 0.0
+Epoch 0:   3%|█▌                                               | 90/2823 [01:02<31:33,  1.44it/s, loss=2.95, v_num=j3l7]input: I don't have enough RAM. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 나는 RAM이 부족합니다.███▍                                                          | 11/63 [00:08<00:38,  1.35it/s]
+ground_truth 충분한 RAM 메모리가 없어요.
+rouge score is 0.0
+prediction: 주의사항을 읽어주세요.██████▌                                                         | 12/63 [00:08<00:36,  1.38it/s]
+ground_truth 사용설명서 자세히 읽으시요.
+rouge score is 0.0
+Epoch 0:   3%|█▌                                               | 92/2823 [01:03<31:28,  1.45it/s, loss=2.95, v_num=j3l7]input: I have never felt better. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 나는 좀 더 편하게 느껴졌습니다.█▋                                                        | 13/63 [00:09<00:33,  1.48it/s]
+ground_truth 이보다 더 좋았던 적이 없다.
+rouge score is 0.19999999500000015
+prediction: 대기오염을 일으키는 산업 폐기물은 공기 오염을 일으킵니다.                                            | 14/63 [00:10<00:32,  1.49it/s]
+ground_truth 공업 배기가스가 공기를 오염시킨다.
+rouge score is 0.0
+Epoch 0:   3%|█▋                                               | 94/2823 [01:05<31:46,  1.43it/s, loss=2.95, v_num=j3l7]input: Tom said he was going to kiss Mary. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 톰은 마리아를 만나고 싶다고 말했다.█▉                                                      | 15/63 [00:11<00:42,  1.12it/s]
+ground_truth 톰은 메리에게 키스할 것이라고 말했다.
+rouge score is 0.3999999950000001
+                                                                                                                        input: This is never going to end. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 이것은 끝나지 않을 것이다.████████                                                     | 16/63 [00:12<00:39,  1.18it/s]
+ground_truth 이건 절대 끝나지 않을거야.
+rouge score is 0.24999999500000009
+Epoch 0:   3%|█▋                                               | 96/2823 [01:07<31:43,  1.43it/s, loss=2.95, v_num=j3l7]input:
+prediction: 이 책은 7만 부로 출판됩니다.███████▏                                                   | 17/63 [00:12<00:35,  1.30it/s]
+ground_truth 이 에디션은 7000 카피 한정판이다.
+rouge score is 0.19999999500000015
+                                                                                                                        input: It's not something anyone can do. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 이는 누구도 할 수 있는 일이 아니다.████▎                                                  | 18/63 [00:13<00:32,  1.39it/s]
+ground_truth 아무나 할 수 있는 것이 아닙니다.
+rouge score is 0.4615384565680473
+Epoch 0:   3%|█▋                                               | 98/2823 [01:08<31:40,  1.43it/s, loss=2.95, v_num=j3l7]input: He always learns things. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 그는 항상 새로운 것을 배우고 있습니다.████▍                                                 | 19/63 [00:14<00:31,  1.38it/s]
+ground_truth 그는 항상 배운다.
+rouge score is 0.44444444000000005
+prediction: 9시 30분 이후에는 버스 서비스가 없습니다.██▌                                                | 20/63 [00:14<00:31,  1.37it/s]
+ground_truth 9시 반 이후엔 버스가 다니지 않아요.
+rouge score is 0.16666666166666683
+Epoch 0:   4%|█▋                                              | 100/2823 [01:09<31:41,  1.43it/s, loss=2.95, v_num=j3l7]input: Tell me what's going on. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 뭐가 일어나고 있는지 말해줘.████████████▋                                               | 21/63 [00:15<00:30,  1.36it/s]
+ground_truth 무슨 일인지 얘기해봐.
+rouge score is 0.0
+                                                                                                                        input: That happened over a year ago. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 이미 몇 년 전 일어났습니다.█████████████▊                                              | 22/63 [00:16<00:29,  1.39it/s]
+ground_truth 그 일은 일년 전 쯤 일어났다.
+rouge score is 0.18181817685950424
+Epoch 0:   4%|█▋                                              | 102/2823 [01:11<31:40,  1.43it/s, loss=2.95, v_num=j3l7]
+Validating:  40%|████████████████████████████▏                                          | 25/63 [00:18<00:32,  1.17it/s]
+ground_truth 어디가는지 말해줘.
+rouge score is 0.0
+                                                                                                                        input: Mary saw Tom and Conchita holding hands. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 그녀는 톰과 콘치타를 손을 잡고 있었다.██████████                                            | 24/63 [00:17<00:29,  1.34it/s]
+ground_truth 메리는 탐과 콘치타가 손잡고 있는 걸 보았다.
+rouge score is 0.0
+Epoch 0:   4%|█▊                                              | 104/2823 [01:13<31:52,  1.42it/s, loss=2.95, v_num=j3l7]
+Validating:  43%|██████████████████████████████▍                                        | 27/63 [00:21<00:34,  1.03it/s]
+ground_truth 그들은 그에게서 권위를 보았다.
+rouge score is 0.1999999952000001
+                                                                                                                        input: This building looks large from the front, but not from the side. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 이 건물은 측면에서 큰 것 같지만, 측면에서 큰 것 같지 않습니다.                                       | 26/63 [00:19<00:30,  1.21it/s]
+ground_truth 그 건물은 앞에서 보면 커 보이지만 옆에서 보면 그렇지 않다.
+rouge score is 0.11764705384083066
+Epoch 0:   4%|█▊                                              | 106/2823 [01:15<32:08,  1.41it/s, loss=2.95, v_num=j3l7]
+prediction: 이게 어떻게 되는지 궁금합니다.████████████████████▋                                      | 29/63 [00:22<00:31,  1.09it/s]
+ground_truth 오랫동안 편지를 못 써서 죄송해요.
+rouge score is 0.18181817685950424
+                                                                                                                        input: He was staring at the toilet water. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 그러나 그는 욕실 물을 보고 있었다.████████████████▌                                       | 28/63 [00:22<00:33,  1.03it/s]
+ground_truth 그는 변기 물을 쳐다보고 있었다.
+rouge score is 0.5454545404958678
+Epoch 0:   4%|█▊                                              | 108/2823 [01:16<32:15,  1.40it/s, loss=2.95, v_num=j3l7]input: What in the world is this? === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 이게 어떻게 되는지 궁금합니다.████████████████████▋                                      | 29/63 [00:22<00:31,  1.09it/s]
+ground_truth 이게 대체 뭐야?
+rouge score is 0.2857142808163266
+Validating:  52%|█████████████████████████████████████▏                                 | 33/63 [00:25<00:21,  1.41it/s]
+ground_truth 프랑스어는 아주 유용해.
+rouge score is 0.3333333283333334
+Epoch 0:   4%|█▊                                              | 110/2823 [01:18<32:08,  1.41it/s, loss=2.95, v_num=j3l7]input: I wonder if she is married. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 나는 그녀가 결혼했나 궁금합니다.█████████████████████▉                                    | 31/63 [00:24<00:24,  1.32it/s]
+ground_truth 그여자 결혼는지 궁금한데.
+rouge score is 0.0
+                                                                                                                        input: Speak a little louder. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 좀 더 큰소리로 말하세요.███████████████████████████                                   | 32/63 [00:24<00:23,  1.33it/s]
+ground_truth 좀더 크게 말해라.
+rouge score is 0.0
+Epoch 0:   4%|█▉                                              | 112/2823 [01:19<32:05,  1.41it/s, loss=2.95, v_num=j3l7]
+Validating:  57%|████████████████████████████████████████▌                              | 36/63 [00:27<00:18,  1.45it/s]
+ground_truth 너 바보 아냐!
+rouge score is 0.0
+                                                                                                                        input: Have you heard of a bird called the Arctic Tern? === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 혹시 아르키티스 터너를 보고 있습니까?██████████████████████▎                                | 34/63 [00:26<00:19,  1.46it/s]
+ground_truth 극제비갈매기라는 새를 들어 본 적 있습니까?
+rouge score is 0.18181817685950424
+Epoch 0:   4%|█▉                                              | 114/2823 [01:21<32:06,  1.41it/s, loss=2.95, v_num=j3l7]input: Tom is a nominee. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 톰은 후보로 선정되었습니다.█████████████████████████████▍                               | 35/63 [00:26<00:20,  1.34it/s]
+ground_truth 톰은 후보야.
+rouge score is 0.39999999520000007
+prediction: 혹시 그것에 대한 말을 할 수 있습니까?███████████████████████▌                              | 36/63 [00:27<00:18,  1.45it/s]
+ground_truth 내가 그것에 대한 너의 말을 믿어도 되겠니?
+rouge score is 0.4285714235714286
+Epoch 0:   4%|█▉                                              | 116/2823 [01:22<32:03,  1.41it/s, loss=2.95, v_num=j3l7]input: I used to keep a diary in English when I was a student. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 영어로 일기를 썼을 때 학생 때 일기를 썼습니다.███████████████████▋                             | 37/63 [00:28<00:18,  1.40it/s]
+ground_truth 나는 학생일 때 영어로 일기를 쓰곤 했다.
+rouge score is 0.3076923027218935
+Validating:  60%|██████████████████████████████████████████▊                            | 38/63 [00:29<00:19,  1.27it/s]
+Validating:  67%|███████████████████████████████████████████████▎                       | 42/63 [00:31<00:13,  1.52it/s]
+ground_truth 여기는 이주 전부터 비가 하나도 오지 않았다.
+rouge score is 0.14285713785714302
+                                                                                                                        input: Stay a while and listen. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 좀 쉬고 들어보자.████████████████████████████████████████                          | 40/63 [00:30<00:16,  1.43it/s]
+ground_truth 가만히 좀 들어.
+rouge score is 0.3333333283333334
+Epoch 0:   4%|██                                              | 120/2823 [01:25<31:56,  1.41it/s, loss=2.95, v_num=j3l7]input: Not all of my cats are gray. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 하지만 내 고양이들은 모두 흰색이다.███████████████████████████████▏                        | 41/63 [00:30<00:14,  1.56it/s]
+ground_truth 모든 고양이가 회색인 건 아니야.
+rouge score is 0.0
+prediction: 공원은 글을 쓰기 위한 좋은 장소입니다.██████████████████████████████▎                       | 42/63 [00:31<00:13,  1.52it/s]
+ground_truth 공원은 글을 쓰기 딱 좋은 곳이야.
+rouge score is 0.6666666616666668
+Epoch 0:   4%|██                                              | 122/2823 [01:26<31:56,  1.41it/s, loss=2.95, v_num=j3l7]input: I speak five languages. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 제가 다섯 가지 언어를 말합니다.███████████████████████████████████▍                      | 43/63 [00:32<00:13,  1.44it/s]
+ground_truth 저는 다섯 개의 언어를 합니다.
+rouge score is 0.3999999950000001
+Validating:  70%|█████████████████████████████████████████████████▌                     | 44/63 [00:33<00:13,  1.40it/s]
+prediction: 그러한 일이 당신에게 일어났다면 어떻게 할 것인가?███████████████████████████▋                    | 45/63 [00:33<00:12,  1.47it/s]
+ground_truth 그런 일이 생긴다면 어쩔 거야?
+rouge score is 0.1666666618055557
+                                                                                                                        input: Both of them speak French. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 둘 다 프랑스어를 할 수 있습니다.█████████████████████████████████████▊                   | 46/63 [00:34<00:13,  1.26it/s]
+ground_truth 둘 다 프랑스어를 할 줄 알아.
+rouge score is 0.6666666616666668
+Epoch 0:   4%|██▏                                             | 126/2823 [01:29<31:57,  1.41it/s, loss=2.95, v_num=j3l7]
+Validating:  75%|████████████████████████████████████████████████████▉                  | 47/63 [00:35<00:11,  1.34it/s]
+prediction: 첫 번째 단계는 업무의 반 정도입니다.██████████████████████████████████████                 | 48/63 [00:36<00:11,  1.34it/s]
+ground_truth 시작이 반이다.
+rouge score is 0.0
+Epoch 0:   5%|██▏                                             | 128/2823 [01:31<31:58,  1.40it/s, loss=2.95, v_num=j3l7]input: The children are riding their bikes. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 어린이들은 자전거를 타고 있습니다.█████████████████████████████████████████▏               | 49/63 [00:36<00:10,  1.32it/s]
+ground_truth 아이들이 자전거를 타고 있다.
+rouge score is 0.4999999950000001
+Validating:  79%|████████████████████████████████████████████████████████▎              | 50/63 [00:37<00:09,  1.38it/s]
+prediction: 태양에 녹아버린 눈은 태양에 녹아버렸다.████████████████████████████████████████▍             | 51/63 [00:38<00:09,  1.30it/s]
+ground_truth 눈은 햇빛에 녹았다.
+rouge score is 0.2857142808163266
+Validating:  83%|██████████████████████████████████████████████████████████▌            | 52/63 [00:39<00:08,  1.24it/s]
+prediction: 나는 여러분을 한국에서 만나고 싶습니다.███████████████████████████████████████████▊          | 54/63 [00:40<00:07,  1.26it/s]
+ground_truth 한국에 너희들을 만나요!
+rouge score is 0.0
+Epoch 0:   5%|██▎                                             | 134/2823 [01:35<32:02,  1.40it/s, loss=2.95, v_num=j3l7]
+Validating:  87%|█████████████████████████████████████████████████████████████▉         | 55/63 [00:41<00:06,  1.29it/s]
+Validating:  90%|████████████████████████████████████████████████████████████████▏      | 57/63 [00:43<00:04,  1.34it/s]
+prediction: Congratulations!████████████████████████████████████████████████████████▌   | 60/63 [00:44<00:01,  1.77it/s]
+ground_truth 축하해!
+rouge score is 0.0
+Epoch 0:   5%|██▍                                             | 140/2823 [01:38<31:37,  1.41it/s, loss=2.95, v_num=j3l7]input: Where did you hide them? === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 너는 그들을 어디에 숨겼는가?█████████████████████████████████████████████████████████▋  | 61/63 [00:44<00:00,  2.04it/s]
+ground_truth 그걸 어디에 숨겼어?
+rouge score is 0.2857142808163266
+Validating:  98%|█████████████████████████████████████████████████████████████████████▊ | 62/63 [00:45<00:00,  1.79it/s]
+Validating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+enterating: 100%|███████████████████████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.4615384568047337███████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.0615384568047337███████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.39999999520000007██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.66666666172839517██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.06666666172839517██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.06666666172839517██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.06666666172839517██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.28571428081632667██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.36363635867768596██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.06363635867768596██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.22222221722222232██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.02222221722222232██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.49999999500000012██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.49999999500000012██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.66666666168888892██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.19999999500000015██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.33333332888888895██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.18181817685950424██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.08181817685950424██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.18181817685950424██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.09999999500000014██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.28571428081632664██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+rouge score is 0.28571428081632664██████████████████████████████████████████████████████| 63/63 [00:46<00:00,  1.63it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  13%|▏| 362/2823 [04:16<29:03,  1.41it/s, loss=2.69, v_num=j3l7, acc_score_tatoeba=0.235, acc_score_mean=0.235]input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2시와 3시 사이에 오시길 바랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.3999999950222222
+Epoch 0:  13%|▏| 364/2823 [04:17<28:58,  1.41it/s, loss=2.69, v_num=j3l7, acc_score_tatoeba=0.235, acc_score_mean=0.235]
+Validating:   2%|█▏                                                                      | 1/63 [00:00<00:56,  1.10it/s]
+prediction: 오늘 오후 2시와 3시 사이에 오시길 바랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시와 3시 사이에 오시길 바랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시와 3시 사이에 오시길 바랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시와 3시 사이에 오시길 바랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시와 3시 사이에 오시길 바랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시와 3시 사이에 오시길 바랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시와 3시 사이에 오시길 바랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시와 3시 사이에 오시길 바랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.4705882303114187바랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332864583337랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632667랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.16666666180555577랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.46153845656804736랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999531250006랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999531250006랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.37499999507812504랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04444443950617294랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04444443950617294랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.46153845656804734랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999500000014랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.59999999520000014랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.74999999520000014랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000014랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.99999999500000014랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999502222224랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.35294117148788934랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999531250006랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999500000009랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.13333332853333359랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332853333359랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.59999999500000019랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428163265316랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.74999999563265316랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614911242626랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333346랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333346랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614887573986랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.46153845656804736랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.22222221777777784랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332888888895랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632665랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.08571428081632665랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000015랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999502222225랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428163265315랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999500000009랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999500000009랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999500000009랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999500000009랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.57142856653061244랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999502222227랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614911242627랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.05384614911242627랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000017랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000017랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.57142856642857157랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999500000017랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332888888895랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.08181817685950424랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632664랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.08571428081632664랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333344랍니다.                                                           | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  28%|▎| 788/2823 [09:23<24:14,  1.40it/s, loss=1.93, v_num=j3l7, acc_score_tatoeba=0.247, acc_score_mean=0.247]input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4285714236734694
+Epoch 0:  28%|▎| 790/2823 [09:24<24:12,  1.40it/s, loss=1.93, v_num=j3l7, acc_score_tatoeba=0.247, acc_score_mean=0.247]
+Validating:   2%|█▏                                                                      | 1/63 [00:01<01:05,  1.06s/it]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.4705882303114187요.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999531250006.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000016.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632666.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.72727272231404964.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.61538461041420124.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.01538461041420124.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.30769230272189354.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.22222221722222232.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.02222221728395072.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.61538461041420124.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.22222221728395072.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.59999999528395072.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000012.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333342.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.22222221728395072.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666222222232.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.42857142367346942.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.47058823031141872.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.26086956068052942.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999500000009.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.13333332853333359.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333349.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.54545454049586789.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.46153845656804739.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333346.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.44444443950617296.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04444443950617296.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632666.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.46153845656804736.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.22222221777777784.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.02222221777777784.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.02222221777777784.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333347.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333347.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.74999999533333347.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333347.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015.                                                              | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  38%|▍| 1072/2823 [12:40<20:42,  1.41it/s, loss=2.32, v_num=j3l7, acc_score_tatoeba=0.259, acc_score_mean=0.259input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4615384568047337
+Epoch 0:  38%|▍| 1074/2823 [12:41<20:40,  1.41it/s, loss=2.32, v_num=j3l7, acc_score_tatoeba=0.259, acc_score_mean=0.259
+Validating:   2%|█▏                                                                      | 1/63 [00:00<00:48,  1.28it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.4705882303114187                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.2857142816326531                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999500000009                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.13333332853333359                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999500000009                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999500000009                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999500000009                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.57142856653061249                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999520000019                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999502222229                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.16666666180555579                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666180555579                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000019                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000019                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.53333332835555569                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332835555569                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632669                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.14285713795918387                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000017                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333347                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999533333347                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632667                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632667                                                               | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  43%|▍| 1214/2823 [14:22<19:03,  1.41it/s, loss=2.29, v_num=j3l7, acc_score_tatoeba=0.255, acc_score_mean=0.255input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4285714236734694
+Epoch 0:  43%|▍| 1216/2823 [14:23<19:00,  1.41it/s, loss=2.29, v_num=j3l7, acc_score_tatoeba=0.255, acc_score_mean=0.255
+Validating:   2%|█▏                                                                      | 1/63 [00:00<00:47,  1.30it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오세요.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.5882352891349482요.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999531250006.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999500000009.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.13333332853333359.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333349.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333349.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428163265316.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.74999999563265316.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614911242626.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333346.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333346.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428071428586.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614887573986.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666166666686.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428112244986.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.16666666166666683.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666166666683.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.74999999585950424.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999585950424.                                                              | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999585950424.                                                              | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  48%|▍| 1356/2823 [16:05<17:24,  1.40it/s, loss=2.3, v_num=j3l7, acc_score_tatoeba=0.254, acc_score_mean=0.254]input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4285714236734694
+Epoch 0:  48%|▍| 1358/2823 [16:06<17:22,  1.41it/s, loss=2.3, v_num=j3l7, acc_score_tatoeba=0.254, acc_score_mean=0.254]
+Validating:   2%|█▏                                                                      | 1/63 [00:00<00:48,  1.28it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.37499999500000003오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999531250006오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666166666676오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666166666676오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632666오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614911242626오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.59999999500000016오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.08181817685950424오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999502222224오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.22222221722222232오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.44444443950617292오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04444443950617292오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.46153845656804734오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332847222225오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332847222225오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666166666685오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666166666685오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.74999999566666685오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999566666685오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999566666685오.                                                             | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  53%|▌| 1498/2823 [17:44<15:41,  1.41it/s, loss=2.6, v_num=j3l7, acc_score_tatoeba=0.262, acc_score_mean=0.262]input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4615384568047337
+Epoch 0:  53%|▌| 1500/2823 [17:45<15:39,  1.41it/s, loss=2.6, v_num=j3l7, acc_score_tatoeba=0.262, acc_score_mean=0.262]
+Validating:   2%|█▏                                                                      | 1/63 [00:00<00:54,  1.14it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.4705882303114187                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.6666666616666668                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.1999999952000001                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.0999999952000001                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.3333333283333334                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.0333333283333334                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332888888895                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.23529411266435996                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614911242626                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.05384614911242626                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.05384614911242626                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.14285713785714302                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999513888902                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.59999999523888902                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999523888902                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666166666687                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666166666687                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999566666687                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999566666687                                                               | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  58%|▌| 1640/2823 [19:25<14:00,  1.41it/s, loss=2.15, v_num=j3l7, acc_score_tatoeba=0.262, acc_score_mean=0.262input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4615384568047337
+Epoch 0:  58%|▌| 1642/2823 [19:26<13:58,  1.41it/s, loss=2.15, v_num=j3l7, acc_score_tatoeba=0.262, acc_score_mean=0.262
+Validating:   2%|█▏                                                                      | 1/63 [00:00<00:45,  1.37it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.7058823479584776                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999531250006                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666172839517                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666172839517                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666172839517                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666172839517                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614911242627                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.85714285224489817                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000016                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.14285713826530627                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04285713826530627                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614887573987                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614887573987                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.46153845656804737                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999526804737                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999526804737                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.57142856653061247                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.74999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  63%|▋| 1782/2823 [21:04<12:18,  1.41it/s, loss=2.54, v_num=j3l7, acc_score_tatoeba=0.263, acc_score_mean=0.263
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.02시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.44444443944444445                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.59999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614887573984                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.05384614887573984                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.22222221728395072                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.22222221777777784                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000014                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999585950424                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632664                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632664                                                               | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  68%|▋| 1924/2823 [22:44<10:37,  1.41it/s, loss=2.05, v_num=j3l7, acc_score_tatoeba=0.263, acc_score_mean=0.263
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.4615384568047337                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999531250006                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666172839517                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666172839517                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666172839517                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.22222221728395072                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.85714285224489812                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.05714285224489812                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999502222222                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614911242622                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.05384614911242622                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000012                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000012                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666168888892                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666168888892                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.57142856653061242                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999520000012                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000012                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632662                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632666                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.47058823031141876                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332864583337                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817719008275                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.08181817719008275                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333345                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.05714285224489814                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.05714285224489814                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.74999999524489814                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614911242624                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333344                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333344                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666168888894                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.57142856653061244                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999520000014                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999520000014                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000014                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.08571428081632664                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.42857142367346947                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.02857142367346947                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.41379309845422124                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000014                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.13333332853333354                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.79999999500000024                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000014                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000014                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614887573984                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.44444443950617294                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04444443950617294                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04444443950617294                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.46153845656804734                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06153845656804734                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.22222221728395072                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999520000012                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.74999999585950424                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999585950424                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.42857142367346947                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.58823528913494827                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.34782608241965987                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000017                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333347                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333347                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.59999999500000017                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.61538461041420127                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.01538461041420127                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428163265317                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333347                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333347                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333347                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.14285713785714302                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.14285713785714302                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.30769230272189352                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.72727272231404962                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.30769230295857992                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.00769230295857992                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333342                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333342                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000012                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000012                                                               | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  88%|▉| 2492/2823 [29:28<03:54,  1.41it/s, loss=2.03, v_num=j3l7, acc_score_tatoeba=0.259, acc_score_mean=0.259input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2~3시 사이에 여기 오세요.                                                               | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4285714236734694
+Epoch 0:  88%|▉| 2494/2823 [29:29<03:53,  1.41it/s, loss=2.03, v_num=j3l7, acc_score_tatoeba=0.259, acc_score_mean=0.259
+Validating:   2%|█▏                                                                      | 1/63 [00:00<00:45,  1.37it/s]
+prediction: 오늘 오후 2~3시 사이에 여기 오세요.                                                               | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 여기 오세요.                                                               | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 여기 오세요.                                                               | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 여기 오세요.                                                               | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 여기 오세요.                                                               | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 여기 오세요.                                                               | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 여기 오세요.                                                               | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 여기 오세요.                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.5882352891349482.                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.3478260824196598.                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.0478260824196598.                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.0478260824196598.                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.3333333283333334.                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.7999999950000002.                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.35294117148788934                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.59999999500000014                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000014                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.14285713795918387                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333346                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.44444443950617296                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.59999999520617296                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000016                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000014                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  93%|▉| 2634/2823 [31:08<02:14,  1.41it/s, loss=2.52, v_num=j3l7, acc_score_tatoeba=0.276, acc_score_mean=0.276input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2~3시 사이에 오시길 바랍니다.                                                             | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4285714236734694
+Epoch 0:  93%|▉| 2636/2823 [31:09<02:12,  1.41it/s, loss=2.52, v_num=j3l7, acc_score_tatoeba=0.276, acc_score_mean=0.276
+Validating:   2%|█▏                                                                      | 1/63 [00:00<00:52,  1.19it/s]
+prediction: 오늘 오후 2~3시 사이에 오시길 바랍니다.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 오시길 바랍니다.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 오시길 바랍니다.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 오시길 바랍니다.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 오시길 바랍니다.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 오시길 바랍니다.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 오시길 바랍니다.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2~3시 사이에 오시길 바랍니다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.5882352891349482니다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.4666666616666667니다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999500000009다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.13333332853333359다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333349다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.79999999500000029다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666166666689다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666166666689다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614887573989다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.37499999507812504다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.07499999507812504다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632664다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.08571428081632664다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.61538461041420124다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666166666686다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.74999999520000007다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999520000007다.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999520000007다.                                                             | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  98%|▉| 2776/2823 [32:47<00:33,  1.41it/s, loss=1.93, v_num=j3l7, acc_score_tatoeba=0.270, acc_score_mean=0.270input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 이날 오후 2시~3시 사이에 여기 오셔서 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.266666661688889
+Epoch 0:  98%|▉| 2778/2823 [32:48<00:31,  1.41it/s, loss=1.93, v_num=j3l7, acc_score_tatoeba=0.270, acc_score_mean=0.270
+Validating:   2%|█▏                                                                      | 1/63 [00:01<01:03,  1.03s/it]
+prediction: 이날 오후 2시~3시 사이에 여기 오셔서 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+prediction: 이날 오후 2시~3시 사이에 여기 오셔서 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+prediction: 이날 오후 2시~3시 사이에 여기 오셔서 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+prediction: 이날 오후 2시~3시 사이에 여기 오셔서 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+prediction: 이날 오후 2시~3시 사이에 여기 오셔서 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+prediction: 이날 오후 2시~3시 사이에 여기 오셔서 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+prediction: 이날 오후 2시~3시 사이에 여기 오셔서 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+prediction: 이날 오후 2시~3시 사이에 여기 오셔서 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.5882352891349482서 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999531250006 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000016 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000016 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333346 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.79999999500000026 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.47058823031141877 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999500000017 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000017 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000017 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.30769230272189357 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817719008275 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333346 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333346 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999533333346 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999533333346 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999533333346 감사합니다.                                                        | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 1:   3%|  | 78/2823 [00:52<30:30,  1.50it/s, loss=1.75, v_num=j3l7, acc_score_tatoeba=0.271, acc_score_mean=0.271]input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4285714236734694
+Epoch 1:   3%|  | 80/2823 [00:52<30:10,  1.51it/s, loss=1.75, v_num=j3l7, acc_score_tatoeba=0.271, acc_score_mean=0.271]
+Validating:   2%|█▏                                                                      | 1/63 [00:00<00:48,  1.28it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 여기 오십시오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.5882352891349482시오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999531250006오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000016오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000016오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000016오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.79999999500000026오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000016오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000016오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.26666666168888916오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666168888916오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333346오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000016오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000016오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.46153845656804736오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.57142856653061246오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.57142856653061246오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333346오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999625000005오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632665오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.42857142367346945오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.58823528913494825오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.44444443950617295오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.44444443950617295오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.44444443950617295오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04444443950617295오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04444443950617295오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.59999999527768596오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333344오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333344오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332833333344오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.13333332835555575오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332847222225오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666166666686오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999520000017오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632665오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000015오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.51612902726326765오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666172839515오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632665오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.22222221728395072오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.85714285224489812오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.05714285224489812오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.14285713785714302오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.08181817685950424오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000014오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000014오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.57142856642857154오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.07142856642857154오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.57142856653061244오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.08181817685950424오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.02222221728395072오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007오.                                                             | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007오.                                                             | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 1:  18%|▏| 504/2823 [05:50<26:53,  1.44it/s, loss=1.95, v_num=j3l7, acc_score_tatoeba=0.272, acc_score_mean=0.272]input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4615384568047337
+Epoch 1:  18%|▏| 506/2823 [05:51<26:49,  1.44it/s, loss=1.95, v_num=j3l7, acc_score_tatoeba=0.272, acc_score_mean=0.272]
+Validating:   2%|█▏                                                                      | 1/63 [00:00<00:51,  1.20it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 와주세요.                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.5882352891349482                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.5384615335798818                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.24999999500000009                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.13333332853333359                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.03333332853333359                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.79999999500000029                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.16666666180555579                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333347                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.44444443950617297                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04444443950617297                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.30769230272189357                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817719008275                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.54545454049586785                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.36363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666166666686                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06666666166666686                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999566666686                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999566666686                                                               | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 1:  23%|▏| 646/2823 [07:28<25:12,  1.44it/s, loss=1.82, v_num=j3l7, acc_score_tatoeba=0.274, acc_score_mean=0.274]input: Please come here between two and three this afternoon. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+prediction: 오늘 오후 2시~3시 사이에 이곳에 오십시오.                                                            | 0/63 [00:00<?, ?it/s]
+ground_truth 오늘 오후 두시에서 세시 사이에 여기로 와 주세요.
+rouge score is 0.4285714236734694
+Epoch 1:  23%|▏| 648/2823 [07:29<25:10,  1.44it/s, loss=1.82, v_num=j3l7, acc_score_tatoeba=0.274, acc_score_mean=0.274]
+Validating:   2%|█▏                                                                      | 1/63 [00:01<01:03,  1.02s/it]
+prediction: 오늘 오후 2시~3시 사이에 이곳에 오십시오.                                                            | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 이곳에 오십시오.                                                            | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 이곳에 오십시오.                                                            | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 이곳에 오십시오.                                                            | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 이곳에 오십시오.                                                            | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 이곳에 오십시오.                                                            | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 이곳에 오십시오.                                                            | 0/63 [00:00<?, ?it/s]
+prediction: 오늘 오후 2시~3시 사이에 이곳에 오십시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.5882352891349482십시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.5384615335798818십시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.4444444395061729십시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.4444444395061729십시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.0444444395061729십시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.0444444395061729십시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000007시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.47058823031141877시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.59999999500000017시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999500000017시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614887573987시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.46153845656804737시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.30769230272189357시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.54545454049586787시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06363635867768596시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.74999999520000007시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999520000007시오.                                                            | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999520000007시오.                                                            | 0/63 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 1:  28%|▎| 788/2823 [09:10<23:41,  1.43it/s, loss=1.95, v_num=j3l7, acc_score_tatoeba=0.271, acc_score_mean=0.271]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+Validating:   0%|                                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.4285714236734694                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.0285714236734694                                                                | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999520000007                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.66666666172839517                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632667                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.18181817685950424                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.22222221728395072                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.85714285224489812                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999520000012                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.26666666168888912                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999507812512                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999507812512                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999507812512                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999500000012                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999513888912                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332888888895                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332888888895                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999520000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999520000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.04999999500000009                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.15384614887573989                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.19999999500000015                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999502222225                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999502222225                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.49999999502551035                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.09999999502551035                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.28571428081632665                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.16666666180555575                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.79999999500000025                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.46153845656804735                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.06153845656804735                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.39999999502222225                                                               | 0/63 [00:00<?, ?it/s]
+rouge score is 0.33333332833333345                                                               | 0/63 [00:00<?, ?it/s]
+Epoch 1:  34%|▎| 960/2823 [11:11<21:42,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: What in the world is this? === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+Epoch 1:  34%|▎| 966/2823 [11:14<21:37,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: Speak a little louder. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>pad>
+Epoch 1:  34%|▎| 966/2823 [11:14<21:37,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: Tom is a nominee. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>pad>
+Epoch 1:  34%|▎| 972/2823 [11:19<21:33,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: We can do this without Tom's help. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>ad><pad>pad>
+Epoch 1:  34%|▎| 972/2823 [11:19<21:33,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: Not all of my cats are gray. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>>ad><pad>pad>
+Epoch 1:  35%|▎| 978/2823 [11:23<21:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: Procrastinating is an art. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>
+Epoch 1:  35%|▎| 978/2823 [11:23<21:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: I hope you tore up my last letter. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+Epoch 1:  35%|▎| 978/2823 [11:23<21:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.222222217283950721:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.022222217283950721:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+rouge score is 0.399999995200000071:28,  1.43it/s, loss=1.87, v_num=j3l7, acc_score_tatoeba=0.277, acc_score_mean=0.277]input: You have to take the bull by the horns. === Translate the above sentence into Korean:</s><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad><pad>d><pad>
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py:685: UserWarning: Detected KeyboardInterrupt, attempting graceful shutdown...
+  rank_zero_warn("Detected KeyboardInterrupt, attempting graceful shutdown...")

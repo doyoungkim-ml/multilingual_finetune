@@ -1,0 +1,20 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "run.py", line 199, in <module>
+    model = T5_small(args)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 32, in __init__
+    self.model =AutoModelForSeq2SeqLM.from_pretrained(args.model_name_or_path) if args.multilingual else T5ForConditionalGeneration.from_pretrained(args.model_name_or_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2225, in from_pretrained
+    model, missing_keys, unexpected_keys, mismatched_keys, error_msgs = cls._load_pretrained_model(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2402, in _load_pretrained_model
+    error_msgs = _load_state_dict_into_model(model_to_load, state_dict, start_prefix)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/modeling_utils.py", line 529, in _load_state_dict_into_model
+    load(model_to_load, prefix=start_prefix)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/modeling_utils.py", line 527, in load
+    load(child, prefix + name + ".")
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/modeling_utils.py", line 523, in load
+    module._load_from_state_dict(*args)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1398, in _load_from_state_dict
+    param.copy_(input_param)
+KeyboardInterrupt

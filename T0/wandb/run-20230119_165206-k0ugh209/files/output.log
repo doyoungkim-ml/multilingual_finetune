@@ -1,0 +1,67 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [4,5,6,7]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+Traceback (most recent call last):
+  File "run.py", line 227, in <module>
+    trainer.fit(model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 735, in fit
+    self._call_and_handle_interrupt(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 682, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 770, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1193, in _run
+    self._dispatch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1272, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1282, in run_stage
+    return self._run_train()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1312, in _run_train
+    self.fit_loop.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 140, in run
+    self.on_run_start(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/fit_loop.py", line 197, in on_run_start
+    self.trainer.reset_train_val_dataloaders(self.trainer.lightning_module)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py", line 550, in reset_train_val_dataloaders
+    self.reset_train_dataloader(model=model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py", line 327, in reset_train_dataloader
+    self.train_dataloader = self.request_dataloader(RunningStage.TRAINING, model=model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py", line 566, in request_dataloader
+    dataloader = source.dataloader()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py", line 296, in dataloader
+    return self.instance.trainer.call_hook(self.name, pl_module=self.instance)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1483, in call_hook
+    output = model_fx(*args, **kwargs)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 331, in train_dataloader
+    dataset_elem = self.get_dataset(dataset=dataset, tokenizer=self.tokenizer, type_path="train", args=self.args)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 38, in get_dataset
+    dataset = Pretrain(dataset=dataset, tokenizer=tokenizer, type_path=type_path, input_length=args.max_input_length,
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 270, in __init__
+    self.dataset, self.prompt, [self.task_prefix, self.input_prefix, self.output_prefix, self.choice_prefix, self.append_choices_to_input] = dataset_prompt_setting(self.type_path, self.dataset_name, self.dataset_config_name, args)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 180, in dataset_prompt_setting
+    unshuffled = load_dataset(dataset_name, dataset_config_name, ignore_verifications= True)[type_path]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/datasets/load.py", line 1718, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/datasets/load.py", line 1488, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/datasets/load.py", line 1212, in dataset_module_factory
+    raise FileNotFoundError(
+FileNotFoundError: Couldn't find a dataset script at /home/joel_jang/seungone/Flipped-Learning/T0/glue_mrpc/glue_mrpc.py or any data file in the same directory. Couldn't find 'glue_mrpc' on the Hugging Face Hub either: FileNotFoundError: Dataset 'glue_mrpc' doesn't exist on the Hub

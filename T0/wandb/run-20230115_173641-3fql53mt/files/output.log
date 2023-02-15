@@ -1,0 +1,223 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/7
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 7 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [7,8,9,10,11,12,13]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+WARNING:datasets.builder:Found cached dataset dream (/home/joel_jang/.cache/huggingface/datasets/dream/plain_text/1.0.0/0835c7949b04e4dc7d094375c7b502ae12c6b17dae8e715d8c363257a391545a)
+100%|████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 435.68it/s]
+###############################
+{'id': 0, 'dialogue_id': '5-510', 'dialogue': ['M: I am considering dropping my dancing class. I am not making any progress.', "W: If I were you, I stick with it. It's definitely worth time and effort."], 'question': 'What does the man suggest the woman do?', 'choice': ['Consult her dancing teacher.', 'Take a more interesting class.', 'Continue her dancing class.'], 'answer': 'Continue her dancing class.'}
+###############################
+Length of dataset retrieving is.. 6116
+Epoch 0:   0%|                                                                  | 0/219 [00:00<?, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 4. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0: 100%|███████████████████████████████▊| 218/219 [01:27<00:00,  2.48it/s, loss=0.685, v_num=53mt]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 2. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 4: 100%|████████████████████████████████| 219/219 [01:20<00:00,  2.71it/s, loss=0.318, v_num=53mt]
+Time: 532.9223787784576

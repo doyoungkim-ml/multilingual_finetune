@@ -1,0 +1,24 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+Traceback (most recent call last):
+  File "run.py", line 199, in <module>
+    model = T5_small(args)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 32, in __init__
+    self.model =AutoModelForSeq2SeqLM.from_pretrained(args.model_name_or_path) if args.multilingual else T5ForConditionalGeneration.from_pretrained(args.model_name_or_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 446, in from_pretrained
+    return model_class.from_pretrained(pretrained_model_name_or_path, *model_args, config=config, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2178, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 1470, in __init__
+    self.shared = nn.Embedding(config.vocab_size, config.d_model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/sparse.py", line 140, in __init__
+    self.reset_parameters()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/sparse.py", line 149, in reset_parameters
+    init.normal_(self.weight)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/init.py", line 151, in normal_
+    return _no_grad_normal_(tensor, mean, std)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/init.py", line 19, in _no_grad_normal_
+    return tensor.normal_(mean, std)
+KeyboardInterrupt

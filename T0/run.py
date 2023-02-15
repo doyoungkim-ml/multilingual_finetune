@@ -31,7 +31,6 @@ def set_seed(seed):
 if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument('--config', default=None, type=str)
-    parser.add_argument('--prompt_name',type=str,default=None)
     parser.add_argument('--output_dir',type=str,default=None)
     parser.add_argument('--method',type=str,default=None)
     parser.add_argument('--CUDA_VISIBLE_DEVICES',type=str,default=None)
@@ -57,8 +56,10 @@ if __name__ == '__main__':
         hparam.channel = False
     if hparam.channel == False or 'channel_base' not in hparam:
         hparam.channel_base = False
+    if 'multilingual' not in hparam:
+        hparam.multilingual = False 
     if 'dataset_length' not in hparam:
-        hparam.dataset_length = 500000     
+        hparam.dataset_length = 50000     
     if 'weight_decay' not in hparam:
         hparam.weight_decay = 0.0
     if 'grad_norm' not in hparam:
@@ -108,7 +109,7 @@ if __name__ == '__main__':
             else: 
                 hparam.valid_data_size = 1000
         else:    
-            hparam.valid_data_size = 200
+            hparam.valid_data_size = 1000
     if 'answer_dict_dir_path' not in hparam:
         hparam.answer_dict_dir_path = None
     if 'ul_loss' not in hparam:
@@ -123,7 +124,8 @@ if __name__ == '__main__':
         print("no checkpoint loaded!!!")
 
     if hparam.wandb_log:
-        wandb_logger = WandbLogger(project=hparam.wandb_project, name=hparam.wandb_run_name)
+        wandb_logger = WandbLogger(
+            project=hparam.wandb_project, name=hparam.wandb_run_name, entity='lklab_kaist')
         wandb_logger.log_hyperparams(hparam)
     else:
         wandb_logger = None
@@ -132,6 +134,7 @@ if __name__ == '__main__':
     args_dict = dict(
         answer_dict_dir_path= hparam.answer_dict_dir_path,
         required_classification = hparam.required_classification,
+        multilingual=hparam.multilingual,
         dataset_length = hparam.dataset_length,
         random = hparam.random,
         dataset=hparam.dataset,
@@ -160,7 +163,7 @@ if __name__ == '__main__':
         opt_level='O1',
         bigbench_path = hparam.bigbench_path,
         bigbench = hparam.bigbench,
-        prompt_name=arg_.prompt_name,
+        prompt_name=hparam.prompt_name,
         label_generalization=arg_.label_generalization,
         dataset_config=hparam.dataset_config,
         method=hparam.method,
@@ -204,6 +207,7 @@ if __name__ == '__main__':
         print(f'Time: {end-start}')
     elif args.mode == 'finetune' or args.mode == 'zerotune':
         train_params = dict(
+            num_sanity_val_steps=2,
             accumulate_grad_batches=args.gradient_accumulation_steps,
             gpus=args.n_gpu,
             max_epochs=args.num_train_epochs,
@@ -211,11 +215,10 @@ if __name__ == '__main__':
             precision= 16 if hparam.fp16 else 32,
             amp_backend="native",
             enable_checkpointing=checkpoint_callback,
-            val_check_interval=100,
+            val_check_interval=1.0,
             logger=wandb_logger,
             callbacks = callbacks,
             strategy=args.accelerator,
-            max_steps=5000,
         )
         trainer= pl.Trainer(**train_params)
         #trainer.test(model)

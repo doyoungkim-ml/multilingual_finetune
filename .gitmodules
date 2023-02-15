@@ -1,3 +1,4 @@
 [submodule "promptsource"]
 	path = promptsource
 	url = https://github.com/doeyoungkim/promptsource
+	branch = composition

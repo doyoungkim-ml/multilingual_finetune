@@ -1,0 +1,35 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [8,9,10,11]
+###############################
+{'id': '1971664873', 'background': "Passive transport occurs when a substance passes through the cell membrane without needing any energy to pass through. This happens when a substance moves from an area where it is more concentrated to an area where it is less concentrated. Concentration is the number of particles of a substance in a given volume. Let's say you dissolve a teaspoon of salt in a cup of water. Then you dissolve two teaspoons of salt in another cup of water. The second solution will have a higher concentration of salt.", 'situation': 'A man put two cups, cup A and cup B, filled with equal amounts of water on to a table and walked away to go check his mail. His son came along and saw the two cups and decided to put some sugar in them to make a tasty drink. The child poured two spoonfuls of sugar into cup A and three spoonfuls of sugar into cup B.', 'question': 'Which cup has a higher concentration of sugar?', 'answers': {'text': ['cup B']}}
+###############################
+First elem of self.dataset is  {'id': '1971664873', 'background': "Passive transport occurs when a substance passes through the cell membrane without needing any energy to pass through. This happens when a substance moves from an area where it is more concentrated to an area where it is less concentrated. Concentration is the number of particles of a substance in a given volume. Let's say you dissolve a teaspoon of salt in a cup of water. Then you dissolve two teaspoons of salt in another cup of water. The second solution will have a higher concentration of salt.", 'situation': 'A man put two cups, cup A and cup B, filled with equal amounts of water on to a table and walked away to go check his mail. His son came along and saw the two cups and decided to put some sugar in them to make a tasty drink. The child poured two spoonfuls of sugar into cup A and three spoonfuls of sugar into cup B.', 'question': 'Which cup has a higher concentration of sugar?', 'answers': {'text': ['cup B']}}
+Length of dataset retrieving is.. 10924
+Epoch 0:   0%|                                                         | 0/2731 [00:00<?, ?it/s]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+Downloading builder script: 100%|██████████████████████████| 5.30k/5.30k [00:00<00:00, 3.14MB/s]
+Downloading readme: 100%|██████████████████████████████████| 8.54k/8.54k [00:00<00:00, 4.99MB/s]
+WARNING:datasets.builder:Found cached dataset ropes (/home/joel_jang/.cache/huggingface/datasets/ropes/plain_text/1.1.0/2ddf8df2070460ad925df98d3b4b3b3809837d246df7c6e4601dca6ce792ebde)
+100%|████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 619.63it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+Epoch 0:   0%|                        | 3/2731 [00:11<2:55:43,  3.86s/it, loss=6.44, v_num=kc4t]Time: 99.26786851882935
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py:685: UserWarning: Detected KeyboardInterrupt, attempting graceful shutdown...
+  rank_zero_warn("Detected KeyboardInterrupt, attempting graceful shutdown...")

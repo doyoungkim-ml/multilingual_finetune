@@ -1,0 +1,456 @@
+[nltk_data] Error loading punkt: <urlopen error [Errno 104] Connection
+[nltk_data]     reset by peer>
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [4,5,6,7]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+WARNING:datasets.builder:Found cached dataset trec (/home/joel_jang/.cache/huggingface/datasets/trec/default/2.0.0/f2469cab1b5fceec7249fda55360dfdbd92a7a5b545e91ea0f78ad108ffac1c2)
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 280.39it/s]
+###############################
+{'text': 'How did serfdom develop in and then leave Russia ?', 'coarse_label': 2, 'fine_label': 26}
+###############################
+First elem of self.dataset is  {'text': 'How did serfdom develop in and then leave Russia ?', 'coarse_label': 2, 'fine_label': 26}
+Length of dataset retrieving is.. 5452
+Epoch 0:   0%|                                                                                              | 0/1363 [00:00<?, ?it/s]#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+fine_grained_ABBR_context_first#######################
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce910>
+{'text': 'Which country did Hitler rule ?', 'coarse_label': 4, 'fine_label': 33}
+['']
+#######################
+##############################################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+fine_grained_HUM_context_first
+fine_grained_ENTY
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceb80>
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea60>
+#######################{'text': "What did San Francisco 's Milt Harper grow that measured 24 inches from tip to tip in 1974 ?", 'coarse_label': 1, 'fine_label': 13}{'text': 'What park contains Firehole River and Fairy Falls ?', 'coarse_label': 4, 'fine_label': 35}
+['']
+['']#######################
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>#######################
+fine_grained_DESC_context_first
+<promptsource.promptsource.templates.Template object at 0x7f17c50cebb0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+{'text': 'In what Olympic Games did Nadia Comaneci become popular ?', 'coarse_label': 1, 'fine_label': 17}#######################
+fine_grained_LOC_context_first
+fine_grained_LOC_context_first
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce7f0><promptsource.promptsource.templates.Template object at 0x7f17c50ce7f0>['']<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+#######################
+{'text': 'What was the claim to fame of Explorer I , launched February 1 , 1958 ?', 'coarse_label': 2, 'fine_label': 27}{'text': "What 's the tallest piece on a chessboard ?", 'coarse_label': 1, 'fine_label': 13}
+fine_grained_LOC_context_first
+['']<promptsource.promptsource.templates.Template object at 0x7f17c50ce7f0>
+#######################
+#######################{'text': 'What is the HIGHEST Roman numeral ?', 'coarse_label': 2, 'fine_label': 24}
+['']
+#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+['']
+#######################
+fine_grained_ABBR_context_first
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce910>
+{'text': 'How many calories are in a tomato ?', 'coarse_label': 5, 'fine_label': 38}
+['']
+##############################################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+fine_grained_open_context_first
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea00>
+{'text': 'What does a chiropodist treat ?', 'coarse_label': 1, 'fine_label': 7}
+['What does a chiropodist treat ?\n\nWhat is this question asking for?', '']
+#######################
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+fine_grained_open
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceb50>
+{'text': 'Who was made the first honorary citizen of the U.S. ?', 'coarse_label': 3, 'fine_label': 29}
+['What is this question asking for?\n\nWho was made the first honorary citizen of the U.S. ?', '']
+##############################################
+##############################################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+#######################
+trec2<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce880>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+{'text': "What U.S. Congressman said : `` Keep the faith , baby '' .", 'coarse_label': 3, 'fine_label': 29}pick_the_best_descriptorfine_grained_ABBR
+fine_grained_open["Is the following question asking about Description, Entity, Abbreviation, Person, Quantity, Location?\n\nWhat U.S. Congressman said : `` Keep the faith , baby '' .", '']
+#######################<promptsource.promptsource.templates.Template object at 0x7f17c50ce9d0><promptsource.promptsource.templates.Template object at 0x7f17c50ceaf0>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceb50>
+{'text': 'Name the 5 words that use all of the letters in the alphabet , except Q , with no repeats .', 'coarse_label': 1, 'fine_label': 23}{'text': "What year was Janet Jackson 's first album released ?", 'coarse_label': 5, 'fine_label': 39}{'text': "What is the world 's best selling cookie ?", 'coarse_label': 1, 'fine_label': 9}
+['Question: Name the 5 words that use all of the letters in the alphabet , except Q , with no repeats .\n\nDescriptors: Description, Entity, Abbreviation, Person, Quantity, Location\n\nBest Descriptor?', '']["What is this question asking for?\n\nWhat is the world 's best selling cookie ?", '']['']
+#####################################################################
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>#######################
+#######################trec2<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce880><promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+{'text': 'What drink is made up of rum , coconut milk and pineapple ?', 'coarse_label': 1, 'fine_label': 9}
+fine_grained_ABBRfine_grained_NUM
+['Is the following question asking about Description, Entity, Abbreviation, Person, Quantity, Location?\n\nWhat drink is made up of rum , coconut milk and pineapple ?', '']
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea90>
+#######################
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceaf0>
+#######################{'text': "Whose first presidential order was : `` Let 's get this goddamn thing airborne '' ?", 'coarse_label': 3, 'fine_label': 29}
+#######################
+['']
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>#######################
+{'text': "How many U.S. presidents were assassinated during Queen Victoria 's reign ?", 'coarse_label': 5, 'fine_label': 38}
+##############################################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>fine_grained_NUM_context_first
+['']
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0><promptsource.promptsource.templates.Template object at 0x7f17c50cea30>
+#######################
+#######################fine_grained_LOC
+{'text': 'What do the names Andrew and Christina mean ?', 'coarse_label': 2, 'fine_label': 24}#######################fine_grained_LOC_context_first
+which_category_best_describes
+<promptsource.promptsource.templates.Template object at 0x7f17c50cb850>['']<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce7f0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0><promptsource.promptsource.templates.Template object at 0x7f17c50ce970>#######################
+{'text': 'Where was the first restaurant ?', 'coarse_label': 4, 'fine_label': 35}
+fine_grained_open_context_first
+fine_grained_DESC_context_first
+#######################
+pick_the_best_descriptor#######################
+#######################
+{'text': 'Who was the lawyer for Randy Steven Craft ?', 'coarse_label': 3, 'fine_label': 29}
+{'text': 'What kind of puzzle first appeared in the U.S. in the New York World on December 21 , 1913 ?', 'coarse_label': 1, 'fine_label': 13}['']
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea00>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce9d0><promptsource.promptsource.templates.Template object at 0x7f17c50cebb0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0><promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+#######################
+['']<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>['Which category best describes the following question: What kind of puzzle first appeared in the U.S. in the New York World on December 21 , 1913 ? \n\nChoose from the following list: \nDescription, Entity, Abbreviation, Person, Quantity, Location', '']
+{'text': 'What U.S. President showed a fondness for munching on bee pollen bars ?', 'coarse_label': 3, 'fine_label': 29}
+{'text': 'Where did the Japanese Imperial Forces surrender to end WWII ?', 'coarse_label': 4, 'fine_label': 35}##############################################what_category_best_describe{'text': 'Name the food company that traveled to Soviet Georgia to film a series of ads .', 'coarse_label': 3, 'fine_label': 28}
+fine_grained_NUM
+fine_grained_DESC
+['What U.S. President showed a fondness for munching on bee pollen bars ?\n\nWhat is this question asking for?', '']
+['Question: Where did the Japanese Imperial Forces surrender to end WWII ?\n\nDescriptors: Description, Entity, Abbreviation, Person, Quantity, Location\n\nBest Descriptor?', '']<promptsource.promptsource.templates.Template object at 0x7f17c50cb880>
+['']
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce790><promptsource.promptsource.templates.Template object at 0x7f17c50cea90>
+#######################
+#######################
+#######################
+#######################{'text': 'What plants are found in an estuary ?', 'coarse_label': 1, 'fine_label': 14}
+{'text': 'What do a diamond and lump of coal have in common ?', 'coarse_label': 2, 'fine_label': 25}{'text': 'What European country boasts the city of Furth , found where the rivers Rednitz and Pegnitz converge ?', 'coarse_label': 4, 'fine_label': 33}
+['Categories: Description, Entity, Abbreviation, Person, Quantity, Location\n\nWhat category best describes: What plants are found in an estuary ? \nAnswer:', '']
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+#######################
+#######################['']['']
+fine_grained_LOC#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>#######################
+fine_grained_NUM<promptsource.promptsource.templates.Template object at 0x7f17c50cb850>
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea90>
+{'text': 'Who was International Olympic Committee chairman at the 1936 Summer Games ?', 'coarse_label': 3, 'fine_label': 29}
+#######################{'text': 'What anesthetic did Queen Victoria allow to be used for the birth of her seventh child , in 1853 ?', 'coarse_label': 1, 'fine_label': 7}
+['']['']<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>#######################
+##############################################
+what_category_best_describe
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0><promptsource.promptsource.templates.Template object at 0x7f17c50cb880>
+#######################
+{'text': 'What building are British monarchs crowned in ?', 'coarse_label': 4, 'fine_label': 35}
+fine_grained_DESC
+['Categories: Description, Entity, Abbreviation, Person, Quantity, Location\n\nWhat category best describes: What building are British monarchs crowned in ? \nAnswer:', '']<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>#######################
+#######################<promptsource.promptsource.templates.Template object at 0x7f17c50ce790>#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>{'text': 'What does caliente mean , in English ?', 'coarse_label': 2, 'fine_label': 24}
+trec2
+#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+['']#######################
+#######################
+fine_grained_ENTY#######################<promptsource.promptsource.templates.Template object at 0x7f17c50ce880>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+fine_grained_LOC
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0><promptsource.promptsource.templates.Template object at 0x7f17c50cea60>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+fine_grained_NUM_context_first
+{'text': "What 's a `` coup de poing '' to a French boxer ?", 'coarse_label': 2, 'fine_label': 24}
+fine_grained_open<promptsource.promptsource.templates.Template object at 0x7f17c50cb850>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceb50>{'text': 'What is the nursery rhyme Rock-a-by Baby about ?', 'coarse_label': 2, 'fine_label': 25}
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea30>["Is the following question asking about Description, Entity, Abbreviation, Person, Quantity, Location?\n\nWhat 's a `` coup de poing '' to a French boxer ?", '']
+fine_grained_open
+{'text': 'Name the Ranger who was always after Yogi Bear .', 'coarse_label': 3, 'fine_label': 29}
+{'text': 'Where is the Thomas Edison Museum ?', 'coarse_label': 4, 'fine_label': 35}
+#######################
+['']{'text': 'Where are some great educational resources for parents and teachers ?', 'coarse_label': 4, 'fine_label': 35}['']
+['What is this question asking for?\n\nWhere is the Thomas Edison Museum ?', '']<promptsource.promptsource.templates.Template object at 0x7f17c50ceb50>
+#######################
+##############################################
+['']{'text': 'What country was Kim Philby really working for ?', 'coarse_label': 4, 'fine_label': 33}
+#######################
+['What is this question asking for?\n\nWhat country was Kim Philby really working for ?', '']
+#####################################################################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+fine_grained_ABBR_context_first
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce910>
+fine_grained_DESC_context_first#######################
+{'text': 'Where can I find a large list of 5 to 6 letter words ?', 'coarse_label': 4, 'fine_label': 35}
+#######################
+['']<promptsource.promptsource.templates.Template object at 0x7f17c50cebb0>
+##############################################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+#######################
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0><promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>#######################
+{'text': 'What does the name Gina mean ?', 'coarse_label': 2, 'fine_label': 24}
+pick_the_best_descriptor
+pick_the_best_descriptor
+fine_grained_LOC<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0><promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>#######################
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce9d0>['']
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce9d0>
+#######################
+<promptsource.promptsource.templates.Template object at 0x7f17c50cb850>{'text': 'What year did Hitler die ?', 'coarse_label': 5, 'fine_label': 39}{'text': 'What does the channel ESPN stand for ?', 'coarse_label': 0, 'fine_label': 1}fine_grained_ENTY
+fine_grained_LOC#######################
+#######################fine_grained_HUM_context_first
+['Question: What does the channel ESPN stand for ?\n\nDescriptors: Description, Entity, Abbreviation, Person, Quantity, Location\n\nBest Descriptor?', '']
+{'text': 'How many years is Johnnie Walker Black Label aged ?', 'coarse_label': 5, 'fine_label': 38}<promptsource.promptsource.templates.Template object at 0x7f17c50cea60><promptsource.promptsource.templates.Template object at 0x7f17c50cb850><promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>['Question: What year did Hitler die ?\n\nDescriptors: Description, Entity, Abbreviation, Person, Quantity, Location\n\nBest Descriptor?', '']
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceb80>
+#######################
+##############################################
+fine_grained_DESC
+['']
+fine_grained_LOC_context_first
+{'text': "What 's the term for a limestone deposit rising from the floor of a cave ?", 'coarse_label': 1, 'fine_label': 21}{'text': 'What is the largest island in the Mediterranean Sea ?', 'coarse_label': 4, 'fine_label': 35}#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+#######################
+#######################<promptsource.promptsource.templates.Template object at 0x7f17c50ce790>#######################{'text': 'What is the US Federal Government website for Standard Industrial Classification codes , SIC , ?', 'coarse_label': 4, 'fine_label': 35}
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce7f0>['']<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>['']
+['']fine_grained_HUM#######################
+trec2
+fine_grained_HUM_context_first{'text': 'How many neurons are in the human brain ?', 'coarse_label': 5, 'fine_label': 38}{'text': "What was Mao 's second name ?", 'coarse_label': 3, 'fine_label': 29}
+#######################fine_grained_ENTY#######################
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce880>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceb20>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceb80><promptsource.promptsource.templates.Template object at 0x7f17c50cea60>
+{'text': 'How many more weeks of winter are there if a ground hog sees his shadow ?', 'coarse_label': 5, 'fine_label': 38}
+['']
+['']
+{'text': 'What does the Latin ante mortem mean ?', 'coarse_label': 2, 'fine_label': 24}
+['Is the following question asking about Description, Entity, Abbreviation, Person, Quantity, Location?\n\nHow many more weeks of winter are there if a ground hog sees his shadow ?', '']
+##############################################
+{'text': 'What have you not let a tennis ball do if you volley ?', 'coarse_label': 2, 'fine_label': 25}
+#######################
+{'text': 'What is Latin for incompetent ?', 'coarse_label': 1, 'fine_label': 21}
+#######################
+['']
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+#######################
+['']
+fine_grained_NUM_context_first['']fine_grained_open#######################
+#######################
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0><promptsource.promptsource.templates.Template object at 0x7f17c50ceb50>
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea30>
+trec1{'text': 'What is the chance of conceiving quadruplets ?', 'coarse_label': 5, 'fine_label': 45}{'text': 'How long does it take the Milky Way Galaxy to make one revolution ?', 'coarse_label': 5, 'fine_label': 44}
+#######################
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceac0>['']['What is this question asking for?\n\nWhat is the chance of conceiving quadruplets ?', '']
+#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>##############################################
+{'text': 'What is the most populated city in the world ?', 'coarse_label': 4, 'fine_label': 32}
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>fine_grained_HUM
+['What is the most populated city in the world ?\n\nIs this asking about Description, Entity, Abbreviation, Person, Quantity, Location?', '']fine_grained_HUM
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceb20>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceb20>#######################
+{'text': 'What substance did Joseph Priestley name for its ability to erase pencil marks ?', 'coarse_label': 1, 'fine_label': 18}
+{'text': 'What was the U.S. highway death toll in 1969 ?', 'coarse_label': 5, 'fine_label': 38}
+['']
+#######################
+#######################
+['']
+##############################################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0><promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+##############################################
+fine_grained_NUM<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+fine_grained_DESC_context_first
+<promptsource.promptsource.templates.Template object at 0x7f17c50cebb0>
+fine_grained_ABBR_context_first
+{'text': 'What room did W.C. Fields keep his library in ?', 'coarse_label': 4, 'fine_label': 35}
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce910>
+['']#######################{'text': 'What are the alveoli ?', 'coarse_label': 2, 'fine_label': 24}
+#######################
+['']
+fine_grained_open_context_first
+#######################
+#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>#######################
+#######################
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea90>
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea00>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>{'text': 'Who invented the lawnmower ?', 'coarse_label': 3, 'fine_label': 29}
+fine_grained_NUM
+trec1#######################
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea90>['']
+{'text': "What continent 's second-highest peak is Mont Blanc ?", 'coarse_label': 4, 'fine_label': 34}#######################{'text': "What is the origin of the word `` sideburns '' ?", 'coarse_label': 2, 'fine_label': 25}
+['']
+["What is the origin of the word `` sideburns '' ?\n\nWhat is this question asking for?", '']#######################
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0><promptsource.promptsource.templates.Template object at 0x7f17c50ceac0>fine_grained_ABBR_context_first#######################
+#######################
+{'text': "Who wrote ` Dubliners ' ?", 'coarse_label': 3, 'fine_label': 29}
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+pick_the_best_descriptor
+fine_grained_ABBR
+["Who wrote ` Dubliners ' ?\n\nIs this asking about Description, Entity, Abbreviation, Person, Quantity, Location?", '']
+fine_grained_ABBR#######################trec1<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+#######################
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce9d0>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceaf0>fine_grained_LOC_context_first<promptsource.promptsource.templates.Template object at 0x7f17c50ceac0>#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce910>
+{'text': "What is Dr. Seuss ' most popular book ?", 'coarse_label': 1, 'fine_label': 5}{'text': 'What composer was awarded the Medal of Honor by Franklin D. Roosevelt ?', 'coarse_label': 3, 'fine_label': 29}<promptsource.promptsource.templates.Template object at 0x7f17c50ce7f0>
+{'text': 'How is thalassemia defined ?', 'coarse_label': 2, 'fine_label': 24}{'text': "How much is Clara Peller being paid by Wendy 's to say `` Where 's the beef '' ?", 'coarse_label': 5, 'fine_label': 41}
+['What composer was awarded the Medal of Honor by Franklin D. Roosevelt ?\n\nIs this asking about Description, Entity, Abbreviation, Person, Quantity, Location?', '']{'text': "Where did the saying `` rule of thumb '' come from ?", 'coarse_label': 2, 'fine_label': 25}
+['']
+##############################################['']
+#######################
+['']
+['Question: How is thalassemia defined ?\n\nDescriptors: Description, Entity, Abbreviation, Person, Quantity, Location\n\nBest Descriptor?', '']#######################
+#######################
+#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+#######################
+which_category_best_describes
+#######################
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceaf0>
+trec1<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ceac0>#######################<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>{'text': 'What Asian spiritual and political leader was married at the age of 13 ?', 'coarse_label': 3, 'fine_label': 29}
+what_category_best_describe<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+{'text': 'What U.S. state records the least rainfall ?', 'coarse_label': 4, 'fine_label': 36}fine_grained_ENTY
+['']
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>#######################
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea60>['What U.S. state records the least rainfall ?\n\nIs this asking about Description, Entity, Abbreviation, Person, Quantity, Location?', '']
+trec2#######################
+<promptsource.promptsource.templates.Template object at 0x7f17c50cb880>
+#######################{'text': 'What are the Low Countries ?', 'coarse_label': 2, 'fine_label': 24}
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce970>
+<promptsource.promptsource.templates.Template object at 0x7f17c50ce880>{'text': 'With whom did Bush compare Saddam Hussein ?', 'coarse_label': 3, 'fine_label': 29}['']{'text': 'How do I tie dye clothes ?', 'coarse_label': 2, 'fine_label': 26}fine_grained_NUM_context_first<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+#######################
+['Which category best describes the following question: How do I tie dye clothes ? \n\nChoose from the following list: \nDescription, Entity, Abbreviation, Person, Quantity, Location', '']
+{'text': 'How many times can a nickel-cadmium rechargeable battery be recharged ?', 'coarse_label': 5, 'fine_label': 38}<promptsource.promptsource.templates.Template object at 0x7f17c50cea30>['Categories: Description, Entity, Abbreviation, Person, Quantity, Location\n\nWhat category best describes: With whom did Bush compare Saddam Hussein ? \nAnswer:', '']
+#######################
+#######################['Is the following question asking about Description, Entity, Abbreviation, Person, Quantity, Location?\n\nHow many times can a nickel-cadmium rechargeable battery be recharged ?', '']{'text': 'What is a 2-sided object called ?', 'coarse_label': 1, 'fine_label': 21}
+#######################
+fine_grained_LOC['']
+#######################
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>#######################
+pick_the_best_descriptor
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+fine_grained_NUM_context_first
+<promptsource.promptsource.templates.Template object at 0x7f17c50cb850><promptsource.promptsource.templates.Template object at 0x7f17c50ce9d0>
+{'text': 'How long is human gestation ?', 'coarse_label': 5, 'fine_label': 44}
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea30>{'text': 'When did Princess Diana and Prince Charles get married ?', 'coarse_label': 5, 'fine_label': 39}
+['']
+['Question: When did Princess Diana and Prince Charles get married ?\n\nDescriptors: Description, Entity, Abbreviation, Person, Quantity, Location\n\nBest Descriptor?', '']
+{'text': "What four tournaments make up tennis ' Grand Slam ?", 'coarse_label': 1, 'fine_label': 17}
+##############################################
+trec2['']
+#######################
+#######################
+#######################<promptsource.promptsource.templates.Template object at 0x7f17c50ce880>
+{'text': 'What is the fear of frogs ?', 'coarse_label': 1, 'fine_label': 7}
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+['Is the following question asking about Description, Entity, Abbreviation, Person, Quantity, Location?\n\nWhat is the fear of frogs ?', '']
+#######################
+fine_grained_NUM
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea90>
+{'text': "What Russian seaport has a name meaning `` Lord of the East '' ?", 'coarse_label': 4, 'fine_label': 32}
+['']
+#######################
+fine_grained_ENTY
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea60>
+{'text': 'What Italian liner was hijacked in 1985 ?', 'coarse_label': 1, 'fine_label': 22}
+['']
+#######################
+#######################
+<promptsource.promptsource.templates.DatasetTemplates object at 0x7f17c9d5f5b0>
+fine_grained_NUM
+<promptsource.promptsource.templates.Template object at 0x7f17c50cea90>
+{'text': 'How many dollars a day did Arthur Frommer say you could get by on in Europe in 1968 ?', 'coarse_label': 5, 'fine_label': 38}
+['']
+#######################
+Traceback (most recent call last):
+  File "run.py", line 227, in <module>
+    trainer.fit(model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 735, in fit
+    self._call_and_handle_interrupt(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 682, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 770, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1193, in _run
+    self._dispatch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1272, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1282, in run_stage
+    return self._run_train()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1312, in _run_train
+    self.fit_loop.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/fit_loop.py", line 234, in advance
+    self.epoch_loop.run(data_fetcher)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 140, in run
+    self.on_run_start(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 141, in on_run_start
+    self._dataloader_iter = _update_dataloader_iter(data_fetcher, self.batch_idx + 1)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py", line 121, in _update_dataloader_iter
+    dataloader_iter = enumerate(data_fetcher, batch_idx)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/fetching.py", line 199, in __iter__
+    self.prefetching(self.prefetch_batches)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/fetching.py", line 258, in prefetching
+    self._fetch_next_batch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/fetching.py", line 300, in _fetch_next_batch
+    batch = next(self.dataloader_iter)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/supporters.py", line 536, in __next__
+    return self.request_next_batch(self.loader_iters)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/supporters.py", line 548, in request_next_batch
+    return apply_to_collection(loader_iters, Iterator, next)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/apply_func.py", line 92, in apply_to_collection
+    return function(data, *args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1203, in _next_data
+    return self._process_data(data)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1229, in _process_data
+    data.reraise()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/_utils.py", line 434, in reraise
+    raise exception
+IndexError: Caught IndexError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 308, in __getitem__
+    return self.datasets[dataset_idx][sample_idx]
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 584, in __getitem__
+    source, targets, data_label, options, label = self.convert_to_features(indexed_data, index)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/Datasets_end2end.py", line 463, in convert_to_features
+    target_= result[1]
+IndexError: list index out of range

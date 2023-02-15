@@ -1,0 +1,188 @@
+wandb_version: 1
+
+CUDA_VISIBLE_DEVICES:
+  desc: null
+  value: 0,1,2,3,4,5,6
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.5
+    framework: huggingface
+    huggingface_version: 4.20.0
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    m:
+    - 1: trainer/global_step
+      6:
+      - 3
+    python_version: 3.8.15
+    start_time: 1673803209.464381
+    t:
+      1:
+      - 1
+      - 5
+      - 9
+      - 11
+      - 41
+      - 49
+      - 51
+      - 53
+      - 55
+      - 71
+      2:
+      - 1
+      - 5
+      - 9
+      - 11
+      - 41
+      - 49
+      - 51
+      - 53
+      - 55
+      - 71
+      3:
+      - 7
+      - 13
+      - 23
+      4: 3.8.15
+      5: 0.13.5
+      6: 4.20.0
+      8:
+      - 5
+accelerator:
+  desc: null
+  value: ddp_sharded
+answer_dict_dir_path:
+  desc: null
+  value: None
+bigbench:
+  desc: null
+  value: false
+bigbench_path:
+  desc: null
+  value: ../BIG-bench/bigbench/benchmark_tasks
+channel:
+  desc: null
+  value: false
+channel_base:
+  desc: null
+  value: false
+channel_checkpoint_path:
+  desc: null
+  value: None
+channel_model:
+  desc: null
+  value: None
+checkpoint_path:
+  desc: null
+  value: ''
+dataset:
+  desc: null
+  value:
+  - cosmos_qa
+dataset_config:
+  desc: null
+  value: None
+dataset_length:
+  desc: null
+  value: 50000
+dataset_version:
+  desc: null
+  value: full
+eos_token:
+  desc: null
+  value: true
+eval_batch_size:
+  desc: null
+  value: 4
+eval_with_prob:
+  desc: null
+  value: true
+eval_with_prompt:
+  desc: null
+  value: false
+fp16:
+  desc: null
+  value: false
+grad_norm:
+  desc: null
+  value: 0.5
+gradient_accumulation_steps:
+  desc: null
+  value: 10
+input_length:
+  desc: null
+  value: 256
+learning_rate:
+  desc: null
+  value: 0.0001
+max_steps:
+  desc: null
+  value: None
+method:
+  desc: null
+  value: baseline
+mode:
+  desc: null
+  value: zerotune
+model:
+  desc: null
+  value: google/t5-xl-lm-adapt
+ngpu:
+  desc: null
+  value: 7
+num_train_epochs:
+  desc: null
+  value: 5
+num_workers:
+  desc: null
+  value: 40
+output_dir:
+  desc: null
+  value: ../outputs/cosmos_qa_1.pt
+output_length:
+  desc: null
+  value: 128
+output_log:
+  desc: null
+  value: log/test.csv
+prompt_name:
+  desc: null
+  value: no_prompt_text
+random:
+  desc: null
+  value: false
+required_classification:
+  desc: null
+  value: true
+train_batch_size:
+  desc: null
+  value: 4
+ul_loss:
+  desc: null
+  value: false
+ul_weight:
+  desc: null
+  value: 3
+use_lr_scheduling:
+  desc: null
+  value: false
+valid_data_size:
+  desc: null
+  value: 200
+valid_dataset:
+  desc: null
+  value:
+  - cosmos_qa
+wandb_log:
+  desc: null
+  value: true
+wandb_project:
+  desc: null
+  value: RoE ICML direct
+wandb_run_name:
+  desc: null
+  value: cosmos_qa_1
+weight_decay:
+  desc: null
+  value: 0.0

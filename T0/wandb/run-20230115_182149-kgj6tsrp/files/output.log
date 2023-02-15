@@ -1,0 +1,80 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/7
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 7 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+WARNING:datasets.builder:Found cached dataset cosmos_qa (/home/joel_jang/.cache/huggingface/datasets/cosmos_qa/default/0.1.0/3e18538cbfdb2c04189b16642715f0f6da3e97ed5df0aadcec3641245b2cf157)
+100%|████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 411.88it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/cosmos_qa/default/0.1.0/3e18538cbfdb2c04189b16642715f0f6da3e97ed5df0aadcec3641245b2cf157/cache-780ded7a9fe6758d.arrow
+Validation sanity check: 0it [00:00, ?it/s]Length of dataset retrieving is.. 200
+Validation sanity check:   0%|                                                    | 0/2 [00:00<?, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 4. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+Validation sanity check: 100%|████████████████████████████████████████████| 2/2 [00:07<00:00,  3.14s/it]agg_score is tensor(0.0893, device='cuda:0') 0
+enter
+save
+WARNING:datasets.builder:Found cached dataset cosmos_qa (/home/joel_jang/.cache/huggingface/datasets/cosmos_qa/default/0.1.0/3e18538cbfdb2c04189b16642715f0f6da3e97ed5df0aadcec3641245b2cf157)
+100%|████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 549.04it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/cosmos_qa/default/0.1.0/3e18538cbfdb2c04189b16642715f0f6da3e97ed5df0aadcec3641245b2cf157/cache-a22928ab0ad904c9.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:394: UserWarning: The number of training samples (1) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+###############################
+{'answer0': 'None of the above choices .', 'answer1': 'I could get hurt on the job', 'answer2': 'I could get fired .', 'answer3': 'I could buy a lot of groceries .', 'context': "do i have a job yet ? no . ... but i have job training ! ! ! it sounds totally miraculous , i know , but my application for certification has been picked up , i ' ve been snuck through the backdoor at the last minute , and nancy ( three cheers for nancy ! ! ! )", 'id': '3WA2XVDZEMF0M64ATQQICXK8O3J6EZ##3A4TN5196LG48H27JLHT8K5JNZACHN##A2JY56TZCEPK3J##Blog_706890##q1_a2##38RHULDV9YDAWQL2GRTDV6HD5EIIWH', 'label': 3, 'question': 'What may happen if i found a job ?'}
+###############################
+Length of dataset retrieving is.. 28
+Epoch 0:  11%|████                                 | 1/9 [00:16<02:09, 16.18s/it, loss=1.48, v_num=tsrp]
+
+
+Validating:  75%|██████████████████████████████████████████▊              | 6/8 [00:12<00:02,  1.10s/it]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+enterating: 100%|█████████████████████████████████████████████████████████| 8/8 [00:13<00:00,  1.07it/s]
+Epoch 0: 100%|█████████████████████████████████████| 9/9 [00:41<00:00,  4.61s/it, loss=1.48, v_num=tsrp]save
+Epoch 1:  11%| | 1/9 [00:13<01:49, 13.70s/it, loss=1.05, v_num=tsrp, acc_score_cosmos_qa=0.350, acc_scor
+
+
+
+
+
+enterating: 100%|█████████████████████████████████████████████████████████| 8/8 [00:16<00:00,  1.07s/it]
+save
+Epoch 2:  11%| | 1/9 [00:17<02:17, 17.13s/it, loss=0.761, v_num=tsrp, acc_score_cosmos_qa=0.325, acc_sco
+
+
+
+
+
+enterating: 100%|█████████████████████████████████████████████████████████| 8/8 [00:15<00:00,  1.12s/it]
+save
+Epoch 3:  11%| | 1/9 [00:17<02:21, 17.69s/it, loss=0.611, v_num=tsrp, acc_score_cosmos_qa=0.300, acc_sco
+
+
+
+
+enterating: 100%|█████████████████████████████████████████████████████████| 8/8 [00:15<00:00,  1.07s/it]
+save
+Epoch 4:  11%| | 1/9 [00:14<01:52, 14.05s/it, loss=0.498, v_num=tsrp, acc_score_cosmos_qa=0.291, acc_sco
+
+
+
+
+enterating: 100%|█████████████████████████████████████████████████████████| 8/8 [00:16<00:00,  1.17s/it]
+save
+Epoch 4: 100%|█| 9/9 [01:28<00:00,  9.89s/it, loss=0.498, v_num=tsrp, acc_score_cosmos_qa=0.286, acc_sco
+Time: 654.2762475013733

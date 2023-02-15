@@ -1,6 +1,6 @@
 
 import pytorch_lightning as pl
-from transformers import T5Tokenizer, T5ForConditionalGeneration, Adafactor, T5Config
+from transformers import AutoTokenizer, T5Tokenizer, AutoModelForSeq2SeqLM, T5ForConditionalGeneration, Adafactor, MT5Config, T5Config
 from pytorch_lightning.trainer.supporters import CombinedLoader
 from torch.utils.data import RandomSampler
 from torch.utils.data import DataLoader, ConcatDataset
@@ -26,13 +26,13 @@ class T5_small(pl.LightningModule):
     def __init__(self, args):
         super(T5_small, self).__init__()
         self.args = args
-        self.tokenizer = T5Tokenizer.from_pretrained(args.model_name_or_path)
+        self.tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path) if args.multilingual else T5Tokenizer.from_pretrained(args.model_name_or_path)
         self.val_count = 0
         self.epoch = 0
-        self.model = T5ForConditionalGeneration.from_pretrained(args.model_name_or_path)
+        self.model =AutoModelForSeq2SeqLM.from_pretrained(args.model_name_or_path) if args.multilingual else T5ForConditionalGeneration.from_pretrained(args.model_name_or_path)
         if args.random == True:
-            config = T5Config.from_pretrained(args.model_name_or_path)
-            self.model = T5ForConditionalGeneration(config)
+            config = MT5Config.from_pretrained(args.model_name_or_path) if args.multilingual else T5Config.from_pretrained(args.model_name_or_path)
+            self.model = AutoModelForSeq2SeqLM(config) if args.multilingual else T5ForConditionalGeneration(config)
 
     def get_dataset(self, dataset, tokenizer, type_path, args):
         dataset = Pretrain(dataset=dataset, tokenizer=tokenizer, type_path=type_path, input_length=args.max_input_length, 
@@ -61,7 +61,6 @@ class T5_small(pl.LightningModule):
                     lm_labels=lm_labels,
                     decoder_attention_mask= batch["target_mask"]
                 )
-
                 loss = outputs[0]
             else: 
                 lm_labels = batch["target_ids"]
@@ -213,12 +212,13 @@ class T5_small(pl.LightningModule):
                     total_cnt+=1
                     ground_truth = targets[i]
                     predicted = dec[i]
-                    #print("prediction:",predicted, keys)
+                    print("input:", texts[i])
+                    print("prediction:",predicted)
                 
-                    #print("ground_truth", ground_truth, keys)
+                    print("ground_truth", ground_truth)
                     rouge = _rougel_score(predicted, ground_truth)
                     rouge_score += rouge
-                    #print("rouge score is", rouge)
+                    print("rouge score is", rouge)
                     acc_score = rouge_score
             else:
                 total_cnt+=len(batch['source_ids'])
@@ -263,6 +263,13 @@ class T5_small(pl.LightningModule):
         loss = self._step(batch)
         self.log("train_loss", loss)
         return loss
+    
+    def on_train_epoch_end(self):
+        param_dict = {}
+        for name, param in self.model.named_parameters():
+            param_dict[name]=param.clone().detach().cpu()
+        torch.save(param_dict, self.args.output_dir[:-3]+'_last.pt') 
+        print("save")
 
 
     def validation_step(self, batch, batch_idx, dataloader_idx=0):
@@ -313,13 +320,7 @@ class T5_small(pl.LightningModule):
         self.agg_score = score
         print("agg_score is", self.agg_score, self.val_count)
         self.log(f'acc_score_mean', self.agg_score, prog_bar=True, logger=True)
-        if self.val_count > 47:
-            print("enter")
-            param_dict = {}
-            for name, param in self.model.named_parameters():
-                param_dict[name]=param.clone().detach().cpu()
-            torch.save(param_dict, self.args.output_dir[:-3]+'_last.pt') 
-        
+        print("enter")
         self.val_count += 1
 
     def train_dataloader(self):

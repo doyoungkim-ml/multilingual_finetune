@@ -1,0 +1,20 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "run.py", line 199, in <module>
+    model = T5_small(args)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 32, in __init__
+    self.model =AutoModelForSeq2SeqLM.from_pretrained(args.model_name_or_path) if args.multilingual else T5ForConditionalGeneration.from_pretrained(args.model_name_or_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2132, in from_pretrained
+    state_dict = load_state_dict(resolved_archive_file)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/modeling_utils.py", line 461, in load_state_dict
+    return torch.load(checkpoint_file, map_location="cpu")
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/serialization.py", line 607, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/serialization.py", line 882, in _load
+    result = unpickler.load()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/serialization.py", line 857, in persistent_load
+    load_tensor(data_type, size, key, _maybe_decode_ascii(location))
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/serialization.py", line 845, in load_tensor
+    storage = zip_file.get_storage_from_record(name, size, dtype).storage()
+KeyboardInterrupt

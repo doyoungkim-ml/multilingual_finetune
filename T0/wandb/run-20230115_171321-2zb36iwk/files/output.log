@@ -1,0 +1,100 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/7
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 7 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+WARNING:datasets.builder:Found cached dataset cosmos_qa (/home/joel_jang/.cache/huggingface/datasets/cosmos_qa/default/0.1.0/3e18538cbfdb2c04189b16642715f0f6da3e97ed5df0aadcec3641245b2cf157)
+100%|████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 627.17it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/cosmos_qa/default/0.1.0/3e18538cbfdb2c04189b16642715f0f6da3e97ed5df0aadcec3641245b2cf157/cache-780ded7a9fe6758d.arrow
+Validation sanity check: 0it [00:00, ?it/s]Length of dataset retrieving is.. 200
+Validation sanity check:   0%|                                                    | 0/2 [00:00<?, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 4. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+Validation sanity check: 100%|████████████████████████████████████████████| 2/2 [00:07<00:00,  3.01s/it]agg_score is tensor(0.0893, device='cuda:0') 0
+enter
+WARNING:datasets.builder:Found cached dataset cosmos_qa (/home/joel_jang/.cache/huggingface/datasets/cosmos_qa/default/0.1.0/3e18538cbfdb2c04189b16642715f0f6da3e97ed5df0aadcec3641245b2cf157)
+100%|████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 551.28it/s]
+###############################
+{'id': '3Q9SPIIRWJKVQ8244310E8TUS6YWAC##34V1S5K3GTZMDUBNBIGY93FLDOB690##A1S1K7134S2VUC##Blog_1044056##q1_a1##3XU9MCX6VQQG7YPLCSAFDPQNH4GR20', 'context': "Good Old War and person L : I saw both of these bands Wednesday night , and they both blew me away . seriously . Good Old War is acoustic and makes me smile . I really can not help but be happy when I listen to them ; I think it 's the fact that they seemed so happy themselves when they played .", 'question': 'In the future , will this person go to see other bands play ?', 'answer0': 'None of the above choices .', 'answer1': 'This person likes music and likes to see the show , they will see other bands play .', 'answer2': 'This person only likes Good Old War and Person L , no other bands .', 'answer3': 'Other Bands is not on tour and this person can not see them .', 'label': 1}
+###############################
+Length of dataset retrieving is.. 25262
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  39%|████████████                   | 353/911 [02:14<03:32,  2.62it/s, loss=0.0714, v_num=6iwk]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py:685: UserWarning: Detected KeyboardInterrupt, attempting graceful shutdown...
+
+Epoch 0:  39%|████████████▏                  | 357/911 [02:15<03:30,  2.63it/s, loss=0.0771, v_num=6iwk]Time: 300.1961386203766

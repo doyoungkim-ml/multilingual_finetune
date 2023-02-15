@@ -1,0 +1,28 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+Traceback (most recent call last):
+  File "run.py", line 195, in <module>
+    model = T5_small(args)
+  File "/home/joel_jang/seungone/Flipped-Learning/T0/T5.py", line 32, in __init__
+    self.model = T5ForConditionalGeneration.from_pretrained(args.model_name_or_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2178, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 1482, in __init__
+    self.decoder = T5Stack(decoder_config, self.shared)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 841, in __init__
+    [T5Block(config, has_relative_attention_bias=bool(i == 0)) for i in range(config.num_layers)]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 841, in <listcomp>
+    [T5Block(config, has_relative_attention_bias=bool(i == 0)) for i in range(config.num_layers)]
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 629, in __init__
+    self.layer.append(T5LayerFF(config))
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 317, in __init__
+    self.DenseReluDense = T5DenseGatedActDense(config)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 299, in __init__
+    self.wi_1 = nn.Linear(config.d_model, config.d_ff, bias=False)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 90, in __init__
+    self.reset_parameters()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 96, in reset_parameters
+    init.kaiming_uniform_(self.weight, a=math.sqrt(5))
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/nn/init.py", line 395, in kaiming_uniform_
+    return tensor.uniform_(-bound, bound)
+KeyboardInterrupt

@@ -1,0 +1,220 @@
+2023-01-26 00:13:57,251 INFO    StreamThr :89877 [internal.py:wandb_internal():88] W&B internal server running at pid: 89877, started at: 2023-01-26 00:13:57.250781
+2023-01-26 00:13:57,253 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: status
+2023-01-26 00:13:57,254 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: status
+2023-01-26 00:13:57,256 DEBUG   SenderThread:89877 [sender.py:send():303] send: header
+2023-01-26 00:13:57,256 INFO    WriterThread:89877 [datastore.py:open_for_write():75] open: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/run-3kxrlb4k.wandb
+2023-01-26 00:13:57,282 DEBUG   SenderThread:89877 [sender.py:send():303] send: run
+2023-01-26 00:13:57,284 INFO    SenderThread:89877 [sender.py:_maybe_setup_resume():593] checking resume status for lklab_kaist/RoE ICML direct/3kxrlb4k
+2023-01-26 00:13:57,433 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: check_version
+2023-01-26 00:13:57,435 INFO    SenderThread:89877 [dir_watcher.py:__init__():216] watching files in: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files
+2023-01-26 00:13:57,435 INFO    SenderThread:89877 [sender.py:_start_run_threads():928] run started: 3kxrlb4k with start time 1674692037.250444
+2023-01-26 00:13:57,435 DEBUG   SenderThread:89877 [sender.py:send():303] send: summary
+2023-01-26 00:13:57,435 INFO    SenderThread:89877 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-01-26 00:13:57,436 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: check_version
+2023-01-26 00:13:57,550 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: run_start
+2023-01-26 00:13:57,657 DEBUG   HandlerThread:89877 [system_info.py:__init__():31] System info init
+2023-01-26 00:13:57,657 DEBUG   HandlerThread:89877 [system_info.py:__init__():46] System info init done
+2023-01-26 00:13:57,657 INFO    HandlerThread:89877 [system_monitor.py:start():150] Starting system monitor
+2023-01-26 00:13:57,657 INFO    SystemMonitor:89877 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-01-26 00:13:57,657 INFO    HandlerThread:89877 [system_monitor.py:probe():168] Collecting system info
+2023-01-26 00:13:57,658 INFO    SystemMonitor:89877 [interfaces.py:start():168] Started cpu
+2023-01-26 00:13:57,658 INFO    SystemMonitor:89877 [interfaces.py:start():168] Started disk
+2023-01-26 00:13:57,659 INFO    SystemMonitor:89877 [interfaces.py:start():168] Started gpu
+2023-01-26 00:13:57,661 INFO    SystemMonitor:89877 [interfaces.py:start():168] Started memory
+2023-01-26 00:13:57,662 INFO    SystemMonitor:89877 [interfaces.py:start():168] Started network
+2023-01-26 00:13:57,982 DEBUG   HandlerThread:89877 [system_info.py:probe():195] Probing system
+2023-01-26 00:13:57,991 DEBUG   HandlerThread:89877 [system_info.py:_probe_git():180] Probing git
+2023-01-26 00:13:58,004 DEBUG   HandlerThread:89877 [system_info.py:_probe_git():188] Probing git done
+2023-01-26 00:13:58,004 DEBUG   HandlerThread:89877 [system_info.py:probe():241] Probing system done
+2023-01-26 00:13:58,004 DEBUG   HandlerThread:89877 [system_monitor.py:probe():177] {'os': 'Linux-5.4.0-1093-gcp-x86_64-with-glibc2.17', 'python': '3.8.15', 'heartbeatAt': '2023-01-26T00:13:57.982814', 'startedAt': '2023-01-26T00:13:57.239226', 'docker': None, 'cuda': None, 'args': ('--config', '../configs/roe_config/tatoeba_1_multilingual.json'), 'state': 'running', 'program': 'run.py', 'codePath': 'T0/run.py', 'git': {'remote': 'https://github.com/seonghyeonye/Flipped-Learning.git', 'commit': 'eb4b98dc94056f35ade2f88f3c2ad12b14cb9b18'}, 'email': 'louisdebroglie@yonsei.ac.kr', 'root': '/home/joel_jang/seungone/Flipped-Learning', 'host': 'lgair-fr-2022-17', 'username': 'joel_jang', 'executable': '/home/joel_jang/miniconda3/envs/zeroshot/bin/python3', 'cpu_count': 48, 'cpu_count_logical': 96, 'cpu_freq': {'current': 2200.160000000003, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}, {'current': 2200.16, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 1984.6844749450684, 'used': 1883.5675773620605}, 'gpu': 'A100-SXM4-40GB', 'gpu_count': 16, 'gpu_devices': [{'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}, {'name': 'A100-SXM4-40GB', 'memory_total': 42505273344}], 'memory': {'total': 1338.6314010620117}}
+2023-01-26 00:13:58,005 INFO    HandlerThread:89877 [system_monitor.py:probe():178] Finished collecting system info
+2023-01-26 00:13:58,005 INFO    HandlerThread:89877 [system_monitor.py:probe():181] Publishing system info
+2023-01-26 00:13:58,005 DEBUG   HandlerThread:89877 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-01-26 00:13:58,005 DEBUG   HandlerThread:89877 [system_info.py:_save_pip():67] Saving pip packages done
+2023-01-26 00:13:58,005 DEBUG   HandlerThread:89877 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-01-26 00:13:58,437 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_created():275] file/dir created: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/requirements.txt
+2023-01-26 00:13:58,438 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_created():275] file/dir created: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/conda-environment.yaml
+2023-01-26 00:13:58,438 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_created():275] file/dir created: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/wandb-summary.json
+2023-01-26 00:14:00,055 DEBUG   HandlerThread:89877 [system_info.py:_save_conda():86] Saving conda packages done
+2023-01-26 00:14:00,057 INFO    HandlerThread:89877 [system_monitor.py:probe():183] Finished publishing system info
+2023-01-26 00:14:00,113 DEBUG   SenderThread:89877 [sender.py:send():303] send: files
+2023-01-26 00:14:00,113 INFO    SenderThread:89877 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2023-01-26 00:14:00,120 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:14:00,120 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:14:00,149 DEBUG   SenderThread:89877 [sender.py:send():303] send: telemetry
+2023-01-26 00:14:00,149 DEBUG   SenderThread:89877 [sender.py:send():303] send: metric
+2023-01-26 00:14:00,149 DEBUG   SenderThread:89877 [sender.py:send():303] send: telemetry
+2023-01-26 00:14:00,149 DEBUG   SenderThread:89877 [sender.py:send():303] send: metric
+2023-01-26 00:14:00,149 WARNING SenderThread:89877 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-01-26 00:14:00,149 DEBUG   SenderThread:89877 [sender.py:send():303] send: config
+2023-01-26 00:14:00,337 INFO    Thread-16 :89877 [upload_job.py:push():143] Uploaded file /tmp/tmpshv2bo39wandb/22c53jak-wandb-metadata.json
+2023-01-26 00:14:00,439 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/conda-environment.yaml
+2023-01-26 00:14:00,439 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_created():275] file/dir created: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/wandb-metadata.json
+2023-01-26 00:14:00,439 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_created():275] file/dir created: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log
+2023-01-26 00:14:02,440 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log
+2023-01-26 00:14:08,443 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log
+2023-01-26 00:14:15,152 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:14:15,153 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:14:28,451 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/config.yaml
+2023-01-26 00:14:30,192 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:14:30,193 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:14:45,231 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:14:45,231 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:14:57,663 DEBUG   SystemMonitor:89877 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-01-26 00:14:57,667 DEBUG   SenderThread:89877 [sender.py:send():303] send: stats
+2023-01-26 00:15:00,270 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:15:00,270 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:15:15,307 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:15:15,308 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:15:18,471 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log
+2023-01-26 00:15:27,670 DEBUG   SenderThread:89877 [sender.py:send():303] send: stats
+2023-01-26 00:15:31,393 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:15:31,393 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:15:46,437 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:15:46,438 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:15:57,673 DEBUG   SenderThread:89877 [sender.py:send():303] send: stats
+2023-01-26 00:16:01,468 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:16:01,468 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:16:14,494 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log
+2023-01-26 00:16:27,677 DEBUG   SenderThread:89877 [sender.py:send():303] send: stats
+2023-01-26 00:16:57,679 DEBUG   SenderThread:89877 [sender.py:send():303] send: stats
+2023-01-26 00:17:27,683 DEBUG   SenderThread:89877 [sender.py:send():303] send: stats
+2023-01-26 00:17:31,954 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:17:31,955 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:17:34,526 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log
+2023-01-26 00:17:47,740 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:17:47,740 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:17:57,684 DEBUG   SenderThread:89877 [sender.py:send():303] send: stats
+2023-01-26 00:18:02,536 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log
+2023-01-26 00:18:02,772 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:18:02,772 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:18:17,075 DEBUG   SenderThread:89877 [sender.py:send():303] send: metric
+2023-01-26 00:18:17,118 DEBUG   SenderThread:89877 [sender.py:send():303] send: metric
+2023-01-26 00:18:17,119 WARNING SenderThread:89877 [sender.py:send_metric():1127] Seen metric with glob (shouldn't happen)
+2023-01-26 00:18:17,119 DEBUG   SenderThread:89877 [sender.py:send():303] send: config
+2023-01-26 00:18:27,688 DEBUG   SenderThread:89877 [sender.py:send():303] send: stats
+2023-01-26 00:18:30,549 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/config.yaml
+2023-01-26 00:18:32,634 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: stop_status
+2023-01-26 00:18:32,636 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: stop_status
+2023-01-26 00:18:34,550 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log
+2023-01-26 00:18:35,551 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log
+2023-01-26 00:18:36,139 DEBUG   SenderThread:89877 [sender.py:send():303] send: exit
+2023-01-26 00:18:36,139 INFO    SenderThread:89877 [sender.py:send_exit():442] handling exit code: 1
+2023-01-26 00:18:36,140 INFO    SenderThread:89877 [sender.py:send_exit():444] handling runtime: 278
+2023-01-26 00:18:36,140 INFO    SenderThread:89877 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-01-26 00:18:36,141 INFO    SenderThread:89877 [sender.py:send_exit():450] send defer
+2023-01-26 00:18:36,141 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:36,141 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 0
+2023-01-26 00:18:36,142 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:36,142 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 0
+2023-01-26 00:18:36,142 INFO    SenderThread:89877 [sender.py:transition_state():463] send defer: 1
+2023-01-26 00:18:36,142 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:36,142 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 1
+2023-01-26 00:18:36,142 INFO    HandlerThread:89877 [system_monitor.py:finish():160] Stopping system monitor
+2023-01-26 00:18:36,144 DEBUG   SystemMonitor:89877 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-01-26 00:18:36,144 INFO    HandlerThread:89877 [interfaces.py:finish():173] Joined cpu
+2023-01-26 00:18:36,144 DEBUG   SystemMonitor:89877 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-01-26 00:18:36,144 INFO    HandlerThread:89877 [interfaces.py:finish():173] Joined disk
+2023-01-26 00:18:36,552 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/wandb-summary.json
+2023-01-26 00:18:38,552 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log
+2023-01-26 00:18:40,798 INFO    HandlerThread:89877 [interfaces.py:finish():173] Joined gpu
+2023-01-26 00:18:40,798 INFO    HandlerThread:89877 [interfaces.py:finish():173] Joined memory
+2023-01-26 00:18:40,798 INFO    HandlerThread:89877 [interfaces.py:finish():173] Joined network
+2023-01-26 00:18:40,798 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: poll_exit
+2023-01-26 00:18:40,799 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:40,799 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 1
+2023-01-26 00:18:40,799 INFO    SenderThread:89877 [sender.py:transition_state():463] send defer: 2
+2023-01-26 00:18:40,800 DEBUG   SenderThread:89877 [sender.py:send():303] send: stats
+2023-01-26 00:18:40,800 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: poll_exit
+2023-01-26 00:18:40,802 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:40,802 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 2
+2023-01-26 00:18:40,802 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:40,802 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 2
+2023-01-26 00:18:40,802 INFO    SenderThread:89877 [sender.py:transition_state():463] send defer: 3
+2023-01-26 00:18:40,802 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:40,802 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 3
+2023-01-26 00:18:40,803 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:40,803 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 3
+2023-01-26 00:18:40,803 INFO    SenderThread:89877 [sender.py:transition_state():463] send defer: 4
+2023-01-26 00:18:40,803 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:40,803 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 4
+2023-01-26 00:18:40,803 DEBUG   SenderThread:89877 [sender.py:send():303] send: summary
+2023-01-26 00:18:40,804 INFO    SenderThread:89877 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2023-01-26 00:18:40,804 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:40,804 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 4
+2023-01-26 00:18:40,804 INFO    SenderThread:89877 [sender.py:transition_state():463] send defer: 5
+2023-01-26 00:18:40,804 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:40,805 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 5
+2023-01-26 00:18:40,805 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:40,805 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 5
+2023-01-26 00:18:40,805 INFO    SenderThread:89877 [sender.py:transition_state():463] send defer: 6
+2023-01-26 00:18:40,805 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:40,805 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 6
+2023-01-26 00:18:40,805 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:40,805 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 6
+2023-01-26 00:18:41,554 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/wandb-summary.json
+2023-01-26 00:18:42,138 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: keepalive
+2023-01-26 00:18:42,705 INFO    SenderThread:89877 [sender.py:transition_state():463] send defer: 7
+2023-01-26 00:18:42,705 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:42,705 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 7
+2023-01-26 00:18:42,706 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:42,706 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 7
+2023-01-26 00:18:42,706 INFO    SenderThread:89877 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-01-26 00:18:43,554 INFO    Thread-13 :89877 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log
+2023-01-26 00:18:43,555 INFO    SenderThread:89877 [dir_watcher.py:finish():392] scan: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files
+2023-01-26 00:18:43,555 INFO    SenderThread:89877 [dir_watcher.py:finish():406] scan save: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log output.log
+2023-01-26 00:18:43,555 INFO    SenderThread:89877 [dir_watcher.py:finish():406] scan save: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/wandb-metadata.json wandb-metadata.json
+2023-01-26 00:18:43,555 INFO    SenderThread:89877 [dir_watcher.py:finish():406] scan save: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/requirements.txt requirements.txt
+2023-01-26 00:18:43,556 INFO    SenderThread:89877 [dir_watcher.py:finish():406] scan save: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/config.yaml config.yaml
+2023-01-26 00:18:43,556 INFO    SenderThread:89877 [dir_watcher.py:finish():406] scan save: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/wandb-summary.json wandb-summary.json
+2023-01-26 00:18:43,559 INFO    SenderThread:89877 [dir_watcher.py:finish():406] scan save: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/conda-environment.yaml conda-environment.yaml
+2023-01-26 00:18:43,560 INFO    SenderThread:89877 [sender.py:transition_state():463] send defer: 8
+2023-01-26 00:18:43,571 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:43,571 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 8
+2023-01-26 00:18:43,572 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:43,572 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 8
+2023-01-26 00:18:43,572 INFO    SenderThread:89877 [file_pusher.py:finish():168] shutting down file pusher
+2023-01-26 00:18:43,798 INFO    Thread-21 :89877 [upload_job.py:push():143] Uploaded file /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/conda-environment.yaml
+2023-01-26 00:18:43,799 INFO    Thread-19 :89877 [upload_job.py:push():143] Uploaded file /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/config.yaml
+2023-01-26 00:18:43,806 INFO    Thread-20 :89877 [upload_job.py:push():143] Uploaded file /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/wandb-summary.json
+2023-01-26 00:18:43,820 INFO    Thread-17 :89877 [upload_job.py:push():143] Uploaded file /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/output.log
+2023-01-26 00:18:43,822 INFO    Thread-18 :89877 [upload_job.py:push():143] Uploaded file /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/files/requirements.txt
+2023-01-26 00:18:44,022 INFO    Thread-12 :89877 [sender.py:transition_state():463] send defer: 9
+2023-01-26 00:18:44,023 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:44,023 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 9
+2023-01-26 00:18:44,023 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:44,023 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 9
+2023-01-26 00:18:44,023 INFO    SenderThread:89877 [file_pusher.py:join():173] waiting for file pusher
+2023-01-26 00:18:44,023 INFO    SenderThread:89877 [sender.py:transition_state():463] send defer: 10
+2023-01-26 00:18:44,023 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:44,024 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 10
+2023-01-26 00:18:44,024 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:44,024 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 10
+2023-01-26 00:18:44,134 INFO    SenderThread:89877 [sender.py:transition_state():463] send defer: 11
+2023-01-26 00:18:44,134 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:44,134 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 11
+2023-01-26 00:18:44,134 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:44,135 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 11
+2023-01-26 00:18:44,135 INFO    SenderThread:89877 [sender.py:transition_state():463] send defer: 12
+2023-01-26 00:18:44,135 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: defer
+2023-01-26 00:18:44,135 INFO    HandlerThread:89877 [handler.py:handle_request_defer():162] handle defer: 12
+2023-01-26 00:18:44,136 DEBUG   SenderThread:89877 [sender.py:send():303] send: final
+2023-01-26 00:18:44,136 DEBUG   SenderThread:89877 [sender.py:send():303] send: footer
+2023-01-26 00:18:44,136 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: defer
+2023-01-26 00:18:44,136 INFO    SenderThread:89877 [sender.py:send_request_defer():459] handle sender defer: 12
+2023-01-26 00:18:44,137 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: poll_exit
+2023-01-26 00:18:44,137 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: poll_exit
+2023-01-26 00:18:44,138 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: server_info
+2023-01-26 00:18:44,138 DEBUG   SenderThread:89877 [sender.py:send_request():317] send_request: server_info
+2023-01-26 00:18:44,140 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: get_summary
+2023-01-26 00:18:44,141 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: sampled_history
+2023-01-26 00:18:44,193 INFO    MainThread:89877 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2023-01-26 00:18:44,194 INFO    MainThread:89877 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2023-01-26 00:18:44,194 INFO    MainThread:89877 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2023-01-26 00:18:44,194 DEBUG   HandlerThread:89877 [handler.py:handle_request():139] handle_request: shutdown
+2023-01-26 00:18:44,194 INFO    HandlerThread:89877 [handler.py:finish():814] shutting down handler
+2023-01-26 00:18:45,136 INFO    WriterThread:89877 [datastore.py:close():279] close: /home/joel_jang/seungone/Flipped-Learning/T0/wandb/run-20230126_001357-3kxrlb4k/run-3kxrlb4k.wandb
+2023-01-26 00:18:45,193 INFO    SenderThread:89877 [sender.py:finish():1331] shutting down sender
+2023-01-26 00:18:45,193 INFO    SenderThread:89877 [file_pusher.py:finish():168] shutting down file pusher
+2023-01-26 00:18:45,194 INFO    SenderThread:89877 [file_pusher.py:join():173] waiting for file pusher
+2023-01-26 00:18:45,198 INFO    MainThread:89877 [internal.py:handle_exit():78] Internal process exited

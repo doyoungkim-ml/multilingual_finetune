@@ -1,0 +1,65 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+###############################
+{'document': 'In Wales, councils are responsible for funding and overseeing schools.\nBut in England, Mr Osborne\'s plan will mean local authorities will cease to have a role in providing education.\nAcademies are directly funded by central government and head teachers have more freedom over admissions and to change the way the school works.\nIt is a significant development in the continued divergence of schools systems on either side of Offa\'s Dyke.\nAnd although the Welsh Government will get extra cash to match the money for English schools to extend the school day, it can spend it on any devolved policy area.\nMinisters have no plans to follow suit.\nAt the moment, governing bodies are responsible for setting school hours and they need ministerial permission to make significant changes.\nThere are already more than 2,000 secondary academies in England and its extension to all state schools is unlikely to shake the Welsh Government\'s attachment to what they call a "community, comprehensive model" for schools.\nIt rejects claims that freedom given to academies can help drive up standards, and it points to academy-free Scotland as the best performing school system in the UK.\nEducation Minister Huw Lewis said there was "very little evidence to suggest" academies have a positive impact in driving up standards and Wales would not be following the model.\n"The Tories have wasted hundreds of millions of pounds on academies and free schools and as the Chancellor finalises his budget plans to slash vital services even further, he is committing them to wasting even more on a failing endeavour.\n"We have no plans to introduce the chaos and waste of academies and free schools here in Wales."\nNone of the main parties in May\'s Assembly election - including the Welsh Conservatives - have said they want to introduce academies in Wales.\nOwen Hathway, NUT Cymru\'s policy officer, called the academy plans for England "scandalous.".\n"There is no evidence that academies work, no evidence that they raise standards, no evidence that they offer better quality education and no evidence that they are what parents and communities want," he said.\n"Certainly a commitment to comprehensive education is something we would want, and indeed expect, all parties to hold firm to in their manifestos for the forthcoming Welsh election."\nBut the Welsh and English schools systems are still linked by a joint arrangement for teachers\' pay and conditions.\nAcademies are not tied to these pay scales so in effect Wednesday\'s announcement will take all English schools out of the system and raise questions about the viability of an England and Wales pay and conditions structure.\nThere is already growing momentum for the devolution of teachers\' pay and conditions.\nOriginally sceptical, the Welsh Labour Government is now broadly in favour.\nSome teaching unions remain opposed because of concern that Welsh teachers would end up being paid less than those in England.\nMr Hathway said teachers were concerned it could lead to regional pay.\n"At the same time we do of course recognise that the issue of pay is already becoming a grey area due to the negative changes we see taking place in England," he said.\nBut an even bigger difference between the schools landscape on either side of the border, appears to make separate arrangements for pay increasingly likely in future.', 'summary': 'As Chancellor George Osborne announced all English state schools will become academies, the Welsh Government continues to reject the model here.', 'id': '35821725'}
+###############################
+First elem of self.dataset is  {'document': 'In Wales, councils are responsible for funding and overseeing schools.\nBut in England, Mr Osborne\'s plan will mean local authorities will cease to have a role in providing education.\nAcademies are directly funded by central government and head teachers have more freedom over admissions and to change the way the school works.\nIt is a significant development in the continued divergence of schools systems on either side of Offa\'s Dyke.\nAnd although the Welsh Government will get extra cash to match the money for English schools to extend the school day, it can spend it on any devolved policy area.\nMinisters have no plans to follow suit.\nAt the moment, governing bodies are responsible for setting school hours and they need ministerial permission to make significant changes.\nThere are already more than 2,000 secondary academies in England and its extension to all state schools is unlikely to shake the Welsh Government\'s attachment to what they call a "community, comprehensive model" for schools.\nIt rejects claims that freedom given to academies can help drive up standards, and it points to academy-free Scotland as the best performing school system in the UK.\nEducation Minister Huw Lewis said there was "very little evidence to suggest" academies have a positive impact in driving up standards and Wales would not be following the model.\n"The Tories have wasted hundreds of millions of pounds on academies and free schools and as the Chancellor finalises his budget plans to slash vital services even further, he is committing them to wasting even more on a failing endeavour.\n"We have no plans to introduce the chaos and waste of academies and free schools here in Wales."\nNone of the main parties in May\'s Assembly election - including the Welsh Conservatives - have said they want to introduce academies in Wales.\nOwen Hathway, NUT Cymru\'s policy officer, called the academy plans for England "scandalous.".\n"There is no evidence that academies work, no evidence that they raise standards, no evidence that they offer better quality education and no evidence that they are what parents and communities want," he said.\n"Certainly a commitment to comprehensive education is something we would want, and indeed expect, all parties to hold firm to in their manifestos for the forthcoming Welsh election."\nBut the Welsh and English schools systems are still linked by a joint arrangement for teachers\' pay and conditions.\nAcademies are not tied to these pay scales so in effect Wednesday\'s announcement will take all English schools out of the system and raise questions about the viability of an England and Wales pay and conditions structure.\nThere is already growing momentum for the devolution of teachers\' pay and conditions.\nOriginally sceptical, the Welsh Labour Government is now broadly in favour.\nSome teaching unions remain opposed because of concern that Welsh teachers would end up being paid less than those in England.\nMr Hathway said teachers were concerned it could lead to regional pay.\n"At the same time we do of course recognise that the issue of pay is already becoming a grey area due to the negative changes we see taking place in England," he said.\nBut an even bigger difference between the schools landscape on either side of the border, appears to make separate arrangements for pay increasingly likely in future.', 'summary': 'As Chancellor George Osborne announced all English state schools will become academies, the Welsh Government continues to reject the model here.', 'id': '35821725'}
+Length of dataset retrieving is.. 50000
+Epoch 0:   0%|                                                        | 0/12500 [00:00<?, ?it/s]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+WARNING:datasets.builder:Found cached dataset xsum (/home/joel_jang/.cache/huggingface/datasets/xsum/default/1.2.0/082863bf4754ee058a5b6f6525d0cb2b18eadb62c7b370b095d1364050a52b71)
+100%|████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 360.83it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/xsum/default/1.2.0/082863bf4754ee058a5b6f6525d0cb2b18eadb62c7b370b095d1364050a52b71/cache-0179b5b9071d9bab.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:   1%|▏                    | 118/12500 [01:22<2:24:29,  1.43it/s, loss=1.86, v_num=6dxv]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py:685: UserWarning: Detected KeyboardInterrupt, attempting graceful shutdown...
+
+Epoch 0:   1%|▏                    | 118/12500 [01:22<2:24:29,  1.43it/s, loss=1.86, v_num=6dxv]Time: 242.85324883460999

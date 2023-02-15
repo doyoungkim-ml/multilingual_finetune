@@ -1,0 +1,263 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/7
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 7 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [7,8,9,10,11,12,13]
+  | Name  | Type                       | Params
+-----------------------------------------------------
+0 | model | T5ForConditionalGeneration | 2.8 B
+-----------------------------------------------------
+2.8 B     Trainable params
+0         Non-trainable params
+2.8 B     Total params
+11,399.029Total estimated model params size (MB)
+WARNING:datasets.builder:Found cached dataset dream (/home/joel_jang/.cache/huggingface/datasets/dream/plain_text/1.0.0/0835c7949b04e4dc7d094375c7b502ae12c6b17dae8e715d8c363257a391545a)
+100%|████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 368.85it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/dream/plain_text/1.0.0/0835c7949b04e4dc7d094375c7b502ae12c6b17dae8e715d8c363257a391545a/cache-2915b643afbb7c53.arrow
+Validation sanity check: 0it [00:00, ?it/s]Length of dataset retrieving is.. 200
+Validation sanity check:   0%|                                                    | 0/2 [00:00<?, ?it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 4. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+Validation sanity check: 100%|████████████████████████████████████████████| 2/2 [00:07<00:00,  3.01s/it]agg_score is tensor(0.2857, device='cuda:0') 0
+enter
+save
+WARNING:datasets.builder:Found cached dataset dream (/home/joel_jang/.cache/huggingface/datasets/dream/plain_text/1.0.0/0835c7949b04e4dc7d094375c7b502ae12c6b17dae8e715d8c363257a391545a)
+100%|████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 516.67it/s]
+###############################
+{'id': 0, 'dialogue_id': '5-510', 'dialogue': ['M: I am considering dropping my dancing class. I am not making any progress.', "W: If I were you, I stick with it. It's definitely worth time and effort."], 'question': 'What does the man suggest the woman do?', 'choice': ['Consult her dancing teacher.', 'Take a more interesting class.', 'Continue her dancing class.'], 'answer': 'Continue her dancing class.'}
+###############################
+Length of dataset retrieving is.. 6116
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0:  96%|██████████████████████████████▋ | 218/227 [01:35<00:03,  2.29it/s, loss=0.685, v_num=ytdv]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 2. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+Epoch 0:  96%|██████████████████████████████▊ | 219/227 [01:36<00:03,  2.27it/s, loss=0.727, v_num=ytdv]
+
+
+Validating:  88%|█████████████████████████████████████████████████▉       | 7/8 [00:11<00:00,  1.19it/s]
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+enterating: 100%|█████████████████████████████████████████████████████████| 8/8 [00:13<00:00,  1.02s/it]
+Epoch 0: 100%|████████████████████████████████| 227/227 [02:01<00:00,  1.87it/s, loss=0.727, v_num=ytdv]save
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 1:  96%|▉| 219/227 [01:28<00:03,  2.47it/s, loss=0.472, v_num=ytdv, acc_score_dream=0.680, acc_sco
+
+
+
+enterating: 100%|█████████████████████████████████████████████████████████| 8/8 [00:16<00:00,  1.24s/it]
+save
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 2:  96%|▉| 219/227 [01:30<00:03,  2.42it/s, loss=0.643, v_num=ytdv, acc_score_dream=0.734, acc_sco
+
+
+
+enterating: 100%|█████████████████████████████████████████████████████████| 8/8 [00:16<00:00,  1.21s/it]
+save
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 3:  96%|▉| 219/227 [01:30<00:03,  2.42it/s, loss=0.494, v_num=ytdv, acc_score_dream=0.744, acc_sco
+
+
+
+enterating: 100%|█████████████████████████████████████████████████████████| 8/8 [00:16<00:00,  1.12it/s]
+save
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 4:  96%|▉| 219/227 [01:30<00:03,  2.42it/s, loss=0.318, v_num=ytdv, acc_score_dream=0.759, acc_sco
+
+
+
+enterating: 100%|█████████████████████████████████████████████████████████| 8/8 [00:17<00:00,  1.08it/s]
+save
+Epoch 4: 100%|█| 227/227 [02:49<00:00,  1.34it/s, loss=0.318, v_num=ytdv, acc_score_dream=0.764, acc_sco
+Time: 1061.1936123371124

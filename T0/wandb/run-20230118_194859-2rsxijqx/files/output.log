@@ -1,0 +1,89 @@
+[nltk_data] Downloading package punkt to /home/joel_jang/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:434: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/16
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 16 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+  | Name  | Type                        | Params
+------------------------------------------------------
+0 | model | MT5ForConditionalGeneration | 3.7 B
+------------------------------------------------------
+3.7 B     Trainable params
+0         Non-trainable params
+3.7 B     Total params
+14,970.479Total estimated model params size (MB)
+WARNING:datasets.builder:Found cached dataset xsum (/home/joel_jang/.cache/huggingface/datasets/xsum/default/1.2.0/082863bf4754ee058a5b6f6525d0cb2b18eadb62c7b370b095d1364050a52b71)
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 355.96it/s]
+WARNING:datasets.arrow_dataset:Loading cached shuffled indices for dataset at /home/joel_jang/.cache/huggingface/datasets/xsum/default/1.2.0/082863bf4754ee058a5b6f6525d0cb2b18eadb62c7b370b095d1364050a52b71/cache-0179b5b9071d9bab.arrow
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/data_loading.py:110: UserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 96 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:56: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 1. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+###############################
+{'document': 'In Wales, councils are responsible for funding and overseeing schools.\nBut in England, Mr Osborne\'s plan will mean local authorities will cease to have a role in providing education.\nAcademies are directly funded by central government and head teachers have more freedom over admissions and to change the way the school works.\nIt is a significant development in the continued divergence of schools systems on either side of Offa\'s Dyke.\nAnd although the Welsh Government will get extra cash to match the money for English schools to extend the school day, it can spend it on any devolved policy area.\nMinisters have no plans to follow suit.\nAt the moment, governing bodies are responsible for setting school hours and they need ministerial permission to make significant changes.\nThere are already more than 2,000 secondary academies in England and its extension to all state schools is unlikely to shake the Welsh Government\'s attachment to what they call a "community, comprehensive model" for schools.\nIt rejects claims that freedom given to academies can help drive up standards, and it points to academy-free Scotland as the best performing school system in the UK.\nEducation Minister Huw Lewis said there was "very little evidence to suggest" academies have a positive impact in driving up standards and Wales would not be following the model.\n"The Tories have wasted hundreds of millions of pounds on academies and free schools and as the Chancellor finalises his budget plans to slash vital services even further, he is committing them to wasting even more on a failing endeavour.\n"We have no plans to introduce the chaos and waste of academies and free schools here in Wales."\nNone of the main parties in May\'s Assembly election - including the Welsh Conservatives - have said they want to introduce academies in Wales.\nOwen Hathway, NUT Cymru\'s policy officer, called the academy plans for England "scandalous.".\n"There is no evidence that academies work, no evidence that they raise standards, no evidence that they offer better quality education and no evidence that they are what parents and communities want," he said.\n"Certainly a commitment to comprehensive education is something we would want, and indeed expect, all parties to hold firm to in their manifestos for the forthcoming Welsh election."\nBut the Welsh and English schools systems are still linked by a joint arrangement for teachers\' pay and conditions.\nAcademies are not tied to these pay scales so in effect Wednesday\'s announcement will take all English schools out of the system and raise questions about the viability of an England and Wales pay and conditions structure.\nThere is already growing momentum for the devolution of teachers\' pay and conditions.\nOriginally sceptical, the Welsh Labour Government is now broadly in favour.\nSome teaching unions remain opposed because of concern that Welsh teachers would end up being paid less than those in England.\nMr Hathway said teachers were concerned it could lead to regional pay.\n"At the same time we do of course recognise that the issue of pay is already becoming a grey area due to the negative changes we see taking place in England," he said.\nBut an even bigger difference between the schools landscape on either side of the border, appears to make separate arrangements for pay increasingly likely in future.', 'summary': 'As Chancellor George Osborne announced all English state schools will become academies, the Welsh Government continues to reject the model here.', 'id': '35821725'}
+###############################
+Length of dataset retrieving is.. 10000
+
+
+Epoch 0:   0%|▏                                                                          | 2/625 [00:15<1:21:34,  7.86s/it, loss=5.77, v_num=ijqx]
+Traceback (most recent call last):
+  File "run.py", line 225, in <module>
+    trainer.fit(model)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 735, in fit
+    self._call_and_handle_interrupt(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 682, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 770, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1193, in _run
+    self._dispatch()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1272, in _dispatch
+    self.training_type_plugin.start_training(self)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 202, in start_training
+    self._results = trainer.run_stage()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1282, in run_stage
+    return self._run_train()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1312, in _run_train
+    self.fit_loop.run()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/fit_loop.py", line 234, in advance
+    self.epoch_loop.run(data_fetcher)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/training_epoch_loop.py", line 195, in advance
+    batch_output = self.batch_loop.run(batch, batch_idx)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/batch/training_batch_loop.py", line 88, in advance
+    outputs = self.optimizer_loop.run(split_batch, optimizers, batch_idx)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 145, in run
+    self.advance(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 215, in advance
+    result = self._run_optimization(
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 259, in _run_optimization
+    closure()
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 160, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 155, in closure
+    self._backward_fn(step_output.closure_loss)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/loops/optimization/optimizer_loop.py", line 327, in backward_fn
+    self.trainer.accelerator.backward(loss, optimizer, opt_idx)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/accelerators/accelerator.py", line 311, in backward
+    self.precision_plugin.backward(self.lightning_module, closure_loss, *args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/plugins/precision/precision_plugin.py", line 91, in backward
+    model.backward(closure_loss, optimizer, *args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/pytorch_lightning/core/lightning.py", line 1444, in backward
+    loss.backward(*args, **kwargs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/_tensor.py", line 307, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/joel_jang/miniconda3/envs/zeroshot/lib/python3.8/site-packages/torch/autograd/__init__.py", line 154, in backward
+    Variable._execution_engine.run_backward(
+RuntimeError: CUDA out of memory. Tried to allocate 1.91 GiB (GPU 0; 39.59 GiB total capacity; 34.90 GiB already allocated; 16.19 MiB free; 36.90 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
