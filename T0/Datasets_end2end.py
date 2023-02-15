@@ -195,15 +195,15 @@ def dataset_prompt_setting(type_path, dataset_name, dataset_config_name, args):
         if type_path == 'train':
             if 'tatoeba' in dataset_name:
                 if dataset_name == 'tatoeba':
-                    unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-kor/tatoeba.json', field="data")["train"]
+                    unshuffled = load_dataset("json", data_files='../data/release/v2021-08-07/eng-kor/tatoeba-kor.json', field="data")["train"]
                 elif dataset_name == 'tatoeba_spa':
-                    unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-spa/tatoeba_spa.json', field="data")["train"]
+                    unshuffled = load_dataset("json", data_files='../data/release/v2021-08-07/eng-spa/tatoeba_spa.json', field="data")["train"]
                 elif dataset_name == 'tatoeba_chi':
-                    unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-zho/tatoeba_zho.json', field="data")["train"]
+                    unshuffled = load_dataset("json", data_files='../data/release/v2021-08-07/eng-zho/tatoeba_zho.json', field="data")["train"]
                 elif dataset_name == 'tatoeba_fra':
-                    unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-fra/tatoeba_fra.json', field="data")["train"]
+                    unshuffled = load_dataset("json", data_files='../data/release/v2021-08-07/eng-fra/tatoeba_fra.json', field="data")["train"]
                 elif dataset_name == 'tatoeba_jap':
-                    unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-jpn/tatoeba_jpn.json', field="data")["train"]
+                    unshuffled = load_dataset("json", data_files='../data/release/v2021-08-07/eng-jpn/tatoeba_jpn.json', field="data")["train"]
                 if len(unshuffled)>args.dataset_length:
                     shuffled = unshuffled.shuffle(seed=42)
                     unshuffled=shuffled.select(range(args.dataset_length))
@@ -247,22 +247,22 @@ def dataset_prompt_setting(type_path, dataset_name, dataset_config_name, args):
                 unshuffled = load_dataset(dataset_name, split=dataset_config_name)
                 prompt = DatasetTemplates('anli')
             elif dataset_name == 'story_cloze':
-                unshuffled = load_dataset("story_cloze","2016", data_dir='../data')[type_path]
+                unshuffled = load_dataset("story_cloze","2016", data_dir='../data/release/v2021-08-07')[type_path]
                 prompt = DatasetTemplates('story_cloze', '2016')
             elif dataset_name == 'tatoeba':
-                unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-kor/tatoeba_val.json', field="data")["train"]
+                unshuffled = load_dataset("json", data_files='../data/release/v2021-08-07/eng-kor/tatoeba_val_kor.json', field="data")["train"]
                 prompt = DatasetTemplates('tatoeba')
             elif dataset_name == 'tatoeba_spa':
-                unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-spa/tatoeba_val_spa.json', field="data")["train"]
+                unshuffled = load_dataset("json", data_files='../data/release/v2021-08-07/eng-spa/tatoeba_val_spa.json', field="data")["train"]
                 prompt = DatasetTemplates('tatoeba')
             elif dataset_name == 'tatoeba_chi':
-                unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-zho/tatoeba_val_zho.json', field="data")["train"]
+                unshuffled = load_dataset("json", data_files='../data/release/v2021-08-07/eng-zho/tatoeba_val_zho.json', field="data")["train"]
                 prompt = DatasetTemplates('tatoeba')
             elif dataset_name == 'tatoeba_jap':
-                unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-jpn/tatoeba_val_jpn.json', field="data")["train"]
+                unshuffled = load_dataset("json", data_files='../data/release/v2021-08-07/eng-jpn/tatoeba_val_jpn.json', field="data")["train"]
                 prompt = DatasetTemplates('tatoeba')
             elif dataset_name == 'tatoeba_fra':
-                unshuffled = load_dataset("json", data_files='/mnt/disks/sdc/data/release/v2021-08-07/eng-fra/tatoeba_val_fra.json', field="data")["train"]
+                unshuffled = load_dataset("json", data_files='../data/release/v2021-08-07/eng-fra/tatoeba_val_fra.json', field="data")["train"]
                 prompt = DatasetTemplates('tatoeba')
             elif dataset_name == 'super_glue' or dataset_name == 'hellaswag' or dataset_name == 'winogrande' or dataset_name == 'lambada':
                 unshuffled = load_dataset(dataset_name, dataset_config_name)[type_path]
